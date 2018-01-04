@@ -1,0 +1,22 @@
+{
+  "name": "lts-jest",
+  "version": "0.0.1",
+  "description": "Run Jest against LWC components in SFDX workspace environment",
+  "main": "src/index.js",
+  "repository": "git@git.soma.salesforce.com:tbliss/lts-jest.git",
+  "author": "Trevor <tbliss@salesforce.com>",
+  "license": "MIT",
+  "private": true,
+  "bin": {
+    "lts-jest": "src/index.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "jest": "21.2.1",
+    "lwc-compiler": "0.17.6",
+    "lwc-engine": "0.17.6",
+    "lwc-jest-resolver": "0.17.6",
+    "lwc-jest-transformer": "0.17.6",
+    "yargs": "^10.0.3"
+  }
+}
