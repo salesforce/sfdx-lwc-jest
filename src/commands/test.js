@@ -3,7 +3,6 @@ const path = require('path');
 const chalk = require('chalk');
 const jest = require('jest');
 
-// TODO: SFDX workspaces do not have package.json, how do we allow overrides?
 function getOverrides(config) {
     const cwd = fs.realpathSync(process.cwd());
     const appPackageJson = path.resolve(cwd, 'package.json');

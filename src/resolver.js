@@ -2,46 +2,18 @@ const fs = require('fs');
 const path = require('path');
 const lwcResolver = require('lwc-jest-resolver');
 
-const PROJECT_ROOT = fs.realpathSync(process.cwd());
-const DEFAULT_NAMESPACE = 'c';
-const PATH_TO_MODULES = path.join('main', 'default', 'lightningcomponents');
+const {
+    PROJECT_ROOT,
+    getSfdxProjectJson,
+    getProjectPaths,
+    getNamespace,
+} = require('./utils/project.js');
 
-function getSfdxProjectJson() {
-    const sfdxProjectJson = path.join(PROJECT_ROOT, 'sfdx-project.json');
-
-    if (!fs.existsSync(sfdxProjectJson)) {
-        throw new Error('Could not find sfdx-project.json. Make sure `lts-jest` is run from project root');
-    }
-
-    return require(sfdxProjectJson);
-}
-
-function getProjectPaths() {
-    const paths = [];
-    const packageDirectories = getSfdxProjectJson().packageDirectories;
-
-    packageDirectories.forEach((entry) => {
-        paths.push(entry.path);
-    });
-
-    return paths;
-}
-
-function getNamespace() {
-    return getSfdxProjectJson().namespace || DEFAULT_NAMESPACE;
-}
-
-function isValidModuleName(id) {
-    return id.match(/^(\w+-?)+$/);
-}
-
-function getInfoFromId(id) {
-    const [ns, ...rest] = id.split('-');
-    return {
-        ns,
-        name: rest.join('-'),
-    };
-}
+const {
+    PATH_TO_MODULES,
+    isValidModuleName,
+    getInfoFromId,
+} = require('./utils/module.js');
 
 function isFile(file) {
     let result;
