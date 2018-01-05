@@ -2,31 +2,34 @@ const fs = require('fs');
 const path = require('path');
 const lwcResolver = require('lwc-jest-resolver');
 
-const LAYOUT = { NAMSPECED: true };
+const PROJECT_ROOT = fs.realpathSync(process.cwd());
+const DEFAULT_NAMESPACE = 'c';
+const PATH_TO_MODULES = path.join('main', 'default', 'lightningcomponents');
 
-module.exports = function (modulePath, options) {
-    const layout = LAYOUT.NAMESPACED;
+function getSfdxProjectJson() {
+    const sfdxProjectJson = path.join(PROJECT_ROOT, 'sfdx-project.json');
 
-    if (isValidModuleName(modulePath)) {
-        const { modulesDir, namespaces } = getProjectInfo(layout);
-        const { ns, name } = getInfoFromId(modulePath);
-        let file;
-
-        if (layout === LAYOUT.NAMESPACED && namespaces.includes(ns)) {
-            file = resolveAsFile(path.join(modulesDir, ns, name, name), options.extensions);
-        } else if (layout === LAYOUT.STANDARD) {
-            const moduleName = `{ns}-{name}`;
-            file = resolveAsFile(path.join(modulesDir, moduleName, moduleName), options.extensions);
-        }
-
-        if (file) {
-            console.log('>>> file: ', file);
-            return fs.realpathSync(file);
-        }
+    if (!fs.existsSync(sfdxProjectJson)) {
+        throw new Error('Could not find sfdx-project.json. Make sure `lts-jest` is run from project root');
     }
 
-    return lwcResolver.apply(null, arguments);
-};
+    return require(sfdxProjectJson);
+}
+
+function getProjectPaths() {
+    const paths = [];
+    const packageDirectories = getSfdxProjectJson().packageDirectories;
+
+    packageDirectories.forEach((entry) => {
+        paths.push(entry.path);
+    });
+
+    return paths;
+}
+
+function getNamespace() {
+    return getSfdxProjectJson().namespace || DEFAULT_NAMESPACE;
+}
 
 function isValidModuleName(id) {
     return id.match(/^(\w+-?)+$/);
@@ -38,16 +41,6 @@ function getInfoFromId(id) {
         ns,
         name: rest.join('-'),
     };
-}
-
-function getProjectInfo(layout) {
-    const cwd = fs.realpathSync(process.cwd());
-    const modulesDir = path.join(cwd + '', 'force-app', 'main', 'default', 'lightningcomponents');
-    let namespaces = [];
-    if (layout === LAYOUT.NAMESPACED) {
-        namespaces = fs.readdirSync(modulesDir); 
-    }
-    return { modulesDir, namespaces };
 }
 
 function isFile(file) {
@@ -80,3 +73,27 @@ function resolveAsFile(name, extensions) {
 
     return undefined;
 }
+
+function getModule(modulePath, options) {
+    if (isValidModuleName(modulePath)) {
+        const { ns, name } = getInfoFromId(modulePath);
+        const projectNs = getNamespace();
+
+        if (projectNs !== ns) {
+            return undefined;
+        }
+
+        const paths = getProjectPaths();
+        for (let i = 0; i < paths.length; i++) {
+            const modulesDir = path.join(PROJECT_ROOT, paths[i], PATH_TO_MODULES);
+            const file = resolveAsFile(path.join(modulesDir, name, name), options.extensions);
+            if (file) {
+                return fs.realpathSync(file);
+            }
+        }
+    }
+}
+
+module.exports = function (modulePath, options) {
+    return  getModule(modulePath, options) || lwcResolver.apply(null, arguments);
+};

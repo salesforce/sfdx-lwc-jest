@@ -56,6 +56,7 @@ module.exports = {
     },
 
     async handler(argv) {
+        // TODO: validate in project root here (by checking existence of sfdx-project.json)? 
         let config = {
             moduleFileExtensions: ['js'],
             transform: {
@@ -67,6 +68,7 @@ module.exports = {
               '<rootDir>/test/specs/',
             ],
             collectCoverageFrom: ['src/modules/**/*.js'],
+            verbose: true
         };
         const options = argv.options.split(' ');
         //config = getOverrides(config);
