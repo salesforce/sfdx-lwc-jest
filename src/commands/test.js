@@ -3,10 +3,13 @@ const path = require('path');
 const chalk = require('chalk');
 const jest = require('jest');
 
-function getOverrides(config) {
-    const cwd = fs.realpathSync(process.cwd());
-    const appPackageJson = path.resolve(cwd, 'package.json');
-    const overrides = Object.assign({}, require(appPackageJson).jest);
+const {
+    PROJECT_ROOT,
+} = require('../utils/project.js');
+
+function applyOverrides(config) {
+    const jestConfig = path.resolve(PROJECT_ROOT, 'jest.config.js');
+    const overrides = Object.assign({}, require(jestConfig));
     const supportedKeys = [
         'collectCoverageFrom',
         'coverageReporters',
@@ -70,7 +73,7 @@ module.exports = {
             verbose: true
         };
         const options = argv.options.split(' ');
-        //config = getOverrides(config);
+        config = applyOverrides(config);
         jest.run(['--config', JSON.stringify(config)].concat(options));
     },
 };
