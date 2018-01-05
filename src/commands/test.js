@@ -14,6 +14,7 @@ function applyOverrides(config) {
         'collectCoverageFrom',
         'coverageReporters',
         'coverageThreshold',
+        'verbose',
     ];
     if (overrides) {
         supportedKeys.forEach(key => {
@@ -69,8 +70,7 @@ module.exports = {
               '<rootDir>/node_modules/',
               '<rootDir>/test/specs/',
             ],
-            collectCoverageFrom: ['src/modules/**/*.js'],
-            verbose: true
+            collectCoverageFrom: ['**/lightningcomponents/**/*.js']
         };
         const options = argv.options.split(' ');
         config = applyOverrides(config);
