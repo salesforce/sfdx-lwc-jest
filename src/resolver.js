@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const GlobSync = require('glob').GlobSync;
 const lwcResolver = require('lwc-jest-resolver');
 
 const {
@@ -47,21 +48,20 @@ function resolveAsFile(name, extensions) {
 }
 
 function getModule(modulePath, options) {
-    if (isValidModuleName(modulePath)) {
-        const { ns, name } = getInfoFromId(modulePath);
-        const projectNs = getNamespace();
+    const { ns, name } = getInfoFromId(modulePath);
+    const projectNs = getNamespace();
 
-        if (projectNs !== ns) {
-            return undefined;
-        }
-
+    if (isValidModuleName(modulePath) && projectNs === ns) {
         const paths = getProjectPaths();
         for (let i = 0; i < paths.length; i++) {
-            const modulesDir = path.join(PROJECT_ROOT, paths[i], PATH_TO_MODULES);
-            const file = resolveAsFile(path.join(modulesDir, name, name), options.extensions);
-            if (file) {
-                return fs.realpathSync(file);
-            }
+            const subProjectRoot = path.join(PROJECT_ROOT, paths[i]);
+            const found = new GlobSync('**/lightningcomponents/', { cwd: subProjectRoot }).found
+            for (let j = 0; j < found.length; j++) {
+                const file = resolveAsFile(path.join(subProjectRoot, found[j], name, name), options.extensions);
+                if (file) {
+                    return fs.realpathSync(file);
+                }
+            };
         }
     }
 }

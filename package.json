@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "chalk": "^2.3.0",
+    "glob": "^7.1.2",
     "jest": "21.2.1",
     "lwc-compiler": "0.17.6",
     "lwc-engine": "0.17.6",
