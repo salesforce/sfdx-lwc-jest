@@ -4,7 +4,10 @@ const chalk = require('chalk');
 const jest = require('jest');
 
 const { error } = require('../log.js');
-const { PROJECT_ROOT } = require('../utils/project.js');
+const { 
+    PROJECT_ROOT,
+    getSfdxProjectJson,
+} = require('../utils/project.js');
 
 function applyOverrides(config) {
     const jestConfig = path.resolve(PROJECT_ROOT, 'jest.config.js');
@@ -56,8 +59,15 @@ module.exports = {
 
     async handler(argv) {
         const cwd = fs.realpathSync(process.cwd());
+
         if (!fs.existsSync(path.join(cwd, 'sfdx-project.json'))) {
             error('Could not find file sfdx-project.json in cwd, please run lts-test from SFDX project root.');
+        }
+
+        const sfdxProjectJson = getSfdxProjectJson();
+        const apiVersion = sfdxProjectJson.sourceApiVersion;
+        if (apiVersion !== '42.0') {
+            error(`Invalid sourceApiVersion found in sfdx-project.json. Expected 42.0, found ${apiVersion}`);
         }
 
         let config = {
