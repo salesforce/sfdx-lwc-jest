@@ -7,6 +7,8 @@ Run Jest against LWC components in SFDX workspace environment
 Globally install this project to execute tests inside your SFDX workspace via command line
 
 ```
+git clone git@git.soma.salesforce.com:tbliss/lts-jest.git
+cd lts-jest
 yarn install
 yarn link
 ```
