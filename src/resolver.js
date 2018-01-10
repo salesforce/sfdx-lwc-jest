@@ -47,9 +47,20 @@ function resolveAsFile(name, extensions) {
     return undefined;
 }
 
+function getLightningMock(modulePath) {
+    const p = path.join(__dirname, 'lightning-mocks', modulePath);
+    if (fs.existsSync(p)) {
+        return path.join(p, modulePath + '.js');
+    }
+}
+
 function getModule(modulePath, options) {
     const { ns, name } = getInfoFromId(modulePath);
     const projectNs = getNamespace();
+
+    if (ns === 'lightning') {
+        return getLightningMock(modulePath);
+    }
 
     if (isValidModuleName(modulePath) && projectNs === ns) {
         const paths = getProjectPaths();
