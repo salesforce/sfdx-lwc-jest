@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const GlobSync = require('glob').GlobSync;
 
 const PROJECT_ROOT = fs.realpathSync(process.cwd());
 const DEFAULT_NAMESPACE = 'c';
@@ -14,13 +15,22 @@ function getSfdxProjectJson() {
     return require(sfdxProjectJson);
 }
 
-function getProjectPaths() {
+// get relative path to 'lightningcomponents' directory from project root
+function getModulePaths() {
     const paths = [];
+    const projectPaths = [];
     const packageDirectories = getSfdxProjectJson().packageDirectories;
 
     packageDirectories.forEach((entry) => {
-        paths.push(entry.path);
+        projectPaths.push(entry.path);
     });
+
+    for (let i = 0; i < projectPaths.length; i++) {
+        const found = new GlobSync('**/lightningcomponents/', { cwd: projectPaths[i] }).found;
+        for (let j = 0; j < found.length; j++) {
+            paths.push(path.join(projectPaths[i], found[j]));
+        }
+    }
 
     return paths;
 }
@@ -32,6 +42,6 @@ function getNamespace() {
 module.exports = {
     PROJECT_ROOT,
     getSfdxProjectJson,
-    getProjectPaths,
-    getNamespace
+    getNamespace,
+    getModulePaths,
 };

@@ -6,6 +6,7 @@ const jest = require('jest');
 const { error } = require('../log.js');
 const { 
     PROJECT_ROOT,
+    getModulePaths,
     getSfdxProjectJson,
 } = require('../utils/project.js');
 
@@ -44,6 +45,14 @@ function applyOverrides(config) {
     return config;
 }
 
+function getCoveragePaths() {
+    let paths = [];
+    const modulePaths = getModulePaths();
+    modulePaths.forEach((p) => {
+        paths.push(path.join(p, '**/*.js'));
+    });
+}
+
 module.exports = {
     command: 'test',
 
@@ -71,7 +80,8 @@ module.exports = {
         }
 
         let config = {
-            moduleFileExtensions: ['js'],
+            rootDir: PROJECT_ROOT,
+            moduleFileExtensions: ['js', 'html'],
             transform: {
                 '^.+\\.(js|html|css)$': require.resolve('lwc-jest-transformer')
             },
@@ -80,7 +90,7 @@ module.exports = {
               '<rootDir>/node_modules/',
               '<rootDir>/test/specs/',
             ],
-            collectCoverageFrom: ['**/lightningcomponents/**/*.js']
+            collectCoverageFrom: getCoveragePaths(),
         };
         const options = argv.options.split(' ');
         config = applyOverrides(config);

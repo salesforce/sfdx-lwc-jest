@@ -6,7 +6,7 @@ const lwcResolver = require('lwc-jest-resolver');
 const {
     PROJECT_ROOT,
     getSfdxProjectJson,
-    getProjectPaths,
+    getModulePaths,
     getNamespace,
 } = require('./utils/project.js');
 
@@ -63,16 +63,12 @@ function getModule(modulePath, options) {
     }
 
     if (isValidModuleName(modulePath) && projectNs === ns) {
-        const paths = getProjectPaths();
+        const paths = getModulePaths();
         for (let i = 0; i < paths.length; i++) {
-            const subProjectRoot = path.join(PROJECT_ROOT, paths[i]);
-            const found = new GlobSync('**/lightningcomponents/', { cwd: subProjectRoot }).found
-            for (let j = 0; j < found.length; j++) {
-                const file = resolveAsFile(path.join(subProjectRoot, found[j], name, name), options.extensions);
-                if (file) {
-                    return fs.realpathSync(file);
-                }
-            };
+            const file = resolveAsFile(path.join(PROJECT_ROOT, paths[i], name, name), options.extensions);
+            if (file) {
+                return fs.realpathSync(file);
+            }
         }
     }
 }

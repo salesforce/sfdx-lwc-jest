@@ -44,7 +44,7 @@ See the Jest [doc](http://facebook.github.io/jest/docs/en/cli.html) for all CLI 
 For example:
 ```js
 module.exports = {
-    collectCoverageFrom: ['.js','.json'],
+    verbose: true,
 };
 ```
 
