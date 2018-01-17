@@ -13,7 +13,15 @@ yarn install
 yarn link
 ```
 
+Once this package is published to the npm repository, simply run the following:
+
+```
+yarn global add lts-jest
+```
+
 ## Usage
+
+Run the `lts-jest test` command from the root level of your SFDX workspace.
 
 ```
 lts-jest test
