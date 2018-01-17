@@ -65,3 +65,53 @@ After adding Jest tests, you will get errors trying to sync your local files wit
 ```
 
 See [How to Exclude Source When Syncing or Converting](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm) for more details.
+
+## Resolving External LWC Components
+
+Any LWC components not located in your local `lightningcomponents` directory of your SFDX workspace will need to be mocked in your Jest tests. Included in this package are a set of mocks for all the `lightning` namespaced components.
+
+### Lightning Namespaced Component Mocks
+
+When this package is installed, a new set of mocks for all `lightning` namespaced components is generated into the lightning-mocks folder. These mocks are generated based off the `lwc-standard.json` metadata file. The mocks will be auto-generated and the Jest resolver will automatically use these mocks in the tests. There is nothing needed to be done to make these work out of the box.
+
+### Other Component Mocks
+
+For components from other namespaces, not in your local `lightningcomponents` directory, you'll need to create your own mock and update the Jest config to map the name of these components to the mock file. 
+
+Let's go through an example. Given the following template, `hello-world.html`, we want to test:
+
+```html
+<template>
+    Hello From a Lightning Web Component!
+    <lightning-button onclick={doSomething}></lightning-button>
+    <foo-button onclick={doSomethingElse}></foo-button>
+</template>
+```
+
+We know out of the box the `lightning-button` will be handled by the package automatically. `foo-button`, however, will need to be resolved. In our `jest.config.js` file at the root of the SFDX project workspace, add the following:
+
+```js
+module.exports = {
+    moduleNameMapper: {
+        '^foo-button$': '<rootDir>/force-app/test/jest-mocks/foo-button.js',
+    }
+};
+```
+
+This will tell Jest to map the import for `foo-button` to the provided file. Here, `<rootDir>` will map to the root of the SFDX workspace. Note that this file location is not required, just an example. You also have the freedom to make these mock implementations as sophisticated or simple as you'd like. In this example, we'll make `foo-button` extremely simple with an empty template and no functionality in the .js file, but you can always add whatever markup you'd like or implement functionality like any other LWC component.
+
+Finally, we need to create the mock `foo-button` files. In the `force-app/test/jest-mocks` directory create the following files:
+
+```html
+<!-- foo-button.html -->
+<template></template>
+```
+
+```js
+// foo-button.js
+import { Element, api } from 'engine';
+export default class FooButton extends Element {
+  @api label
+  // any other @api properties or implementation you may want to expose here
+}
+```

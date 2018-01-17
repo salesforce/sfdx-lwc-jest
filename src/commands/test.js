@@ -17,6 +17,7 @@ function applyOverrides(config) {
         'collectCoverageFrom',
         'coverageReporters',
         'coverageThreshold',
+        'moduleNameMapper',
         'verbose',
     ];
     if (overrides) {
