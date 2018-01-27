@@ -51,6 +51,28 @@ function applyOverrides(config) {
     return config;
 }
 
+function getOptions(argv) {
+    let options = [];
+
+    if (argv.coverage) {
+        options.push('--coverage');
+    }
+
+    if (argv.updateSnapshot || argv.u) {
+        options.push('-u');
+    }
+
+    if (argv.watch) {
+        options.push('--watch');
+    }
+
+    if (argv.passthrough) {
+        options = options.concat(argv.passthrough.split(' '));
+    }
+
+    return options;
+}
+
 function getCoveragePaths() {
     let paths = [];
     const modulePaths = getModulePaths();
@@ -65,11 +87,30 @@ module.exports = {
     description: 'Run Jest unit tests in SFDX workspace',
 
     builder: {
-        options: {
-            description: 'Jest CLI options',
-            type: 'string',
-            default: '',
+        coverage: {
+            description: 'Collect coverage and display in output',
+            type: 'boolean',
+            default: false,
         },
+
+        updateSnapshot: {
+            description: '',
+            type: 'boolean',
+            default: false,
+            alias: 'u',
+        },
+
+        watch: {
+            description: '',
+            type: 'boolean',
+            default: false,
+        },
+
+        passthrough: {
+            description: 'Additional CLI options, separated by a space, to directly to Jest',
+            type: 'string',
+        },
+
     },
 
     async handler(argv) {
@@ -98,8 +139,8 @@ module.exports = {
             ],
             collectCoverageFrom: getCoveragePaths(),
         };
-        const options = argv.options.split(' ');
         config = applyOverrides(config);
+        const options = getOptions(argv);
         jest.run(['--config', JSON.stringify(config)].concat(options));
     },
 };
