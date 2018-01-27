@@ -12,6 +12,11 @@ const {
 
 function applyOverrides(config) {
     const jestConfig = path.resolve(PROJECT_ROOT, 'jest.config.js');
+
+    if (!fs.existsSync(jestConfig)) {
+        return config;
+    }
+
     const overrides = Object.assign({}, require(jestConfig));
     const supportedKeys = [
         'collectCoverageFrom',
