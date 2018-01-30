@@ -130,7 +130,7 @@ module.exports = {
             rootDir: PROJECT_ROOT,
             moduleFileExtensions: ['js', 'html'],
             transform: {
-                '^.+\\.(js|html|css)$': require.resolve('lwc-jest-transformer')
+                '^.+\\.(js|html|css)$': require.resolve('../resources/lwc-jest-transformer')
             },
             resolver: path.resolve(__dirname, '../resolver.js'),
             testPathIgnorePatterns: [

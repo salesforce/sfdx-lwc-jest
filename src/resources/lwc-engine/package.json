@@ -1,0 +1,5 @@
+{
+    "name": "lwc-engine",
+    "version": "0.16.9",
+    "main": "engine.min.js"
+}

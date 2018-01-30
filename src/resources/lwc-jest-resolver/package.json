@@ -1,0 +1,12 @@
+{
+    "name": "lwc-jest-resolver",
+    "version": "0.0.6",
+    "description": "Jest resolver to resolve LWC specific packages",
+    "main": "src/index.js",
+    "license": "MIT",
+    "dependencies": {
+      "jest": "21.2.1",
+      "path": "^0.12.7"
+    }
+  }
+  

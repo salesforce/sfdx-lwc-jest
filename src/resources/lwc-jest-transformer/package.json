@@ -1,0 +1,14 @@
+{
+    "name": "lwc-jest-transformer",
+    "version": "2.0.1",
+    "description": "Jest transformer for LWC components and engine",
+    "main": "src/index.js",
+    "dependencies": {
+      "babel-core": "^6.24.1",
+      "deasync": "^0.1.10"
+    },
+    "engines": {
+      "node": ">=8"
+    }
+  }
+  
