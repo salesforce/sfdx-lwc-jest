@@ -1,12 +1,15 @@
 const babelCore = require('babel-core');
 const jestPreset = require('babel-preset-jest');
-const lwcCompiler = require('lwc-compiler');
+const lwcCompiler = require('../../lwc-compiler');
 
 const { waitForPromise } = require('./utils');
 
 const BABEL_CONFIG = {
     "presets": [
-        ["env", {
+        // grab this projects preset module so we can run transformer against
+        // other projects that may not have that dependency in their node_modules.
+        // SFDX workspaces are an example of this.
+        [require.resolve('babel-preset-env'), {
             targets: {
                 node: true
             }

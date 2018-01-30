@@ -13,13 +13,13 @@
     "postinstall": "./bin/install-jest-mocks.js"
   },
   "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-jest": "^22.1.0",
     "chalk": "^2.3.0",
+    "deasync": "^0.1.10",
     "glob": "^7.1.2",
     "jest": "21.2.1",
-    "lwc-compiler": "file:./src/resources/lwc-compiler",
-    "lwc-engine": "file:./src/resources/lwc-engine",
-    "lwc-jest-resolver": "file:./src/resources/lwc-jest-resolver",
-    "lwc-jest-transformer": "file:./src/resources/lwc-jest-transformer",
     "yargs": "^10.0.3"
   },
   "publishConfig": {
