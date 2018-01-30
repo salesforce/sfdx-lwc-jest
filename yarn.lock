@@ -1572,19 +1572,19 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lwc-compiler@./src/resources/lwc-compiler:
+"lwc-compiler@file:./src/resources/lwc-compiler":
   version "0.16.9"
 
-lwc-engine@./src/resources/lwc-engine:
+"lwc-engine@file:./src/resources/lwc-engine":
   version "0.16.9"
 
-lwc-jest-resolver@./src/resources/lwc-jest-resolver:
+"lwc-jest-resolver@file:./src/resources/lwc-jest-resolver":
   version "0.0.6"
   dependencies:
     jest "21.2.1"
     path "^0.12.7"
 
-lwc-jest-transformer@./src/resources/lwc-jest-transformer:
+"lwc-jest-transformer@file:./src/resources/lwc-jest-transformer":
   version "2.0.1"
   dependencies:
     babel-core "^6.24.1"

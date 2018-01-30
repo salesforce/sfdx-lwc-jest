@@ -16,10 +16,10 @@
     "chalk": "^2.3.0",
     "glob": "^7.1.2",
     "jest": "21.2.1",
-    "lwc-compiler": "./src/resources/lwc-compiler",
-    "lwc-engine": "./src/resources/lwc-engine",
-    "lwc-jest-resolver": "./src/resources/lwc-jest-resolver",
-    "lwc-jest-transformer": "./src/resources/lwc-jest-transformer",
+    "lwc-compiler": "file:./src/resources/lwc-compiler",
+    "lwc-engine": "file:./src/resources/lwc-engine",
+    "lwc-jest-resolver": "file:./src/resources/lwc-jest-resolver",
+    "lwc-jest-transformer": "file:./src/resources/lwc-jest-transformer",
     "yargs": "^10.0.3"
   },
   "publishConfig": {
