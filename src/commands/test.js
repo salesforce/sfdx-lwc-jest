@@ -10,6 +10,9 @@ const {
     getSfdxProjectJson,
 } = require('../utils/project.js');
 
+// CLI options we do not want to pass along to Jest
+const OPTIONS_BLACKLIST = ['_', '$0', 'advancedMode', 'a'];
+
 function applyOverrides(config) {
     const jestConfig = path.resolve(PROJECT_ROOT, 'jest.config.js');
 
@@ -54,21 +57,11 @@ function applyOverrides(config) {
 function getOptions(argv) {
     let options = [];
 
-    if (argv.coverage) {
-        options.push('--coverage');
-    }
-
-    if (argv.updateSnapshot || argv.u) {
-        options.push('-u');
-    }
-
-    if (argv.watch) {
-        options.push('--watch');
-    }
-
-    if (argv.passthrough) {
-        options = options.concat(argv.passthrough.split(' '));
-    }
+    Object.keys(argv).forEach(arg => {
+        if (argv[arg] && !OPTIONS_BLACKLIST.includes(arg)) {
+            options.push(`--${arg}`);
+        }
+    });
 
     return options;
 }
@@ -87,6 +80,13 @@ module.exports = {
     description: 'Run Jest unit tests in SFDX workspace',
 
     builder: {
+        advancedMode: {
+            description: 'For advanced users only. Pass all CLI arguments directly to Jest',
+            type: 'boolean',
+            default: false,
+            alias: 'a',
+        },
+
         coverage: {
             description: 'Collect coverage and display in output',
             type: 'boolean',
@@ -94,23 +94,23 @@ module.exports = {
         },
 
         updateSnapshot: {
-            description: '',
+            description: 'Re-record every snapshot that fails during a test run',
             type: 'boolean',
             default: false,
             alias: 'u',
         },
 
-        watch: {
-            description: '',
+        verbose: {
+            description: 'Display individual test results with the test suite hierarchy',
             type: 'boolean',
             default: false,
         },
 
-        passthrough: {
-            description: 'Additional CLI options, separated by a space, to directly to Jest',
-            type: 'string',
+        watch: {
+            description: 'Watch files for changes and rerun tests related to changed files',
+            type: 'boolean',
+            default: false,
         },
-
     },
 
     async handler(argv) {

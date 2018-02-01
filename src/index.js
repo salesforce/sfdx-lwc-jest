@@ -1,15 +1,16 @@
 #!/usr/bin/env node
 
 const yargs = require('yargs');
-
 const { error } = require('./log');
 
 const test = require('./commands/test');
 
+const isAdvanced = yargs.argv.advancedMode;
+
 yargs
     .command(test)
     .demandCommand()
-    .strict()
+    .strict(!isAdvanced)
     .help()
     .argv;
 
