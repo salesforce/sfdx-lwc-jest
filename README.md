@@ -4,55 +4,58 @@ Run Jest against LWC components in SFDX workspace environment
 
 ## Installation
 
-Globally install this project to execute tests inside your SFDX workspace via command line
+Add this project as a devDependency:
 
-```
-git clone git@git.soma.salesforce.com:tbliss/lts-jest.git
-cd lts-jest
-yarn install
-yarn link
+```bash
+yarn add -D lts-jest
+``` 
+
+Update your projects unit testing script in package.json to execute `lts-jest`:
+
+```json
+{
+    "scripts": {
+        "test:unit": "lts-jest test"
+    }
+}
 ```
 
-Once this package is published to the npm repository, simply run the following:
-
-```
-yarn global add lts-jest
-```
+Alternatively, you can globally install the package and run directly from the command line.
 
 ## Usage
 
-Run the `lts-jest test` command from the root level of your SFDX workspace.
-
 ```
-lts-jest test
-
 Run Jest unit tests in SFDX workspace
 
 Options:
-  --version  Show version number                                       [boolean]
-  --help     Show help                                                 [boolean]
-  --options  Jest CLI options                             [string] [default: ""]
-
+  --version             Show version number                                               [boolean]
+  --help                Show help                                                         [boolean]
+  --advancedMode, -a    For advanced users only. Pass all CLI arguments directly to Jest  [boolean] [default: false]
+  --coverage            Collect coverage and display in output                            [boolean] [default: false]
+  --updateSnapshot, -u  Re-record every snapshot that fails during a test run             [boolean] [default: false]
+  --verbose             Display individual test results with the test suite hierarchy     [boolean] [default: false]
+  --watch               Watch files for changes and rerun tests related to changed files  [boolean] [default: false]
 ```
 
 ## Passing Additional Jest CLI Options
 
-To pass any additional Jest CLI options to your run, pass in a string to the `--options` param of `lts-jest test`. For example, to run Jest in watch mode and set the verbose flag, run:
+To pass any additional Jest CLI options to your run, set the `--advancedMode` flag. When this flag is set, all other CLI parameters will be passed along directly to Jest.
 
 ```bash
-lts-jest test --options='--watch --verbose'
+lts-jest test --advancedMode --json
 ```
 
 See the Jest [doc](http://facebook.github.io/jest/docs/en/cli.html) for all CLI options.
 
 ## Overriding Jest Config
 
-`lts-jest` will set up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. Some, but not all, options can be overriden. To override an option, create a `jest.config.js` file in the project root and set the options as [documented](http://facebook.github.io/jest/docs/en/configuration.html#options). 
+`lts-jest` will set up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, import the default config from `lts-jest`, modify as you please, and then export the new config.
 
-For example:
 ```js
+const { jestConfig } = require('lts-jest/config');
 module.exports = {
-    verbose: true,
+    ...jestConfig,
+    testMatch: ['**/todo.test.js'],
 };
 ```
 
@@ -91,9 +94,11 @@ Let's go through an example. Given the following template, `hello-world.html`, w
 We know out of the box the `lightning-button` will be handled by the package automatically. `foo-button`, however, will need to be resolved. In our `jest.config.js` file at the root of the SFDX project workspace, add the following:
 
 ```js
+const { jestConfig } = require('lts-jest/config');
 module.exports = {
+    ...jestConfig,
     moduleNameMapper: {
-        '^foo-button$': '<rootDir>/force-app/test/jest-mocks/foo-button.js',
+        '^foo-button$': '<rootDir>/force-app/test/jest-mocks/foo-button',
     }
 };
 ```
