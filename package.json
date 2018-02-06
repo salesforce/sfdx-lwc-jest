@@ -10,7 +10,7 @@
     "lts-jest": "src/index.js"
   },
   "scripts": {
-    "postinstall": "./bin/install-jest-mocks.js"
+    "release": "./bin/install-jest-mocks.js && npm publish"
   },
   "dependencies": {
     "babel-core": "^6.24.1",
