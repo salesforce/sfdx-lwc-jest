@@ -18,6 +18,7 @@ const jestConfig = {
     transform: {
         '^.+\\.(js|html|css)$': require.resolve('lwc-jest-transformer')
     },
+    transformIgnorePatterns: ["/node_modules/(?:(?!lightning-mocks.*(js|html|css)))*$"],
     resolver: path.resolve(__dirname, './resolver.js'),
     testPathIgnorePatterns: [
       '<rootDir>/node_modules/',
