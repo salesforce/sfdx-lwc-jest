@@ -8,7 +8,7 @@ const {
 } = require('./log');
 const test = require('./commands/test');
 
-const isAdvanced = yargs.argv.advancedMode;
+const isAdvanced = yargs.argv.advancedMode || yargs.argv.a;
 
 yargs
     .command(test)
