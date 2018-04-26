@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Dynamic-icon extends Element {
+export default class Dynamicicon extends Element {
     @api alternativeText
 	@api option
 	@api type

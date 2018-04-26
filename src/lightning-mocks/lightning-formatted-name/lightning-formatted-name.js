@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formatted-name extends Element {
+export default class Formattedname extends Element {
     @api firstName
 	@api format
 	@api informalName

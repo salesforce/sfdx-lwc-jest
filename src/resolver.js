@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const GlobSync = require('glob').GlobSync;
-const lwcResolver = require('./resources/lwc-jest-resolver');
+const lwcResolver = require('lwc-jest-resolver');
 
 const {
     PROJECT_ROOT,
@@ -75,7 +75,7 @@ function getModule(modulePath, options) {
 
 module.exports = function (modulePath, options) {
     if (modulePath === 'engine') {
-        return path.join (__dirname, 'resources', 'lwc-engine', 'engine.js');
+        return require.resolve('lwc-engine');
     }
     return  getModule(modulePath, options) || lwcResolver.apply(null, arguments);
 };

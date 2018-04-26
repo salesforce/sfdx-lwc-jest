@@ -1,7 +1,8 @@
 import { Element, api } from 'engine';
 
-export default class Input-location extends Element {
+export default class Inputlocation extends Element {
     @api disabled
+	@api fieldLevelHelp
 	@api label
 	@api latitude
 	@api longitude

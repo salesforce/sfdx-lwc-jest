@@ -5,6 +5,7 @@ export default class Datatable extends Element {
 	@api data
 	@api defaultSortDirection
 	@api enableInfiniteLoading
+	@api errors
 	@api hideCheckboxColumn
 	@api isLoading
 	@api keyField

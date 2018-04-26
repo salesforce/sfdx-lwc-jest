@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formatted-phone extends Element {
+export default class Formattedphone extends Element {
     @api value
     
 }

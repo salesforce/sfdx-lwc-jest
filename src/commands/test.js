@@ -76,8 +76,8 @@ module.exports = {
 
         const sfdxProjectJson = getSfdxProjectJson();
         const apiVersion = sfdxProjectJson.sourceApiVersion;
-        if (apiVersion !== '42.0') {
-            error(`Invalid sourceApiVersion found in sfdx-project.json. Expected 42.0, found ${apiVersion}`);
+        if (apiVersion !== '43.0') {
+            error(`Invalid sourceApiVersion found in sfdx-project.json. Expected 43.0, found ${apiVersion}`);
         }
 
         const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));

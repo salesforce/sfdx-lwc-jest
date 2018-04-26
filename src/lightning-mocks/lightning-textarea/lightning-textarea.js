@@ -3,9 +3,9 @@ import { Element, api } from 'engine';
 export default class Textarea extends Element {
     @api disabled
 	@api label
-	@api maxlength
 	@api messageWhenBadInput
 	@api messageWhenTooLong
+	@api messageWhenTooShort
 	@api messageWhenValueMissing
 	@api minlength
 	@api name
@@ -15,5 +15,6 @@ export default class Textarea extends Element {
 	@api validity
 	@api value
 	@api variant
-    @api showHelpMessageIfInvalid() {}
+    @api focus() {}
+	@api showHelpMessageIfInvalid() {}
 }

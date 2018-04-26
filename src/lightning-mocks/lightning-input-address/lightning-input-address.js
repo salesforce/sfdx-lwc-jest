@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Input-address extends Element {
+export default class Inputaddress extends Element {
     @api addressLabel
 	@api city
 	@api cityLabel
@@ -8,6 +8,7 @@ export default class Input-address extends Element {
 	@api countryLabel
 	@api countryOptions
 	@api disabled
+	@api fieldLevelHelp
 	@api postalCode
 	@api postalCodeLabel
 	@api province

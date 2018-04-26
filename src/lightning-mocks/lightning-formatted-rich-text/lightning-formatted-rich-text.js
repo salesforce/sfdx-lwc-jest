@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formatted-rich-text extends Element {
+export default class Formattedrichtext extends Element {
     @api value
     
 }

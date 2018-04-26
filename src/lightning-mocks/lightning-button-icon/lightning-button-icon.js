@@ -1,7 +1,13 @@
 import { Element, api } from 'engine';
 
-export default class Button-icon extends Element {
+export default class Buttonicon extends Element {
     @api alternativeText
+	@api ariaAtomic
+	@api ariaControls
+	@api ariaDescribedBy
+	@api ariaExpanded
+	@api ariaLabel
+	@api ariaLive
 	@api disabled
 	@api iconClass
 	@api iconName

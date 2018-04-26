@@ -2,14 +2,21 @@ import { Element, api } from 'engine';
 
 export default class Input extends Element {
     @api accept
+	@api ariaControls
+	@api ariaDescribedBy
+	@api ariaLabel
+	@api ariaLabelledBy
 	@api checked
+	@api dateAriaControls
+	@api dateAriaDescribedBy
+	@api dateAriaLabel
+	@api dateAriaLabelledBy
 	@api disabled
 	@api files
 	@api formatter
 	@api isLoading
 	@api label
 	@api max
-	@api maxlength
 	@api messageToggleActive
 	@api messageToggleInactive
 	@api messageWhenBadInput
@@ -29,6 +36,10 @@ export default class Input extends Element {
 	@api readonly
 	@api required
 	@api step
+	@api timeAriaControls
+	@api timeAriaDescribedBy
+	@api timeAriaLabel
+	@api timeAriaLabelledBy
 	@api type
 	@api validity
 	@api value

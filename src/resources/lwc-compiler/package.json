@@ -1,5 +1,0 @@
-{
-    "name": "lwc-compiler",
-    "version": "0.16.9",
-    "main": "compiler.js"
-}

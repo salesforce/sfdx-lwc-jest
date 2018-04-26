@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formatted-url extends Element {
+export default class Formattedurl extends Element {
     @api label
 	@api target
 	@api tooltip

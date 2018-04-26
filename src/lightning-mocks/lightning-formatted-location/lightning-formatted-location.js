@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formatted-location extends Element {
+export default class Formattedlocation extends Element {
     @api latitude
 	@api longitude
     

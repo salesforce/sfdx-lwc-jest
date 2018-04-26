@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Vertical-navigation-item-badge extends Element {
+export default class Verticalnavigationitembadge extends Element {
     @api assistiveText
 	@api badgeCount
 	@api href

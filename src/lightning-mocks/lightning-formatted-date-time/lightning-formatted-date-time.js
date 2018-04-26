@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formatted-date-time extends Element {
+export default class Formatteddatetime extends Element {
     @api day
 	@api era
 	@api hour

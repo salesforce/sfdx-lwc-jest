@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formatted-email extends Element {
+export default class Formattedemail extends Element {
     @api label
 	@api value
     

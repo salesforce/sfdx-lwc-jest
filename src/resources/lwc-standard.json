@@ -270,6 +270,42 @@
         "type": "STRING"
       },
       {
+        "description": "Indicates whether assistive technologies will present all, or only parts of, the changed region. Valid values are 'true' or 'false'.",
+        "name": "ariaAtomic",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that this button controls the contents or presence of.",
+        "name": "ariaControls",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that provides descriptive labels for the button.",
+        "name": "ariaDescribedBy",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Indicates whether an element the button controls is expanded or collapsed. Valid values are 'true' or 'false'.",
+        "name": "ariaExpanded",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Label describing the button to assistive technologies.",
+        "name": "ariaLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Indicates that the button will be updated. Valid values are 'assertive', 'polite', or 'off'.",
+        "name": "ariaLive",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "A CSS class for the outer element, in addition to the component's base classes.",
         "name": "class",
         "required": false,
@@ -611,7 +647,7 @@
     "description": "A collection of images that are displayed one at a time.",
     "extensible": false,
     "minVersion": "42.0",
-    "support": "GA"
+    "support": "BETA"
   },
   "checkbox-group": {
     "@type": "COMPONENT",
@@ -773,7 +809,7 @@
       {
         "description": "Specifies the name of an input element.",
         "name": "name",
-        "required": true,
+        "required": false,
         "type": "STRING"
       },
       {
@@ -894,6 +930,12 @@
         "type": "BOOLEAN"
       },
       {
+        "description": "Specifies an object containing information about cell level, row level, and table level errors. When it's set, error messages are displayed on the table accordingly.",
+        "name": "errors",
+        "required": false,
+        "type": "OBJECT"
+      },
+      {
         "description": "Hides or displays the checkbox column for row selection. To hide the checkbox column, set hideCheckboxColumn to true. The default is false.",
         "name": "hideCheckboxColumn",
         "required": false,
@@ -936,7 +978,19 @@
         "type": "INTEGER"
       },
       {
-        "description": "The action triggered when a header action is clicked. By default, it also closes the header actions menu.",
+        "description": "The action triggered when clicking on the table footer bar's cancel button during inline edit. All edited cells are reverted to their original values.",
+        "name": "oncancel",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when a cell's value changes after an inline edit. Returns the draftValues object.",
+        "name": "oncellchange",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when a header action is clicked. By default, it also closes the header actions menu. Returns the action and columnDefinition objects.",
         "name": "onheaderaction",
         "required": false,
         "type": "AURA.ACTION"
@@ -948,25 +1002,31 @@
         "type": "AURA.ACTION"
       },
       {
-        "description": "The action triggered when the table renders columns the first time and every time its resized an specific column.",
+        "description": "The action triggered when the table renders columns the first time and every time its resized an specific column. Returns columnWidths.",
         "name": "onresize",
         "required": false,
         "type": "AURA.ACTION"
       },
       {
-        "description": "The action triggered when a row action is clicked. By default, it also closes the row actions menu.",
+        "description": "The action triggered when a row action is clicked. By default, it also closes the row actions menu. Returns the eventDetails object.",
         "name": "onrowaction",
         "required": false,
         "type": "AURA.ACTION"
       },
       {
-        "description": "The action triggered when a row is selected.",
+        "description": "The action triggered when a row is selected. Returns the selectedRows object.",
         "name": "onrowselection",
         "required": false,
         "type": "AURA.ACTION"
       },
       {
-        "description": "The action triggered when a column is sorted.",
+        "description": "The action triggered when clicking on the table footer bar's save button during inline edit. Returns the draftValues object.",
+        "name": "onsave",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when a column is sorted. Returns fieldName and sortDirection.",
         "name": "onsort",
         "required": false,
         "type": "AURA.ACTION"
@@ -1040,10 +1100,28 @@
         "type": "STRING"
       },
       {
+        "description": "Label for add button.",
+        "name": "addButtonLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Specifies that an input element should be disabled. This value defaults to false.",
         "name": "disabled",
         "required": false,
         "type": "BOOLEAN"
+      },
+      {
+        "description": "Label for down button.",
+        "name": "downButtonLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Help text detailing the purpose and function of name compound field.",
+        "name": "fieldLevelHelp",
+        "required": false,
+        "type": "STRING"
       },
       {
         "description": "Label for the dual list box.",
@@ -1066,7 +1144,7 @@
       {
         "description": "Specifies the name of an input element.",
         "name": "name",
-        "required": true,
+        "required": false,
         "type": "STRING"
       },
       {
@@ -1100,6 +1178,12 @@
         "type": "BOOLEAN"
       },
       {
+        "description": "Label for remove button.",
+        "name": "removeButtonLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Specifies that an input field must be filled out before submitting the form. This value defaults to false.",
         "name": "required",
         "required": false,
@@ -1130,6 +1214,12 @@
         "type": "INTEGER"
       },
       {
+        "description": "Label for up button.",
+        "name": "upButtonLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Represents the validity states that an element can be in, with respect to constraint validation.",
         "name": "validity",
         "required": false,
@@ -1148,7 +1238,7 @@
         "type": "LIST"
       },
       {
-        "description": "The variant changes the appearance of an input field. Accepted variants include standard and label-hidden. This value defaults to standard.",
+        "description": "The variant changes the appearance of the compound field. Accepted variants include standard and label-hidden. This value defaults to standard.",
         "name": "variant",
         "required": false,
         "type": "STRING"
@@ -1273,56 +1363,6 @@
     "description": "A file uploader for uploading and attaching files to records.",
     "extensible": false,
     "support": "BETA"
-  },
-  "formatted-url": {
-    "@type": "COMPONENT",
-    "attributes": [
-      {
-        "description": "A CSS class for the outer element, in addition to the component's base classes.",
-        "name": "class",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The text to display in the link.",
-        "name": "label",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The action triggered when the URL is clicked.",
-        "name": "onclick",
-        "required": false,
-        "type": "AURA.ACTION"
-      },
-      {
-        "description": "Specifies where to open the link. Options include _blank, _parent, _self, and _top.",
-        "name": "target",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Displays tooltip text when the mouse moves over the element.",
-        "name": "title",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The text to display when the mouse hovers over the link.",
-        "name": "tooltip",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The URL to be formatted.",
-        "name": "value",
-        "required": false,
-        "type": "STRING"
-      }
-    ],
-    "description": "Displays a URL as a hyperlink. This component requires API version 41.0 and later.",
-    "extensible": false,
-    "support": "GA"
   },
   "formatted-address": {
     "@type": "COMPONENT",
@@ -1663,6 +1703,12 @@
         "type": "STRING"
       },
       {
+        "description": "The number formatting style to use. Possible values are decimal, currency, and percent. This value defaults to decimal.",
+        "name": "formatStyle",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Displays tooltip text when the mouse moves over the element.",
         "name": "title",
         "required": false,
@@ -1796,6 +1842,56 @@
     "extensible": false,
     "support": "GA"
   },
+  "formatted-url": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The text to display in the link.",
+        "name": "label",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The action triggered when the URL is clicked.",
+        "name": "onclick",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Specifies where to open the link. Options include _blank, _parent, _self, and _top.",
+        "name": "target",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The text to display when the mouse hovers over the link.",
+        "name": "tooltip",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The URL to be formatted.",
+        "name": "value",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Displays a URL as a hyperlink. This component requires API version 41.0 and later.",
+    "extensible": false,
+    "support": "GA"
+  },
   "helptext": {
     "@type": "COMPONENT",
     "attributes": [
@@ -1857,6 +1953,12 @@
         "type": "STRING"
       },
       {
+        "description": "A uri path to a custom svg sprite, including the name of the resouce, for example: /assets/icons/standard-sprite/svg/test.svg#icon-heart",
+        "name": "src",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Displays tooltip text when the mouse moves over the element.",
         "name": "title",
         "required": false,
@@ -1890,6 +1992,30 @@
         "type": "STRING"
       },
       {
+        "description": "A space-separated list of element IDs whose presence or content is controlled by the input.",
+        "name": "ariaControls",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that provide descriptive labels for the input.",
+        "name": "ariaDescribedBy",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Describes the input to assistive technologies.",
+        "name": "ariaLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that provide labels for the input.",
+        "name": "ariaLabelledBy",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Specifies whether the checkbox is checked. This value defaults to false.",
         "name": "checked",
         "required": false,
@@ -1898,6 +2024,30 @@
       {
         "description": "A CSS class for the outer element, in addition to the component's base classes.",
         "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs whose presence or content is controlled by the date input when type=datetime. On mobile devices, this is merged with ariaControls and timeAriaControls to describe the native date time input.",
+        "name": "dateAriaControls",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that provide descriptive labels for the date input when type=datetime. On mobile devices, this is merged with ariaDescribedBy and timeAriaDescribedBy to describe the native date time input.",
+        "name": "dateAriaDescribedBy",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Describes the date input to assistive technologies when type=datetime. On mobile devices, this label is merged with ariaLabel and timeAriaLabel to describe the native date time input.",
+        "name": "dateAriaLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that provide labels for the date input when type=datetime. On mobile devices, this is merged with ariaLabelledBy and timeAriaLabelledBy to describe the native date time input.",
+        "name": "dateAriaLabelledBy",
         "required": false,
         "type": "STRING"
       },
@@ -2024,7 +2174,7 @@
       {
         "description": "Specifies the name of an input element.",
         "name": "name",
-        "required": true,
+        "required": false,
         "type": "STRING"
       },
       {
@@ -2080,6 +2230,30 @@
         "name": "tabindex",
         "required": false,
         "type": "INTEGER"
+      },
+      {
+        "description": "A space-separated list of element IDs whose presence or content is controlled by the time input when type=datetime. On mobile devices, this is merged with ariaControls and dateAriaControls to describe the native date time input.",
+        "name": "timeAriaControls",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that provide descriptive labels for the time input when type=datetime. On mobile devices, this is merged with ariaDescribedBy and dateAriaDescribedBy to describe the native date time input.",
+        "name": "timeAriaDescribedBy",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Describes the time input to assistive technologies when type=datetime. On mobile devices, this label is merged with ariaLabel and dateAriaLabel to describe the native date time input.",
+        "name": "timeAriaLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that provide labels for the time input when type=datetime. On mobile devices, this is merged with ariaLabelledBy and dateAriaLabelledBy to describe the native date time input.",
+        "name": "timeAriaLabelledBy",
+        "required": false,
+        "type": "STRING"
       },
       {
         "description": "Displays tooltip text when the mouse moves over the element.",
@@ -2176,6 +2350,12 @@
         "name": "disabled",
         "required": false,
         "type": "BOOLEAN"
+      },
+      {
+        "description": "Help text detailing the purpose and function of the address compound field.",
+        "name": "fieldLevelHelp",
+        "required": false,
+        "type": "STRING"
       },
       {
         "description": "The action triggered when the input releases focus.",
@@ -2282,6 +2462,12 @@
         "type": "STRING"
       },
       {
+        "description": "The action triggered when the input value changes.",
+        "name": "onchange",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
         "description": "The field value, which overrides the existing value.",
         "name": "value",
         "required": false,
@@ -2306,6 +2492,12 @@
         "name": "disabled",
         "required": false,
         "type": "BOOLEAN"
+      },
+      {
+        "description": "Help text detailing the purpose and function of name compound field.",
+        "name": "fieldLevelHelp",
+        "required": false,
+        "type": "STRING"
       },
       {
         "description": "Text label for the compound field.",
@@ -2386,6 +2578,12 @@
         "name": "disabled",
         "required": false,
         "type": "BOOLEAN"
+      },
+      {
+        "description": "Help text detailing the purpose and function of name compound field.",
+        "name": "fieldLevelHelp",
+        "required": false,
+        "type": "STRING"
       },
       {
         "description": "List of fields to be displayed on the component. This value defaults to ['firstName', 'salutation', 'lastName']. Other field values include middleName, informalName, suffix.",
@@ -2534,6 +2732,18 @@
         "type": "LIST"
       },
       {
+        "description": "Text label for the rich text editor.",
+        "name": "label",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Specifies whether the label is visible or not. The default is false.",
+        "name": "labelVisible",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
         "description": "Error message that's displayed when valid is false.",
         "name": "messageWhenBadInput",
         "required": false,
@@ -2582,7 +2792,7 @@
         "type": "STRING"
       },
       {
-        "description": "The variant changes the appearance of the toolbar. Accepted variants include bottom-toolbar.",
+        "description": "The variant changes the appearance of the toolbar. Accepted variants include bottom-toolbar",
         "name": "variant",
         "required": false,
         "type": "STRING"
@@ -2597,6 +2807,45 @@
       }
     ],
     "minVersion": "0.0",
+    "support": "GA"
+  },
+  "navigation": {
+    "@type": "COMPONENT",
+    "description": "Generates URL for a given pageReference. This component requires API version 43.0 and later.",
+    "extensible": false,
+    "methods": [
+      {
+        "attributes": [
+          {
+            "description": "Defines the page reference. Required properties include 'type' and 'attributes'. 'state' is optional.",
+            "name": "pageReference",
+            "required": true,
+            "type": "OBJECT"
+          }
+        ],
+        "description": "Generates a URL for a given pageReference. Returns a Promise javascript object that resolves to a URL.",
+        "name": "generateUrl"
+      },
+      {
+        "attributes": [
+          {
+            "description": "Defines the page reference. Required properties include 'type' and 'attributes'. 'state' is optional.",
+            "name": "pageReference",
+            "required": true,
+            "type": "OBJECT"
+          },
+          {
+            "description": "Indicates that the new page should replace the current page in the navigation history.",
+            "name": "replace",
+            "required": false,
+            "type": "BOOLEAN"
+          }
+        ],
+        "description": "Requests navigation to the specified page reference.",
+        "name": "navigate"
+      }
+    ],
+    "minVersion": "43.0",
     "support": "GA"
   },
   "notifications-library": {
@@ -2885,7 +3134,7 @@
       {
         "description": "Specifies the name of an input element.",
         "name": "name",
-        "required": true,
+        "required": false,
         "type": "STRING"
       },
       {
@@ -2973,6 +3222,142 @@
         "name": "showHelpMessageIfInvalid"
       }
     ],
+    "support": "GA"
+  },
+  "record-edit-form": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The API name of the object.",
+        "name": "objectApiName",
+        "required": true,
+        "type": "STRING"
+      },
+      {
+        "description": "The action triggered when there is an error on form submission.",
+        "name": "onerror",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the form data is loaded.",
+        "name": "onload",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the form is submitted.",
+        "name": "onsubmit",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the form is saved.",
+        "name": "onsuccess",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The ID of the record to be displayed.",
+        "name": "recordId",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The ID of the record type, which is required if you created multiple record types but don't have a default.",
+        "name": "recordTypeId",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Represents a record edit layout that displays one or more fields, provided by lightning:outputField. This component requires API version 41.0 and later.",
+    "extensible": false,
+    "methods": [
+      {
+        "name": "submit"
+      }
+    ],
+    "minVersion": "41.0",
+    "support": "GA"
+  },
+  "record-form": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Specifies the number of columns for the form.",
+        "name": "columns",
+        "required": false,
+        "type": "NUMBER"
+      },
+      {
+        "description": "List of fields to be displayed.",
+        "name": "fields",
+        "required": false,
+        "type": "STRING[]"
+      },
+      {
+        "description": "The type of layout to use to display the form fields. Possible values: COMPACT, FULL.",
+        "name": "layoutType",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Specifies the interaction and display style for the form. Possible values: view, edit, readonly",
+        "name": "mode",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The API name of the object.",
+        "name": "objectApiName",
+        "required": true,
+        "type": "STRING"
+      },
+      {
+        "description": "The action triggered when there is an error on form submission.",
+        "name": "onerror",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the form data is loaded.",
+        "name": "onload",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the form is submitted.",
+        "name": "onsubmit",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the form is saved.",
+        "name": "onsuccess",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The ID of the record to be displayed.",
+        "name": "recordId",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Creates an editable form or display form for a record. This component requires API version 43.0 and later.",
+    "extensible": false,
     "support": "GA"
   },
   "record-view-form": {
@@ -3284,6 +3669,12 @@
         "type": "STRING"
       },
       {
+        "description": "Error message to be displayed when the value is too short.",
+        "name": "messageWhenTooShort",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Error message to be displayed when the value is missing.",
         "name": "messageWhenValueMissing",
         "required": false,
@@ -3298,7 +3689,7 @@
       {
         "description": "Specifies the name of an input element.",
         "name": "name",
-        "required": true,
+        "required": false,
         "type": "STRING"
       },
       {
@@ -3371,6 +3762,10 @@
     "description": "Represents a multiline text input.",
     "extensible": false,
     "methods": [
+      {
+        "description": "Sets focus on the element.",
+        "name": "focus"
+      },
       {
         "description": "Shows the help message if the form control is in an invalid state.",
         "name": "showHelpMessageIfInvalid"

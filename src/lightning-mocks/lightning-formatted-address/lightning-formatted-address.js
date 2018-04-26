@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formatted-address extends Element {
+export default class Formattedaddress extends Element {
     @api city
 	@api country
 	@api disabled
