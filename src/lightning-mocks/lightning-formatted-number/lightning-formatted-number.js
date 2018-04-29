@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formattednumber extends Element {
+export default class FormattedNumber extends Element {
     @api currencyCode
 	@api currencyDisplayAs
 	@api maximumFractionDigits

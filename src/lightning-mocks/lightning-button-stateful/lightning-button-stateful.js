@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Buttonstateful extends Element {
+export default class ButtonStateful extends Element {
     @api iconNameWhenHover
 	@api iconNameWhenOff
 	@api iconNameWhenOn

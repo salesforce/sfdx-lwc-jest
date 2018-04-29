@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Treegrid extends Element {
+export default class TreeGrid extends Element {
     @api columns
 	@api data
 	@api expandedRows

@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Inputname extends Element {
+export default class InputName extends Element {
     @api disabled
 	@api fieldLevelHelp
 	@api fieldsToDisplay

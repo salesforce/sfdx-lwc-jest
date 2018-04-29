@@ -42,8 +42,11 @@ const globalHTMLProperties = [
 ];
 
 Object.keys(metadata).forEach((cmp) => {
-    let className = cmp.charAt(0).toUpperCase() + cmp.substring(1);
-    className = className.replace(/-/g, '');
+    let split = cmp.split('-');
+    split = split.map(entry => {
+        return entry.charAt(0).toUpperCase() + entry.substring(1);
+    });
+    const className = split.join('');
 
     let attributes = [];
     metadata[cmp].attributes && metadata[cmp].attributes.forEach((attr) => {

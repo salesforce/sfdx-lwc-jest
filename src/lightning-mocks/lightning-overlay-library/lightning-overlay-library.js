@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Overlaylibrary extends Element {
+export default class OverlayLibrary extends Element {
     
     @api close() {}
 	@api hide() {}

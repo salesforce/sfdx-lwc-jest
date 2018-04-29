@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Relativedatetime extends Element {
+export default class RelativeDateTime extends Element {
     @api value
     
 }

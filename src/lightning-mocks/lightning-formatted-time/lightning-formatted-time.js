@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formattedtime extends Element {
+export default class FormattedTime extends Element {
     @api value
     
 }

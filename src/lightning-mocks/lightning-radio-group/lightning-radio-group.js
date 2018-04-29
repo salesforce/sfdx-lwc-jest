@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Radiogroup extends Element {
+export default class RadioGroup extends Element {
     @api disabled
 	@api label
 	@api messageWhenValueMissing

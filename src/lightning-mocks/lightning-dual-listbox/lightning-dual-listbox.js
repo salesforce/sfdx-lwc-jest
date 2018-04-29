@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Duallistbox extends Element {
+export default class DualListbox extends Element {
     @api addButtonLabel
 	@api disabled
 	@api downButtonLabel

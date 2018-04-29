@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Inputrichtext extends Element {
+export default class InputRichText extends Element {
     @api ariaDescribedby
 	@api ariaLabel
 	@api ariaLabelledby

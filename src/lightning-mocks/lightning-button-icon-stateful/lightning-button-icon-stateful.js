@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Buttoniconstateful extends Element {
+export default class ButtonIconStateful extends Element {
     @api alternativeText
 	@api disabled
 	@api iconName

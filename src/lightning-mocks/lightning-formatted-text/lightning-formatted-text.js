@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Formattedtext extends Element {
+export default class FormattedText extends Element {
     @api linkify
 	@api value
     

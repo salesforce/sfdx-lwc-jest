@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Recordform extends Element {
+export default class RecordForm extends Element {
     @api columns
 	@api fields
 	@api layoutType

@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Checkboxgroup extends Element {
+export default class CheckboxGroup extends Element {
     @api disabled
 	@api label
 	@api messageWhenValueMissing

@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Recordviewform extends Element {
+export default class RecordViewForm extends Element {
     @api objectApiName
 	@api recordId
     

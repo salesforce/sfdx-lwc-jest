@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Inputaddress extends Element {
+export default class InputAddress extends Element {
     @api addressLabel
 	@api city
 	@api cityLabel

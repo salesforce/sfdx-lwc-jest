@@ -1,6 +1,6 @@
 import { Element, api } from 'engine';
 
-export default class Fileupload extends Element {
+export default class FileUpload extends Element {
     @api accept
 	@api disabled
 	@api label
