@@ -1,7 +1,2 @@
-import { Element, api } from 'engine';
-
-export default class Navigation extends Element {
-    
-    @api generateUrl() {}
-	@api navigate() {}
-}
+export const getNavigationService = jest.fn();
+export const getPageReference = jest.fn(); 
