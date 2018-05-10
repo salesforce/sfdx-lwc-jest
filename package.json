@@ -27,7 +27,7 @@
     "lwc-jest-transformer": "0.19.200",
     "lwc-module-resolver": "0.19.3",
     "lwc-wire-service": "0.19.3",
-    "lwc-wire-service-jest-util": "1.1.3",
+    "lwc-wire-service-jest-util": "2.1.3",
     "yargs": "^10.0.3"
   },
   "publishConfig": {

@@ -3046,9 +3046,9 @@ lwc-template-compiler@0.19.3:
     he "^1.1.1"
     parse5-with-errors "^4.0.1"
 
-lwc-wire-service-jest-util@1.1.3:
-  version "1.1.3"
-  resolved "http://npm.lwcjs.org/lwc-wire-service-jest-util/-/lwc-wire-service-jest-util-1.1.3/23a3946354d813fe14d524fb9505a4c880548308.tgz#23a3946354d813fe14d524fb9505a4c880548308"
+lwc-wire-service-jest-util@2.1.3:
+  version "2.1.3"
+  resolved "http://npm.lwcjs.org/lwc-wire-service-jest-util/-/lwc-wire-service-jest-util-2.1.3/ed2b8092f7c88d24235f8606e3f1ac5d04b6158f.tgz#ed2b8092f7c88d24235f8606e3f1ac5d04b6158f"
 
 lwc-wire-service@0.19.3:
   version "0.19.3"
