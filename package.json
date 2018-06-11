@@ -10,7 +10,7 @@
     "lts-jest": "src/index.js"
   },
   "scripts": {
-    "build": "./bin/install-jest-mocks.js",
+    "updateMocks": "./bin/install-jest-mocks.js",
     "release": "npm publish"
   },
   "dependencies": {
