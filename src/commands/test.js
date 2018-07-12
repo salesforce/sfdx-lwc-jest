@@ -76,7 +76,7 @@ module.exports = {
 
         const sfdxProjectJson = getSfdxProjectJson();
         const apiVersion = sfdxProjectJson.sourceApiVersion;
-        if (apiVersion !== '43.0') {
+        if (apiVersion !== '44.0') {
             error(`Invalid sourceApiVersion found in sfdx-project.json. Expected 43.0, found ${apiVersion}`);
         }
 
