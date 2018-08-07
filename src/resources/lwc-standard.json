@@ -1,4 +1,82 @@
 {
+  "accordion": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "The activeSectionName changes the default expanded section. The first section in the accordion is expanded by default.",
+        "name": "activeSectionName",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "If true, all sections will be closed by default and the accordion will allow multiple sections open at a time.",
+        "name": "allowMultipleSectionsOpen",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Action fired when the open sections change, it contains all open sections.",
+        "name": "onsectiontoggle",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "A collection of vertically stacked sections with multiple content areas. This component requires version 41.0 and later.",
+    "extensible": false,
+    "minVersion": "41.0",
+    "support": "GA"
+  },
+  "accordion-section": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "Enables a custom menu implementation. Actions are displayed to the right of the section title.",
+        "name": "actions",
+        "required": false,
+        "type": "AURA.COMPONENT[]"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The text that displays as the title of the section.",
+        "name": "label",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The unique section name to use with the activeSectionName attribute in the lightning:accordion component.",
+        "name": "name",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "A single section that is nested in a lightning:accordion component. This component requires version 41.0 and later.",
+    "extensible": false,
+    "minVersion": "41.0",
+    "support": "GA"
+  },
   "avatar": {
     "@type": "COMPONENT",
     "attributes": [
@@ -155,6 +233,42 @@
       {
         "description": "Specifies a shortcut key to activate or focus an element.",
         "name": "accesskey",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Indicates whether assistive technologies will present all, or only parts of, the changed region. Valid values are 'true' or 'false'.",
+        "name": "ariaAtomic",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that this button controls the contents or presence of.",
+        "name": "ariaControls",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A space-separated list of element IDs that provides descriptive labels for the button.",
+        "name": "ariaDescribedBy",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Indicates whether an element the button controls is expanded or collapsed. Valid values are 'true' or 'false'.",
+        "name": "ariaExpanded",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Label describing the button to assistive technologies.",
+        "name": "ariaLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Indicates that the button will be updated. Valid values are 'assertive', 'polite', or 'off'.",
+        "name": "ariaLive",
         "required": false,
         "type": "STRING"
       },
@@ -610,6 +724,51 @@
     "minVersion": "0.0",
     "support": "GA"
   },
+  "card": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "Actions are components such as button or buttonIcon. Actions are displayed in the header.",
+        "name": "actions",
+        "required": false,
+        "type": "AURA.COMPONENT[]"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The footer can include text or another component",
+        "name": "footer",
+        "required": false,
+        "type": "OBJECT"
+      },
+      {
+        "description": "The Lightning Design System name of the icon. Names are written in the format 'utility:down' where 'utility' is the category, and 'down' is the specific icon to be displayed. The icon is displayed in the header to the left of the title.",
+        "name": "iconName",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The title can include text or another component, and is displayed in the header.",
+        "name": "title",
+        "required": true,
+        "type": "OBJECT"
+      },
+      {
+        "description": "The variant changes the appearance of the card. Accepted variants include base or narrow. This value defaults to base.",
+        "name": "variant",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Cards are used to apply a container around a related grouping of information.",
+    "extensible": false,
+    "minVersion": "0.0",
+    "support": "GA"
+  },
   "carousel": {
     "@type": "COMPONENT",
     "attributes": [
@@ -652,6 +811,12 @@
   "checkbox-group": {
     "@type": "COMPONENT",
     "attributes": [
+      {
+        "description": "Specifies a shortcut key to activate or focus an element.",
+        "name": "accesskey",
+        "required": false,
+        "type": "STRING"
+      },
       {
         "description": "A CSS class for the outer element, in addition to the component's base classes.",
         "name": "class",
@@ -713,6 +878,12 @@
         "type": "BOOLEAN"
       },
       {
+        "description": "Specifies the tab order of an element (when the tab button is used for navigating).",
+        "name": "tabindex",
+        "required": false,
+        "type": "INTEGER"
+      },
+      {
         "description": "Displays tooltip text when the mouse moves over the element.",
         "name": "title",
         "required": false,
@@ -727,6 +898,12 @@
     ],
     "description": "A checkbox group that enables selection of single or multiple options. This component requires API version 41.0 and later.",
     "extensible": false,
+    "methods": [
+      {
+        "description": "Sets focus on the element.",
+        "name": "focus"
+      }
+    ],
     "support": "GA"
   },
   "click-to-dial": {
@@ -1364,60 +1541,12 @@
     "extensible": false,
     "support": "BETA"
   },
-  "formatted-address": {
+  "form-element": {
     "@type": "COMPONENT",
     "attributes": [
       {
-        "description": "The city detail for the address.",
-        "name": "city",
-        "required": false,
-        "type": "STRING"
-      },
-      {
         "description": "A CSS class for the outer element, in addition to the component's base classes.",
         "name": "class",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The country detail for the address.",
-        "name": "country",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Specifies whether the address is clickable. This value defaults to false.",
-        "name": "disabled",
-        "required": false,
-        "type": "BOOLEAN"
-      },
-      {
-        "description": "The latitude of the location if known. Latitude values must be within -90 and 90.",
-        "name": "latitude",
-        "required": false,
-        "type": "DECIMAL"
-      },
-      {
-        "description": "The longitude of the location if known. Longitude values must be within -180 and 180.",
-        "name": "longitude",
-        "required": false,
-        "type": "DECIMAL"
-      },
-      {
-        "description": "The postal code detail for the address.",
-        "name": "postalCode",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The province detail for the address.",
-        "name": "province",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The street detail for the address.",
-        "name": "street",
         "required": false,
         "type": "STRING"
       },
@@ -1428,8 +1557,9 @@
         "type": "STRING"
       }
     ],
-    "description": "Displays a formatted address that provides a link to the given location on Google Maps. This component requires API version 42.0 and later.",
+    "description": "Represents a form element.",
     "extensible": false,
+    "minVersion": "44.0",
     "support": "GA"
   },
   "formatted-date-time": {
@@ -1524,6 +1654,74 @@
     "extensible": false,
     "minVersion": "0.0",
     "support": "BETA"
+  },
+  "formatted-address": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "The city detail for the address.",
+        "name": "city",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The country detail for the address.",
+        "name": "country",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Specifies whether the address is clickable. This value defaults to false.",
+        "name": "disabled",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "The latitude of the location if known. Latitude values must be within -90 and 90.",
+        "name": "latitude",
+        "required": false,
+        "type": "DECIMAL"
+      },
+      {
+        "description": "The longitude of the location if known. Longitude values must be within -180 and 180.",
+        "name": "longitude",
+        "required": false,
+        "type": "DECIMAL"
+      },
+      {
+        "description": "The postal code detail for the address.",
+        "name": "postalCode",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The province detail for the address.",
+        "name": "province",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The street detail for the address.",
+        "name": "street",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Displays a formatted address that provides a link to the given location on Google Maps. This component requires API version 42.0 and later.",
+    "extensible": false,
+    "support": "GA"
   },
   "formatted-email": {
     "@type": "COMPONENT",
@@ -1699,12 +1897,6 @@
       {
         "description": "The number formatting style to use. Possible values are decimal, currency, and percent. This value defaults to decimal.",
         "name": "style",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The number formatting style to use. Possible values are decimal, currency, and percent. This value defaults to decimal.",
-        "name": "formatStyle",
         "required": false,
         "type": "STRING"
       },
@@ -2456,6 +2648,12 @@
         "type": "STRING"
       },
       {
+        "description": "Whether or not the field is disabled. Defaults to false for readonly fields, true for other fields.",
+        "name": "disabled",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
         "description": "The API name of the field to be displayed.",
         "name": "fieldName",
         "required": false,
@@ -2768,6 +2966,12 @@
         "type": "STRING"
       },
       {
+        "description": "Entity ID to share the image with.",
+        "name": "shareWithEntityId",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Specifies the tab order of an element (when the tab button is used for navigating).",
         "name": "tabindex",
         "required": false,
@@ -2806,6 +3010,126 @@
         "name": "focus"
       }
     ],
+    "minVersion": "0.0",
+    "support": "GA"
+  },
+  "layout": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "Body of the layout component.",
+        "name": "body",
+        "required": false,
+        "type": "AURA.COMPONENT[]"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Determines how to spread the layout items horizontally. The alignment options are center, space, spread, and end.",
+        "name": "horizontalAlign",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Determines whether to wrap the child items when they exceed the layout width. If true, the items wrap to the following line. This value defaults to false.",
+        "name": "multipleRows",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Pulls layout items to the layout boundaries and corresponds to the padding size on the layout item. Possible values are small, medium, or large.",
+        "name": "pullToBoundary",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Determines how to spread the layout items vertically. The alignment options are start, center, end, and stretch.",
+        "name": "verticalAlign",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Represents a responsive grid system for arranging containers on a page.",
+    "extensible": false,
+    "minVersion": "0.0",
+    "support": "GA"
+  },
+  "layout-item": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "Sets alignment bump. Allowed values are left, top, right, bottom.",
+        "name": "alignmentBump",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The body of the component. In markup, this is everything in the body of the tag.",
+        "name": "body",
+        "required": false,
+        "type": "AURA.COMPONENT[]"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Make the item fluid so that it absorbs any extra space in its container or shrinks when there is less space. Allowed values are: auto (columns grow or shrink equally as space allows), shrink (columns shrink equally as space decreases), no-shrink (columns don't shrink as space reduces), grow (columns grow equally as space increases), no-grow (columns don't grow as space increases), no-flex (columns don't grow or shrink as space changes). Use a comma-separated value for multiple options, such as 'auto, no-shrink'.",
+        "name": "flexibility",
+        "required": false,
+        "type": "OBJECT"
+      },
+      {
+        "description": "If the viewport is divided into 12 parts, this attribute indicates the relative space the container occupies on device-types larger than desktop. It is expressed as an integer from 1 through 12.",
+        "name": "largeDeviceSize",
+        "required": false,
+        "type": "INTEGER"
+      },
+      {
+        "description": "If the viewport is divided into 12 parts, this attribute indicates the relative space the container occupies on device-types larger than tablet. It is expressed as an integer from 1 through 12.",
+        "name": "mediumDeviceSize",
+        "required": false,
+        "type": "INTEGER"
+      },
+      {
+        "description": "Sets padding to either the right and left sides of a container, or all sides of a container. Allowed values are horizontal-small, horizontal-medium, horizontal-large, around-small, around-medium, around-large.",
+        "name": "padding",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "If the viewport is divided into 12 parts, size indicates the relative space the container occupies. Size is expressed as an integer from 1 through 12. This applies for all device-types.",
+        "name": "size",
+        "required": false,
+        "type": "INTEGER"
+      },
+      {
+        "description": "If the viewport is divided into 12 parts, this attribute indicates the relative space the container occupies on device-types larger than mobile. It is expressed as an integer from 1 through 12.",
+        "name": "smallDeviceSize",
+        "required": false,
+        "type": "INTEGER"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "The basic element of lightning:layout.",
+    "extensible": false,
     "minVersion": "0.0",
     "support": "GA"
   },
@@ -3098,6 +3422,51 @@
     "extensible": false,
     "support": "GA"
   },
+  "progress-indicator": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The current step, which must match the value attribute of one of progressStep components. If a step is not provided, the value of the first progressStep component is used.",
+        "name": "currentStep",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Indicates whether the current step is in error state and displays a warning icon on the step indicator. Applies to the base type only. This value defaults to false.",
+        "name": "hasError",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Changes the visual pattern of the indicator. Valid values are base and path. This value defaults to base.",
+        "name": "type",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Changes the appearance of the progress indicator for the base type only. Valid values are base or shaded. The shaded variant adds a light gray border to the step indicators. This value defaults to base.",
+        "name": "variant",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Provides a visual indication on the progress of a particular process. This component is available in version 41.0 and later.",
+    "extensible": false,
+    "minVersion": "41.0",
+    "support": "BETA"
+  },
   "radio-group": {
     "@type": "COMPONENT",
     "attributes": [
@@ -3308,7 +3677,7 @@
         "type": "STRING[]"
       },
       {
-        "description": "The type of layout to use to display the form fields. Possible values: COMPACT, FULL.",
+        "description": "The type of layout to use to display the form fields. Possible values: Compact, Full.",
         "name": "layoutType",
         "required": false,
         "type": "STRING"
@@ -3352,6 +3721,12 @@
       {
         "description": "The ID of the record to be displayed.",
         "name": "recordId",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The ID of the record type, which is required if you created multiple record types but don't have a default.",
+        "name": "recordTypeId",
         "required": false,
         "type": "STRING"
       }
@@ -3774,6 +4149,45 @@
     "minVersion": "0.0",
     "support": "GA"
   },
+  "tile": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The URL of the page that the link goes to.",
+        "name": "href",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The text label that displays in the tile and hover text.",
+        "name": "label",
+        "required": true,
+        "type": "STRING"
+      },
+      {
+        "description": "The icon or figure that's displayed next to the textual information.",
+        "name": "media",
+        "required": false,
+        "type": "AURA.COMPONENT[]"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "A grouping of related information associated with a record.",
+    "extensible": false,
+    "minVersion": "0.0",
+    "support": "GA"
+  },
   "tree": {
     "@type": "COMPONENT",
     "attributes": [
@@ -3934,6 +4348,63 @@
     "extensible": false,
     "support": "GA"
   },
+  "vertical-navigation": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "The aria label attribute for the navigation component",
+        "name": "ariaLabel",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Specify true to reduce spacing between navigation items. This value defaults to false.",
+        "name": "compact",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Action fired before an item is selected. The event params include the `name` of the selected item. To prevent the onselect handler from running, call event.preventDefault() in the onbeforeselect handler.",
+        "name": "onbeforeselect",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Action fired when an item is selected. The event params include the `name` of the selected item.",
+        "name": "onselect",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Name of the nagivation item to make active.",
+        "name": "selectedItem",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Specify true when the vertical navigation is sitting on top of a shaded background. This value defaults to false.",
+        "name": "shaded",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Represents a vertical list of links that either take the user to another page or parts of the page the user is in. This component requires API version 41.0 and later.",
+    "extensible": false,
+    "minVersion": "41.0",
+    "support": "GA"
+  },
   "vertical-navigation-item": {
     "@type": "COMPONENT",
     "attributes": [
@@ -4064,6 +4535,54 @@
     ],
     "description": "A link and icon within a lightning:verticalNavigationSection or lightning:verticalNavigationOverflow. This component requires API version 41.0 and later.",
     "extensible": false,
+    "support": "GA"
+  },
+  "vertical-navigation-overflow": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Represents an overflow of items from a preceding lightning:verticalNavigationSection, with the ability to toggle visibility. This component requires API 41.0 and later.",
+    "extensible": false,
+    "minVersion": "41.0",
+    "support": "GA"
+  },
+  "vertical-navigation-section": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The heading text for this section.",
+        "name": "label",
+        "required": true,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Represents a section within a lightning:verticalNavigation. This component requires API version 41.0 and later.",
+    "extensible": false,
+    "minVersion": "41.0",
     "support": "GA"
   }
 }

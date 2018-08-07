@@ -7,5 +7,6 @@ export default class RecordForm extends Element {
 	@api mode
 	@api objectApiName
 	@api recordId
+	@api recordTypeId
     
 }

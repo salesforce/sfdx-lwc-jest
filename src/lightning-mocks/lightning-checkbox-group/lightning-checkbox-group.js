@@ -8,5 +8,5 @@ export default class CheckboxGroup extends Element {
 	@api options
 	@api required
 	@api value
-    
+    @api focus() {}
 }

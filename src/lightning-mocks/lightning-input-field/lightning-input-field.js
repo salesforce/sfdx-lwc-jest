@@ -1,7 +1,8 @@
 import { Element, api } from 'engine';
 
 export default class InputField extends Element {
-    @api fieldName
+    @api disabled
+	@api fieldName
 	@api value
     
 }
