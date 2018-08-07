@@ -24,7 +24,7 @@
     "lwc-compiler": "0.24.18",
     "lwc-engine": "0.24.18",
     "lwc-jest-preset": "0.24.18",
-    "lwc-jest-resolver": "0.24.0",
+    "lwc-jest-resolver": "0.24.18",
     "lwc-jest-transformer": "0.24.18",
     "lwc-module-resolver": "0.24.18",
     "lwc-wire-service": "0.24.18",
