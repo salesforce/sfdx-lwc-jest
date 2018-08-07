@@ -10,6 +10,7 @@ export default class InputRichText extends Element {
 	@api labelVisible
 	@api messageWhenBadInput
 	@api placeholder
+	@api shareWithEntityId
 	@api valid
 	@api value
 	@api variant

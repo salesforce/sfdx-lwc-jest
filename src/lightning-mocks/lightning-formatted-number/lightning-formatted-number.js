@@ -8,7 +8,6 @@ export default class FormattedNumber extends Element {
 	@api minimumFractionDigits
 	@api minimumIntegerDigits
 	@api minimumSignificantDigits
-	@api formatStyle
 	@api value
     
 }
