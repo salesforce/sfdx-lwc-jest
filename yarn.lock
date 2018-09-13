@@ -1185,9 +1185,9 @@ babel-plugin-transform-inline-consecutive-adds@^0.5.0-alpha.5a128fd5:
   version "0.5.0-alpha.e9f96ffe"
   resolved "http://npm.lwcjs.org/babel-plugin-transform-inline-consecutive-adds/-/babel-plugin-transform-inline-consecutive-adds-0.5.0-alpha.e9f96ffe/d485c6ca183e15e865fec5731aadc831e2083022.tgz#d485c6ca183e15e865fec5731aadc831e2083022"
 
-babel-plugin-transform-lwc-class@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/babel-plugin-transform-lwc-class/-/babel-plugin-transform-lwc-class-0.24.18/9a9e5bb25bbfa50de20de61d5ab5d7dfdc7c7654.tgz#9a9e5bb25bbfa50de20de61d5ab5d7dfdc7c7654"
+babel-plugin-transform-lwc-class@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/babel-plugin-transform-lwc-class/-/babel-plugin-transform-lwc-class-0.29.1/bf1588ba77e98406d46487c2bd96fc53a923e853.tgz#bf1588ba77e98406d46487c2bd96fc53a923e853"
   dependencies:
     "@babel/helper-module-imports" "7.0.0-beta.49"
     "@babel/plugin-proposal-class-properties" "7.0.0-beta.49"
@@ -1210,9 +1210,9 @@ babel-plugin-transform-property-literals@^6.10.0-alpha.5a128fd5:
   dependencies:
     esutils "^2.0.2"
 
-babel-plugin-transform-proxy-compat@0.18.11:
-  version "0.18.11"
-  resolved "http://npm.lwcjs.org/babel-plugin-transform-proxy-compat/-/babel-plugin-transform-proxy-compat-0.18.11/6c2567c41831f58de3c91cb98920b9276bcb61fc.tgz#6c2567c41831f58de3c91cb98920b9276bcb61fc"
+babel-plugin-transform-proxy-compat@0.18.12:
+  version "0.18.12"
+  resolved "http://npm.lwcjs.org/babel-plugin-transform-proxy-compat/-/babel-plugin-transform-proxy-compat-0.18.12/4ac191063b8d2ffb034aa58eb7bf3b2d1ffbf507.tgz#4ac191063b8d2ffb034aa58eb7bf3b2d1ffbf507"
 
 babel-plugin-transform-regenerator@^6.22.0:
   version "6.26.0"
@@ -1253,9 +1253,9 @@ babel-plugin-transform-undefined-to-void@^6.10.0-alpha.5a128fd5:
   version "6.10.0-alpha.f95869d4"
   resolved "http://npm.lwcjs.org/babel-plugin-transform-undefined-to-void/-/babel-plugin-transform-undefined-to-void-6.10.0-alpha.f95869d4/175a1a3090e616403f8c819cdcea1aecb66523b2.tgz#175a1a3090e616403f8c819cdcea1aecb66523b2"
 
-babel-preset-compat@0.18.11:
-  version "0.18.11"
-  resolved "http://npm.lwcjs.org/babel-preset-compat/-/babel-preset-compat-0.18.11/68d54e19fcd4df57ddec0762f71ca405986be080.tgz#68d54e19fcd4df57ddec0762f71ca405986be080"
+babel-preset-compat@0.18.12:
+  version "0.18.12"
+  resolved "http://npm.lwcjs.org/babel-preset-compat/-/babel-preset-compat-0.18.12/0fef5812e94e96d8f0091b0074ec010884946ba9.tgz#0fef5812e94e96d8f0091b0074ec010884946ba9"
   dependencies:
     "@babel/plugin-proposal-class-properties" "7.0.0-beta.49"
     "@babel/plugin-proposal-object-rest-spread" "7.0.0-beta.49"
@@ -1286,7 +1286,7 @@ babel-preset-compat@0.18.11:
     "@babel/plugin-transform-template-literals" "7.0.0-beta.49"
     "@babel/plugin-transform-typeof-symbol" "7.0.0-beta.49"
     "@babel/plugin-transform-unicode-regex" "7.0.0-beta.49"
-    babel-plugin-transform-proxy-compat "0.18.11"
+    babel-plugin-transform-proxy-compat "0.18.12"
 
 babel-preset-env@^1.6.1:
   version "1.6.1"
@@ -1862,7 +1862,7 @@ debug@^3.1.0:
   dependencies:
     ms "2.0.0"
 
-decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2, decamelize@^1.2.0:
+decamelize@^1.0.0, decamelize@^1.1.1, decamelize@^1.1.2:
   version "1.2.0"
   resolved "http://npm.lwcjs.org/decamelize/-/decamelize-1.2.0/f6534d15148269b20352e7bee26f501f9a191290.tgz#f6534d15148269b20352e7bee26f501f9a191290"
 
@@ -3308,68 +3308,67 @@ lru-cache@^4.0.1:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
 
-lwc-compiler@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-compiler/-/lwc-compiler-0.24.18/25f93449b35dc30eaa7331c3d943d419e402032b.tgz#25f93449b35dc30eaa7331c3d943d419e402032b"
+lwc-compiler@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-compiler/-/lwc-compiler-0.29.1/78760d46827c3207ea602b16a8dd510b7464e2a1.tgz#78760d46827c3207ea602b16a8dd510b7464e2a1"
   dependencies:
     "@babel/core" "7.0.0-beta.49"
     "@babel/plugin-proposal-class-properties" "7.0.0-beta.49"
     "@babel/plugin-proposal-object-rest-spread" "7.0.0-beta.49"
     "@types/chokidar" "^1.7.5"
-    babel-plugin-transform-lwc-class "0.24.18"
-    babel-preset-compat "0.18.11"
+    babel-plugin-transform-lwc-class "0.29.1"
+    babel-preset-compat "0.18.12"
     babel-preset-minify "0.5.0-alpha.5a128fd5"
     cssnano "^3.10.0"
-    lwc-template-compiler "0.24.18"
+    lwc-template-compiler "0.29.1"
     parse5 "^3.0.3"
     postcss "~6.0.19"
-    postcss-plugin-lwc "0.24.18"
+    postcss-plugin-lwc "0.29.1"
     postcss-selector-parser "^3.1.1"
     rollup "0.60.1"
     rollup-plugin-replace "^2.0.0"
 
-lwc-engine@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-engine/-/lwc-engine-0.24.18/fdc987bb2d1ba11a3ce42ebbe4677d8e907da71e.tgz#fdc987bb2d1ba11a3ce42ebbe4677d8e907da71e"
+lwc-engine@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-engine/-/lwc-engine-0.29.1/44fa9504ddafb80eef3161e4801e71cfbe08e0df.tgz#44fa9504ddafb80eef3161e4801e71cfbe08e0df"
   dependencies:
     observable-membrane "0.25.0"
 
-lwc-jest-preset@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-jest-preset/-/lwc-jest-preset-0.24.18/54c3f680cb86a1e429ee6a0a299ab12331e71dc6.tgz#54c3f680cb86a1e429ee6a0a299ab12331e71dc6"
+lwc-jest-preset@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-jest-preset/-/lwc-jest-preset-0.29.1/2023e938667c9472c11da14e7cb1475bc713cbf0.tgz#2023e938667c9472c11da14e7cb1475bc713cbf0"
   dependencies:
-    lwc-jest-resolver "0.24.18"
-    lwc-jest-serializer "0.24.18"
-    lwc-jest-transformer "0.24.18"
-    lwc-test-utils "0.24.18"
+    lwc-jest-resolver "0.29.1"
+    lwc-jest-serializer "0.29.1"
+    lwc-jest-transformer "0.29.1"
+    lwc-test-utils "0.29.1"
 
-lwc-jest-resolver@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-jest-resolver/-/lwc-jest-resolver-0.24.18/3f8ac9c7112713f2db284edb41a962c7fa0bfeac.tgz#3f8ac9c7112713f2db284edb41a962c7fa0bfeac"
+lwc-jest-resolver@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-jest-resolver/-/lwc-jest-resolver-0.29.1/8bdfc09a15c9748bf1c1429c3ebb7267b5b63236.tgz#8bdfc09a15c9748bf1c1429c3ebb7267b5b63236"
 
-lwc-jest-serializer@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-jest-serializer/-/lwc-jest-serializer-0.24.18/f40c418a599e9a69c10a26bd2a3be8b54420dece.tgz#f40c418a599e9a69c10a26bd2a3be8b54420dece"
+lwc-jest-serializer@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-jest-serializer/-/lwc-jest-serializer-0.29.1/c964f33d39b856ed5248f18f3d53e617b7505925.tgz#c964f33d39b856ed5248f18f3d53e617b7505925"
 
-lwc-jest-transformer@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-jest-transformer/-/lwc-jest-transformer-0.24.18/175ea21f9a62206e37bbe95bbb54740b73c42782.tgz#175ea21f9a62206e37bbe95bbb54740b73c42782"
+lwc-jest-transformer@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-jest-transformer/-/lwc-jest-transformer-0.29.1/87f1d9e8d4170538f3f7788e5ac7ba0fcee655cc.tgz#87f1d9e8d4170538f3f7788e5ac7ba0fcee655cc"
   dependencies:
     "@babel/core" "7.0.0-beta.49"
     "@babel/plugin-transform-modules-commonjs" "7.0.0-beta.49"
     "@babel/template" "7.0.0-beta.49"
     deasync "0.1.12"
 
-lwc-module-resolver@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-module-resolver/-/lwc-module-resolver-0.24.18/966336508b10599630c3ef6e1b55370c929ef116.tgz#966336508b10599630c3ef6e1b55370c929ef116"
+lwc-module-resolver@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-module-resolver/-/lwc-module-resolver-0.29.1/9e7cc98ae2fe7906defd62c0e5c736626635d12a.tgz#9e7cc98ae2fe7906defd62c0e5c736626635d12a"
   dependencies:
     glob "^7.1.2"
-    resolve "1.5.0"
 
-lwc-template-compiler@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-template-compiler/-/lwc-template-compiler-0.24.18/34f60a4667fd53a297ac71041dc4a099be3f800a.tgz#34f60a4667fd53a297ac71041dc4a099be3f800a"
+lwc-template-compiler@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-template-compiler/-/lwc-template-compiler-0.29.1/0bed79fe3ab99d91cc6dd4099d803bfb6ae63503.tgz#0bed79fe3ab99d91cc6dd4099d803bfb6ae63503"
   dependencies:
     babel-generator "^6.26.1"
     babel-template "^6.26.0"
@@ -3377,21 +3376,20 @@ lwc-template-compiler@0.24.18:
     babel-types "^6.26.0"
     babylon "^6.17.0"
     camelcase "~5.0.0"
-    decamelize "^1.2.0"
     he "^1.1.1"
     parse5-with-errors "^4.0.1"
 
-lwc-test-utils@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-test-utils/-/lwc-test-utils-0.24.18/176165820e3cb7bf45754f192b6cf4f4b92d26b6.tgz#176165820e3cb7bf45754f192b6cf4f4b92d26b6"
+lwc-test-utils@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-test-utils/-/lwc-test-utils-0.29.1/bf32d105afe955fd28c3a2d540ec6f00dad4c6aa.tgz#bf32d105afe955fd28c3a2d540ec6f00dad4c6aa"
 
 lwc-wire-service-jest-util@2.1.4:
   version "2.1.4"
   resolved "http://npm.lwcjs.org/lwc-wire-service-jest-util/-/lwc-wire-service-jest-util-2.1.4/31b640731754fcc0db870336a9e066c6461fb190.tgz#31b640731754fcc0db870336a9e066c6461fb190"
 
-lwc-wire-service@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/lwc-wire-service/-/lwc-wire-service-0.24.18/1d25b8cec75012eff572791e245488dbea3ac49c.tgz#1d25b8cec75012eff572791e245488dbea3ac49c"
+lwc-wire-service@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/lwc-wire-service/-/lwc-wire-service-0.29.1/604db29d6cde20daa39a6eab6ae12a91b1536c9d.tgz#604db29d6cde20daa39a6eab6ae12a91b1536c9d"
 
 magic-string@^0.22.4:
   version "0.22.5"
@@ -4004,9 +4002,9 @@ postcss-ordered-values@^2.1.0:
     postcss "^5.0.4"
     postcss-value-parser "^3.0.1"
 
-postcss-plugin-lwc@0.24.18:
-  version "0.24.18"
-  resolved "http://npm.lwcjs.org/postcss-plugin-lwc/-/postcss-plugin-lwc-0.24.18/115d2d7bbb39ec0c6d506494a494a26359cd0da1.tgz#115d2d7bbb39ec0c6d506494a494a26359cd0da1"
+postcss-plugin-lwc@0.29.1:
+  version "0.29.1"
+  resolved "http://npm.lwcjs.org/postcss-plugin-lwc/-/postcss-plugin-lwc-0.29.1/cd14475e94d8e9dccec62dda79c16d5c6bb725ff.tgz#cd14475e94d8e9dccec62dda79c16d5c6bb725ff"
   dependencies:
     balanced-match "^1.0.0"
     postcss "^6.0.13"
@@ -4437,12 +4435,6 @@ resolve-url@^0.2.1:
 resolve@1.1.7:
   version "1.1.7"
   resolved "http://npm.lwcjs.org/resolve/-/resolve-1.1.7/203114d82ad2c5ed9e8e0411b3932875e889e97b.tgz#203114d82ad2c5ed9e8e0411b3932875e889e97b"
-
-resolve@1.5.0:
-  version "1.5.0"
-  resolved "http://npm.lwcjs.org/resolve/-/resolve-1.5.0/1f09acce796c9a762579f31b2c1cc4c3cddf9f36.tgz#1f09acce796c9a762579f31b2c1cc4c3cddf9f36"
-  dependencies:
-    path-parse "^1.0.5"
 
 resolve@^1.3.2:
   version "1.8.1"
