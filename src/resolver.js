@@ -12,7 +12,6 @@ const {
 
 const {
     PATH_TO_MODULES,
-    isValidModuleName,
     getInfoFromId,
 } = require('./utils/module.js');
 
@@ -59,10 +58,10 @@ function getModule(modulePath, options) {
     const projectNs = getNamespace();
 
     if (ns === 'lightning') {
-        return getLightningMock(modulePath);
+        return getLightningMock(name);
     }
 
-    if (isValidModuleName(modulePath) && projectNs === ns) {
+    if (projectNs === ns) {
         const paths = getModulePaths();
         for (let i = 0; i < paths.length; i++) {
             const file = resolveAsFile(path.join(PROJECT_ROOT, paths[i], name, name), options.extensions);

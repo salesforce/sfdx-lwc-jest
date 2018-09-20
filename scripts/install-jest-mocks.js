@@ -42,11 +42,9 @@ const globalHTMLProperties = [
 ];
 
 Object.keys(metadata).forEach((cmp) => {
-    let split = cmp.split('-');
-    split = split.map(entry => {
+    const className = cmp.split('-').map(entry => {
         return entry.charAt(0).toUpperCase() + entry.substring(1);
-    });
-    const className = split.join('');
+    }).join('');
 
     let attributes = [];
     metadata[cmp].attributes && metadata[cmp].attributes.forEach((attr) => {
@@ -68,7 +66,7 @@ export default class ${className} extends Element {
     ${methods.join('\n\t')}
 }`;
 
-    writeFiles(cmp, template);
+    writeFiles(className, template);
 });
 
 function writeFiles(cmp, template) {
@@ -77,7 +75,7 @@ function writeFiles(cmp, template) {
         fs.mkdirSync(mocksFolder);
     }
 
-    const cmpName = 'lightning-' + cmp;
+    const cmpName = cmp.charAt(0).toLowerCase() + cmp.substring(1);
     const html = '<template></template>';
     const mocksDir = path.join(__dirname, '..', 'src', 'lightning-mocks');
     const dir = path.join(mocksDir, cmpName);
