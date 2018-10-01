@@ -1,5 +1,5 @@
 const path = require('path');
-const { 
+const {
     PROJECT_ROOT,
     getModulePaths,
 } = require('./utils/project.js');
@@ -27,6 +27,9 @@ const jestConfig = {
     collectCoverageFrom: getCoveragePaths(),
     // temp workaround until this is released - https://github.com/facebook/jest/pull/6792
     testURL: "http://localhost/",
+    snapshotSerializers: [
+        require.resolve('lwc-jest-serializer')
+    ],
 };
 
 module.exports = { jestConfig };

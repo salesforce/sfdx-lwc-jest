@@ -25,6 +25,7 @@
     "lwc-engine": "0.29.1",
     "lwc-jest-preset": "0.29.1",
     "lwc-jest-resolver": "0.29.1",
+    "lwc-jest-serializer": "0.29.1",
     "lwc-jest-transformer": "0.29.1",
     "lwc-module-resolver": "0.29.1",
     "lwc-wire-service": "0.29.1",
