@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Layout extends Element {
+export default class Layout extends LightningElement {
     @api body
 	@api horizontalAlign
 	@api multipleRows

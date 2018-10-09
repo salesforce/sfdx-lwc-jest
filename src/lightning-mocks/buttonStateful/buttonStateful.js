@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class ButtonStateful extends Element {
+export default class ButtonStateful extends LightningElement {
     @api iconNameWhenHover
 	@api iconNameWhenOff
 	@api iconNameWhenOn

@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class VerticalNavigationItemIcon extends Element {
+export default class VerticalNavigationItemIcon extends LightningElement {
     @api href
 	@api iconName
 	@api label

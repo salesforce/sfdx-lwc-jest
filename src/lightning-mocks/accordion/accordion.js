@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Accordion extends Element {
+export default class Accordion extends LightningElement {
     @api activeSectionName
 	@api allowMultipleSectionsOpen
     

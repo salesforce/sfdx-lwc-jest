@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Slider extends Element {
+export default class Slider extends LightningElement {
     @api disabled
 	@api label
 	@api max

@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Badge extends Element {
+export default class Badge extends LightningElement {
     @api label
     
 }

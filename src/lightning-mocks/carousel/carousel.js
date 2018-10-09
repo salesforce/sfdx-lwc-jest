@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Carousel extends Element {
+export default class Carousel extends LightningElement {
     @api disableAutoRefresh
 	@api disableAutoScroll
 	@api scrollDuration

@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class FormattedAddress extends Element {
+export default class FormattedAddress extends LightningElement {
     @api city
 	@api country
 	@api disabled

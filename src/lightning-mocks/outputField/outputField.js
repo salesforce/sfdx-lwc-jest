@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class OutputField extends Element {
+export default class OutputField extends LightningElement {
     @api fieldName
 	@api variant
     

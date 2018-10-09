@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class FormattedRichText extends Element {
+export default class FormattedRichText extends LightningElement {
     @api value
     
 }

@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Input extends Element {
+export default class Input extends LightningElement {
     @api accept
 	@api ariaControls
 	@api ariaDescribedBy

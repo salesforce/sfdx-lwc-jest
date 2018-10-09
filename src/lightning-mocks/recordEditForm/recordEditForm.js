@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class RecordEditForm extends Element {
+export default class RecordEditForm extends LightningElement {
     @api objectApiName
 	@api recordId
 	@api recordTypeId

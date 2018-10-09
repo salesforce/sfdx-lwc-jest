@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Combobox extends Element {
+export default class Combobox extends LightningElement {
     @api disabled
 	@api dropdownAlignment
 	@api label

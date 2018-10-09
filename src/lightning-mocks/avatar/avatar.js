@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Avatar extends Element {
+export default class Avatar extends LightningElement {
     @api alternativeText
 	@api fallbackIconName
 	@api initials

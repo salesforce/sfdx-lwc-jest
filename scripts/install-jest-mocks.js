@@ -59,9 +59,9 @@ Object.keys(metadata).forEach((cmp) => {
         methods.push(`@api ${method.name}() {}`);
     });
 
-    let template = `import { Element, api } from 'engine';
+    let template = `import { LightningElement, api } from 'lwc';
 
-export default class ${className} extends Element {
+export default class ${className} extends LightningElement {
     ${attributes.join('\n\t')}
     ${methods.join('\n\t')}
 }`;

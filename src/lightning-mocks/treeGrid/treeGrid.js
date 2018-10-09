@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class TreeGrid extends Element {
+export default class TreeGrid extends LightningElement {
     @api columns
 	@api data
 	@api expandedRows

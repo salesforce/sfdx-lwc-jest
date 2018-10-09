@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class OverlayLibrary extends Element {
+export default class OverlayLibrary extends LightningElement {
     
     @api close() {}
 	@api hide() {}

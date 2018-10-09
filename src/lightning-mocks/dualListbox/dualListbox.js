@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class DualListbox extends Element {
+export default class DualListbox extends LightningElement {
     @api addButtonLabel
 	@api disabled
 	@api downButtonLabel

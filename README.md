@@ -114,8 +114,8 @@ Finally, we need to create the mock `foo-button` files. In the `force-app/test/j
 
 ```js
 // foo-button.js
-import { Element, api } from 'engine';
-export default class FooButton extends Element {
+import { LightningElement, api } from 'lwc';
+export default class FooButton extends LightningElement {
   @api label
   // any other @api properties or implementation you may want to expose here
 }

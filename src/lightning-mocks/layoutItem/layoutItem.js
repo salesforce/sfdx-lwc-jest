@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class LayoutItem extends Element {
+export default class LayoutItem extends LightningElement {
     @api alignmentBump
 	@api body
 	@api flexibility

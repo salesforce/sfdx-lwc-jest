@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class ButtonIcon extends Element {
+export default class ButtonIcon extends LightningElement {
     @api alternativeText
 	@api ariaAtomic
 	@api ariaControls

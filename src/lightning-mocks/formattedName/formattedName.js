@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class FormattedName extends Element {
+export default class FormattedName extends LightningElement {
     @api firstName
 	@api format
 	@api informalName

@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class FormattedLocation extends Element {
+export default class FormattedLocation extends LightningElement {
     @api latitude
 	@api longitude
     

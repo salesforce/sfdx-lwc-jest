@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class RadioGroup extends Element {
+export default class RadioGroup extends LightningElement {
     @api disabled
 	@api label
 	@api messageWhenValueMissing

@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class FileUpload extends Element {
+export default class FileUpload extends LightningElement {
     @api accept
 	@api disabled
 	@api label

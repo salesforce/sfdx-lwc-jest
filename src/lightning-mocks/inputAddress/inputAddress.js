@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class InputAddress extends Element {
+export default class InputAddress extends LightningElement {
     @api addressLabel
 	@api city
 	@api cityLabel

@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class FormattedDateTime extends Element {
+export default class FormattedDateTime extends LightningElement {
     @api day
 	@api era
 	@api hour

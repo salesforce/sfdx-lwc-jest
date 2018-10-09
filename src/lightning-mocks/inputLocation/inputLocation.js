@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class InputLocation extends Element {
+export default class InputLocation extends LightningElement {
     @api disabled
 	@api fieldLevelHelp
 	@api label

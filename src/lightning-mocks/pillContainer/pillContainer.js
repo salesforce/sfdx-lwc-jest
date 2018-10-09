@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class PillContainer extends Element {
+export default class PillContainer extends LightningElement {
     @api items
 	@api label
 	@api singleLine

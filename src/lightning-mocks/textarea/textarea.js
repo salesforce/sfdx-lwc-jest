@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class Textarea extends Element {
+export default class Textarea extends LightningElement {
     @api disabled
 	@api label
 	@api messageWhenBadInput

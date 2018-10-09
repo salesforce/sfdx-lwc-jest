@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class ProgressBar extends Element {
+export default class ProgressBar extends LightningElement {
     @api size
 	@api value
 	@api variant

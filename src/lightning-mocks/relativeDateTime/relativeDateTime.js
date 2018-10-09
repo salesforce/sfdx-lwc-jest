@@ -1,6 +1,6 @@
-import { Element, api } from 'engine';
+import { LightningElement, api } from 'lwc';
 
-export default class RelativeDateTime extends Element {
+export default class RelativeDateTime extends LightningElement {
     @api value
     
 }
