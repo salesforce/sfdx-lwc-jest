@@ -15,7 +15,7 @@ Update your projects unit testing script in package.json to execute `lts-jest`:
 ```json
 {
     "scripts": {
-        "test:unit": "lts-jest test"
+        "test:unit": "lts-jest"
     }
 }
 ```
@@ -25,27 +25,49 @@ Alternatively, you can globally install the package and run directly from the co
 ## Usage
 
 ```
-Run Jest unit tests in SFDX workspace
+`lts-jest [options]` will run Jest unit tests in SFDX workspace
 
 Options:
-  --version             Show version number                                               [boolean]
-  --help                Show help                                                         [boolean]
-  --advancedMode, -a    For advanced users only. Pass all CLI arguments directly to Jest  [boolean] [default: false]
-  --coverage            Collect coverage and display in output                            [boolean] [default: false]
-  --updateSnapshot, -u  Re-record every snapshot that fails during a test run             [boolean] [default: false]
-  --verbose             Display individual test results with the test suite hierarchy     [boolean] [default: false]
-  --watch               Watch files for changes and rerun tests related to changed files  [boolean] [default: false]
+  --version             Show version number                            [boolean]
+  --coverage            Collect coverage and display in output
+                                                      [boolean] [default: false]
+  --updateSnapshot, -u  Re-record every snapshot that fails during a test run
+                                                      [boolean] [default: false]
+  --verbose             Display individual test results with the test suite
+                        hierarchy                     [boolean] [default: false]
+  --watch               Watch files for changes and rerun tests related to
+                        changed files                 [boolean] [default: false]
+  --debug               Run tests in debug mode
+                        (https://jestjs.io/docs/en/troubleshooting)
+                                                      [boolean] [default: false]
+  --help                Show help                                      [boolean]
+
+Examples:
+  lts-jest --coverage  Collect coverage and display in output
+  lts-jest -- --json   All params after `--` will be directly passed to Jest
 ```
 
 ## Passing Additional Jest CLI Options
 
-To pass any additional Jest CLI options to your run, set the `--advancedMode` flag. When this flag is set, all other CLI parameters will be passed along directly to Jest.
+To pass any additional Jest CLI options to your run, pass them after the `--` flag. All CLI parameters after the flag will be passed along directly to Jest.
 
 ```bash
-lts-jest test --advancedMode --json
+lts-jest -- --json
 ```
 
 See the Jest [doc](http://facebook.github.io/jest/docs/en/cli.html) for all CLI options.
+
+## Debug mode
+
+Debug mode lets you use debugger in your jest tests.
+- Put a `debugger;` into your code
+- Open `chrome://inspect` 
+- Run `lts-jest` with the `--debug` flag.
+
+Pass other parameters to jest after the `--` flag. For example,
+```
+lts-jest --debug -- --no-cache
+```
 
 ## Overriding Jest Config
 
