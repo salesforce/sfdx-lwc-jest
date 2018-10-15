@@ -5,3 +5,4 @@ export const createRecord = jest.fn();
 export const createRecordInputFromRecord = jest.fn();
 export const createRecordInputFilteredByEditedFields = jest.fn();
 export const getRecordInput = jest.fn();
+export const getRecordUi = jest.fn();
