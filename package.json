@@ -1,6 +1,6 @@
 {
   "name": "lts-jest",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "description": "Run Jest against LWC components in SFDX workspace environment",
   "main": "src/index.js",
   "repository": "git@git.soma.salesforce.com:lwc/lts-jest.git",
