@@ -1,6 +1,6 @@
 const path = require('path');
 
-const PATH_TO_MODULES = path.join('main', 'default', 'lightningcomponents');
+const PATH_TO_MODULES = path.join('main', 'default', 'lwc');
 
 function getInfoFromId(id) {
     const [ns, ...rest] = id.split('/');

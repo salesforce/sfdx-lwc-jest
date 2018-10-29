@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const chalk = require('chalk');
 const jest = require('jest');
 const runCommand = require('./runCommand');
 

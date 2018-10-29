@@ -15,7 +15,7 @@ function getSfdxProjectJson() {
     return require(sfdxProjectJson);
 }
 
-// get relative path to 'lightningcomponents' directory from project root
+// get relative path to 'lwc' directory from project root
 function getModulePaths() {
     const paths = [];
     const projectPaths = [];
@@ -26,7 +26,7 @@ function getModulePaths() {
     });
 
     for (let i = 0; i < projectPaths.length; i++) {
-        const found = new GlobSync('**/lightningcomponents/', { cwd: projectPaths[i] }).found;
+        const found = new GlobSync('**/lwc/', { cwd: projectPaths[i] }).found;
         for (let j = 0; j < found.length; j++) {
             paths.push(path.join(projectPaths[i], found[j]));
         }

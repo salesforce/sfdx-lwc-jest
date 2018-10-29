@@ -93,7 +93,7 @@ See [How to Exclude Source When Syncing or Converting](https://developer.salesfo
 
 ## Resolving External LWC Components
 
-Any LWC components not located in your local `lightningcomponents` directory of your SFDX workspace will need to be mocked in your Jest tests. Included in this package are a set of mocks for all the `lightning` namespaced components.
+Any LWC components not located in your local `lwc` directory of your SFDX workspace will need to be mocked in your Jest tests. Included in this package are a set of mocks for all the `lightning` namespaced components.
 
 ### Lightning Namespaced Component Mocks
 
@@ -101,7 +101,7 @@ When this package is installed, a new set of mocks for all `lightning` namespace
 
 ### Other Component Mocks
 
-For components from other namespaces, not in your local `lightningcomponents` directory, you'll need to create your own mock and update the Jest config to map the name of these components to the mock file. 
+For components from other namespaces, not in your local `lwc` directory, you'll need to create your own mock and update the Jest config to map the name of these components to the mock file. 
 
 Let's go through an example. Given the following template, `hello-world.html`, we want to test:
 

@@ -1,17 +1,14 @@
 const fs = require('fs');
 const path = require('path');
-const GlobSync = require('glob').GlobSync;
 const lwcResolver = require('lwc-jest-resolver');
 
 const {
     PROJECT_ROOT,
-    getSfdxProjectJson,
     getModulePaths,
     getNamespace,
 } = require('./utils/project.js');
 
 const {
-    PATH_TO_MODULES,
     getInfoFromId,
 } = require('./utils/module.js');
 
