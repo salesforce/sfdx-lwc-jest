@@ -11,7 +11,8 @@
   },
   "scripts": {
     "updateMocks": "./scripts/install-jest-mocks.js",
-    "release": "npm publish"
+    "release": "npm publish",
+    "test": "jest"
   },
   "dependencies": {
     "babel-core": "^6.24.1",
@@ -20,7 +21,7 @@
     "chalk": "^2.3.0",
     "deasync": "^0.1.10",
     "glob": "^7.1.2",
-    "jest": "~23.4.2",
+    "jest": "~23.6.0",
     "lwc-compiler": "0.30.4",
     "lwc-engine": "0.30.4",
     "lwc-jest-preset": "0.30.4",

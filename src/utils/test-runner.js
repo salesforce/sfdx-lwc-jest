@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const jest = require('jest');
-const runCommand = require('./runCommand');
+const { jestRunner } = require('./jest');
+const shell = require('./shell');
 
 const {
     error,
@@ -15,6 +15,8 @@ const {
 
 const {
     jestConfig,
+    expectedApiVersion,
+    jestPath
 } = require('../config');
 
 // CLI options we do not want to pass along to Jest
@@ -34,13 +36,8 @@ function getOptions(argv) {
 async function testRunner(argv) {
     const cwd = fs.realpathSync(process.cwd());
 
-    if (!fs.existsSync(path.join(cwd, 'sfdx-project.json'))) {
-        error('Could not find file sfdx-project.json in cwd, please run lts-test from SFDX project root.');
-    }
-
     const sfdxProjectJson = getSfdxProjectJson();
     const apiVersion = sfdxProjectJson.sourceApiVersion;
-    const expectedApiVersion = '45.0';
     if (apiVersion !== expectedApiVersion) {
         error(`Invalid sourceApiVersion found in sfdx-project.json. Expected ${expectedApiVersion}, found ${apiVersion}`);
     }
@@ -50,10 +47,6 @@ async function testRunner(argv) {
 
     const options = getOptions(argv);
     if (argv.debug) {
-
-        // Execute command is different on Windows.
-        const jestPath = process.platform == 'win32' ? './node_modules/jest/bin/jest.js' : 'node_modules/.bin/jest';
-
         info('Running in debug mode...');
         let commandArgs = ['--inspect-brk', jestPath, '--runInBand'];
         commandArgs = commandArgs.concat(options);
@@ -63,9 +56,9 @@ async function testRunner(argv) {
         const command = 'node';
         info(command + ' ' + commandArgs.join(' '));
 
-        runCommand(command, commandArgs);
+        shell.runCommand(command, commandArgs);
     } else {
-        jest.run([...config, ...options]);
+        jestRunner.run([...config, ...options]);
     }
 }
 

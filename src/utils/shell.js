@@ -1,4 +1,4 @@
-const spawn = require('child_process').spawn
+const spawn = require('child_process').spawn;
 const {
     error,
     info,
@@ -23,5 +23,5 @@ const runCommand = (command, args) => {
     });
 }
 
-module.exports = runCommand;
+module.exports = { runCommand };
 
