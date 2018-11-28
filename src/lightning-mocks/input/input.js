@@ -25,6 +25,7 @@ export default class Input extends LightningElement {
 	@api messageWhenRangeUnderflow
 	@api messageWhenStepMismatch
 	@api messageWhenTooLong
+	@api messageWhenTooShort
 	@api messageWhenTypeMismatch
 	@api messageWhenValueMissing
 	@api min
@@ -40,6 +41,7 @@ export default class Input extends LightningElement {
 	@api timeAriaDescribedBy
 	@api timeAriaLabel
 	@api timeAriaLabelledBy
+	@api timezone
 	@api type
 	@api validity
 	@api value

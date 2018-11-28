@@ -6,6 +6,7 @@ export default class InputRichText extends LightningElement {
 	@api ariaLabelledby
 	@api disabled
 	@api disabledCategories
+	@api formats
 	@api label
 	@api labelVisible
 	@api messageWhenBadInput

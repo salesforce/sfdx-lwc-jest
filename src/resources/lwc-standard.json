@@ -368,6 +368,27 @@
     "minVersion": "0.0",
     "support": "GA"
   },
+  "button-group": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Represents a group of buttons.",
+    "extensible": false,
+    "minVersion": "0.0",
+    "support": "GA"
+  },
   "button-icon": {
     "@type": "COMPONENT",
     "attributes": [
@@ -617,6 +638,159 @@
         "name": "focus"
       }
     ],
+    "support": "GA"
+  },
+  "button-menu": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "Specifies a shortcut key to activate or focus an element.",
+        "name": "accesskey",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The assistive text for the button.",
+        "name": "alternativeText",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The body of the component.",
+        "name": "body",
+        "required": false,
+        "type": "AURA.COMPONENTDEFREF[]"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "If true, the menu is disabled. Disabling the menu prevents users from opening it. This value defaults to false.",
+        "name": "disabled",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Describes the reason for showing the draft indicator. This is required when the isDraft attribute is true.",
+        "name": "draftAlternativeText",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The name of the icon to be used in the format \\'utility:down\\'. This value defaults to utility:down. If an icon other than utility:down or utility:chevrondown is used, a utility:down icon is appended to the right of that icon.",
+        "name": "iconName",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The size of the icon. Options include xx-small, x-small, medium, or large. This value defaults to medium.",
+        "name": "iconSize",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "If true, the menu trigger shows a draft indicator. This value defaults to false.",
+        "name": "isDraft",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "If true, the menu is in a loading state and shows a spinner. This value defaults to false.",
+        "name": "isLoading",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Optional text to be shown on the button.",
+        "name": "label",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Message displayed while the menu is in the loading state.",
+        "name": "loadingStateAlternativeText",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Determines the alignment of the menu relative to the button. Available options are: left, center, right, bottom-left, bottom-center, bottom-right. This value defaults to left.",
+        "name": "menuAlignment",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The name for the button element. This value is optional and can be used to identify the button in a callback.",
+        "name": "name",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The action triggered when the element releases focus.",
+        "name": "onblur",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the element receives focus.",
+        "name": "onfocus",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Action fired when the menu is opened.",
+        "name": "onopen",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Action fired when a menu item is selected. The 'detail.menuItem' property of the passed event is the selected menu item.",
+        "name": "onselect",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Specifies the tab order of an element (when the tab button is used for navigating).",
+        "name": "tabindex",
+        "required": false,
+        "type": "INTEGER"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The value for the button element. This value is optional and can be used when submitting a form.",
+        "name": "value",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The variant changes the look of the button. Accepted variants include bare, container, border, border-filled, bare-inverse, and border-inverse. This value defaults to border.",
+        "name": "variant",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "If true, the menu items are displayed. This value defaults to false.",
+        "name": "visible",
+        "required": false,
+        "type": "BOOLEAN"
+      }
+    ],
+    "description": "Represents a dropdown menu with a list of actions or functions.",
+    "extensible": false,
+    "methods": [
+      {
+        "description": "Sets focus on the element.",
+        "name": "focus"
+      }
+    ],
+    "minVersion": "0.0",
     "support": "GA"
   },
   "button-stateful": {
@@ -900,8 +1074,32 @@
     "extensible": false,
     "methods": [
       {
+        "description": "Indicates whether the checkbox group has any validity errors.",
+        "name": "checkValidity"
+      },
+      {
         "description": "Sets focus on the element.",
         "name": "focus"
+      },
+      {
+        "description": "Display error messages if the checkbox group is invalid.",
+        "name": "reportValidity"
+      },
+      {
+        "attributes": [
+          {
+            "description": "The string that describes the error. If message is an empty string, the error message is reset.",
+            "name": "message",
+            "required": false,
+            "type": "STRING"
+          }
+        ],
+        "description": "Sets a custom error message to be displayed when the checkbox group input is submitted.",
+        "name": "setCustomValidity"
+      },
+      {
+        "description": "Displays error messages. The checkbox group is invalid if it fails at least one constraint validation and when checkValidity() returns false.",
+        "name": "showHelpMessageIfInvalid"
       }
     ],
     "support": "GA"
@@ -966,8 +1164,14 @@
         "type": "BOOLEAN"
       },
       {
-        "description": "Determines the alignment of the drop-down relative to the input. Available values are left, center, right, bottom-left, bottom-center, bottom-right. The default is left.",
+        "description": "Specifies where the drop-down list is aligned with or anchored to the selection field. By default the list is aligned with the selection field at the top so the list opens down.  Use bottom-left to make the selection field display at the bottom so the list opens above it.  Use auto to let the component determine where to open the list based on space available.",
         "name": "dropdownAlignment",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Help text detailing the purpose and function of the combobox.",
+        "name": "fieldLevelHelp",
         "required": false,
         "type": "STRING"
       },
@@ -1008,7 +1212,7 @@
         "type": "AURA.ACTION"
       },
       {
-        "description": "A list of options that are available for selection. Each option has the following attributes: class, selected, label, and value.",
+        "description": "A list of options that are available for selection. Each option has the following attributes: label and value.",
         "name": "options",
         "required": true,
         "type": "OBJECT[]"
@@ -1028,6 +1232,12 @@
       {
         "description": "Specifies that an input field must be filled out before submitting the form. This value defaults to false.",
         "name": "required",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Displays a spinner to indicate activity in the dropdown list. This value defaults to false.",
+        "name": "spinnerActive",
         "required": false,
         "type": "BOOLEAN"
       },
@@ -1099,6 +1309,12 @@
         "name": "defaultSortDirection",
         "required": false,
         "type": "STRING"
+      },
+      {
+        "description": "The current values per row that are provided during inline edit.",
+        "name": "draftValues",
+        "required": false,
+        "type": "OBJECT"
       },
       {
         "description": "Enables or disables infinite loading. The default is false.",
@@ -1283,6 +1499,12 @@
         "type": "STRING"
       },
       {
+        "description": "Set to true to hide the Up and Down buttons used for reordering the Selected list items.",
+        "name": "disableReordering",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
         "description": "Specifies that an input element should be disabled. This value defaults to false.",
         "name": "disabled",
         "required": false,
@@ -1377,6 +1599,18 @@
         "name": "selectedLabel",
         "required": true,
         "type": "STRING"
+      },
+      {
+        "description": "Displays a spinner to indicate activity in the list box. This value defaults to false.",
+        "name": "showActivityIndicator",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Number of items that display before vertical scrollbars are displayed for the list boxes. Determines the vertical size of the dual list box.",
+        "name": "size",
+        "required": false,
+        "type": "INTEGER"
       },
       {
         "description": "Label for source options list box.",
@@ -1541,120 +1775,6 @@
     "extensible": false,
     "support": "BETA"
   },
-  "form-element": {
-    "@type": "COMPONENT",
-    "attributes": [
-      {
-        "description": "A CSS class for the outer element, in addition to the component's base classes.",
-        "name": "class",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Displays tooltip text when the mouse moves over the element.",
-        "name": "title",
-        "required": false,
-        "type": "STRING"
-      }
-    ],
-    "description": "Represents a form element.",
-    "extensible": false,
-    "minVersion": "44.0",
-    "support": "GA"
-  },
-  "formatted-date-time": {
-    "@type": "COMPONENT",
-    "attributes": [
-      {
-        "description": "A CSS class for the outer element, in addition to the component's base classes.",
-        "name": "class",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Allowed values are numeric or 2-digit.",
-        "name": "day",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Allowed values are narrow, short, or long.",
-        "name": "era",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Allowed values are numeric or 2-digit.",
-        "name": "hour",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Determines whether time is displayed as 12-hour. If false, time displays as 24-hour. The default setting is determined by the user's locale.",
-        "name": "hour12",
-        "required": false,
-        "type": "BOOLEAN"
-      },
-      {
-        "description": "Allowed values are numeric or 2-digit.",
-        "name": "minute",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Allowed values are 2-digit, narrow, short, or long.",
-        "name": "month",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Allowed values are numeric or 2-digit.",
-        "name": "second",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The time zone to use. Implementations can include any time zone listed in the IANA time zone database. The default is the runtime's default time zone. Use this attribute only if you want to override the default time zone.",
-        "name": "timeZone",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Allowed values are short or long. For example, the Pacific Time zone would display as 'PST' if you select 'short', or 'Pacific Standard Time' if you select 'long.'",
-        "name": "timeZoneName",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Displays tooltip text when the mouse moves over the element.",
-        "name": "title",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "The value to be formatted, which can be a Date object, timestamp, or an ISO8601 formatted string.",
-        "name": "value",
-        "required": true,
-        "type": "OBJECT"
-      },
-      {
-        "description": "Allowed values are narrow, short, or long.",
-        "name": "weekday",
-        "required": false,
-        "type": "STRING"
-      },
-      {
-        "description": "Allowed values are numeric or 2-digit.",
-        "name": "year",
-        "required": false,
-        "type": "STRING"
-      }
-    ],
-    "description": "Displays formatted date and time.",
-    "extensible": false,
-    "minVersion": "0.0",
-    "support": "BETA"
-  },
   "formatted-address": {
     "@type": "COMPONENT",
     "attributes": [
@@ -1722,6 +1842,99 @@
     "description": "Displays a formatted address that provides a link to the given location on Google Maps. This component requires API version 42.0 and later.",
     "extensible": false,
     "support": "GA"
+  },
+  "formatted-date-time": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Allowed values are numeric or 2-digit.",
+        "name": "day",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Allowed values are narrow, short, or long.",
+        "name": "era",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Allowed values are numeric or 2-digit.",
+        "name": "hour",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Determines whether time is displayed as 12-hour. If false, time displays as 24-hour. The default setting is determined by the user's locale.",
+        "name": "hour12",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Allowed values are numeric or 2-digit.",
+        "name": "minute",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Allowed values are 2-digit, narrow, short, or long.",
+        "name": "month",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Allowed values are numeric or 2-digit.",
+        "name": "second",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The time zone to use. Implementations can include any time zone listed in the IANA time zone database. The default is the runtime's default time zone. Use this attribute only if you want to override the default time zone.",
+        "name": "timeZone",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Allowed values are short or long. For example, the Pacific time zone would display as 'PST' if you select 'short', or 'Pacific Standard Time' if you select 'long.'",
+        "name": "timeZoneName",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The value to be formatted, which can be a Date object, timestamp, or an ISO8601 formatted string.",
+        "name": "value",
+        "required": true,
+        "type": "OBJECT"
+      },
+      {
+        "description": "Specifies how to display the day of the week. Allowed values are narrow, short, or long.",
+        "name": "weekday",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Allowed values are numeric or 2-digit.",
+        "name": "year",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Displays formatted date and time.",
+    "extensible": false,
+    "minVersion": "0.0",
+    "support": "BETA"
   },
   "formatted-email": {
     "@type": "COMPONENT",
@@ -1960,6 +2173,12 @@
         "type": "STRING"
       },
       {
+        "description": "Prevents the component from creating links in the rich text.",
+        "name": "disableLinkify",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
         "description": "Displays tooltip text when the mouse moves over the element.",
         "name": "title",
         "required": false,
@@ -2102,6 +2321,12 @@
       {
         "description": "The Lightning Design System name of the icon used as the visible element. Names are written in the format 'utility:info' where 'utility' is the category, and 'info' is the specific icon to be displayed. The default value is 'utility:info'.",
         "name": "iconName",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The iconVariant changes the appearance of the icon. Accepted variants include inverse, warning, error.",
+        "name": "iconVariant",
         "required": false,
         "type": "STRING"
       },
@@ -2256,7 +2481,7 @@
         "type": "OBJECT"
       },
       {
-        "description": "String value with the formatter to be used. Valid values include percent, percent-fixed, and currency.",
+        "description": "String value with the formatter to be used for number input. Valid values include decimal, percent, percent-fixed, and currency.",
         "name": "formatter",
         "required": false,
         "type": "STRING"
@@ -2274,10 +2499,10 @@
         "type": "STRING"
       },
       {
-        "description": "Expected higher bound for the value in Floating-Point number",
+        "description": "The maximum acceptable value for the input. This attribute can be used only with number, range, date, time, and datetime input types. For number and range type, the max value is a decimal number. For the date, time, and datetime types, the max value must use a valid string for the type.",
         "name": "max",
         "required": false,
-        "type": "DECIMAL"
+        "type": "OBJECT"
       },
       {
         "description": "The maximum number of characters allowed in the field.",
@@ -2334,6 +2559,12 @@
         "type": "STRING"
       },
       {
+        "description": "Error message to be displayed when the value is too short.",
+        "name": "messageWhenTooShort",
+        "required": false,
+        "type": "STRING"
+      },
+      {
         "description": "Error message to be displayed when a type mismatch is detected.",
         "name": "messageWhenTypeMismatch",
         "required": false,
@@ -2346,10 +2577,10 @@
         "type": "STRING"
       },
       {
-        "description": "Expected lower bound for the value in Floating-Point number",
+        "description": "The minimum acceptable value for the input. This attribute can be used only with number, range, date, time, and datetime input types. For number and range types, the min value is a decimal number. For the date, time, and datetime types, the min value must use a valid string for the type.",
         "name": "min",
         "required": false,
-        "type": "DECIMAL"
+        "type": "OBJECT"
       },
       {
         "description": "The minimum number of characters allowed in the field.",
@@ -2388,7 +2619,7 @@
         "type": "AURA.ACTION"
       },
       {
-        "description": "Specifies the regular expression that the input's value is checked against.\n                                This attribute is supported for text, date, search, url, tel, email, and password types.",
+        "description": "Specifies the regular expression that the input's value is checked against.\n                                This attribute is supported for text, search, url, tel, email, and password types.",
         "name": "pattern",
         "required": false,
         "type": "STRING"
@@ -2412,7 +2643,7 @@
         "type": "BOOLEAN"
       },
       {
-        "description": "Granularity of the value in Positive Floating Point. Use 'any' when granularity is not a concern. This value defaults to 1.",
+        "description": "Granularity of the value, specified as a positive floating point number. Use 'any' when granularity is not a concern. This value defaults to 1.",
         "name": "step",
         "required": false,
         "type": "OBJECT"
@@ -2444,6 +2675,12 @@
       {
         "description": "A space-separated list of element IDs that provide labels for the time input when type=datetime. On mobile devices, this is merged with ariaLabelledBy and dateAriaLabelledBy to describe the native date time input.",
         "name": "timeAriaLabelledBy",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Specifies the time zone used when type='datetime' only. This value defaults to the user’s Salesforce time zone setting.",
+        "name": "timezone",
         "required": false,
         "type": "STRING"
       },
@@ -2692,7 +2929,7 @@
         "type": "BOOLEAN"
       },
       {
-        "description": "Help text detailing the purpose and function of name compound field.",
+        "description": "Help text detailing the purpose and function of location compound field.",
         "name": "fieldLevelHelp",
         "required": false,
         "type": "STRING"
@@ -2930,6 +3167,12 @@
         "type": "LIST"
       },
       {
+        "description": "A whitelist of formats. By default, the list is computed based on enabled categories. The \"table\" format is always enabled to support copying and pasting of tables If formats are not provided. If formats are provided, omitting a format from the list removes the corresponding button.",
+        "name": "formats",
+        "required": false,
+        "type": "LIST"
+      },
+      {
         "description": "Text label for the rich text editor.",
         "name": "label",
         "required": false,
@@ -3068,7 +3311,7 @@
     "@type": "COMPONENT",
     "attributes": [
       {
-        "description": "Sets alignment bump. Allowed values are left, top, right, bottom.",
+        "description": "Specifies a direction to bump the alignment of adjacent layout items. Allowed values are left, top, right, bottom.",
         "name": "alignmentBump",
         "required": false,
         "type": "STRING"
@@ -3130,6 +3373,168 @@
     ],
     "description": "The basic element of lightning:layout.",
     "extensible": false,
+    "minVersion": "0.0",
+    "support": "GA"
+  },
+  "map": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "Centers the map according to an specific 'mapMarker' object. If not specified automatically calculates center.",
+        "name": "center",
+        "required": false,
+        "type": "OBJECT"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Array containing one of more objects with the address or coordinates to be displayed.",
+        "name": "mapMarkers",
+        "required": true,
+        "type": "OBJECT"
+      },
+      {
+        "description": "When the map displays multiple markers on the page and shows the list of markers, this property provides the heading title for the markers. Required if multiple markers specified.",
+        "name": "markersTitle",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Shows footer with 'Open in Google Maps' link. Default value: 'false'",
+        "name": "showFooter",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Corresponds to zoom levels defined in Google Maps API. If not specified, the map component automatically chooses an appropriate zoom level to show all markers with comfortable margins.",
+        "name": "zoomLevel",
+        "required": false,
+        "type": "INTEGER"
+      }
+    ],
+    "description": "A lightning:map component securely displays a map of one or more locations. This component requires API version 44.0 and later.",
+    "extensible": false,
+    "minVersion": "44.0",
+    "support": "BETA"
+  },
+  "menu-item": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "Specifies a shortcut key to activate or focus an element.",
+        "name": "accesskey",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "If not specified, the menu item is not checkable. If true, a check mark is shown to the left of the menu item. If false, a check mark is not shown but there is space to accommodate one.",
+        "name": "checked",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "If true, the menu item is not actionable and is shown as disabled.",
+        "name": "disabled",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Describes the reason for showing the draft indicator. This is required when the isDraft attribute is true",
+        "name": "draftAlternativeText",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "URL for a link to use for the menu item.",
+        "name": "href",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The name of an icon to display after the text of the menu item.",
+        "name": "iconName",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "If true, the menu item shows a draft indicator. This value defaults to false.",
+        "name": "isDraft",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Text of the menu item.",
+        "name": "label",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "DEPRECATED. The action triggered when this menu item is selected.",
+        "name": "onactive",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the element releases focus.",
+        "name": "onblur",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the element receives focus.",
+        "name": "onfocus",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The name of an icon to display before the text of the menu item.",
+        "name": "prefixIconName",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Specifies the tab order of an element (when the tab button is used for navigating).",
+        "name": "tabindex",
+        "required": false,
+        "type": "INTEGER"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "A value associated with the menu item.",
+        "name": "value",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Represents a list item in a menu.",
+    "extensible": false,
+    "methods": [
+      {
+        "description": "Sets focus on the element.",
+        "name": "focus"
+      }
+    ],
     "minVersion": "0.0",
     "support": "GA"
   },
@@ -3334,7 +3739,7 @@
         "type": "STRING"
       }
     ],
-    "description": "A pill represents an existing item in a database, as opposed to user-generated freeform text.",
+    "description": "A pill displays a label that can contain links and can be removed from view.",
     "extensible": false,
     "minVersion": "0.0",
     "support": "GA"
@@ -3817,49 +4222,49 @@
         "type": "INTEGER"
       },
       {
-        "description": "Error message to be displayed when a bad input is detected. Use with setCustomValidity.",
+        "description": "Error message to be displayed when a bad input is detected.",
         "name": "messageWhenBadInput",
         "required": false,
         "type": "STRING"
       },
       {
-        "description": "Error message to be displayed when a pattern mismatch is detected. Use with setCustomValidity.",
+        "description": "Error message to be displayed when a pattern mismatch is detected.",
         "name": "messageWhenPatternMismatch",
         "required": false,
         "type": "STRING"
       },
       {
-        "description": "Error message to be displayed when a range overflow is detected. Use with setCustomValidity.",
+        "description": "Error message to be displayed when a range overflow is detected.",
         "name": "messageWhenRangeOverflow",
         "required": false,
         "type": "STRING"
       },
       {
-        "description": "Error message to be displayed when a range underflow is detected. Use with setCustomValidity.",
+        "description": "Error message to be displayed when a range underflow is detected.",
         "name": "messageWhenRangeUnderflow",
         "required": false,
         "type": "STRING"
       },
       {
-        "description": "Error message to be displayed when a step mismatch is detected. Use with setCustomValidity.",
+        "description": "Error message to be displayed when a step mismatch is detected.",
         "name": "messageWhenStepMismatch",
         "required": false,
         "type": "STRING"
       },
       {
-        "description": "Error message to be displayed when the value is too long. Use with setCustomValidity.",
+        "description": "Error message to be displayed when the value is too long.",
         "name": "messageWhenTooLong",
         "required": false,
         "type": "STRING"
       },
       {
-        "description": "Error message to be displayed when a type mismatch is detected. Use with setCustomValidity.",
+        "description": "Error message to be displayed when a type mismatch is detected.",
         "name": "messageWhenTypeMismatch",
         "required": false,
         "type": "STRING"
       },
       {
-        "description": "Error message to be displayed when the value is missing. Use with setCustomValidity.",
+        "description": "Error message to be displayed when the value is missing.",
         "name": "messageWhenValueMissing",
         "required": false,
         "type": "STRING"
@@ -3997,6 +4402,144 @@
     "extensible": false,
     "minVersion": "0.0",
     "support": "GA"
+  },
+  "tab": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "Specifies a shortcut key to activate or focus an element.",
+        "name": "accesskey",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The body of the tab.",
+        "name": "body",
+        "required": false,
+        "type": "AURA.COMPONENTDEFREF[]"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Assistive text for the icon that's displayed on the left of the tab label.",
+        "name": "iconAssistiveText",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The Lightning Design System name of the icon. The icon is displayed on the left of the tab label. Names are written in the format 'utility:down' where 'utility' is the category, and 'down' is the specific icon to be displayed. Only utility icons can be used in this component.",
+        "name": "iconName",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The optional ID is used during tabset's onselect event to determine which tab was clicked.",
+        "name": "id",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The text that appears on the tab. The attribute accepts string values, but for compatibility with previous releases also accepts a component type. Only the text portion of the label value displays and any CSS classes that are applied are ignored.",
+        "name": "label",
+        "required": false,
+        "type": "AURA.COMPONENT[]"
+      },
+      {
+        "description": "The action triggered when this tab becomes active.",
+        "name": "onactive",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the element releases focus.",
+        "name": "onblur",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "The action triggered when the element receives focus.",
+        "name": "onfocus",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Specifies whether there's an error in the tab content. An error icon is displayed on the right of the tab label.",
+        "name": "showErrorIndicator",
+        "required": false,
+        "type": "BOOLEAN"
+      },
+      {
+        "description": "Specifies the tab order of an element (when the tab button is used for navigating).",
+        "name": "tabindex",
+        "required": false,
+        "type": "INTEGER"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "A single tab that is nested in a lightning:tabset component.",
+    "extensible": false,
+    "methods": [
+      {
+        "description": "Sets focus on the element.",
+        "name": "focus"
+      }
+    ],
+    "minVersion": "0.0",
+    "support": "BETA"
+  },
+  "tabset": {
+    "@type": "COMPONENT",
+    "attributes": [
+      {
+        "description": "The body of the component. This could be one or more lightning:tab components.",
+        "name": "body",
+        "required": false,
+        "type": "AURA.COMPONENTDEFREF[]"
+      },
+      {
+        "description": "A CSS class for the outer element, in addition to the component's base classes.",
+        "name": "class",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The action that will run when the tab is clicked.",
+        "name": "onselect",
+        "required": false,
+        "type": "AURA.ACTION"
+      },
+      {
+        "description": "Allows you to set a specific tab to open by default. If this attribute is not used, the first tab opens by default.",
+        "name": "selectedTabId",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "Displays tooltip text when the mouse moves over the element.",
+        "name": "title",
+        "required": false,
+        "type": "STRING"
+      },
+      {
+        "description": "The variant changes the appearance of the tabset. Accepted variants are default, scoped, and vertical.",
+        "name": "variant",
+        "required": false,
+        "type": "STRING"
+      }
+    ],
+    "description": "Represents a list of tabs.",
+    "extensible": false,
+    "minVersion": "0.0",
+    "support": "BETA"
   },
   "textarea": {
     "@type": "COMPONENT",

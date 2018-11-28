@@ -2,6 +2,7 @@ import { LightningElement, api } from 'lwc';
 
 export default class DualListbox extends LightningElement {
     @api addButtonLabel
+	@api disableReordering
 	@api disabled
 	@api downButtonLabel
 	@api fieldLevelHelp
@@ -15,6 +16,8 @@ export default class DualListbox extends LightningElement {
 	@api required
 	@api requiredOptions
 	@api selectedLabel
+	@api showActivityIndicator
+	@api size
 	@api sourceLabel
 	@api upButtonLabel
 	@api validity

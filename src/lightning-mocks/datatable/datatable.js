@@ -4,6 +4,7 @@ export default class Datatable extends LightningElement {
     @api columns
 	@api data
 	@api defaultSortDirection
+	@api draftValues
 	@api enableInfiniteLoading
 	@api errors
 	@api hideCheckboxColumn
