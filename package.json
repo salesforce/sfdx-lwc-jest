@@ -1,0 +1,39 @@
+{
+  "name": "@salesforce/lwc-jest",
+  "version": "0.4.0",
+  "description": "Run Jest against LWC components in SFDX workspace environment",
+  "main": "src/index.js",
+  "license": "MIT",
+  "files": [
+    "src/",
+    "config.js"
+  ],
+  "repository": "git@git.soma.salesforce.com:salesforce/lwc-jest.git",
+  "bin": {
+    "lwc-jest": "src/index.js"
+  },
+  "scripts": {
+    "updateMocks": "./scripts/install-jest-mocks.js",
+    "release": "npm publish",
+    "test": "jest"
+  },
+  "dependencies": {
+    "babel-core": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-jest": "^22.1.0",
+    "chalk": "^2.3.0",
+    "deasync": "^0.1.10",
+    "glob": "^7.1.2",
+    "jest": "~23.6.0",
+    "lwc-compiler": "0.33.9",
+    "lwc-engine": "0.33.9",
+    "lwc-jest-preset": "0.33.9",
+    "lwc-jest-resolver": "0.33.9",
+    "lwc-jest-serializer": "0.33.9",
+    "lwc-jest-transformer": "0.33.9",
+    "lwc-module-resolver": "0.33.9",
+    "lwc-wire-service": "0.33.9",
+    "lwc-wire-service-jest-util": "2.1.4",
+    "yargs": "^10.0.3"
+  }
+}

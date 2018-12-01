@@ -1,0 +1,39 @@
+const options = require('../options/options');
+const yargs = require('yargs');
+
+const {
+    error,
+    info,
+} = require('../log');
+
+const argError = (msg, err, yargs) => {
+    if (err) {
+        throw err;
+    }
+
+    let unrecognized;
+    let token = 'Unknown argument: ';
+    if (msg.startsWith(token)) {
+        unrecognized = msg.substring(token.length);
+    }
+
+    let template = `The following argument(s) are not recognized by lwc-jest: ${unrecognized}\n` +
+        `If you wish to pass these arguments along to Jest, please add the '--' flag`;
+
+    info(yargs.help());
+    error(template);
+}
+
+const getArgs = () => {
+    return yargs
+        .usage('`$0 [options]` will run Jest unit tests in SFDX workspace')
+        .example('$0 --coverage', options.coverage.description)
+        .example('$0 -- --json', 'All params after `--` will be directly passed to Jest')
+        .options(options)
+        .strict()
+        .fail(argError)
+        .help()
+        .argv;
+}
+
+module.exports = { getArgs };

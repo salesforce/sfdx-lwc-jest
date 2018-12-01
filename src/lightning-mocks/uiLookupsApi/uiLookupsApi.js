@@ -1,0 +1,1 @@
+export const getLookupRecords = jest.fn();
