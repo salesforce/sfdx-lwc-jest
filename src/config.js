@@ -16,7 +16,7 @@ const jestConfig = {
     rootDir: PROJECT_ROOT,
     moduleFileExtensions: ['js', 'html'],
     transform: {
-        '^.+\\.(js|html|css)$': require.resolve('lwc-jest-transformer')
+        '^.+\\.(js|html|css)$': require.resolve('@lwc/jest-transformer')
     },
     transformIgnorePatterns: ["/node_modules/(?:(?!lightning-mocks.*(js|html|css)))*$"],
     resolver: path.resolve(__dirname, './resolver.js'),
@@ -28,7 +28,7 @@ const jestConfig = {
     // temp workaround until this is released - https://github.com/facebook/jest/pull/6792
     testURL: "http://localhost/",
     snapshotSerializers: [
-        require.resolve('lwc-jest-serializer')
+        require.resolve('@lwc/jest-serializer')
     ],
 };
 
