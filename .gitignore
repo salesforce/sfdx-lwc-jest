@@ -3,3 +3,4 @@ logs
 node_modules
 .sfdx
 .vscode
+.DS_Store
