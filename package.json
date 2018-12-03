@@ -1,6 +1,6 @@
 {
   "name": "lts-jest",
-  "version": "0.3.12",
+  "version": "0.3.13",
   "description": "Run Jest against LWC components in SFDX workspace environment",
   "main": "src/index.js",
   "files": [
