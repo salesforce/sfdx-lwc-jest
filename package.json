@@ -8,7 +8,7 @@
     "src/",
     "config.js"
   ],
-  "repository": "git@git.soma.salesforce.com:salesforce/lwc-jest.git",
+  "repository": "git@github.com:salesforce/lwc-jest.git",
   "bin": {
     "lwc-jest": "src/index.js"
   },
