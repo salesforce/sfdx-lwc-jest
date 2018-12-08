@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
+'use strict';
+
 /* eslint-disable no-console */
 
 const chalk = require('chalk');

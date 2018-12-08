@@ -8,14 +8,15 @@
     "src/",
     "config.js"
   ],
-  "repository": "git@git.soma.salesforce.com:salesforce/lwc-jest.git",
+  "repository": "git@github.com:salesforce/lwc-jest.git",
   "bin": {
     "lwc-jest": "src/index.js"
   },
   "scripts": {
-    "updateMocks": "./scripts/install-jest-mocks.js",
+    "lint": "eslint src/ --ignore-pattern **/src/lightning-mocks/*",
     "release": "npm publish",
-    "test": "jest"
+    "test": "jest",
+    "updateMocks": "./scripts/install-jest-mocks.js"
   },
   "dependencies": {
     "@lwc/compiler": "0.33.10",
@@ -35,5 +36,8 @@
     "jest": "~23.6.0",
     "lwc-wire-service-jest-util": "2.2.0",
     "yargs": "^10.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0"
   }
 }
