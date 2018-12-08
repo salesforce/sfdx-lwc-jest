@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
+'use strict';
+
 const fs = require('fs');
 const path = require('path');
 const lwcResolver = require('@lwc/jest-resolver');
@@ -20,7 +22,7 @@ const {
 
 function isFile(file) {
     let result;
-  
+
     try {
       const stat = fs.statSync(file);
       result = stat.isFile() || stat.isFIFO();
@@ -30,7 +32,7 @@ function isFile(file) {
       }
       result = false;
     }
-  
+
     return result;
   }
 
