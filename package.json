@@ -13,10 +13,11 @@
     "lwc-jest": "src/index.js"
   },
   "scripts": {
+    "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
     "lint": "eslint src/ --ignore-pattern **/src/lightning-mocks/*",
     "release": "npm publish",
     "test": "jest",
-    "updateMocks": "./scripts/install-jest-mocks.js"
+    "update-mocks": "./scripts/install-jest-mocks.js"
   },
   "dependencies": {
     "@lwc/compiler": "0.33.10",
@@ -38,6 +39,7 @@
     "yargs": "^10.0.3"
   },
   "devDependencies": {
-    "eslint": "^5.9.0"
+    "eslint": "^5.9.0",
+    "isbinaryfile": "^3.0.3"
   }
 }
