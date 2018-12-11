@@ -1908,12 +1908,12 @@ bser@^2.0.0:
 
 buffer-alloc-unsafe@^1.1.0:
   version "1.1.0"
-  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
+  resolved "http://npm.lwcjs.org/buffer-alloc-unsafe/-/buffer-alloc-unsafe-1.1.0/bd7dc26ae2972d0eda253be061dba992349c19f0.tgz#bd7dc26ae2972d0eda253be061dba992349c19f0"
   integrity sha512-TEM2iMIEQdJ2yjPJoSIsldnleVaAk1oW3DBVUykyOLsEsFmEc9kn+SFFPz+gl54KQNxlDnAwCXosOS9Okx2xAg==
 
 buffer-alloc@^1.2.0:
   version "1.2.0"
-  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/buffer-alloc/-/buffer-alloc-1.2.0.tgz#890dd90d923a873e08e10e5fd51a57e5b7cce0ec"
+  resolved "http://npm.lwcjs.org/buffer-alloc/-/buffer-alloc-1.2.0/890dd90d923a873e08e10e5fd51a57e5b7cce0ec.tgz#890dd90d923a873e08e10e5fd51a57e5b7cce0ec"
   integrity sha512-CFsHQgjtW1UChdXgbyJGtnm+O/uLQeZdtbDo8mfUgYXCHSM1wgrVxXm6bSyrUuErEb+4sYVGCzASBRot7zyrow==
   dependencies:
     buffer-alloc-unsafe "^1.1.0"
@@ -1921,7 +1921,7 @@ buffer-alloc@^1.2.0:
 
 buffer-fill@^1.0.0:
   version "1.0.0"
-  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/buffer-fill/-/buffer-fill-1.0.0.tgz#f8f78b76789888ef39f205cd637f68e702122b2c"
+  resolved "http://npm.lwcjs.org/buffer-fill/-/buffer-fill-1.0.0/f8f78b76789888ef39f205cd637f68e702122b2c.tgz#f8f78b76789888ef39f205cd637f68e702122b2c"
   integrity sha1-+PeLdniYiO858gXNY39o5wISKyw=
 
 buffer-from@^1.0.0:
@@ -3570,7 +3570,7 @@ isarray@1.0.0, isarray@~1.0.0:
 
 isbinaryfile@^3.0.3:
   version "3.0.3"
-  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/isbinaryfile/-/isbinaryfile-3.0.3.tgz#5d6def3edebf6e8ca8cae9c30183a804b5f8be80"
+  resolved "http://npm.lwcjs.org/isbinaryfile/-/isbinaryfile-3.0.3/5d6def3edebf6e8ca8cae9c30183a804b5f8be80.tgz#5d6def3edebf6e8ca8cae9c30183a804b5f8be80"
   integrity sha512-8cJBL5tTd2OS0dM4jz07wQd5g0dCCqIhUxPIGtZfa5L6hWlvV5MHTITy/DBAsF+Oe2LS1X3krBUhNwaGUWpWxw==
   dependencies:
     buffer-alloc "^1.2.0"
