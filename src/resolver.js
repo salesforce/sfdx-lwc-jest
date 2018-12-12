@@ -80,8 +80,6 @@ function getModule(modulePath, options) {
 module.exports = function (modulePath, options) {
     if (modulePath === 'lwc') {
         return require.resolve('@lwc/engine');
-    } else if (modulePath === '@salesforce/wire-service-jest-util') {
-        return require.resolve('@salesforce/wire-service-jest-util');
     }
     return  getModule(modulePath, options) || lwcResolver.apply(null, arguments);
 };
