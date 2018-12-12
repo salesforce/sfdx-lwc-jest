@@ -15,7 +15,7 @@
   "scripts": {
     "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
     "lint": "eslint src/ --ignore-pattern **/src/lightning-mocks/*",
-    "release": "npm publish",
+    "release": "npm publish --access public",
     "test": "jest",
     "update-mocks": "./scripts/install-jest-mocks.js"
   },
