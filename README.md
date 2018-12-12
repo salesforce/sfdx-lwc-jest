@@ -116,7 +116,7 @@ Let's go through an example. Given the following template, `hello-world.html`, w
 We know out of the box the `lightning-button` will be handled by the package automatically. `foo-button`, however, will need to be resolved. In our `jest.config.js` file at the root of the SFDX project workspace, add the following:
 
 ```js
-const { jestConfig } = require('lwc-jest/config');
+const { jestConfig } = require('@salesforce/lwc-jest/config');
 module.exports = {
     ...jestConfig,
     moduleNameMapper: {
