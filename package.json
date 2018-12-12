@@ -20,14 +20,14 @@
     "update-mocks": "./scripts/install-jest-mocks.js"
   },
   "dependencies": {
-    "@lwc/compiler": "0.33.10",
-    "@lwc/engine": "0.33.10",
-    "@lwc/jest-preset": "0.33.10",
-    "@lwc/jest-resolver": "0.33.10",
-    "@lwc/jest-serializer": "0.33.10",
-    "@lwc/jest-transformer": "0.33.10",
-    "@lwc/module-resolver": "0.33.10",
-    "@lwc/wire-service": "0.33.10",
+    "@lwc/compiler": "0.33.17",
+    "@lwc/engine": "0.33.17",
+    "@lwc/jest-preset": "0.33.17",
+    "@lwc/jest-resolver": "0.33.17",
+    "@lwc/jest-serializer": "0.33.17",
+    "@lwc/jest-transformer": "0.33.17",
+    "@lwc/module-resolver": "0.33.17",
+    "@lwc/wire-service": "0.33.17",
     "babel-core": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-jest": "^22.1.0",
@@ -35,7 +35,6 @@
     "deasync": "^0.1.10",
     "glob": "^7.1.2",
     "jest": "~23.6.0",
-    "lwc-wire-service-jest-util": "2.2.0",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
