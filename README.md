@@ -74,7 +74,7 @@ lwc-jest --debug -- --no-cache
 `lwc-jest` will set up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, import the default config from `lwc-jest`, modify as you please, and then export the new config.
 
 ```js
-const { jestConfig } = require('lwc-jest/config');
+const { jestConfig } = require('@salesforce/lwc-jest/config');
 module.exports = {
     ...jestConfig,
     testMatch: ['**/todo.test.js'],
