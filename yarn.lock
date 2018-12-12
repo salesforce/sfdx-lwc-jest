@@ -646,6 +646,11 @@
   resolved "https://registry.yarnpkg.com/@lwc/wire-service/-/wire-service-0.33.17.tgz#a8670d570ef41c732e1dac9ddcf21dce100ab2dd"
   integrity sha512-qYoIXl6BAFXnJWUV6PLRqOj9TFHFqVfd37Wd7S9ldXrdrraLF5BQvpKMRks3D6ZsWbPESFdtz0aPTKe6xWexxw==
 
+"@salesforce/wire-service-jest-util@^2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.2.2.tgz#41c249af14b670f5a12dd96b5c4965ae9b022f96"
+  integrity sha512-+rFwkyImh5ucGzLiAVbFaGbPEDTWSvFWMHnkW1rnpQfpXR/EfqOBv6tq36gpdncot3TnVzbkMN3SesFDLJnSDA==
+
 "@types/chokidar@^1.7.5":
   version "1.7.5"
   resolved "https://registry.yarnpkg.com/@types/chokidar/-/chokidar-1.7.5.tgz#1fa78c8803e035bed6d98e6949e514b133b0c9b6"
