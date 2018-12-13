@@ -1,6 +1,6 @@
 # @salesforce/lwc-jest
 
-Run Jest against LWC components in an SFDX workspace environment
+Run Jest against Lightning web components in an SFDX workspace environment.
 
 ## Installation
 
@@ -49,7 +49,7 @@ Examples:
 
 ## Passing Additional Jest CLI Options
 
-To pass any additional Jest CLI options to your run, pass them after the `--` flag. All CLI parameters after the flag will be passed along directly to Jest.
+To pass any additional Jest CLI options to your run, pass them after the `--` flag. All CLI parameters after the flag are passed along directly to Jest.
 
 ```bash
 lwc-jest -- --json
@@ -71,7 +71,7 @@ lwc-jest --debug -- --no-cache
 
 ## Overriding Jest Config
 
-`lwc-jest` will set up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, import the default config from `lwc-jest`, modify as you please, and then export the new config.
+`lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, import the default config from `lwc-jest`, modify as you please, and then export the new config.
 
 ```js
 const { jestConfig } = require('@salesforce/lwc-jest/config');
@@ -83,7 +83,7 @@ module.exports = {
 
 ## Updating .forceignore
 
-After adding Jest tests, you will get errors trying to sync your local files with a scratch org because the `__tests__` directory will not be recognized. To ignore these test files, add this entry to your `.forceignore` file:
+After adding Jest tests, you'll get errors trying to sync your local files with a scratch org because the `__tests__` directory will not be recognized. To ignore these test files, add this entry to your `.forceignore` file:
 
 ```
 **__tests__
@@ -91,17 +91,17 @@ After adding Jest tests, you will get errors trying to sync your local files wit
 
 See [How to Exclude Source When Syncing or Converting](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm) for more details.
 
-## Resolving External LWC Components
+## Resolving External Lightning Web Components
 
-Any LWC components not located in your local `lwc` directory of your SFDX workspace will need to be mocked in your Jest tests. Included in this package are a set of mocks for all the `lightning` namespaced components.
+Any Ligntning web components not located in your local `lwc` directory of your SFDX workspace will need to be mocked in your Jest tests. Included in this package are a set of mocks for all the `lightning` namespaced components.
 
 ### Lightning Namespaced Component Mocks
 
-When this package is installed, a new set of mocks for all `lightning` namespaced components is generated into the lightning-mocks folder. These mocks are generated based off the `lwc-standard.json` metadata file. The mocks will be auto-generated and the Jest resolver will automatically use these mocks in the tests. There is nothing needed to be done to make these work out of the box.
+When this package is installed, a new set of mocks for all `lightning` namespaced components is generated into the `lightning-mocks` folder. These mocks are generated based off the `lwc-standard.json` metadata file. The mocks are auto-generated and the Jest resolver automatically uses these mocks in the tests. These work out-of-the-box, you don't need to do anything.
 
 ### Other Component Mocks
 
-For components from other namespaces, not in your local `lwc` directory, you'll need to create your own mock and update the Jest config to map the name of these components to the mock file. 
+For components from other namespaces, not in your local `lwc` directory, create your own mock and update the Jest config to map the name of these components to the mock file. 
 
 Let's go through an example. Given the following template, `hello-world.html`, we want to test:
 
@@ -125,7 +125,7 @@ module.exports = {
 };
 ```
 
-This will tell Jest to map the import for `foo-button` to the provided file. Here, `<rootDir>` will map to the root of the SFDX workspace. Note that this file location is not required, just an example. You also have the freedom to make these mock implementations as sophisticated or simple as you'd like. In this example, we'll make `foo-button` extremely simple with an empty template and no functionality in the .js file, but you can always add whatever markup you'd like or implement functionality like any other LWC component.
+This tells Jest to map the import for `foo-button` to the provided file. Here, `<rootDir>` maps to the root of the SFDX workspace. Note that this file location is not required, just an example. You also have the freedom to make these mock implementations as sophisticated or simple as you'd like. In this example, we'll make `foo-button` extremely simple with an empty template and no functionality in the .js file, but you can always add whatever markup you'd like or implement functionality like any other Lightning web component.
 
 Finally, we need to create the mock `foo-button` files. In the `force-app/test/jest-mocks` directory create the following files:
 
