@@ -103,42 +103,44 @@ When this package is installed, a new set of mocks for all `lightning` namespace
 
 For components from other namespaces, not in your local `lwc` directory, create your own mock and update the Jest config to map the name of these components to the mock file. 
 
-Let's go through an example. Given the following template, `hello-world.html`, we want to test:
+Let's go through an example. Given the following template, `helloWorld.html`, we want to test:
 
 ```html
 <template>
     Hello From a Lightning Web Component!
     <lightning-button onclick={doSomething}></lightning-button>
-    <foo-button onclick={doSomethingElse}></foo-button>
+    <foo-fancy-button onclick={doSomethingElse}></foo-button>
 </template>
 ```
 
-We know out of the box the `lightning-button` will be handled by the package automatically. `foo-button`, however, will need to be resolved. In our `jest.config.js` file at the root of the SFDX project workspace, add the following:
+We know out of the box the `lightning-button` will be handled by the package automatically. `foo-fancy-button`, however, will need to be resolved. First, create a `jest.config.js` file at the root of the SFDX project workspace and add the following:
 
 ```js
 const { jestConfig } = require('@salesforce/lwc-jest/config');
 module.exports = {
     ...jestConfig,
     moduleNameMapper: {
-        '^foo-button$': '<rootDir>/force-app/test/jest-mocks/foo-button',
+        '^foo/fancyButton$': '<rootDir>/force-app/test/jest-mocks/foo/fancyButton',
     }
 };
 ```
 
-This tells Jest to map the import for `foo-button` to the provided file. Here, `<rootDir>` maps to the root of the SFDX workspace. Note that this file location is not required, just an example. You also have the freedom to make these mock implementations as sophisticated or simple as you'd like. In this example, we'll make `foo-button` extremely simple with an empty template and no functionality in the .js file, but you can always add whatever markup you'd like or implement functionality like any other Lightning web component.
+This tells Jest to map the import for `foo-fancy-button` to the provided file. Notice that the first dash is converted to a forward slash and the rest of the component name goes from kebab to camel case. The reason for the forward slash is because the module resolver treats everything before the first dash as the namespace. Here, `<rootDir>` maps to the root of the SFDX workspace. Note that this file location is not required, just an example.
 
-Finally, we need to create the mock `foo-button` files. In the `force-app/test/jest-mocks` directory create the following files:
+You also have the freedom to make these mock implementations as sophisticated or simple as you'd like. In this example, we'll keep `foo-fancy-button` simple with an empty template and no functionality in the `.js` file, but you can always add whatever markup you'd like or implement functionality like any other Lightning web component.
+
+Finally, we need to create the mock `foo-fancy-button` files. In the `force-app/test/jest-mocks/foo` directory create the following files:
 
 ```html
-<!-- foo-button.html -->
+<!-- fancyButton.html -->
 <template></template>
 ```
 
 ```js
-// foo-button.js
+// fancyButton.js
 import { LightningElement, api } from 'lwc';
-export default class FooButton extends LightningElement {
+export default class FancyButton extends LightningElement {
   @api label
-  // any other @api properties or implementation you may want to expose here
+  // any other implementation you may want to expose here
 }
 ```
