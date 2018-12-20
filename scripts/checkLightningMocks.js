@@ -50,7 +50,7 @@ lightningNamespaces.forEach(ns => {
         if (hasHtml && isExposed) {
             const slots = getSlotCount(htmlPath);
             if (slots > 0) {
-                matches.push({ file: file, slots: slots });
+                matches.push({ file, slots });
             }
         }
     });
