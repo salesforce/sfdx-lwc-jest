@@ -24,6 +24,7 @@ const lightningNamespaces = [ 'lightning', 'interop' ];
  */
 const dynamicHtmlMapper = {
     'tile': 'standardTile',
+    'progressStep': 'base',
 }
 const pathToComponents = process.argv[2];
 
