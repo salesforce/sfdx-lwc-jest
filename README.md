@@ -69,15 +69,23 @@ Pass other parameters to jest after the `--` flag. For example,
 lwc-jest --debug -- --no-cache
 ```
 
+### Debugging in VSCode
+
+If you prefer to debug directly inside the VSCode IDE, follow these steps:
+- From the VSCode dropdowns, select Debug --> Add Configuration...
+- Replace the contents of generated `launch.json` with the [`Debug Jest Tests` configuration](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) provided by Jest
+- Add a `jest.config.json` file to the root of the SFDX project as described [here](#overriding-jest-config)
+- Run tests by pressing F5 or selecting Debug --> Start Debugging
+
 ## Overriding Jest Config
 
-`lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, import the default config from `lwc-jest`, modify as you please, and then export the new config.
+`lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, create a file called `jest.config.js` at the root of your SFDX project, import the default config from `lwc-jest`, modify as you please, and then export the new config.
 
 ```js
 const { jestConfig } = require('@salesforce/lwc-jest/config');
 module.exports = {
     ...jestConfig,
-    testMatch: ['**/todo.test.js'],
+    // add any custom configurations here
 };
 ```
 
