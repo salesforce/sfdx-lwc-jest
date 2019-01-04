@@ -1,6 +1,6 @@
 # @salesforce/lwc-jest
 
-Run Jest against Lightning web components in an SFDX workspace environment.
+Run Jest against Lightning web components in an Salesforce DX workspace environment.
 
 ## Installation
 
@@ -25,7 +25,7 @@ Alternatively, you can globally install the package and run directly from the co
 ## Usage
 
 ```
-`lwc-jest [options]` will run Jest unit tests in SFDX workspace
+`lwc-jest [options]` will run Jest unit tests in Salesforce DX workspace
 
 Options:
   --version             Show version number                            [boolean]
@@ -69,17 +69,17 @@ Pass other parameters to jest after the `--` flag. For example,
 lwc-jest --debug -- --no-cache
 ```
 
-### Debugging in VSCode
+### Debugging in Visual Studio Code
 
-If you prefer to debug directly inside the VSCode IDE, follow these steps:
-- From the VSCode dropdowns, select Debug --> Add Configuration...
+If you prefer to debug directly inside the Visual Studio Code IDE, follow these steps:
+- From the Visual Studio Code dropdowns, select Debug --> Add Configuration...
 - Replace the contents of generated `launch.json` with the [`Debug Jest Tests` configuration](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) provided by Jest
-- Add a `jest.config.json` file to the root of the SFDX project as described [here](#overriding-jest-config)
+- Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config)
 - Run tests by pressing F5 or selecting Debug --> Start Debugging
 
 ## Overriding Jest Config
 
-`lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, create a file called `jest.config.js` at the root of your SFDX project, import the default config from `lwc-jest`, modify as you please, and then export the new config.
+`lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, create a file called `jest.config.js` at the root of your Salesforce DX project, import the default config from `lwc-jest`, modify as you please, and then export the new config.
 
 ```js
 const { jestConfig } = require('@salesforce/lwc-jest/config');
@@ -121,7 +121,7 @@ Let's go through an example. Given the following template, `helloWorld.html`, we
 </template>
 ```
 
-We know out of the box the `lightning-button` will be handled by the package automatically. `foo-fancy-button`, however, will need to be resolved. First, create a `jest.config.js` file at the root of the SFDX project workspace and add the following:
+We know out of the box the `lightning-button` will be handled by the package automatically. `foo-fancy-button`, however, will need to be resolved. First, create a `jest.config.js` file at the root of the Salesforce DX project workspace and add the following:
 
 ```js
 const { jestConfig } = require('@salesforce/lwc-jest/config');
@@ -133,7 +133,7 @@ module.exports = {
 };
 ```
 
-This tells Jest to map the import for `foo-fancy-button` to the provided file. Notice that the first dash is converted to a forward slash and the rest of the component name goes from kebab to camel case. The reason for the forward slash is because the module resolver treats everything before the first dash as the namespace. Here, `<rootDir>` maps to the root of the SFDX workspace. Note that this file location is not required, just an example.
+This tells Jest to map the import for `foo-fancy-button` to the provided file. Notice that the first dash is converted to a forward slash and the rest of the component name goes from kebab to camel case. The reason for the forward slash is because the module resolver treats everything before the first dash as the namespace. Here, `<rootDir>` maps to the root of the Salesforce DX workspace. Note that this file location is not required, just an example.
 
 You also have the freedom to make these mock implementations as sophisticated or simple as you'd like. In this example, we'll keep `foo-fancy-button` simple with an empty template and no functionality in the `.js` file, but you can always add whatever markup you'd like or implement functionality like any other Lightning web component.
 
