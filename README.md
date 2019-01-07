@@ -25,7 +25,7 @@ Alternatively, you can globally install the package and run directly from the co
 ## Usage
 
 ```
-`lwc-jest [options]` will run Jest unit tests in Salesforce DX workspace
+`lwc-jest [options]` will run Jest unit tests in the Salesforce DX workspace
 
 Options:
   --version             Show version number                            [boolean]
@@ -73,13 +73,13 @@ lwc-jest --debug -- --no-cache
 
 If you prefer to debug directly inside the Visual Studio Code IDE, follow these steps:
 - From the Visual Studio Code dropdowns, select Debug --> Add Configuration...
-- Replace the contents of generated `launch.json` with the [`Debug Jest Tests` configuration](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) provided by Jest
+- Replace the contents of the generated `launch.json` with the version from Jest's [_Debugging in VS Code_ documentation](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code)
 - Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config)
 - Run tests by pressing F5 or selecting Debug --> Start Debugging
 
 ## Overriding Jest Config
 
-`lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional tweaks. To override any options or set additional ones, create a file called `jest.config.js` at the root of your Salesforce DX project, import the default config from `lwc-jest`, modify as you please, and then export the new config.
+`lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional changes. To override any options or set additional ones, create a file called `jest.config.js` at the root of your Salesforce DX project, import the default config from `lwc-jest`, modify as you please, and then export the new config.
 
 ```js
 const { jestConfig } = require('@salesforce/lwc-jest/config');
