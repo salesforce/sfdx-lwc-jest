@@ -10,7 +10,7 @@ Add this project as a devDependency:
 yarn add -D @salesforce/lwc-jest
 ``` 
 
-Update your projects unit testing script in package.json to execute `lwc-jest`:
+Update your project's unit testing script in package.json to execute `lwc-jest`:
 
 ```json
 {
