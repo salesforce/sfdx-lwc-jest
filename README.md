@@ -1,6 +1,6 @@
 # @salesforce/lwc-jest
 
-Run Jest against Lightning web components in an Salesforce DX workspace environment.
+Run Jest against Lightning web components in a Salesforce DX workspace environment.
 
 ## Installation
 
@@ -25,7 +25,7 @@ Alternatively, you can globally install the package and run directly from the co
 ## Usage
 
 ```
-`lwc-jest [options]` will run Jest unit tests in the Salesforce DX workspace
+`lwc-jest [options]` runs Jest unit tests
 
 Options:
   --version             Show version number                            [boolean]
@@ -71,11 +71,11 @@ lwc-jest --debug -- --no-cache
 
 ### Debugging in Visual Studio Code
 
-If you prefer to debug directly inside the Visual Studio Code IDE, follow these steps:
+If you prefer to debug inside Visual Studio Code, follow these steps:
 - From the Visual Studio Code dropdowns, select Debug --> Add Configuration...
-- Replace the contents of the generated `launch.json` with the version from Jest's [_Debugging in VS Code_ documentation](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code)
-- Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config)
-- Run tests by pressing F5 or selecting Debug --> Start Debugging
+- Replace the contents of the generated `launch.json` with the version from Jest's [_Debugging in VS Code_ documentation](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code).
+- Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config).
+- To run tests, press F5 or select Debug > Start Debugging.
 
 ## Overriding Jest Config
 
@@ -121,7 +121,7 @@ Let's go through an example. Given the following template, `helloWorld.html`, we
 </template>
 ```
 
-We know out of the box the `lightning-button` will be handled by the package automatically. `foo-fancy-button`, however, will need to be resolved. First, create a `jest.config.js` file at the root of the Salesforce DX project workspace and add the following:
+Because it's in the `lightning` namespace, the `lightning-button` just works. However, you must write some code to help the Jest resolver find the `foo-fancy-button component`. First, create a `jest.config.js` file at the root of the Salesforce DX project workspace and add the following:
 
 ```js
 const { jestConfig } = require('@salesforce/lwc-jest/config');
