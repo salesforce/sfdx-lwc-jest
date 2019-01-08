@@ -72,7 +72,7 @@ lwc-jest --debug -- --no-cache
 ### Debugging in Visual Studio Code
 
 If you prefer to debug inside Visual Studio Code, follow these steps:
-- From the Visual Studio Code dropdowns, select Debug --> Add Configuration...
+- From the Visual Studio Code dropdowns, select Debug > Add Configuration...
 - Replace the contents of the generated `launch.json` with the version from Jest's [_Debugging in VS Code_ documentation](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code).
 - Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config).
 - To run tests, press F5 or select Debug > Start Debugging.
