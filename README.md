@@ -8,17 +8,21 @@ Add this project as a devDependency:
 
 ```bash
 yarn add -D @salesforce/lwc-jest
-``` 
+```
 
 Update your project's unit testing script in package.json to execute `lwc-jest`:
 
 ```json
 {
     "scripts": {
-        "test:unit": "lwc-jest"
+        "test:unit": "lwc-jest",
+        "test:unit:watch": "lwc-jest --watch",
+        "test:unit:debug": "lwc-jest --debug"
     }
 }
 ```
+
+`test:unit` runs all your tests. `test:unit:watch` and `test:unit:debug` run Jest in watch and debug mode (see below).
 
 Alternatively, you can globally install the package and run directly from the command line.
 
@@ -49,22 +53,22 @@ Examples:
 
 ## Passing Additional Jest CLI Options
 
-To pass any additional Jest CLI options to your run, pass them after the `--` flag. All CLI parameters after the flag are passed along directly to Jest.
+To pass any additional Jest CLI options to your run, pass them after the `--` flag. All CLI parameters after the flag are passed directly to Jest.
 
 ```bash
 lwc-jest -- --json
 ```
 
-See the Jest [doc](http://facebook.github.io/jest/docs/en/cli.html) for all CLI options.
+See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) for all CLI options.
 
 ## Debug mode
 
-Debug mode lets you use debugger in your jest tests.
+Debug mode lets you easily debug your jest tests.
 - Put a `debugger;` into your code
-- Open `chrome://inspect` 
+- Open `chrome://inspect`
 - Run `lwc-jest` with the `--debug` flag.
 
-Pass other parameters to jest after the `--` flag. For example,
+Pass other parameters to Jest after the `--` flag. For example,
 ```
 lwc-jest --debug -- --no-cache
 ```
@@ -72,10 +76,17 @@ lwc-jest --debug -- --no-cache
 ### Debugging in Visual Studio Code
 
 If you prefer to debug inside Visual Studio Code, follow these steps:
-- From the Visual Studio Code dropdowns, select Debug > Add Configuration...
+- From the Visual Studio Code dropdowns, select Debug > Add Configuration....
+- If you're prompted for an Environment choose any value.
 - Replace the contents of the generated `launch.json` with the version from Jest's [_Debugging in VS Code_ documentation](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code).
 - Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config).
 - To run tests, press F5 or select Debug > Start Debugging.
+
+
+## Watch mode
+
+Watch mode causes Jest to monitor files for changes and rerun tests related to the changed files. This is a great way to rapidly make component and test changes while monitoring tests results.
+
 
 ## Overriding Jest Config
 
@@ -109,7 +120,7 @@ When this package is installed, a new set of mocks for all `lightning` namespace
 
 ### Other Component Mocks
 
-For components from other namespaces, not in your local `lwc` directory, create your own mock and update the Jest config to map the name of these components to the mock file. 
+For components from other namespaces, not in your local `lwc` directory, create your own mock and update the Jest config to map the name of these components to the mock file.
 
 Let's go through an example. Given the following template, `helloWorld.html`, we want to test:
 
