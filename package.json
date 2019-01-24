@@ -28,7 +28,7 @@
     "@lwc/jest-transformer": "0.33.28-5",
     "@lwc/module-resolver": "0.33.28-5",
     "@lwc/wire-service": "0.33.28-5",
-    "@salesforce/wire-service-jest-util": "^2.2.2",
+    "@salesforce/wire-service-jest-util": "^2.2.3",
     "babel-core": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-jest": "^22.1.0",
