@@ -6,8 +6,8 @@
  */
 export const getRecord = jest.fn();
 export const getRecordCreateDefaults = jest.fn();
-export const updateRecord = jest.fn().mockResolvedValue();
-export const createRecord = jest.fn().mockResolvedValue();
+export const updateRecord = jest.fn().mockResolvedValue({});
+export const createRecord = jest.fn().mockResolvedValue({});
 export const deleteRecord = jest.fn().mockResolvedValue();
 export const generateRecordInputForCreate = jest.fn();
 export const generateRecordInputForUpdate = jest.fn();

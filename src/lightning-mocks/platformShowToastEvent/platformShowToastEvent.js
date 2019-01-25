@@ -13,14 +13,5 @@ export class ShowToastEvent extends CustomEvent {
             cancelable: true,
             bubbles: true,
         });
-
-        showToast(toast, forceShowToastAttributes => {
-            Object.defineProperties(this, {
-                toastAttributes: {
-                    value: forceShowToastAttributes,
-                    writable: false,
-                },
-            });
-        });
     }
 }
