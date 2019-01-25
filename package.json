@@ -1,6 +1,6 @@
 {
   "name": "@salesforce/lwc-jest",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "Run Jest against LWC components in a Salesforce DX workspace environment",
   "main": "src/index.js",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "@lwc/jest-transformer": "0.33.28-5",
     "@lwc/module-resolver": "0.33.28-5",
     "@lwc/wire-service": "0.33.28-5",
-    "@salesforce/wire-service-jest-util": "^2.2.2",
+    "@salesforce/wire-service-jest-util": "^2.2.4",
     "babel-core": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-jest": "^22.1.0",
