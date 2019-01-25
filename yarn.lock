@@ -647,10 +647,10 @@
   resolved "https://registry.yarnpkg.com/@lwc/wire-service/-/wire-service-0.33.28-5.tgz#3deef5906dd8fbf5ad0d79fa359bc9be08590d10"
   integrity sha512-pirs0MNbEDBglNGgVCdd7tmoN5ywGMxs6F6TTa1fgNZgr1EH9QM3gJPC4MJRCpV7bLQB8JQmJ1j6jbtDwuQFWA==
 
-"@salesforce/wire-service-jest-util@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.2.3.tgz#aeae66b313baf184e01d1b99825474103132d362"
-  integrity sha512-rjejsnj+7NQc38TxHCR9HkMU3zjyCTzJhIwp+EOtkGtm2InJSde8z8/pT/Da0o2OmokOYCUdJ2DAswU8GbomJg==
+"@salesforce/wire-service-jest-util@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.2.4.tgz#346d22061f94dd1d9da249efb68f41b5f6f65bb6"
+  integrity sha512-fKm3PqxFJqAEKEJ6LVzKRWd2dFfDkvzH/ssQMdfyZQelyXYFPT49UQ4a9MD0GrADA3Mt8vDWunhlv9guBTc04A==
 
 "@types/chokidar@^1.7.5":
   version "1.7.5"
