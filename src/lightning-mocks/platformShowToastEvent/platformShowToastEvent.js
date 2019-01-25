@@ -7,7 +7,7 @@
 const ShowToastEventName = 'lightning__showtoast';
 
 export class ShowToastEvent extends CustomEvent {
-    constructor(toast) {
+    constructor() {
         super(ShowToastEventName, {
             composed: true,
             cancelable: true,
