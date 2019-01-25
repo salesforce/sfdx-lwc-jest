@@ -15,5 +15,3 @@ export class ShowToastEvent extends CustomEvent {
         });
     }
 }
-
-export const foo = "foo";
