@@ -28,7 +28,7 @@ Alternatively, you can globally install the package and run directly from the co
 
 ## Updating .forceignore
 
-After adding Jest tests, you'll get errors trying to sync your local files with a scratch org because the `__tests__` directory will not be recognized. To ignore these test files, add this entry to your `.forceignore` file:
+After adding Jest tests, you'll get errors trying to push your local files with a scratch org because the `__tests__` directory will not be recognized. To ignore these test files, add this entry to your `.forceignore` file:
 
 ```
 **/__tests__/**

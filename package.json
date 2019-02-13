@@ -10,7 +10,7 @@
   ],
   "repository": "git@github.com:salesforce/lwc-jest.git",
   "bin": {
-    "lwc-jest": "./bin/lwc-jest.js"
+    "lwc-jest": "./bin/lwc-jest"
   },
   "scripts": {
     "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
