@@ -28,7 +28,7 @@ Alternatively, you can globally install the package and run directly from the co
 
 ## Updating .forceignore
 
-After adding Jest tests, you'll get errors trying to push your local files with a scratch org because the `__tests__` directory will not be recognized. To ignore these test files, add this entry to your `.forceignore` file:
+After adding Jest tests, pushing your local files to a scratch org causes errors because the `__tests__` directory isn't recognized. To ignore these test files, add this entry to your `.forceignore` file:
 
 ```
 **/__tests__/**
@@ -132,7 +132,7 @@ module.exports = {
 
 ## Resolving External Lightning Web Components
 
-Any Ligntning web components not located in your local `lwc` directory of your SFDX workspace will need to be mocked in your Jest tests. Included in this package are a set of mocks for all the `lightning` namespaced components.
+If a Lightning web component isn't located in the local `lwc` directory of your Salesforce DX project, you must mock it in your Jest tests. This package includes a set of mocks for all components in the `lightning` namespace.
 
 ### Lightning Namespaced Component Mocks
 
