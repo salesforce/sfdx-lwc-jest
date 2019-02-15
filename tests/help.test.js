@@ -8,7 +8,7 @@ const { exec } = require('child_process');
 
 const runInHelpMode = () => {
     return new Promise((resolve, reject) => {
-        exec('node ./src/index.js --help', (error, stdout) => {
+        exec('node ./bin/lwc-jest --help', (error, stdout) => {
             if (error) {
                 reject(error);
             } else {

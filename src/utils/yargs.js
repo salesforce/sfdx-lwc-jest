@@ -34,9 +34,9 @@ const argError = (msg, err, yargs) => {
 
 const getArgs = () => {
     return yargs
-        .usage('`$0 [options]` will run Jest unit tests in SFDX workspace')
+        .usage('`$0 [options]` runs Jest unit tests in SFDX workspace')
         .example('$0 --coverage', options.coverage.description)
-        .example('$0 -- --json', 'All params after `--` will be directly passed to Jest')
+        .example('$0 -- --json', 'All params after `--` are directly passed to Jest')
         .options(options)
         .strict()
         .fail(argError)

@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /*
  * Copyright (c) 2018, salesforce.com, inc.
  * All rights reserved.
@@ -8,13 +6,10 @@
  */
 'use strict';
 
-const { getArgs } = require('./utils/yargs');
-const { error } = require('./log');
+const { registerLdsTestWireAdapter, registerApexTestWireAdapter, registerTestWireAdapter } = require('@salesforce/wire-service-jest-util');
 
-const args = getArgs();
-const runJest = require('./utils/test-runner');
-runJest(args);
-
-process.on('unhandledRejection', reason => {
-    error(reason);
-});
+module.exports = {
+    registerLdsTestWireAdapter,
+    registerApexTestWireAdapter,
+    registerTestWireAdapter,
+};

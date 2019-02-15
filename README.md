@@ -26,6 +26,16 @@ Update your project's unit testing script in package.json to execute `lwc-jest`:
 
 Alternatively, you can globally install the package and run directly from the command line.
 
+## Updating .forceignore
+
+After adding Jest tests, pushing your local files to a scratch org causes errors because the `__tests__` directory isn't recognized. To ignore these test files, add this entry to your `.forceignore` file:
+
+```
+**/__tests__/**
+```
+
+See [How to Exclude Source When Syncing or Converting](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm) for more details.
+
 ## Usage
 
 ```
@@ -120,19 +130,9 @@ module.exports = {
 };
 ```
 
-## Updating .forceignore
-
-After adding Jest tests, you'll get errors trying to sync your local files with a scratch org because the `__tests__` directory will not be recognized. To ignore these test files, add this entry to your `.forceignore` file:
-
-```
-**/__tests__/**
-```
-
-See [How to Exclude Source When Syncing or Converting](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm) for more details.
-
 ## Resolving External Lightning Web Components
 
-Any Ligntning web components not located in your local `lwc` directory of your SFDX workspace will need to be mocked in your Jest tests. Included in this package are a set of mocks for all the `lightning` namespaced components.
+If a Lightning web component isn't located in the local `lwc` directory of your Salesforce DX project, you must mock it in your Jest tests. This package includes a set of mocks for all components in the `lightning` namespace.
 
 ### Lightning Namespaced Component Mocks
 
@@ -183,3 +183,17 @@ export default class FancyButton extends LightningElement {
   // any other implementation you may want to expose here
 }
 ```
+
+## Testing @wire Adapters
+
+To provision data through `@wire` adapters in unit tests, use the APIs provided by [`@salesforce/wire-service-jest-util`](https://github.com/salesforce/wire-service-jest-util). These APIs are exposed through this package so you do not need to include another dependency in your `package.json`. 
+
+```js
+import {
+    registerTestWireAdapter,
+    registerLdsTestWireAdapter,
+    registerApexTestWireAdapter
+} from '@salesforce/lwc-jest';
+```
+
+See the `@salesforce/wire-service-jest-util` [README](https://github.com/salesforce/wire-service-jest-util/blob/master/README.md) for further documentation on these APIs.
