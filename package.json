@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "license": "MIT",
   "files": [
+    "bin/",
     "src/",
     "config.js"
   ],
