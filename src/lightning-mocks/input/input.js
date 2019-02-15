@@ -53,5 +53,9 @@ export default class Input extends LightningElement {
 	@api value
 	@api variant
     @api focus() {}
-	@api showHelpMessageIfInvalid() {}
+    @api showHelpMessageIfInvalid() {}
+    @api checkValidity() {}
+    @api setCustomValidity() {}
+    @api reportValidity() {}
+    @api blur() {}
 }
