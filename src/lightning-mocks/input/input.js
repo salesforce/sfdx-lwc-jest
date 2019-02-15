@@ -49,7 +49,7 @@ export default class Input extends LightningElement {
 	@api timeAriaLabelledBy
 	@api timezone
 	@api type
-    @api validity
+	@api validity
 	@api value
 	@api variant
     @api focus() {}
