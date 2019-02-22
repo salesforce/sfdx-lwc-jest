@@ -24,7 +24,7 @@
     "@lwc/compiler": "0.34.4",
     "@lwc/engine": "0.34.4",
     "@lwc/jest-preset": "0.34.4",
-    "@lwc/jest-resolver": "0.34.4",
+    "@lwc/jest-resolver": "0.35.9",
     "@lwc/jest-serializer": "0.34.4",
     "@lwc/jest-transformer": "0.34.4",
     "@lwc/module-resolver": "0.34.4",
