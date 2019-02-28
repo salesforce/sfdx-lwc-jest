@@ -535,117 +535,117 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@lwc/babel-plugin-component@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/babel-plugin-component/-/babel-plugin-component-0.34.4.tgz#2c81d20be5cf1de0a54ae983efeb94440dcb1f75"
-  integrity sha512-fAMpAl8j+dv0GT0Yj8mNhQ3SUUVFmW31a/RK/ksQBgGY5OfvYDcEJL2pwCoowbCVOrv0/OLWTLFS4HdbHYeITg==
+"@lwc/babel-plugin-component@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/babel-plugin-component/-/babel-plugin-component-0.35.10.tgz#cec06d93ad605057117b6ee68d9b03ee4bdf1ac9"
+  integrity sha512-mcY0OKIsbmbiz0KGCvoK0IAIGGED9PE9GYMQS5jvAhMptNSoSTlwyYmRJQuAUZq8AvMencPzZ1iIxj9d0H9Jug==
   dependencies:
     "@babel/helper-module-imports" "7.0.0"
     "@babel/plugin-proposal-class-properties" "7.1.0"
-    "@lwc/errors" "0.34.4"
+    "@lwc/errors" "0.35.10"
 
-"@lwc/compiler@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/compiler/-/compiler-0.34.4.tgz#6503b2e6c7e70e390c7da418b4e1cdba78534efb"
-  integrity sha512-j/U5fw/Yygk4b2SC2/zPhYBYDGanoi2wGydxnTmEY3QYC25CC0c9eklf+ZqP8C8zYaK4cF8ZngPPTm6V+DNSPA==
+"@lwc/compiler@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/compiler/-/compiler-0.35.10.tgz#425f1858d2680ae962c2b8ed533e5f6332307cfa"
+  integrity sha512-NlhgLnuD9tQzbnq9PePrZQOik9jRM/xILg7pMb8ujj4dbGUMiu4DwBCcl1Cptz8dF/70J6Ub6ZfOqMM7xnHhFw==
   dependencies:
     "@babel/core" "7.1.0"
     "@babel/plugin-proposal-object-rest-spread" "7.0.0"
-    "@lwc/babel-plugin-component" "0.34.4"
-    "@lwc/errors" "0.34.4"
-    "@lwc/style-compiler" "0.34.4"
-    "@lwc/template-compiler" "0.34.4"
+    "@lwc/babel-plugin-component" "0.35.10"
+    "@lwc/errors" "0.35.10"
+    "@lwc/style-compiler" "0.35.10"
+    "@lwc/template-compiler" "0.35.10"
     "@types/chokidar" "^1.7.5"
-    babel-preset-compat "0.21.0"
+    babel-preset-compat "0.21.3"
     babel-preset-minify "0.5.0-alpha.5a128fd5"
     rollup "0.66.2"
     rollup-plugin-replace "^2.0.0"
 
-"@lwc/engine@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/engine/-/engine-0.34.4.tgz#daf3ccdbc3f7fbced0c5ca2a9b647d5e73dde81b"
-  integrity sha512-MoaQdxw8zI9Zcxi0bqfg9YEHkfAiYc8oU8cEi10THjmlFE+qtUFpGz2H920YXy++2NQUJ4Orw99sI3n+zX5I7A==
+"@lwc/engine@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/engine/-/engine-0.35.10.tgz#c454136172cc38908d5464a796a951831ff13fcb"
+  integrity sha512-vgDpn7ar6/RP1ZxOpOhvIS/EA3ES0FdUiI78W/2gulGEc7J5/AJITcB9w3kisNhpaZU3sT09ZfnvJ964KOKwOw==
   dependencies:
-    observable-membrane "0.25.0"
+    observable-membrane "0.26.0"
 
-"@lwc/errors@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/errors/-/errors-0.34.4.tgz#991b78aeefca32187156db6f39748d1b9f26cdc2"
-  integrity sha512-AGICwjXEy1y3RsfXf3KDUEIM6a9h8OBxhywN2O86fcA+pJb+ZVyjT0EpSFg55fBTHIvUXeV2H2R8Z91pnCM6lA==
+"@lwc/errors@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/errors/-/errors-0.35.10.tgz#aa9a799b4dafb223d317f660baef22c502ae33f3"
+  integrity sha512-Lqut4B8XaNV/8Xb2xSc3DLEWhG4+JSqoDqmM5I3N1REF8XlaVhf7Gcw1yAh728Rzduw8fAZ215vBii1f7VR4uA==
 
-"@lwc/jest-preset@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-preset/-/jest-preset-0.34.4.tgz#cb21b6f7324d8f5c7301011dd9b36af72d1d85f0"
-  integrity sha512-9SQsKTuSklyi9cJ1FsNyFnnDYButM5JIXmlDu8Rk5Sj7YxSeiMrpakdefT2rXK8hfK3SowlYTreDl0shsBS+qg==
+"@lwc/jest-preset@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/jest-preset/-/jest-preset-0.35.10.tgz#7703484639f4743f61b2f5099759f253d9c386e0"
+  integrity sha512-MCz5i/W2rGqkqB5AQFccVdrfzfYHmC00NY1sHRT3YJybTQs0vWoGfvldm4l6gUGE1FpaB9XkLCCL8JH3y5B7kw==
   dependencies:
-    "@lwc/jest-resolver" "0.34.4"
-    "@lwc/jest-serializer" "0.34.4"
-    "@lwc/jest-transformer" "0.34.4"
-    "@lwc/test-utils" "0.34.4"
+    "@lwc/jest-resolver" "0.35.10"
+    "@lwc/jest-serializer" "0.35.10"
+    "@lwc/jest-transformer" "0.35.10"
+    "@lwc/test-utils" "0.35.10"
 
-"@lwc/jest-resolver@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-0.34.4.tgz#010f17c8f05473dac1864a3099a56956bf79482d"
-  integrity sha512-kmXfoOhQm3egDjpG025exmqXzzqsX//IlTCdaWb4luaLSMh3L7AMG2rSsHzZNKRSdcRZndczr9II8b8gFjV/VQ==
+"@lwc/jest-resolver@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/jest-resolver/-/jest-resolver-0.35.10.tgz#fa407533c9dd74f4cda12cfd10fdd00a5205e930"
+  integrity sha512-QIPnVAmDC326wPldTRBQRyjVFxLSsfu8l0lgOJvuAQ59yPG0UsomwOdHe1cZqNEz3GED8j4UsLWjiPiLJARqGQ==
 
-"@lwc/jest-serializer@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-serializer/-/jest-serializer-0.34.4.tgz#fd569980d1a875d3139206606d6c2a4577a117a5"
-  integrity sha512-iY1G81GNLtlxBF4As4Hu59s0fzHPTZihdx125ujYateWjXiFS8ZWiWQkkuBwSjnqk8JF65WJPopp/uPIdvIXCg==
+"@lwc/jest-serializer@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/jest-serializer/-/jest-serializer-0.35.10.tgz#bc540f11f5fc6a12d60f40f10aedb8574fa7cc8a"
+  integrity sha512-tOpZCpOwdMtfK7La2yPflw9dpFsi45qk+3aenTMcKsGZSd23B0NDTHQYm4EYXhBP6JcQ5AgHMi7pzFP9lU9Zew==
 
-"@lwc/jest-transformer@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-transformer/-/jest-transformer-0.34.4.tgz#5e6458a23cdacdf7006d9c58f3901e2486804267"
-  integrity sha512-j3rgAc5xmcZAyrFC9Dm7ThIzYcR33HGu15wS/Fj9geH4n8EZueiY7/CwsDll6nPA+xDME4Par+AkLiO4BbEXfw==
+"@lwc/jest-transformer@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/jest-transformer/-/jest-transformer-0.35.10.tgz#5b9b3f28f61c2ac5159bf09825d8b0d978dcca66"
+  integrity sha512-mdoCcPUAZIfocqsqGYzVxq9bQQiGzwRifYmKw44NmGxaqSDaY6zDiH5uzCX9Z9Sh98Jd09f5d8TDfoDgNPuRUA==
   dependencies:
     "@babel/core" "7.1.0"
     "@babel/plugin-transform-modules-commonjs" "7.1.0"
     "@babel/template" "~7.1.2"
-    "@lwc/errors" "0.34.4"
-    deasync "0.1.12"
+    "@lwc/errors" "0.35.10"
+    deasync "0.1.14"
 
-"@lwc/module-resolver@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/module-resolver/-/module-resolver-0.34.4.tgz#4d50d6ff91fe8361c53fc06fa41448f10a039456"
-  integrity sha512-3RMKu937ZYR+ZpvBxwO7O6qYWiqC3Y7G1UZhik19CJQHdcpU5fxQbN8vbRlRXw2U0y2UiUl6ax2Z8zv2PifR1w==
+"@lwc/module-resolver@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/module-resolver/-/module-resolver-0.35.10.tgz#ca532130efd93066bcdfc2b70dc77ff15af7e7fe"
+  integrity sha512-O78FAR2U5XtN9QeuljaUAeCKWz4d/EmcylNKztdV1H0U1GAXZmal7oIyIWwKDpPvmTts6RN0EvXJBaWMCrLt4w==
   dependencies:
     glob "^7.1.2"
 
-"@lwc/style-compiler@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/style-compiler/-/style-compiler-0.34.4.tgz#07ccd4d5added8e9f1173c94fcd9aac88c0e50cf"
-  integrity sha512-sywbPGmqSKLKaZxYj0u8eKLKvaCZhKXMo3/BDuEF5Zo5EuqK1yMTSKhKjZnpAXcoiDQmhRZpwMI/FAW5J1wKsA==
+"@lwc/style-compiler@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/style-compiler/-/style-compiler-0.35.10.tgz#c8e58d8e60f3104053019f7569d2163bb71b39da"
+  integrity sha512-yjxYYSxDFTmmtInHM3oQJviYI4a+o4nCYDhw3QGdj5MiWfMGAMIt4fd3zK0+TaE7a5P+glNz2zub3G1pzKuPHw==
   dependencies:
     cssnano "~3.10.0"
     postcss "~7.0.5"
     postcss-selector-parser "3.1.1"
     postcss-value-parser "3.3.1"
 
-"@lwc/template-compiler@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/template-compiler/-/template-compiler-0.34.4.tgz#4825f8e2db5834fa95f877a1fb764c85733b945a"
-  integrity sha512-QeYlE4U43Qbf0M9xwepuNSH8ulpofo9tR71QdB1wE9qupGL9JJOsd3Osz6B97HTyYSeYI4wzdjaY8ohB/RzJuA==
+"@lwc/template-compiler@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/template-compiler/-/template-compiler-0.35.10.tgz#b666d25227bbd5c8c88343999e69d7b5ea95a247"
+  integrity sha512-j2zhlHZVdBK95uA9LagJbzTWECujPwoyp9Qte39xtV4BnzXVSL75wEqRHqud78dm+okWUA8EeMMj+GPjsZXB7Q==
   dependencies:
     "@babel/generator" "~7.1.5"
     "@babel/parser" "~7.1.5"
     "@babel/template" "~7.1.2"
     "@babel/traverse" "~7.1.5"
     "@babel/types" "~7.1.5"
-    "@lwc/errors" "0.34.4"
-    "@lwc/style-compiler" "0.34.4"
+    "@lwc/errors" "0.35.10"
+    "@lwc/style-compiler" "0.35.10"
     camelcase "~5.0.0"
     he "^1.1.1"
     parse5-with-errors "^4.0.1"
 
-"@lwc/test-utils@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/test-utils/-/test-utils-0.34.4.tgz#0de5a4160fba24e31e84e07cc6c4cf2ddd065845"
-  integrity sha512-G6Ex66ZWYpGBvp8GumQxx3ttIEbXdRkUUnRFrBpSvAjiI6UHJfZ1eOC894DRTm1KBP52fiq2zyYDLa3POZR4sg==
+"@lwc/test-utils@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/test-utils/-/test-utils-0.35.10.tgz#4eda9297f352aafd7c0252bc941ae7a562ff5fbb"
+  integrity sha512-a75WOJk7uP7HzU/Q/Z7SVaf3zb0fD9v5HfiKH9QPmxmhygOsfJyfAEzoJkYJEfb1Ao5mMTmDXLorzr9dN3Bw6Q==
 
-"@lwc/wire-service@0.34.4":
-  version "0.34.4"
-  resolved "https://registry.yarnpkg.com/@lwc/wire-service/-/wire-service-0.34.4.tgz#1e3019a751ccc9a7911773028c9e3bfe9f5a2fc5"
-  integrity sha512-1JqYgKswHX+pLhJe7+60udTk/xZvvGPuDN34Z37ES4oIU9kps7eVCGXHXa9clhW/PA8FC6y2hO6Yt2NqbAfICg==
+"@lwc/wire-service@0.35.10":
+  version "0.35.10"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/@lwc/wire-service/-/wire-service-0.35.10.tgz#938f0dc76baf97ce2a4e52a73f119bc25c206378"
+  integrity sha512-ixbYlX6Y6xBQ6H8nrqvhrtvoUEWPWFgzMVZlHdkpHSVt+IjH/7hZMe/gmwoXLeH2Tc9Jgt6PSvhic+cwlNZvDQ==
 
 "@salesforce/wire-service-jest-util@^2.2.5":
   version "2.2.5"
@@ -1140,10 +1140,10 @@ babel-plugin-transform-property-literals@^6.10.0-alpha.5a128fd5:
   dependencies:
     esutils "^2.0.2"
 
-babel-plugin-transform-proxy-compat@0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-proxy-compat/-/babel-plugin-transform-proxy-compat-0.21.0.tgz#e509c87b0b01f413244dc4a3290cf44644eb538f"
-  integrity sha512-NYUrnD3CWDVlM3GVEVpDB6pkeWRoWJQsq8J6BPS7i4odIUBbR2Z4+sTCzJCHN4+vwifUzdg8tyb/LJazzJhrHw==
+babel-plugin-transform-proxy-compat@0.21.3:
+  version "0.21.3"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/babel-plugin-transform-proxy-compat/-/babel-plugin-transform-proxy-compat-0.21.3.tgz#6ff1aea7a0bdd0cc62a617e404c6bd0a225f3774"
+  integrity sha512-BdhgF0wgyCnYx2kvJhshME79Nk2eGwTyL6xttPTouEeyhH9kTEetZ/5wwBSd/VSY3EZjQcJi1BpWnKoGMrbt7w==
   dependencies:
     "@babel/types" "7.0.0"
 
@@ -1179,10 +1179,10 @@ babel-plugin-transform-undefined-to-void@^6.10.0-alpha.5a128fd5:
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-undefined-to-void/-/babel-plugin-transform-undefined-to-void-6.10.0-alpha.f95869d4.tgz#175a1a3090e616403f8c819cdcea1aecb66523b2"
   integrity sha1-F1oaMJDmFkA/jIGc3Ooa7LZlI7I=
 
-babel-preset-compat@0.21.0:
-  version "0.21.0"
-  resolved "https://registry.yarnpkg.com/babel-preset-compat/-/babel-preset-compat-0.21.0.tgz#ab5ab03d4bcd88a4f08f0762710e17df7393e7e9"
-  integrity sha512-o9S0QB4sDemrqlWffJ3jDYh0oO1RZFMnBDljnLHaMkpvQ7mEdfLliofs90yxDwbUctddz3T5DIaiNxxfEiJGxA==
+babel-preset-compat@0.21.3:
+  version "0.21.3"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/babel-preset-compat/-/babel-preset-compat-0.21.3.tgz#9b583e7499e7d70ffdf3bfae345e9aaa9e3a3861"
+  integrity sha512-89RqoVlRhmR1iFIbj0qtPKqnwjI5mltV4P67Fqr85XoXtUhRyTQUQYdxlFUiidZCmvyzHigQ9KsTJHiZxql7eg==
   dependencies:
     "@babel/plugin-proposal-class-properties" "7.1.0"
     "@babel/plugin-proposal-object-rest-spread" "7.0.0"
@@ -1213,7 +1213,7 @@ babel-preset-compat@0.21.0:
     "@babel/plugin-transform-template-literals" "7.0.0"
     "@babel/plugin-transform-typeof-symbol" "7.0.0"
     "@babel/plugin-transform-unicode-regex" "7.0.0"
-    babel-plugin-transform-proxy-compat "0.21.0"
+    babel-plugin-transform-proxy-compat "0.21.3"
 
 babel-preset-jest@^23.2.0:
   version "23.2.0"
@@ -1809,13 +1809,13 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-deasync@0.1.12:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/deasync/-/deasync-0.1.12.tgz#0159492a4133ab301d6c778cf01e74e63b10e549"
-  integrity sha512-gpacYo8FBZh3INBp2KOtrQp9kCO5faHvOmEZx3/cZTr3Mm8/kAYs7/Ws3E3OAH0ApBNK6Y6N+7+Dka2Zn2Fldw==
+deasync@0.1.14:
+  version "0.1.14"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/deasync/-/deasync-0.1.14.tgz#232ea2252b443948cad033d792eb3b24b0a3d828"
+  integrity sha512-wN8sIuEqIwyQh72AG7oY6YQODCxIp1eXzEZlZznBuwDF8Q03Tdy9QNp1BNZXeadXoklNrw+Ip1fch+KXo/+ASw==
   dependencies:
     bindings "~1.2.1"
-    nan "^2.0.7"
+    node-addon-api "^1.6.0"
 
 debug@^2.1.2, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   version "2.6.9"
@@ -3779,7 +3779,7 @@ mute-stream@0.0.7:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.7.tgz#3075ce93bc21b8fab43e1bc4da7e8115ed1e7bab"
   integrity sha1-MHXOk7whuPq0PhvE2n6BFe0ee6s=
 
-nan@^2.0.7, nan@^2.9.2:
+nan@^2.9.2:
   version "2.11.1"
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.11.1.tgz#90e22bccb8ca57ea4cd37cc83d3819b52eea6766"
   integrity sha512-iji6k87OSXa0CcrLl9z+ZiYSuR2o+c0bGuNmXdrhTQTakxytAFsC56SArGYoiHlJlFoHSnvmhpceZJaXkVuOtA==
@@ -3819,6 +3819,11 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+
+node-addon-api@^1.6.0:
+  version "1.6.2"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/node-addon-api/-/node-addon-api-1.6.2.tgz#d8aad9781a5cfc4132cc2fecdbdd982534265217"
+  integrity sha512-479Bjw9nTE5DdBSZZWprFryHGjUaQC31y1wHo19We/k0BZlrmhqQitWoUL0cD8+scljCbIUL+E58oRDEakdGGA==
 
 node-int64@^0.4.0:
   version "0.4.0"
@@ -3990,10 +3995,10 @@ object.pick@^1.3.0:
   dependencies:
     isobject "^3.0.1"
 
-observable-membrane@0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/observable-membrane/-/observable-membrane-0.25.0.tgz#d0f20e1c98c5425396fd021bc320eb96874508e2"
-  integrity sha512-ySxObvl89y6EeHnjDNQDmcDZFs4EpVmtEimmf/joIgxwhfVLHONEkf8aSNgDLCjFY2n2cAnG9Ww1yldigq7wPQ==
+observable-membrane@0.26.0:
+  version "0.26.0"
+  resolved "https://nexus.soma.salesforce.com/nexus/content/groups/npm-all/observable-membrane/-/observable-membrane-0.26.0.tgz#f4f186660b4fbd61e91001424981b63e522f948e"
+  integrity sha512-iVi2WY0l9sSuSDvXJpKd8FFx6vG2LGFa91Wd0c3gC4aRa7GhW8BByzIbqJwsOe1miQSJ02k8iFAyx2moGm7zmQ==
 
 once@^1.3.0, once@^1.4.0:
   version "1.4.0"
