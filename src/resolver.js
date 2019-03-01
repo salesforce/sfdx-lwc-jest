@@ -13,7 +13,7 @@ const lwcResolver = require('@lwc/jest-resolver');
 const {
     PROJECT_ROOT,
     getModulePaths,
-    getNamespace,
+    DEFAULT_NAMESPACE,
 } = require('./utils/project.js');
 
 const {
@@ -60,13 +60,12 @@ function getLightningMock(modulePath) {
 
 function getModule(modulePath, options) {
     const { ns, name } = getInfoFromId(modulePath);
-    const projectNs = getNamespace();
 
     if (ns === 'lightning') {
         return getLightningMock(name);
     }
 
-    if (projectNs === ns) {
+    if (ns === DEFAULT_NAMESPACE) {
         const paths = getModulePaths();
         for (let i = 0; i < paths.length; i++) {
             const file = resolveAsFile(path.join(PROJECT_ROOT, paths[i], name, name), options.extensions);

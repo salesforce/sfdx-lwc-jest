@@ -13,6 +13,5 @@ module.exports = {
     getSfdxProjectJson: () => {
         return { mock: true, sourceApiVersion: expectedApiVersion }
     },
-    getNamespace: 'mockedNamespace',
     getModulePaths: () => ['C:/WIN32/SYSTEM']
 };
