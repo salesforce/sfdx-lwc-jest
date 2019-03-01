@@ -43,13 +43,9 @@ function getModulePaths() {
     return paths;
 }
 
-function getNamespace() {
-    return getSfdxProjectJson().namespace || DEFAULT_NAMESPACE;
-}
-
 module.exports = {
     PROJECT_ROOT,
     getSfdxProjectJson,
-    getNamespace,
+    DEFAULT_NAMESPACE,
     getModulePaths,
 };
