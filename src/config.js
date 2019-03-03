@@ -34,8 +34,6 @@ const jestConfig = {
       '<rootDir>/test/specs/',
     ],
     collectCoverageFrom: getCoveragePaths(),
-    // temp workaround until this is released - https://github.com/facebook/jest/pull/6792
-    testURL: "http://localhost/",
     snapshotSerializers: [
         require.resolve('@lwc/jest-serializer')
     ],
