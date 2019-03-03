@@ -18,6 +18,7 @@ function getCoveragePaths() {
     modulePaths.forEach((p) => {
         paths.push(path.join(p, '**/*.js'));
     });
+    return paths;
 }
 
 const jestConfig = {
