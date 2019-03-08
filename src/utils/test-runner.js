@@ -64,6 +64,10 @@ async function testRunner(argv) {
 
         shell.runCommand(command, commandArgs);
     } else {
+        // Jest will not set the env if not run from the bin executable
+        if (process.env.NODE_ENV == null) {
+            process.env.NODE_ENV = 'test';
+        }
         jestRunner.run([...config, ...options]);
     }
 }
