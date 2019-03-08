@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.4.11 (March 8th, 2019)
+## 0.4.11 (March 8, 2019)
 
 ### Fixes
 
