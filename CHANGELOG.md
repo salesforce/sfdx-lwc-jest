@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.12 (March 11, 2019)
+
+### Fixes
+
+- `lightning/platformResourceLoader` mock APIs to return a resolved Promise ([#38](https://github.com/salesforce/lwc-jest/pull/38))
+
+### Chores
+
+- Upgrade LWC to version 0.34.7
+
 ## 0.4.11 (March 8, 2019)
 
 ### Fixes
