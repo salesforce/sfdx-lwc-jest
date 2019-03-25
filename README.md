@@ -28,7 +28,7 @@ Alternatively, you can globally install the package and run directly from the co
 
 ### Troubleshooting `deasync` Installation Errors
 
-This project has a transitive dependency on `deasync` to compile Lightning web components during test runs. Depending on your operating system and Node version combination, `deasync` may attempt to compile during installation of this project. This has been known to create issues for some Windows users.
+This project has a transitive dependency on `deasync` to compile Lightning web components during test runs. Depending on your operating system and Node version combination, `deasync` may attempt to compile C++ code during installation of this project. This has been known to create issues for some Windows users.
 
 The most common solution on Windows is to globally install `windows-build-tools`. Run the following as administrator:
 
