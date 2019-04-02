@@ -18,6 +18,7 @@ export default class Input extends LightningElement {
 	@api dateAriaLabel
 	@api dateAriaLabelledBy
 	@api disabled
+	@api fieldLevelHelp
 	@api files
 	@api formatter
 	@api isLoading

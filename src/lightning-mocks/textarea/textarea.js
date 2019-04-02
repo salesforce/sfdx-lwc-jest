@@ -9,6 +9,7 @@ import { LightningElement, api } from 'lwc';
 export default class Textarea extends LightningElement {
     @api disabled
 	@api label
+	@api fieldLevelHelp
 	@api messageWhenBadInput
 	@api messageWhenTooLong
 	@api messageWhenTooShort
@@ -22,5 +23,9 @@ export default class Textarea extends LightningElement {
 	@api value
 	@api variant
     @api focus() {}
-	@api showHelpMessageIfInvalid() {}
+    @api showHelpMessageIfInvalid() {}
+    @api checkValidity() {}
+    @api setCustomValidity() {}
+    @api reportValidity() {}
+    @api blur() {}
 }
