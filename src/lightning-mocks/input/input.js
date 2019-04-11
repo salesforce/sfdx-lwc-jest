@@ -20,6 +20,7 @@ export default class Input extends LightningElement {
 	@api disabled
 	@api files
 	@api formatter
+    @api formatFractionDigits
 	@api isLoading
 	@api label
 	@api max
