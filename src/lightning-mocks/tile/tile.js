@@ -10,5 +10,6 @@ export default class Tile extends LightningElement {
     @api href
 	@api label
 	@api media
+	@api type
     
 }
