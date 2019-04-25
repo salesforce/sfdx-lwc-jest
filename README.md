@@ -38,7 +38,7 @@ npm install --global --production windows-build-tools
 
 If that does not work or you are on a different operating system, follow the instructions in the installation section of the `deasync` [README](https://github.com/abbr/deasync#installation).
 
-If *that* doesn't work, try pinning the version of `deasync` to the latest release using `yarn`'s "resolutions" entry inside the package.json file. This requires using `yarn` instead of `npm` to install and build. Add the following to your package.json and run the `yarn` command from the project root:
+If all of the above fail, try pinning the version of `deasync` to the latest release using `yarn`'s "resolutions" entry inside the consuming project's package.json file. This requires using `yarn` instead of `npm` to install and build. Add the following to your package.json and run the `yarn` command from the consuming project root:
 
 ```json
 "resolutions": {
