@@ -38,6 +38,13 @@ npm install --global --production windows-build-tools
 
 If that does not work or you are on a different operating system, follow the instructions in the installation section of the `deasync` [README](https://github.com/abbr/deasync#installation).
 
+If all of the above fail, try pinning the version of `deasync` to the latest release using `yarn`'s "resolutions" entry inside the consuming project's package.json file. This approach requires using `yarn` instead of `npm` to install and build. Add the following to your package.json and run the `yarn` command from the consuming project root:
+
+```json
+"resolutions": {
+    "deasync": "0.1.14"
+}
+```
 
 ## Updating .forceignore
 
@@ -199,7 +206,7 @@ export default class FancyButton extends LightningElement {
 
 ## Testing @wire Adapters
 
-To provision data through `@wire` adapters in unit tests, use the APIs provided by [`@salesforce/wire-service-jest-util`](https://github.com/salesforce/wire-service-jest-util). These APIs are exposed through this package so you do not need to include another dependency in your `package.json`. 
+To provision data through `@wire` adapters in unit tests, use the APIs provided by [`@salesforce/wire-service-jest-util`](https://github.com/salesforce/wire-service-jest-util). These APIs are exposed through this package so you do not need to include another dependency in your package.json. 
 
 ```js
 import {
