@@ -7,8 +7,11 @@
 import { LightningElement, api } from 'lwc';
 
 export default class RecordEditForm extends LightningElement {
+    @api fieldNames
+    @api formClass
+    @api layoutType
     @api objectApiName
-	@api recordId
-	@api recordTypeId
+    @api recordId
+    @api recordTypeId
     @api submit() {}
 }

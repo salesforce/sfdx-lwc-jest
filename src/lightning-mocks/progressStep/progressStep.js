@@ -8,6 +8,5 @@ import { LightningElement, api } from 'lwc';
 
 export default class ProgressStep extends LightningElement {
     @api label
-	@api value
-
+    @api value
 }

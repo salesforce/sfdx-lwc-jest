@@ -8,19 +8,25 @@ import { LightningElement, api } from 'lwc';
 
 export default class Textarea extends LightningElement {
     @api disabled
-	@api label
-	@api messageWhenBadInput
-	@api messageWhenTooLong
-	@api messageWhenTooShort
-	@api messageWhenValueMissing
-	@api minlength
-	@api name
-	@api placeholder
-	@api readonly
-	@api required
-	@api validity
-	@api value
-	@api variant
+    @api fieldLevelHelp
+    @api label
+    @api maxLength
+    @api messageWhenBadInput
+    @api messageWhenTooLong
+    @api messageWhenTooShort
+    @api messageWhenValueMissing
+    @api minLength
+    @api name
+    @api placeholder
+    @api readOnly
+    @api required
+    @api validity
+    @api value
+    @api variant
+    @api blur() {}
+    @api checkValidity() {}
     @api focus() {}
-	@api showHelpMessageIfInvalid() {}
+    @api reportValidity() {}
+    @api setCustomValidity() {}
+    @api showHelpMessageIfInvalid() {}
 }

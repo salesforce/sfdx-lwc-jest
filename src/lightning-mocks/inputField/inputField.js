@@ -7,8 +7,16 @@
 import { LightningElement, api } from 'lwc';
 
 export default class InputField extends LightningElement {
+    @api dirty
     @api disabled
-	@api fieldName
-	@api value
-    
+    @api fieldName
+    @api readonly
+    @api value
+    @api variant
+    @api reportValidity() {}
+    @api reset() {}
+    @api setErrors() {}
+    @api updateDependentField() {}
+    @api wirePicklistValues() {}
+    @api wireRecordUi() {}
 }

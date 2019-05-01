@@ -8,5 +8,4 @@ import { LightningElement, api } from 'lwc';
 
 export default class MenuDivider extends LightningElement {
     @api variant
-
 }
