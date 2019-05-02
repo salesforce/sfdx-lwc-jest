@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.4.13 (May 2, 2019)
+
+### Fixes
+
+- Update significant number of `lightning` stubs based on new generation script ([#50](https://github.com/salesforce/lwc-jest/pull/50))
+- Add `type` prop to `<lightning-tile>` stub ([#48](https://github.com/salesforce/lwc-jest/pull/48))
+- Add `formatFractionDigits` prop to `<lightning-input>` stub ([#47](https://github.com/salesforce/lwc-jest/pull/47))
+
+### Chores
+
+- Upgrade LWC to version 0.34.8  ([#44](https://github.com/salesforce/lwc-jest/pull/44))
+- Update README with additional troubleshooting info on deasync ([#43](https://github.com/salesforce/lwc-jest/pull/43) [#49](https://github.com/salesforce/lwc-jest/pull/49))
+
 ## 0.4.12 (March 11, 2019)
 
 ### Fixes
