@@ -7,6 +7,6 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Messages extends LightningElement {
-    @api setError
     @api error
+    @api setError() {}
 }
