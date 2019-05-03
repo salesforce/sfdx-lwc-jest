@@ -15,10 +15,9 @@
   },
   "scripts": {
     "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
-    "lint": "eslint src/ --ignore-pattern **/src/lightning-mocks/*",
+    "lint": "eslint src/ --ignore-pattern **/src/lightning-stubs/*",
     "release": "npm publish --access public",
-    "test": "jest",
-    "update-mocks": "./scripts/install-jest-mocks.js"
+    "test": "jest"
   },
   "dependencies": {
     "@lwc/compiler": "0.34.8",

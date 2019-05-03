@@ -52,7 +52,7 @@ function resolveAsFile(name, extensions) {
 }
 
 function getLightningMock(modulePath) {
-    const p = path.join(__dirname, 'lightning-mocks', modulePath);
+    const p = path.join(__dirname, 'lightning-stubs', modulePath);
     if (fs.existsSync(p)) {
         return path.join(p, modulePath + '.js');
     }
