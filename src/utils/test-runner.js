@@ -12,13 +12,11 @@ const { jestRunner } = require('./jest');
 const shell = require('./shell');
 
 const {
-    error,
     info,
 } = require('../log');
 
 const {
     PROJECT_ROOT,
-    getSfdxProjectJson,
 } = require('./project');
 
 const {
