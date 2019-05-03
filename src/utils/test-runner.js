@@ -23,7 +23,6 @@ const {
 
 const {
     jestConfig,
-    expectedApiVersion,
     jestPath
 } = require('../config');
 
@@ -42,12 +41,6 @@ function getOptions(argv) {
 }
 
 async function testRunner(argv) {
-    const sfdxProjectJson = getSfdxProjectJson();
-    const apiVersion = sfdxProjectJson.sourceApiVersion;
-    if (apiVersion !== expectedApiVersion) {
-        error(`Invalid sourceApiVersion found in sfdx-project.json. Expected ${expectedApiVersion}, found ${apiVersion}`);
-    }
-
     const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));
     const config = hasCustomConfig ? [] : ['--config', JSON.stringify(jestConfig)];
 
