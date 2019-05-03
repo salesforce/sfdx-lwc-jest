@@ -152,11 +152,11 @@ module.exports = {
 
 ## Resolving External Lightning Web Components
 
-If a Lightning web component isn't located in the local `lwc` directory of your Salesforce DX project, you must mock it in your Jest tests. This package includes a set of mocks for all components in the `lightning` namespace.
+If a Lightning web component isn't located in the local `lwc` directory of your Salesforce DX project, you must mock it in your Jest tests. This package includes a set of stubs for all components in the `lightning` namespace.
 
-### Lightning Namespaced Component Mocks
+### Lightning Namespaced Component Stubs
 
-When this package is installed, a new set of mocks for all `lightning` namespaced components is generated into the `lightning-mocks` folder. These mocks are generated based off the `lwc-standard.json` metadata file. The mocks are auto-generated and the Jest resolver automatically uses these mocks in the tests. These work out-of-the-box, you don't need to do anything.
+This package ships with stubs for the `lightning` base components. They are located in the `src/lightning-stubs` directory. These stubs will automatically get used when running tests through `lwc-jest`. You can override the default provided stub for your project by overriding the `moduleNameMapper` config as described below in the [Other Component Mocks](#other-component-mocks) section.
 
 ### Other Component Mocks
 
