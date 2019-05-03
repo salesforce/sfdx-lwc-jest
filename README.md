@@ -108,7 +108,7 @@ lwc-jest --debug -- --no-cache
 If you prefer to debug inside Visual Studio Code, follow these steps:
 - From the Visual Studio Code dropdowns, select Debug > Add Configuration....
 - If you're prompted for an Environment choose any value.
-- Replace the contents of the generated `launch.json` with the following.
+- Replace the contents of the generated `launch.json` with the following (for Windows users see the [Jest website](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) for launch.json contents).
 ```json
 {
   "version": "0.2.0",
@@ -131,7 +131,6 @@ If you prefer to debug inside Visual Studio Code, follow these steps:
 ```
 - Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
 - To run tests, press F5 or select Debug > Start Debugging.
-
 
 ## Watch mode
 
