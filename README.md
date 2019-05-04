@@ -108,7 +108,7 @@ lwc-jest --debug -- --no-cache
 If you prefer to debug inside Visual Studio Code, follow these steps:
 - From the Visual Studio Code dropdowns, select Debug > Add Configuration....
 - If you're prompted for an Environment choose any value.
-- Replace the contents of the generated `launch.json` with the following.
+- Mac users, replace the contents of the generated `launch.json` with the following. (for Windows users see the [Jest website](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) for launch.json contents).
 ```json
 {
   "version": "0.2.0",
@@ -132,7 +132,6 @@ If you prefer to debug inside Visual Studio Code, follow these steps:
 - Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
 - To run tests, press F5 or select Debug > Start Debugging.
 
-
 ## Watch mode
 
 Watch mode causes Jest to monitor files for changes and rerun tests related to the changed files. This is a great way to rapidly make component and test changes while monitoring tests results.
@@ -152,11 +151,11 @@ module.exports = {
 
 ## Resolving External Lightning Web Components
 
-If a Lightning web component isn't located in the local `lwc` directory of your Salesforce DX project, you must mock it in your Jest tests. This package includes a set of mocks for all components in the `lightning` namespace.
+If a Lightning web component isn't located in the local `lwc` directory of your Salesforce DX project, you must mock it in your Jest tests. This package includes a set of stubs for all components in the `lightning` namespace.
 
-### Lightning Namespaced Component Mocks
+### Lightning Namespaced Component Stubs
 
-When this package is installed, a new set of mocks for all `lightning` namespaced components is generated into the `lightning-mocks` folder. These mocks are generated based off the `lwc-standard.json` metadata file. The mocks are auto-generated and the Jest resolver automatically uses these mocks in the tests. These work out-of-the-box, you don't need to do anything.
+This package installs stubs for the `lightning` base components to the `src/lightning-stubs` directory. These stubs are used automatically when running tests through `lwc-jest`. To override the default stub provided for your project, override the `moduleNameMapper` config as described in [Other Component Mocks](#other-component-mocks).
 
 ### Other Component Mocks
 
