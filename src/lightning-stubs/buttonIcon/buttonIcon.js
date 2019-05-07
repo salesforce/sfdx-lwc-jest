@@ -8,6 +8,7 @@ import { LightningElement, api } from 'lwc';
 
 export default class ButtonIcon extends LightningElement {
     @api alternativeText
+    @api disabled
     @api iconClass
     @api iconName
     @api name
