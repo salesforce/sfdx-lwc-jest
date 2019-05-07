@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.14 (May 7, 2019)
+
+### Fixes
+
+- Add missing `disabled` property to buttons components ([#54](https://github.com/salesforce/lwc-jest/pull/54))
+
+### Chores
+
+- Remove old mock generation logic, rename mocks --> stubs ([#53](https://github.com/salesforce/lwc-jest/pull/53))
+
 ## 0.4.13 (May 2, 2019)
 
 ### Fixes
