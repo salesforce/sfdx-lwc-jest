@@ -1,6 +1,6 @@
 {
   "name": "@salesforce/lwc-jest",
-  "version": "0.4.14",
+  "version": "0.5.0",
   "description": "Run Jest against LWC components in a Salesforce DX workspace environment",
   "main": "src/index.js",
   "license": "MIT",
