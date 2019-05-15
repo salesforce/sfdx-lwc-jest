@@ -26,26 +26,6 @@ Update your project's unit testing script in package.json to execute `lwc-jest`:
 
 Alternatively, you can globally install the package and run directly from the command line.
 
-### Troubleshooting `deasync` Installation Errors
-
-This project has a transitive dependency on `deasync` to compile Lightning web components during test runs. Depending on your operating system and Node version combination, `deasync` may attempt to compile C++ code during installation of this project. This has been known to create issues for some Windows users.
-
-The most common solution on Windows is to globally install `windows-build-tools`. Run the following as administrator:
-
-```bash
-npm install --global --production windows-build-tools
-```
-
-If that does not work or you are on a different operating system, follow the instructions in the installation section of the `deasync` [README](https://github.com/abbr/deasync#installation).
-
-If all of the above fail, try pinning the version of `deasync` to the latest release using `yarn`'s "resolutions" entry inside the consuming project's package.json file. This approach requires using `yarn` instead of `npm` to install and build. Add the following to your package.json and run the `yarn` command from the consuming project root:
-
-```json
-"resolutions": {
-    "deasync": "0.1.14"
-}
-```
-
 ## Updating .forceignore
 
 After adding Jest tests, pushing your local files to a scratch org causes errors because the `__tests__` directory isn't recognized. To ignore these test files, add this entry to your `.forceignore` file:
