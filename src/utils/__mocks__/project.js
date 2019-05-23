@@ -6,12 +6,7 @@
  */
 'use strict';
 
-const { expectedApiVersion } = require('../../config');
-
 module.exports = {
     PROJECT_ROOT: 'projectRoot',
-    getSfdxProjectJson: () => {
-        return { mock: true, sourceApiVersion: expectedApiVersion }
-    },
     getModulePaths: () => ['C:/WIN32/SYSTEM']
 };
