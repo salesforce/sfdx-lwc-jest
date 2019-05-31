@@ -2,6 +2,18 @@
 
 Run Jest against Lightning web components in a Salesforce DX workspace environment.
 
+## Master vs. Prerelease
+
+To test your components against Salesforce production instances, use the master branch. The latest release off of this branch is tagged with the npm dist-tag of `latest`.
+
+To test against sandbox instances, use the `prerelease` branch and the version tagged as `prerelease`.
+
+### Invalid sourceApiVersion found in sfdx-project.json
+
+If you see this error while running tests in your Salesforce DX project, it most likely means you are using the incorrect version of this project.
+
+For example, the error message `Invalid sourceApiVersion found in sfdx-project.json. Expected 45.0, found 46.0` means this project is targeted to API version 45.0, which maps to Spring '19, but the Salesforce DX project the tests are run in is using API version 46.0, which maps to Summer '19. To fix this issue, use the `prerelease` version of this project.
+
 ## Installation
 
 Add this project as a devDependency:
