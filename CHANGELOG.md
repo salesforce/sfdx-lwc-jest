@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.5.0 (May 13, 2019)
+
+### Fixes
+
+- `platformResourceLoader` mock returns resolved Promise again
+
+### Chores
+
+- Upgrade LWC to version 0.37.4
+- Expected API version check bumped to version 46.0 to match next major release
+- Upgrade Jest to version 24.8.0
+
 ## 0.4.14 (May 7, 2019)
 
 ### Fixes

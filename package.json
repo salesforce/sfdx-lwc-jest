@@ -1,6 +1,6 @@
 {
   "name": "@salesforce/lwc-jest",
-  "version": "0.4.14",
+  "version": "0.5.0",
   "description": "Run Jest against LWC components in a Salesforce DX workspace environment",
   "main": "src/index.js",
   "license": "MIT",
@@ -20,18 +20,18 @@
     "test": "jest"
   },
   "dependencies": {
-    "@lwc/compiler": "0.34.8",
-    "@lwc/engine": "0.34.8",
-    "@lwc/jest-preset": "0.34.8",
-    "@lwc/jest-resolver": "0.34.8",
-    "@lwc/jest-serializer": "0.34.8",
-    "@lwc/jest-transformer": "0.34.8",
-    "@lwc/module-resolver": "0.34.8",
-    "@lwc/wire-service": "0.34.8",
+    "@lwc/compiler": "0.37.4-220.2",
+    "@lwc/engine": "0.37.4-220.2",
+    "@lwc/jest-preset": "0.37.4-220.2",
+    "@lwc/jest-resolver": "0.37.4-220.2",
+    "@lwc/jest-serializer": "0.37.4-220.2",
+    "@lwc/jest-transformer": "0.37.4-220.2",
+    "@lwc/module-resolver": "0.37.4-220.2",
+    "@lwc/wire-service": "0.37.4-220.2",
     "@salesforce/wire-service-jest-util": "^2.2.5",
     "chalk": "^2.3.0",
     "glob": "^7.1.2",
-    "jest": "~23.6.0",
+    "jest": "24.8.0",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
