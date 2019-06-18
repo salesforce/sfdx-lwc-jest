@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.5.1 (June 18, 2019)
+
+### Fixes
+
+- Add `title` property back to the `<lightning-card>` stub ([#69](https://github.com/salesforce/lwc-jest/pull/69))
+
+### Chores
+
+- Upgrade LWC to version 0.37.4-220.2, removes `deasync` dependency :tada:
+
 ## 0.5.0 (May 13, 2019)
 
 ### Fixes
