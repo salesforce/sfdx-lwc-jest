@@ -15,8 +15,10 @@ const {
 function getCoveragePaths() {
     let paths = [];
     const modulePaths = getModulePaths();
-    modulePaths.forEach((p) => {
-        paths.push(path.join(p, '**/*.js'));
+    modulePaths.forEach(p => {
+        // convert back to forward slashes here on Windows for Jest  to be happy
+        p = p.replace(/\\/g, '/');
+		paths.push(p + '**/*.js');
     });
     return paths;
 }
