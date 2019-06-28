@@ -13,14 +13,11 @@ const {
 } = require('./utils/project.js');
 
 function getCoveragePaths() {
-    let paths = [];
     const modulePaths = getModulePaths();
-    modulePaths.forEach(p => {
+    return modulePaths.map(p => {
         // convert back to forward slashes here on Windows for Jest  to be happy
-        p = p.replace(/\\/g, '/');
-		paths.push(p + '**/*.js');
+        return p.replace(/\\/g, '/') + '**/*.js';
     });
-    return paths;
 }
 
 const jestConfig = {
