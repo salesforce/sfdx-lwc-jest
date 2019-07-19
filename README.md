@@ -38,15 +38,6 @@ Update your project's unit testing script in package.json to execute `lwc-jest`:
 
 Alternatively, you can globally install the package and run directly from the command line.
 
-## Updating .forceignore
-
-After adding Jest tests, pushing your local files to a scratch org causes errors because the `__tests__` directory isn't recognized. To ignore these test files, add this entry to your `.forceignore` file:
-
-```
-**/__tests__/**
-```
-
-See [How to Exclude Source When Syncing or Converting](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_exclude_source.htm) for more details.
 
 ## Usage
 
