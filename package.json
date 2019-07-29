@@ -37,8 +37,5 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "isbinaryfile": "^3.0.3"
-  },
-  "resolutions": {
-    "lodash": "^4.17.13"
   }
 }
