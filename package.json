@@ -37,5 +37,8 @@
   "devDependencies": {
     "eslint": "^5.9.0",
     "isbinaryfile": "^3.0.3"
+  },
+  "resolutions": {
+    "js-yaml": "^3.13.1"
   }
 }
