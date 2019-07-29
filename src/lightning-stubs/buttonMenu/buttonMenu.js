@@ -18,6 +18,7 @@ export default class ButtonMenu extends LightningElement {
     @api loadingStateAlternativeText
     @api menuAlignment
     @api nubbin
+    @api tooltip
     @api value
     @api variant
     @api focus() {}
