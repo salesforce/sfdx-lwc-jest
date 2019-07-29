@@ -13,6 +13,7 @@ export default class ButtonIcon extends LightningElement {
     @api iconName
     @api name
     @api size
+    @api tooltip
     @api type
     @api value
     @api variant
