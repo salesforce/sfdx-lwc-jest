@@ -15,5 +15,13 @@ export const createRecordInputFilteredByEditedFields = jest.fn();
 export const getRecordInput = jest.fn();
 export const refresh = jest.fn().mockResolvedValue();
 export const getRecordUi = jest.fn();
-export const getFieldValue = jest.fn();
+export const getFieldValue = jest.fn((record, field) => {
+    if (record) {
+        const fields = field.fieldApiName.split('.');
+        const fieldData = fields.reduce((o, i) => o[i], record.fields);
+        if (fieldData && fieldData.value) {
+            return fieldData.value;
+        }
+    }
+});
 export const getFieldDisplayValue = jest.fn();
