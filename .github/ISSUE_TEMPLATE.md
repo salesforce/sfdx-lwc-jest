@@ -62,4 +62,4 @@ lwc-jest -- --no-cache
 <!--- Only if you have suggestions on a fix for the bug -->
 
 **Additional context/Screenshots**
-Add any other context about the problem here. If applicable, add screenshots to help explain.
+<!-- Add any other context about the problem here. If applicable, add screenshots to help explain. -->
