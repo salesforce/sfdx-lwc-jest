@@ -15,6 +15,13 @@ export const createRecordInputFilteredByEditedFields = jest.fn();
 export const getRecordInput = jest.fn();
 export const refresh = jest.fn().mockResolvedValue();
 export const getRecordUi = jest.fn();
+
+/**
+ * Gets a field's value from a record.
+ * @param record The record.
+ * @param field The qualified API name of the field to return.
+ * @returns The field's value (which may be a record in the case of spanning fields), or undefined if the field isn't found.
+ */
 export const getFieldValue = jest.fn((record, field) => {
     const unqualifiedField = splitQualifiedFieldApiName(getFieldApiName(field))[1];
     const fields = unqualifiedField.split(".");
@@ -31,7 +38,32 @@ export const getFieldValue = jest.fn((record, field) => {
     }
     return r;
 });
-export const getFieldDisplayValue = jest.fn();
+
+/**
+ * Gets a field's display value from a record.
+ * @param record The record.
+ * @param field The qualified API name of the field to return.
+ * @returns The field's display value, or undefined if the field isn't found.
+ */
+export const getFieldDisplayValue = jest.fn((record, field) => {
+    const unqualifiedField = splitQualifiedFieldApiName(getFieldApiName(field))[1];
+    const fields = unqualifiedField.split(".");
+    let r = record;
+    while (r && r.fields) {
+        const f = fields.shift();
+        const fvr = r.fields[f];
+        if (fvr === undefined) {
+            return undefined;
+        }
+        else if (fields.length > 0) {
+            r = fvr.value;
+        }
+        else {
+            return fvr.displayValue;
+        }
+    }
+    return r;
+});
 
 /**
  * Returns the field API name, qualified with an object name if possible.
