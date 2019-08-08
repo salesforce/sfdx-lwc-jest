@@ -1,4 +1,4 @@
-# @salesforce/lwc-jest
+# @salesforce/sfdx-lwc-jest
 
 Run Jest against Lightning web components in a Salesforce DX workspace environment.
 
@@ -19,7 +19,7 @@ For example, the error message `Invalid sourceApiVersion found in sfdx-project.j
 Add this project as a devDependency:
 
 ```bash
-yarn add -D @salesforce/lwc-jest
+yarn add -D @salesforce/sfdx-lwc-jest
 ```
 
 Update your project's unit testing script in package.json to execute `lwc-jest`:
@@ -122,10 +122,10 @@ Watch mode causes Jest to monitor files for changes and rerun tests related to t
 
 ## Overriding Jest Config
 
-`lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional changes. To override any options or set additional ones, create a file called `jest.config.js` at the root of your Salesforce DX project, import the default config from `lwc-jest`, modify as you please, and then export the new config.
+`sfdx-lwc-jest` sets up all the necessary Jest [configs](http://facebook.github.io/jest/docs/en/configuration.html) for you to run tests out of the box without any additional changes. To override any options or set additional ones, create a file called `jest.config.js` at the root of your Salesforce DX project, import the default config from `sfdx-lwc-jest`, modify as you please, and then export the new config.
 
 ```js
-const { jestConfig } = require('@salesforce/lwc-jest/config');
+const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
 module.exports = {
     ...jestConfig,
     // add any custom configurations here
@@ -138,7 +138,7 @@ If a Lightning web component isn't located in the local `lwc` directory of your 
 
 ### Lightning Namespaced Component Stubs
 
-This package installs stubs for the `lightning` base components to the `src/lightning-stubs` directory. These stubs are used automatically when running tests through `lwc-jest`. To override the default stub provided for your project, override the `moduleNameMapper` config as described in [Other Component Mocks](#other-component-mocks).
+This package installs stubs for the `lightning` base components to the `src/lightning-stubs` directory. These stubs are used automatically when running tests through `sfdx-lwc-jest`. To override the default stub provided for your project, override the `moduleNameMapper` config as described in [Other Component Mocks](#other-component-mocks).
 
 ### Other Component Mocks
 
@@ -157,7 +157,7 @@ Let's go through an example. Given the following template, `helloWorld.html`, we
 Because it's in the `lightning` namespace, the `lightning-button` just works. However, you must write some code to help the Jest resolver find the `foo-fancy-button component`. First, create a `jest.config.js` file at the root of the Salesforce DX project workspace and add the following:
 
 ```js
-const { jestConfig } = require('@salesforce/lwc-jest/config');
+const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
 module.exports = {
     ...jestConfig,
     moduleNameMapper: {
@@ -195,7 +195,7 @@ import {
     registerTestWireAdapter,
     registerLdsTestWireAdapter,
     registerApexTestWireAdapter
-} from '@salesforce/lwc-jest';
+} from '@salesforce/sfdx-lwc-jest';
 ```
 
 See the `@salesforce/wire-service-jest-util` [README](https://github.com/salesforce/wire-service-jest-util/blob/master/README.md) for further documentation on these APIs.
