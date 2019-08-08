@@ -1,5 +1,5 @@
 {
-  "name": "@salesforce/lwc-jest",
+  "name": "@salesforce/sfdx-lwc-jest",
   "version": "0.5.2",
   "description": "Run Jest against LWC components in a Salesforce DX workspace environment",
   "main": "src/index.js",
@@ -9,7 +9,7 @@
     "src/",
     "config.js"
   ],
-  "repository": "git@github.com:salesforce/lwc-jest.git",
+  "repository": "git@github.com:salesforce/sfdx-lwc-jest.git",
   "bin": {
     "lwc-jest": "./bin/lwc-jest"
   },

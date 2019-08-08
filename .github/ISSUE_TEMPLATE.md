@@ -36,7 +36,7 @@ export default class Foo extends LightningElement {
 
 ```js
 // Jest config overrides (if any)
-const { jestConfig } = require('@salesforce/lwc-jest/config');
+const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
 module.exports = {
     ...jestConfig,
     foo: 'bar',
@@ -55,7 +55,7 @@ lwc-jest -- --no-cache
 <!-- Example: Error is thrown -->
 
 ### Version
-- @salesforce/lwc-jest: x.x.x
+- @salesforce/sfdx-lwc-jest: x.x.x
 - Node: x.x.x
 
 **Possible Solution**
