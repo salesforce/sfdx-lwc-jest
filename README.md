@@ -2,6 +2,8 @@
 
 Run Jest against Lightning web components in a Salesforce DX workspace environment.
 
+:warning::warning::warning:This package, `@salesforce/lwc-jest`, has been renamed to `@salesforce/sfdx-lwc-jest`. Please update your projects to reference `@salesforce/sfdx-lwc-jest`. There are no functional changes, this is only the name change. `@salesforce/lwc-jest` will continue to be updated through the Winter '20 release, then development and releases will only happen against `@salesforce/sfdx-lwc-jest`.:warning::warning::warning:
+
 ## Master vs. Prerelease
 
 To test your components against Salesforce production instances, use the master branch. The latest release off of this branch is tagged with the npm dist-tag of `latest`.
