@@ -5,7 +5,7 @@ This package, `@salesforce/lwc-jest`, has been renamed to `@salesforce/sfdx-lwc-
 The following code changes should be made:
 
 1. Have a dependency on `@salesforce/sfdx-lwc-jest` instead of `@salesforce/lwc-jest` in `package.json`.
-2. If using a custom Jest config, import `jestConfig` from `@salesforce/lwc-jest/config`.
+2. If using a custom Jest config, import `jestConfig` from `@salesforce/sfdx-lwc-jest/config`.
 3. If using any wire service testing utils, such as `registerLdsTestWireAdapter`, import them from `@salesforce/sfdx-lwc-jest`. 
 
 # @salesforce/lwc-jest
