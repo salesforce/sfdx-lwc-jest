@@ -1,4 +1,12 @@
-:warning::warning::warning:This package, `@salesforce/lwc-jest`, has been renamed to `@salesforce/sfdx-lwc-jest`. Please update your projects to reference `@salesforce/sfdx-lwc-jest`. There are no functional changes, this is only the name change. `@salesforce/lwc-jest` will continue to be updated through the Winter '20 release, then development and releases will only happen against `@salesforce/sfdx-lwc-jest`.:warning::warning::warning:
+:warning::warning::warning: Deprecation Notice :warning::warning::warning:
+
+This package, `@salesforce/lwc-jest`, has been renamed to `@salesforce/sfdx-lwc-jest`. Please update your projects to reference `@salesforce/sfdx-lwc-jest`. `@salesforce/lwc-jest` will continue to be updated through the Winter '20 release, then development and releases will only happen against `@salesforce/sfdx-lwc-jest`.
+
+The following code changes should be made:
+
+1. Have a dependency on `@salesforce/sfdx-lwc-jest` instead of `@salesforce/lwc-jest` in `package.json`.
+2. If using a custom Jest config, import `jestConfig` from `@salesforce/lwc-jest/config`.
+3. If using any wire service testing utils, such as `registerLdsTestWireAdapter`, import them from `@salesforce/sfdx-lwc-jest`. 
 
 # @salesforce/lwc-jest
 
