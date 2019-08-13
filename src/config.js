@@ -38,7 +38,7 @@ const jestConfig = {
     ],
 };
 
-const expectedApiVersion = '46.0';
+const expectedApiVersion = '47.0';
 
 // Execute command is different on Windows.
 const jestPath = process.platform == 'win32' ? './node_modules/jest/bin/jest.js' : 'node_modules/.bin/jest';
