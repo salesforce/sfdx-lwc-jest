@@ -1,6 +1,6 @@
 {
   "name": "@salesforce/sfdx-lwc-jest",
-  "version": "0.6.1-alpha1",
+  "version": "0.6.1-alpha2",
   "description": "Run Jest against LWC components in a Salesforce DX workspace environment",
   "main": "src/index.js",
   "license": "MIT",
@@ -27,6 +27,7 @@
     "@lwc/jest-serializer": "2.2.0",
     "@lwc/jest-transformer": "2.2.0",
     "@lwc/module-resolver": "1.0.2-222.23",
+    "@lwc/synthetic-shadow": "1.0.2-222.23",
     "@lwc/wire-service": "1.0.2-222.23",
     "@salesforce/wire-service-jest-util": "^2.2.5",
     "chalk": "^2.3.0",
