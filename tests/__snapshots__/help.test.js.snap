@@ -21,6 +21,5 @@ Options:
 Examples:
   lwc-jest --coverage  Collect coverage and display in output
   lwc-jest -- --json   All params after \`--\` are directly passed to Jest
-
 "
 `;

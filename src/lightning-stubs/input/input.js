@@ -8,11 +8,13 @@ import { LightningElement, api } from 'lwc';
 
 export default class Input extends LightningElement {
     @api accept
+    @api autocomplete
     @api checked
     @api dateAriaControls
     @api dateAriaDescribedBy
     @api dateAriaLabel
     @api dateAriaLabelledBy
+    @api dateStyle
     @api disabled
     @api fieldLevelHelp
     @api files
@@ -45,6 +47,7 @@ export default class Input extends LightningElement {
     @api timeAriaControls
     @api timeAriaDescribedBy
     @api timeAriaLabelledBy
+    @api timeStyle
     @api timezone
     @api type
     @api validity

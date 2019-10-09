@@ -7,6 +7,7 @@
 'use strict';
 
 const path = require('path');
+const jestPreset = require('@lwc/jest-preset');
 const {
     PROJECT_ROOT,
     getModulePaths,
@@ -23,6 +24,7 @@ function getCoveragePaths() {
 const jestConfig = {
     rootDir: PROJECT_ROOT,
     moduleFileExtensions: ['js', 'html'],
+    testEnvironment: jestPreset.testEnvironment || 'jsdom',
     transform: {
         '^.+\\.(js|html|css)$': require.resolve('@lwc/jest-transformer')
     },
