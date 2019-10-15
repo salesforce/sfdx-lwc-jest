@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.5.3 (August 8, 2019)
+
+## Chores
+
+- Rename package to `@salesforce/sfdx-lwc-jest` to match project name [#86](https://github.com/salesforce/sfdx-lwc-jest/pull/86)
+
+## 0.5.2 (August 7, 2019)
+
+## Features
+
+- Add real implementation to `getFieldValue` and `getFieldDisplayValue` [#83](https://github.com/salesforce/sfdx-lwc-jest/pull/83)
+
+## Fixes
+
+- Add missing `tooltip` and `density` properties to stubs [#81](https://github.com/salesforce/sfdx-lwc-jest/pull/81)
+- Add missing `variant` property to `<lightning-radio-group>` [#74](https://github.com/salesforce/sfdx-lwc-jest/pull/74)
+- Update code coverage paths so coverage is properly reported on Windows [#72](https://github.com/salesforce/sfdx-lwc-jest/pull/72)
+
+## Chores
+
+- Upgrade `js-yaml` dependency to address security alert [#82](https://github.com/salesforce/sfdx-lwc-jest/pull/82)
+- Upgrade `lodash` dependency to address security alert [#78](https://github.com/salesforce/sfdx-lwc-jest/pull/78)
+
 ## 0.5.1 (June 18, 2019)
 
 ### Fixes
