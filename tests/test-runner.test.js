@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
+'use strict';
+
 const fakeJest = require('../src/utils/jest');
 const fakeShell = require('../src/utils/shell');
 jest.mock('../src/utils/project');
