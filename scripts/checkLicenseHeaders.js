@@ -17,8 +17,8 @@
 'use strict';
 
 const fs = require('fs');
-const {execSync} = require('child_process');
-const isbinaryfile = require('isbinaryfile');
+const { execSync } = require('child_process');
+const { isBinaryFileSync } = require('isbinaryfile');
 
 const getFileContents = path => fs.readFileSync(path, {encoding: 'utf-8'});
 const isDirectory = path => fs.lstatSync(path).isDirectory();
@@ -134,7 +134,7 @@ function check() {
       INCLUDED_PATTERNS.some(pattern => pattern.test(file)) &&
       !IGNORED_PATTERNS.some(pattern => pattern.test(file)) &&
       !isDirectory(file) &&
-      !isbinaryfile.sync(file) &&
+      !isBinaryFileSync(file) &&
       needsCopyrightHeader(file)
   );
 
