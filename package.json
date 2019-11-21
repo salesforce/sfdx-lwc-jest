@@ -31,14 +31,14 @@
     "@lwc/synthetic-shadow": "1.0.2-222.23",
     "@lwc/wire-service": "1.0.2-222.23",
     "@salesforce/wire-service-jest-util": "^2.2.5",
-    "chalk": "^2.3.0",
-    "glob": "^7.1.2",
-    "jest": "24.8.0",
-    "yargs": "^13.0.0"
+    "chalk": "^2.4.2",
+    "glob": "^7.1.5",
+    "jest": "24.9.0",
+    "yargs": "^14.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "isbinaryfile": "^3.0.3"
+    "eslint": "^6.6.0",
+    "isbinaryfile": "^4.0.2"
   },
   "resolutions": {
     "js-yaml": "^3.13.1"
