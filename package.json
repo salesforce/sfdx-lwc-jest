@@ -11,7 +11,8 @@
   ],
   "repository": "git@github.com:salesforce/lwc-jest.git",
   "bin": {
-    "lwc-jest": "./bin/lwc-jest"
+    "lwc-jest": "./bin/sfdx-lwc-jest",
+    "sfdx-lwc-jest": "./bin/sfdx-lwc-jest"
   },
   "scripts": {
     "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
