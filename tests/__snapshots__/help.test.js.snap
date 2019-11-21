@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`--help attribute shows help 1`] = `
-"\`lwc-jest [options]\` runs Jest unit tests in SFDX workspace
+"\`sfdx-lwc-jest [options]\` runs Jest unit tests in SFDX workspace
 
 Options:
   --version             Show version number                            [boolean]
@@ -19,7 +19,7 @@ Options:
   --help                Show help                                      [boolean]
 
 Examples:
-  lwc-jest --coverage  Collect coverage and display in output
-  lwc-jest -- --json   All params after \`--\` are directly passed to Jest
+  sfdx-lwc-jest --coverage  Collect coverage and display in output
+  sfdx-lwc-jest -- --json   All params after \`--\` are directly passed to Jest
 "
 `;
