@@ -22,14 +22,14 @@ Add this project as a devDependency:
 yarn add -D @salesforce/sfdx-lwc-jest
 ```
 
-Update your project's unit testing script in package.json to execute `lwc-jest`:
+Update your project's unit testing script in `package.json` to execute `sfdx-lwc-jest`:
 
 ```json
 {
     "scripts": {
-        "test:unit": "lwc-jest",
-        "test:unit:watch": "lwc-jest --watch",
-        "test:unit:debug": "lwc-jest --debug"
+        "test:unit": "sfdx-lwc-jest",
+        "test:unit:watch": "sfdx-lwc-jest --watch",
+        "test:unit:debug": "sfdx-lwc-jest --debug"
     }
 }
 ```
@@ -60,8 +60,8 @@ Options:
   --help                Show help                                      [boolean]
 
 Examples:
-  lwc-jest --coverage  Collect coverage and display in output
-  lwc-jest -- --json   All params after `--` will be directly passed to Jest
+  sfdx-lwc-jest --coverage  Collect coverage and display in output
+  sfdx-lwc-jest -- --json   All params after `--` will be directly passed to Jest
 ```
 
 ## Passing Additional Jest CLI Options
@@ -69,7 +69,7 @@ Examples:
 To pass any additional Jest CLI options to your run, pass them after the `--` flag. All CLI parameters after the flag are passed directly to Jest.
 
 ```bash
-lwc-jest -- --json
+sfdx-lwc-jest -- --json
 ```
 
 See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) for all CLI options.
@@ -79,11 +79,12 @@ See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) fo
 Debug mode lets you easily debug your Jest tests.
 - Put a `debugger;` into your code
 - Open `chrome://inspect`
-- Run `lwc-jest` with the `--debug` flag.
+- Run `sfdx-lwc-jest` with the `--debug` flag.
 
 Pass other parameters to Jest after the `--` flag. For example,
-```
-lwc-jest --debug -- --no-cache
+
+```bash
+sfdx-lwc-jest --debug -- --no-cache
 ```
 
 ### Debugging in Visual Studio Code
