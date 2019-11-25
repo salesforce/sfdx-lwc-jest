@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.6.2 (November 25, 2019)
+
+## Fixes
+
+- Add missing `required` property to `<lightning-input>` [#114](https://github.com/salesforce/sfdx-lwc-jest/pull/114)
+
+## Chores
+
+- Upgrade `dependencies` and `devDependencies` [#112](https://github.com/salesforce/sfdx-lwc-jest/pull/112)
+- Update bin reference. The `sfdx-lwc-jest` package will now expose 2 aliases `sfdx-lwc-jest` and `lwc-jest` (legacy binary name) pointing to the same executable file. [#100](https://github.com/salesforce/sfdx-lwc-jest/pull/100)
+
+## 0.6.1 (October 16, 2019)
+
+## Fixes
+
+- Add missing `dateStyle` and `timeStyle` properties to `<lightning-input>` [#94](https://github.com/salesforce/sfdx-lwc-jest/pull/94)
+- Add missing `autocomplete` property to `<lightning-input>` [#92](https://github.com/salesforce/sfdx-lwc-jest/pull/92)
+
+## Chores
+
+- Upgrade `lwc` related packages to the latest version [#100](https://github.com/salesforce/sfdx-lwc-jest/pull/100)
+
 ## 0.5.3 (August 8, 2019)
 
 ## Chores
