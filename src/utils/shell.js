@@ -19,15 +19,15 @@ const runCommand = (command, args) => {
     });
 
     jestProcess.stdout.on('data', function (data) {
-        info('stdout: ' + data.toString());
+        info('stdout: ' + String(data));
     });
 
     jestProcess.stderr.on('data', function (data) {
-        info('stderr: ' + data.toString());
+        info('stderr: ' + String(data));
     });
 
     jestProcess.on('exit', function (code) {
-        info('Exited with code ' + code.toString());
+        info('Exited with code ' + String(code));
     });
 }
 
