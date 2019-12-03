@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.6.3 (December 3, 2019)
+
+## Fixes
+
+- Fix null exit code in jest process exit [#120](https://github.com/salesforce/sfdx-lwc-jest/pull/120)
+- Exclude all node_modules except lightning-stubs [#113](https://github.com/salesforce/sfdx-lwc-jest/pull/113)
+
 ## 0.6.2 (November 25, 2019)
 
 ## Fixes
