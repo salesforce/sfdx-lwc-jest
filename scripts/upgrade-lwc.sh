@@ -12,6 +12,7 @@ yarn upgrade @lwc/compiler@$LWC_VERSION
 yarn upgrade @lwc/engine@$LWC_VERSION
 yarn upgrade @lwc/module-resolver@$LWC_VERSION
 yarn upgrade @lwc/wire-service@$LWC_VERSION
+yarn upgrade @lwc/synthetic-shadow@$LWC_VERSION
 
 yarn upgrade @lwc/jest-resolver@$LWC_TEST_VERSION
 yarn upgrade @lwc/jest-serializer@$LWC_TEST_VERSION
