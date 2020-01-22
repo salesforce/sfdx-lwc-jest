@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.7.0 (January 22, 2020)
+
+## Fixes
+
+- Fix null exit code in jest process exit [#120](https://github.com/salesforce/sfdx-lwc-jest/pull/120)
+
+## Chores
+
+- Upgrade LWC to version 1.1.13-224.4
+
 ## 0.6.2 (November 25, 2019)
 
 ## Fixes
