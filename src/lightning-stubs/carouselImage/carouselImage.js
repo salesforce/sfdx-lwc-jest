@@ -7,9 +7,9 @@
 import { LightningElement, api } from 'lwc';
 
 export default class CarouselImage extends LightningElement {
-    @api alternativeText
-    @api description
-    @api header
-    @api href
-    @api src
+    @api alternativeText;
+    @api description;
+    @api header;
+    @api href;
+    @api src;
 }

@@ -17,7 +17,7 @@
     "scripts": {
         "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
         "lint": "eslint src/ --ignore-pattern **/src/lightning-stubs/*",
-        "format": "prettier --write",
+        "format": "prettier --write '**/*.{js,json,md,html,css}'",
         "release": "npm publish --access public",
         "test": "jest"
     },

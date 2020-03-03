@@ -1,6 +1,7 @@
 ### Description
 
 #### Steps to Reproduce
+
 <!--
 Please provide the following code snippets. Issues without sufficient info to
 reproduce the issue will be closed.
@@ -21,7 +22,7 @@ it('does x when y', () => {
 ```html
 <!-- HTML for component under test -->
 <template>
-...
+    ...
 </template>
 ```
 
@@ -49,17 +50,22 @@ lwc-jest -- --no-cache
 ```
 
 #### Expected Results
+
 <!-- Example: No error is throw -->
 
 #### Actual Results
+
 <!-- Example: Error is thrown -->
 
 ### Version
-- @salesforce/sfdx-lwc-jest: x.x.x
-- Node: x.x.x
+
+-   @salesforce/sfdx-lwc-jest: x.x.x
+-   Node: x.x.x
 
 **Possible Solution**
+
 <!--- Only if you have suggestions on a fix for the bug -->
 
 **Additional context/Screenshots**
+
 <!-- Add any other context about the problem here. If applicable, add screenshots to help explain. -->

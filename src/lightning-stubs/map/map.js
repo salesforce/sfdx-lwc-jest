@@ -7,10 +7,10 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Map extends LightningElement {
-    @api center
-    @api listView
-    @api mapMarkers
-    @api markersTitle
-    @api showFooter
-    @api zoomLevel
+    @api center;
+    @api listView;
+    @api mapMarkers;
+    @api markersTitle;
+    @api showFooter;
+    @api zoomLevel;
 }

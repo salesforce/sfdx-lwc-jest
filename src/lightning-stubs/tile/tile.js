@@ -7,8 +7,8 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Tile extends LightningElement {
-    @api actions
-    @api href
-    @api label
-    @api type
+    @api actions;
+    @api href;
+    @api label;
+    @api type;
 }

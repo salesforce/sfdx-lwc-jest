@@ -6,8 +6,8 @@
  */
 export const baseNavigation = superclass => {
     return class extends superclass {
-        @api keyboardMode
-        @api focus
+        @api keyboardMode;
+        @api focus;
         [updateActionables]() {}
         [handleArrowKeyDown]() {}
         [handleArrowLeft]() {}

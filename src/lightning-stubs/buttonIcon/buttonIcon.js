@@ -7,15 +7,15 @@
 import { LightningElement, api } from 'lwc';
 
 export default class ButtonIcon extends LightningElement {
-    @api alternativeText
-    @api disabled
-    @api iconClass
-    @api iconName
-    @api name
-    @api size
-    @api tooltip
-    @api type
-    @api value
-    @api variant
+    @api alternativeText;
+    @api disabled;
+    @api iconClass;
+    @api iconName;
+    @api name;
+    @api size;
+    @api tooltip;
+    @api type;
+    @api value;
+    @api variant;
     @api focus() {}
 }

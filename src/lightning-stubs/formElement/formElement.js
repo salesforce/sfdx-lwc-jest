@@ -6,7 +6,4 @@
  */
 import { LightningElement, api } from 'lwc';
 
-export default class FormElement extends LightningElement {
-    
-    
-}
+export default class FormElement extends LightningElement {}

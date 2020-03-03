@@ -7,7 +7,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class VerticalNavigation extends LightningElement {
-    @api compact
-    @api selectedItem
-    @api shaded
+    @api compact;
+    @api selectedItem;
+    @api shaded;
 }
