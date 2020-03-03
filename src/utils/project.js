@@ -17,7 +17,9 @@ function getSfdxProjectJson() {
     const sfdxProjectJson = path.join(PROJECT_ROOT, 'sfdx-project.json');
 
     if (!fs.existsSync(sfdxProjectJson)) {
-        throw new Error('Could not find sfdx-project.json. Make sure `lwc-jest` is run from project root');
+        throw new Error(
+            'Could not find sfdx-project.json. Make sure `lwc-jest` is run from project root',
+        );
     }
 
     return require(sfdxProjectJson);
@@ -29,7 +31,7 @@ function getModulePaths() {
     const projectPaths = [];
     const packageDirectories = getSfdxProjectJson().packageDirectories;
 
-    packageDirectories.forEach((entry) => {
+    packageDirectories.forEach(entry => {
         projectPaths.push(entry.path);
     });
 

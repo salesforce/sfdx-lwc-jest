@@ -5,4 +5,4 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 export const getListUi = jest.fn();
-export const MRU = Symbol.for("MRU");
+export const MRU = Symbol.for('MRU');

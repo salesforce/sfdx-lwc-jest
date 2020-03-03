@@ -7,9 +7,9 @@
 import { LightningElement, api } from 'lwc';
 
 export default class FormattedEmail extends LightningElement {
-    @api hideIcon
-    @api label
-    @api value
+    @api hideIcon;
+    @api label;
+    @api value;
     @api blur() {}
     @api click() {}
     @api focus() {}

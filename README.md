@@ -38,7 +38,6 @@ Update your project's unit testing script in `package.json` to execute `sfdx-lwc
 
 Alternatively, you can globally install the package and run directly from the command line.
 
-
 ## Usage
 
 ```
@@ -77,9 +76,10 @@ See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) fo
 ## Debug mode
 
 Debug mode lets you easily debug your Jest tests.
-- Put a `debugger;` into your code
-- Open `chrome://inspect`
-- Run `sfdx-lwc-jest` with the `--debug` flag.
+
+-   Put a `debugger;` into your code
+-   Open `chrome://inspect`
+-   Run `sfdx-lwc-jest` with the `--debug` flag.
 
 Pass other parameters to Jest after the `--` flag. For example,
 
@@ -90,36 +90,38 @@ sfdx-lwc-jest --debug -- --no-cache
 ### Debugging in Visual Studio Code
 
 If you prefer to debug inside Visual Studio Code, follow these steps:
-- From the Visual Studio Code dropdowns, select Debug > Add Configuration....
-- If you're prompted for an Environment choose any value.
-- Mac users, replace the contents of the generated `launch.json` with the following. (for Windows users see the [Jest website](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) for launch.json contents).
+
+-   From the Visual Studio Code dropdowns, select Debug > Add Configuration....
+-   If you're prompted for an Environment choose any value.
+-   Mac users, replace the contents of the generated `launch.json` with the following. (for Windows users see the [Jest website](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) for launch.json contents).
+
 ```json
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Debug Jest Tests",
-      "type": "node",
-      "request": "launch",
-      "runtimeArgs": [
-        "--inspect-brk",
-        "${workspaceRoot}/node_modules/.bin/jest",
-        "--runInBand"
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "port": 9229
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Jest Tests",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": [
+                "--inspect-brk",
+                "${workspaceRoot}/node_modules/.bin/jest",
+                "--runInBand"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229
+        }
+    ]
 }
 ```
-- Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
-- To run tests, press F5 or select Debug > Start Debugging.
+
+-   Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
+-   To run tests, press F5 or select Debug > Start Debugging.
 
 ## Watch mode
 
 Watch mode causes Jest to monitor files for changes and rerun tests related to the changed files. This is a great way to rapidly make component and test changes while monitoring tests results.
-
 
 ## Overriding Jest Config
 
@@ -163,7 +165,7 @@ module.exports = {
     ...jestConfig,
     moduleNameMapper: {
         '^foo/fancyButton$': '<rootDir>/force-app/test/jest-mocks/foo/fancyButton',
-    }
+    },
 };
 ```
 
@@ -182,20 +184,20 @@ Finally, we need to create the mock `foo-fancy-button` files. In the `force-app/
 // fancyButton.js
 import { LightningElement, api } from 'lwc';
 export default class FancyButton extends LightningElement {
-  @api label
-  // any other implementation you may want to expose here
+    @api label;
+    // any other implementation you may want to expose here
 }
 ```
 
 ## Testing @wire Adapters
 
-To provision data through `@wire` adapters in unit tests, use the APIs provided by [`@salesforce/wire-service-jest-util`](https://github.com/salesforce/wire-service-jest-util). These APIs are exposed through this package so you do not need to include another dependency in your package.json. 
+To provision data through `@wire` adapters in unit tests, use the APIs provided by [`@salesforce/wire-service-jest-util`](https://github.com/salesforce/wire-service-jest-util). These APIs are exposed through this package so you do not need to include another dependency in your package.json.
 
 ```js
 import {
     registerTestWireAdapter,
     registerLdsTestWireAdapter,
-    registerApexTestWireAdapter
+    registerApexTestWireAdapter,
 } from '@salesforce/sfdx-lwc-jest';
 ```
 

@@ -9,10 +9,7 @@
 const options = require('../options/options');
 const yargs = require('yargs');
 
-const {
-    error,
-    info,
-} = require('../log');
+const { error, info } = require('../log');
 
 const argError = (msg, err, yargs) => {
     if (err) {
@@ -25,12 +22,13 @@ const argError = (msg, err, yargs) => {
         unrecognized = msg.substring(token.length);
     }
 
-    let template = `The following argument(s) are not recognized by lwc-jest: ${unrecognized}\n` +
+    let template =
+        `The following argument(s) are not recognized by lwc-jest: ${unrecognized}\n` +
         `If you wish to pass these arguments along to Jest, please add the '--' flag`;
 
     info(yargs.help());
     error(template);
-}
+};
 
 const getArgs = () => {
     return yargs
@@ -40,8 +38,7 @@ const getArgs = () => {
         .options(options)
         .strict()
         .fail(argError)
-        .help()
-        .argv;
-}
+        .help().argv;
+};
 
 module.exports = { getArgs };

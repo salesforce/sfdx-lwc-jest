@@ -7,5 +7,5 @@
 import { LightningElement, api } from 'lwc';
 
 export default class MenuSubheader extends LightningElement {
-    @api label
+    @api label;
 }

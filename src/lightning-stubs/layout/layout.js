@@ -7,8 +7,8 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Layout extends LightningElement {
-    @api horizontalAlign
-    @api multipleRows
-    @api pullToBoundary
-    @api verticalAlign
+    @api horizontalAlign;
+    @api multipleRows;
+    @api pullToBoundary;
+    @api verticalAlign;
 }

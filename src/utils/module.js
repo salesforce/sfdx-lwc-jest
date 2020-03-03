@@ -20,5 +20,5 @@ function getInfoFromId(id) {
 
 module.exports = {
     PATH_TO_MODULES,
-    getInfoFromId
-}
+    getInfoFromId,
+};
