@@ -26,13 +26,13 @@ child_process.spawn.mockImplementation(() => {
 jest.mock('../../src/log', () => {
     return {
         info: jest.fn(),
-        error: jest.fn()
+        error: jest.fn(),
     };
 });
 
 beforeEach(() => {
     jest.clearAllMocks();
-})
+});
 
 const mockCommand = 'mockCommand';
 const mockArgs = [];

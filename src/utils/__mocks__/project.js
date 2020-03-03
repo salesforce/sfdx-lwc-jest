@@ -11,7 +11,7 @@ const { expectedApiVersion } = require('../../config');
 module.exports = {
     PROJECT_ROOT: 'projectRoot',
     getSfdxProjectJson: () => {
-        return { mock: true, sourceApiVersion: expectedApiVersion }
+        return { mock: true, sourceApiVersion: expectedApiVersion };
     },
-    getModulePaths: () => ['C:/WIN32/SYSTEM']
+    getModulePaths: () => ['C:/WIN32/SYSTEM'],
 };

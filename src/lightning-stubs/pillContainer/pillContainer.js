@@ -7,10 +7,10 @@
 import { LightningElement, api } from 'lwc';
 
 export default class PillContainer extends LightningElement {
-    @api isCollapsible
-    @api isExpanded
-    @api items
-    @api label
-    @api singleLine
-    @api variant
+    @api isCollapsible;
+    @api isExpanded;
+    @api items;
+    @api label;
+    @api singleLine;
+    @api variant;
 }

@@ -24,15 +24,14 @@ export const getRecordUi = jest.fn();
  */
 export const getFieldValue = jest.fn((record, field) => {
     const unqualifiedField = splitQualifiedFieldApiName(getFieldApiName(field))[1];
-    const fields = unqualifiedField.split(".");
+    const fields = unqualifiedField.split('.');
     let r = record;
     while (fields.length > 0 && r && r.fields) {
         const f = fields.shift();
         const fvr = r.fields[f];
         if (fvr === undefined) {
             return undefined;
-        }
-        else {
+        } else {
             r = fvr.value;
         }
     }
@@ -47,18 +46,16 @@ export const getFieldValue = jest.fn((record, field) => {
  */
 export const getFieldDisplayValue = jest.fn((record, field) => {
     const unqualifiedField = splitQualifiedFieldApiName(getFieldApiName(field))[1];
-    const fields = unqualifiedField.split(".");
+    const fields = unqualifiedField.split('.');
     let r = record;
     while (r && r.fields) {
         const f = fields.shift();
         const fvr = r.fields[f];
         if (fvr === undefined) {
             return undefined;
-        }
-        else if (fields.length > 0) {
+        } else if (fields.length > 0) {
             r = fvr.value;
-        }
-        else {
+        } else {
             return fvr.displayValue;
         }
     }
@@ -71,13 +68,16 @@ export const getFieldDisplayValue = jest.fn((record, field) => {
  * @return The qualified field API name.
  */
 function getFieldApiName(value) {
-    if (typeof value === "string") {
+    if (typeof value === 'string') {
         return value;
+    } else if (
+        value &&
+        typeof value.objectApiName === 'string' &&
+        typeof value.fieldApiName === 'string'
+    ) {
+        return value.objectApiName + '.' + value.fieldApiName;
     }
-    else if (value && typeof value.objectApiName === "string" && typeof value.fieldApiName === "string") {
-        return value.objectApiName + "." + value.fieldApiName;
-    }
-    throw new TypeError("Value is not a string or FieldId.");
+    throw new TypeError('Value is not a string or FieldId.');
 }
 
 /**
@@ -88,10 +88,10 @@ function getFieldApiName(value) {
  * @return The object and field API names.
  */
 function splitQualifiedFieldApiName(fieldApiName) {
-    const idx = fieldApiName.indexOf(".");
+    const idx = fieldApiName.indexOf('.');
     if (idx < 1) {
         // object api name must non-empty
-        throw new TypeError("Value does not include an object API name.");
+        throw new TypeError('Value does not include an object API name.');
     }
     return [fieldApiName.substring(0, idx), fieldApiName.substring(idx + 1)];
 }
