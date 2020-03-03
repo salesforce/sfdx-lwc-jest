@@ -19,8 +19,6 @@ export default class InputRichText extends LightningElement {
     @api valid;
     @api value;
     @api variant;
-    @api blur() {}
-    @api focus() {}
     @api getFormat() {}
     @api insertTextAtCursor() {}
     @api setFormat() {}

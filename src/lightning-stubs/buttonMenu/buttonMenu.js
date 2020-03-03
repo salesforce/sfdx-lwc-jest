@@ -21,5 +21,4 @@ export default class ButtonMenu extends LightningElement {
     @api tooltip;
     @api value;
     @api variant;
-    @api focus() {}
 }

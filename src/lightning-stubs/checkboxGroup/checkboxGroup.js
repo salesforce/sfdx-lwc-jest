@@ -17,7 +17,6 @@ export default class CheckboxGroup extends LightningElement {
     @api value;
     @api variant;
     @api checkValidity() {}
-    @api focus() {}
     @api reportValidity() {}
     @api setCustomValidity() {}
     @api showHelpMessageIfInvalid() {}

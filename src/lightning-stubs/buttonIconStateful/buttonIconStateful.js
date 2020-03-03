@@ -15,5 +15,4 @@ export default class ButtonIconStateful extends LightningElement {
     @api size;
     @api value;
     @api variant;
-    @api focus() {}
 }

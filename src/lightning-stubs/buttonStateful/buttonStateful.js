@@ -15,5 +15,4 @@ export default class ButtonStateful extends LightningElement {
     @api labelWhenOn;
     @api selected;
     @api variant;
-    @api focus() {}
 }

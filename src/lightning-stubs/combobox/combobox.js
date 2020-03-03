@@ -21,9 +21,7 @@ export default class Combobox extends LightningElement {
     @api validity;
     @api value;
     @api variant;
-    @api blur() {}
     @api checkValidity() {}
-    @api focus() {}
     @api reportValidity() {}
     @api setCustomValidity() {}
     @api showHelpMessageIfInvalid() {}

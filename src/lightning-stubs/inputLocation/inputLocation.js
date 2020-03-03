@@ -16,9 +16,7 @@ export default class InputLocation extends LightningElement {
     @api required;
     @api validity;
     @api variant;
-    @api blur() {}
     @api checkValidity() {}
-    @api focus() {}
     @api reportValidity() {}
     @api setCustomValidityForField() {}
     @api showHelpMessageIfInvalid() {}

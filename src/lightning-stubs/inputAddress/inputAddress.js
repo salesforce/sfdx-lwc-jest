@@ -27,9 +27,7 @@ export default class InputAddress extends LightningElement {
     @api streetLabel;
     @api validity;
     @api variant;
-    @api blur() {}
     @api checkValidity() {}
-    @api focus() {}
     @api reportValidity() {}
     @api setCustomValidityForField() {}
     @api showHelpMessageIfInvalid() {}
