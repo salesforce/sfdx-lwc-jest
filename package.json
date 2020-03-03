@@ -1,46 +1,59 @@
 {
-  "name": "@salesforce/sfdx-lwc-jest",
-  "version": "0.7.0",
-  "description": "Run Jest against LWC components in a Salesforce DX workspace environment",
-  "main": "src/index.js",
-  "license": "MIT",
-  "files": [
-    "bin/",
-    "src/",
-    "config.js"
-  ],
-  "repository": "git@github.com:salesforce/sfdx-lwc-jest.git",
-  "bin": {
-    "lwc-jest": "./bin/sfdx-lwc-jest",
-    "sfdx-lwc-jest": "./bin/sfdx-lwc-jest"
-  },
-  "scripts": {
-    "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
-    "lint": "eslint src/ --ignore-pattern **/src/lightning-stubs/*",
-    "release": "npm publish --access public",
-    "test": "jest"
-  },
-  "dependencies": {
-    "@lwc/compiler": "1.1.13-224.4",
-    "@lwc/engine": "1.1.13-224.4",
-    "@lwc/jest-preset": "4.1.0-224.3",
-    "@lwc/jest-resolver": "4.1.0-224.3",
-    "@lwc/jest-serializer": "4.1.0-224.3",
-    "@lwc/jest-transformer": "4.1.0-224.3",
-    "@lwc/module-resolver": "1.1.13-224.4",
-    "@lwc/synthetic-shadow": "1.1.13-224.4",
-    "@lwc/wire-service": "1.1.13-224.4",
-    "@salesforce/wire-service-jest-util": "^2.2.5",
-    "chalk": "^2.4.2",
-    "glob": "^7.1.5",
-    "jest": "24.9.0",
-    "yargs": "^14.2.0"
-  },
-  "devDependencies": {
-    "eslint": "^6.6.0",
-    "isbinaryfile": "^4.0.2"
-  },
-  "resolutions": {
-    "js-yaml": "^3.13.1"
-  }
+    "name": "@salesforce/sfdx-lwc-jest",
+    "version": "0.7.0",
+    "description": "Run Jest against LWC components in a Salesforce DX workspace environment",
+    "main": "src/index.js",
+    "license": "MIT",
+    "files": [
+        "bin/",
+        "src/",
+        "config.js"
+    ],
+    "repository": "git@github.com:salesforce/sfdx-lwc-jest.git",
+    "bin": {
+        "lwc-jest": "./bin/sfdx-lwc-jest",
+        "sfdx-lwc-jest": "./bin/sfdx-lwc-jest"
+    },
+    "scripts": {
+        "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
+        "lint": "eslint src/ --ignore-pattern **/src/lightning-stubs/*",
+        "format": "prettier --write",
+        "release": "npm publish --access public",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@lwc/compiler": "1.1.13-224.4",
+        "@lwc/engine": "1.1.13-224.4",
+        "@lwc/jest-preset": "4.1.0-224.3",
+        "@lwc/jest-resolver": "4.1.0-224.3",
+        "@lwc/jest-serializer": "4.1.0-224.3",
+        "@lwc/jest-transformer": "4.1.0-224.3",
+        "@lwc/module-resolver": "1.1.13-224.4",
+        "@lwc/synthetic-shadow": "1.1.13-224.4",
+        "@lwc/wire-service": "1.1.13-224.4",
+        "@salesforce/wire-service-jest-util": "^2.2.5",
+        "chalk": "^2.4.2",
+        "glob": "^7.1.5",
+        "jest": "24.9.0",
+        "yargs": "^14.2.0"
+    },
+    "devDependencies": {
+        "eslint": "^6.6.0",
+        "husky": "^4.2.3",
+        "isbinaryfile": "^4.0.2",
+        "lint-staged": "^10.0.8",
+        "prettier": "^1.19.1"
+    },
+    "resolutions": {
+        "js-yaml": "^3.13.1"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.js": "eslint",
+        "*.{js,json,md,html,css}": "prettier --write"
+    }
 }
