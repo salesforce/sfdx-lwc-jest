@@ -15,5 +15,4 @@ export default class Button extends LightningElement {
     @api type
     @api value
     @api variant
-    @api focus() {}
 }

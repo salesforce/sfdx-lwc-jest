@@ -17,5 +17,4 @@ export default class ButtonIcon extends LightningElement {
     @api type
     @api value
     @api variant
-    @api focus() {}
 }

@@ -13,5 +13,4 @@ export default class PillContainer extends LightningElement {
     @api label
     @api singleLine
     @api variant
-    @api focus() {}
 }

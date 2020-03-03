@@ -11,6 +11,4 @@ export default class FormattedUrl extends LightningElement {
     @api target
     @api tooltip
     @api value
-    @api blur() {}
-    @api focus() {}
 }

@@ -9,6 +9,7 @@ import { LightningElement, api } from 'lwc';
 export default class MenuItem extends LightningElement {
     @api checked
     @api disabled
+    @api download
     @api draftAlternativeText
     @api href
     @api iconName
@@ -16,5 +17,4 @@ export default class MenuItem extends LightningElement {
     @api label
     @api prefixIconName
     @api value
-    @api focus() {}
 }
