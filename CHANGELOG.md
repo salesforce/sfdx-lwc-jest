@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.7.1 (March 3, 2020)
+
+## Fixes
+
+-   Update a variety of stubs, including adding missing `empApi` and `pageReferenceUtils` libraries [#134](https://github.com/salesforce/sfdx-lwc-jest/pull/134)
+-   Add `selectedItem` attribute to `<lightning-tree>` stub [#126](https://github.com/salesforce/sfdx-lwc-jest/pull/126)
+-   Add missing `<lightning-progress-ring>` stub [#132](https://github.com/salesforce/sfdx-lwc-jest/pull/132)
+
+## Chores
+
+-   Add code formatting and linting on all files [#135](https://github.com/salesforce/sfdx-lwc-jest/pull/135)
+
 ## 0.7.0 (January 22, 2020)
 
 ## Fixes
