@@ -11,7 +11,9 @@ const GenerateUrl = Symbol('GenerateUrl');
 export const NavigationMixin = Base => {
     return class extends Base {
         [Navigate]() {}
-        [GenerateUrl]() {}
+        [GenerateUrl]() {
+            return Promise.resolve('https://www.example.com');
+        }
     };
 };
 NavigationMixin.Navigate = Navigate;
