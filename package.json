@@ -31,11 +31,11 @@
         "@lwc/module-resolver": "1.1.13-224.4",
         "@lwc/synthetic-shadow": "1.1.13-224.4",
         "@lwc/wire-service": "1.1.13-224.4",
-        "@salesforce/wire-service-jest-util": "^2.2.5",
-        "chalk": "^2.4.2",
-        "glob": "^7.1.5",
+        "@salesforce/wire-service-jest-util": "~2.2.5",
+        "chalk": "~4.0.0",
+        "glob": "~7.1.6",
         "jest": "24.9.0",
-        "yargs": "^14.2.0"
+        "yargs": "~15.3.1"
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
