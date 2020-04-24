@@ -23,7 +23,7 @@ const OPTIONS_BLACKLIST = ['_', '$0', 'debug', 'd'];
 function getOptions(argv) {
     let options = [];
 
-    Object.keys(argv).forEach(arg => {
+    Object.keys(argv).forEach((arg) => {
         if (argv[arg] && !OPTIONS_BLACKLIST.includes(arg)) {
             options.push(`--${arg}`);
         }

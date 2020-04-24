@@ -73,7 +73,7 @@ function getModule(modulePath, options) {
     }
 }
 
-module.exports = function(modulePath, options) {
+module.exports = function (modulePath, options) {
     if (modulePath === 'lwc') {
         return require.resolve('@lwc/engine');
     }

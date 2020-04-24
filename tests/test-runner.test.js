@@ -27,7 +27,7 @@ test('advanced params get passed to Jest', () => {
     const advancedParam = '--maxWorkers=4';
     const args = generateArgs({ advanced: [advancedParam] });
     let jestParams = [];
-    fakeJest.jestRunner.run = jest.fn(array => {
+    fakeJest.jestRunner.run = jest.fn((array) => {
         jestParams = array;
     });
     runJest(args);
@@ -36,7 +36,7 @@ test('advanced params get passed to Jest', () => {
 
 test('config is being passed', () => {
     let jestParams = [];
-    fakeJest.jestRunner.run = jest.fn(array => {
+    fakeJest.jestRunner.run = jest.fn((array) => {
         jestParams = array;
     });
     runJest(defaultArgs);

@@ -31,7 +31,7 @@ function getModulePaths() {
     const projectPaths = [];
     const packageDirectories = getSfdxProjectJson().packageDirectories;
 
-    packageDirectories.forEach(entry => {
+    packageDirectories.forEach((entry) => {
         projectPaths.push(entry.path);
     });
 

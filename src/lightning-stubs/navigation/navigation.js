@@ -8,7 +8,7 @@ export const CurrentPageReference = jest.fn();
 
 const Navigate = Symbol('Navigate');
 const GenerateUrl = Symbol('GenerateUrl');
-export const NavigationMixin = Base => {
+export const NavigationMixin = (Base) => {
     return class extends Base {
         [Navigate]() {}
         [GenerateUrl]() {
