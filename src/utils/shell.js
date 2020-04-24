@@ -11,19 +11,19 @@ const { error, info } = require('../log');
 
 const runCommand = (command, args) => {
     const jestProcess = spawn(command, args);
-    jestProcess.on('error', err => {
+    jestProcess.on('error', (err) => {
         error('error', err);
     });
 
-    jestProcess.stdout.on('data', function(data) {
+    jestProcess.stdout.on('data', function (data) {
         info('stdout: ' + String(data));
     });
 
-    jestProcess.stderr.on('data', function(data) {
+    jestProcess.stderr.on('data', function (data) {
         info('stderr: ' + String(data));
     });
 
-    jestProcess.on('exit', function(code) {
+    jestProcess.on('exit', function (code) {
         info('Exited with code ' + String(code));
     });
 };

@@ -6,7 +6,7 @@
  */
 import { api } from 'lwc';
 
-export const baseNavigation = superclass => {
+export const baseNavigation = (superclass) => {
     return class extends superclass {
         @api keyboardMode;
         @api focus;

@@ -22,7 +22,7 @@ const runInHelpMode = () => {
 
 test('--help attribute shows help', () => {
     expect.assertions(1);
-    return runInHelpMode().then(stdout => {
+    return runInHelpMode().then((stdout) => {
         expect(stdout).toMatchSnapshot();
     });
 });
