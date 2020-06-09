@@ -5,8 +5,7 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 import { api } from 'lwc';
-
-export const baseNavigation = (superclass) => {
+export const baseNavigation = superclass => {
     return class extends superclass {
         @api keyboardMode;
         @api focus;

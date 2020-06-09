@@ -7,6 +7,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Datatable extends LightningElement {
+    @api columnWidthsMode;
     @api columns;
     @api data;
     @api defaultSortDirection;
