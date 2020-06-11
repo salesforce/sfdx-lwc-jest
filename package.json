@@ -34,7 +34,7 @@
         "@salesforce/wire-service-jest-util": "~2.2.5",
         "chalk": "~4.0.0",
         "glob": "~7.1.6",
-        "jest": "24.9.0",
+        "jest": "26.0.1",
         "yargs": "~15.3.1"
     },
     "devDependencies": {
