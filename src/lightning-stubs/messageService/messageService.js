@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-export const APPLICATION_SCOPE = jest.fn();
+export const APPLICATION_SCOPE = Symbol('APPLICATION_SCOPE');
 export const createMessageChannel = jest.fn();
 export const createMessageContext = jest.fn();
 export const MessageContext = jest.fn();
