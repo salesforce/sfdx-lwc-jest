@@ -10,7 +10,7 @@ export default class InputField extends LightningElement {
     @api dirty;
     @api disabled;
     @api fieldName;
-    @api readonly;
+    @api readOnly;
     @api required;
     @api value;
     @api variant;
