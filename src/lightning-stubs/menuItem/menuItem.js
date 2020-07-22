@@ -16,5 +16,6 @@ export default class MenuItem extends LightningElement {
     @api isDraft;
     @api label;
     @api prefixIconName;
+    @api target;
     @api value;
 }
