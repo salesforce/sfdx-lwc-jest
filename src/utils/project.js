@@ -40,7 +40,7 @@ function getModulePaths() {
     });
 
     for (let i = 0; i < projectPaths.length; i++) {
-        const found = fg.sync('**/**lwc', { cwd: projectPaths[i], onlyDirectories: true });
+        const found = fg.sync('**/lwc', { cwd: projectPaths[i], onlyDirectories: true });
         for (let j = 0; j < found.length; j++) {
             paths.push(path.join(projectPaths[i], found[j]));
         }
