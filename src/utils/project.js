@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const GlobSync = require('glob').GlobSync;
+const fg = require('fast-glob');
 
 const PROJECT_ROOT = fs.realpathSync(process.cwd());
 const DEFAULT_NAMESPACE = 'c';
@@ -40,7 +40,7 @@ function getModulePaths() {
     });
 
     for (let i = 0; i < projectPaths.length; i++) {
-        const found = new GlobSync('**/lwc/', { cwd: projectPaths[i] }).found;
+        const found = fg.sync('**/**lwc', { cwd: projectPaths[i], onlyDirectories: true });
         for (let j = 0; j < found.length; j++) {
             paths.push(path.join(projectPaths[i], found[j]));
         }
