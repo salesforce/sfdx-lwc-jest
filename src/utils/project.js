@@ -13,6 +13,8 @@ const GlobSync = require('glob').GlobSync;
 const PROJECT_ROOT = fs.realpathSync(process.cwd());
 const DEFAULT_NAMESPACE = 'c';
 
+const paths = [];
+
 function getSfdxProjectJson() {
     const sfdxProjectJson = path.join(PROJECT_ROOT, 'sfdx-project.json');
 
@@ -27,7 +29,9 @@ function getSfdxProjectJson() {
 
 // get relative path to 'lwc' directory from project root
 function getModulePaths() {
-    const paths = [];
+    if (paths.length > 0) {
+        return paths;
+    }
     const projectPaths = [];
     const packageDirectories = getSfdxProjectJson().packageDirectories;
 
