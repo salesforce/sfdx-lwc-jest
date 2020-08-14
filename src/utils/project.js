@@ -29,9 +29,8 @@ function getSfdxProjectJson() {
 
 // get relative path to 'lwc' directory from project root
 function getModulePaths() {
-    if (paths.length > 0) {
-        return paths;
-    }
+    if (paths.length > 0) return paths;
+
     const projectPaths = [];
     const packageDirectories = getSfdxProjectJson().packageDirectories;
 
@@ -40,10 +39,7 @@ function getModulePaths() {
     });
 
     for (let i = 0; i < projectPaths.length; i++) {
-        const found = fg.sync('**/lwc', { cwd: projectPaths[i], onlyDirectories: true });
-        for (let j = 0; j < found.length; j++) {
-            paths.push(path.join(projectPaths[i], found[j]));
-        }
+        paths.push(...fg.sync(projectPaths[i] + '/**/lwc', { onlyDirectories: true }));
     }
 
     return paths;
