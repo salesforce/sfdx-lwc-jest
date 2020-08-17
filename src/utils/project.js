@@ -28,6 +28,7 @@ function getSfdxProjectJson() {
 }
 
 // get relative path to 'lwc' directory from project root
+// If jest is running is watch mode, caching the paths means that new modules will not be detected which might cause tests to fail.
 function getModulePaths() {
     if (PATHS.length > 0) return PATHS;
     const packageDirectories = getSfdxProjectJson().packageDirectories;
