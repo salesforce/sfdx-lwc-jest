@@ -13,7 +13,7 @@ const fg = require('fast-glob');
 const PROJECT_ROOT = fs.realpathSync(process.cwd());
 const DEFAULT_NAMESPACE = 'c';
 
-const paths = [];
+let PATHS = [];
 
 function getSfdxProjectJson() {
     const sfdxProjectJson = path.join(PROJECT_ROOT, 'sfdx-project.json');
@@ -29,20 +29,11 @@ function getSfdxProjectJson() {
 
 // get relative path to 'lwc' directory from project root
 function getModulePaths() {
-    if (paths.length > 0) return paths;
-
-    const projectPaths = [];
+    if (PATHS.length > 0) return PATHS;
     const packageDirectories = getSfdxProjectJson().packageDirectories;
-
-    packageDirectories.forEach((entry) => {
-        projectPaths.push(entry.path);
-    });
-
-    for (let i = 0; i < projectPaths.length; i++) {
-        paths.push(...fg.sync(projectPaths[i] + '/**/lwc', { onlyDirectories: true }));
-    }
-
-    return paths;
+    const projectPaths = packageDirectories.map((entry) => `${entry.path}/**/lwc`);
+    PATHS = fg.sync(projectPaths, { onlyDirectories: true });
+    return PATHS;
 }
 
 module.exports = {
