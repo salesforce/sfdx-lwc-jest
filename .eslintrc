@@ -11,17 +11,5 @@
     },
     "rules": {
         "strict": ["error", "global"]
-    },
-    "overrides": [
-        {
-            "files": ["src/lightning-stubs/**"],
-            "parser": "babel-eslint",
-            "parserOptions": {
-                "sourceType": "module"
-            },
-            "env": {
-                "browser": true
-            }
-        }
-    ]
+    }
 }

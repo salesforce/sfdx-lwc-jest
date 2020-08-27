@@ -25,9 +25,6 @@ const jestConfig = {
     transform: {
         '^.+\\.(js|html|css)$': require.resolve('@lwc/jest-transformer'),
     },
-    transformIgnorePatterns: [
-        '/node_modules/(?!(.*@salesforce/sfdx-lwc-jest/src/lightning-stubs)/)',
-    ],
     resolver: path.resolve(__dirname, './resolver.js'),
     testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
     collectCoverageFrom: getCoveragePaths(),

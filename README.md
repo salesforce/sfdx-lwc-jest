@@ -141,7 +141,7 @@ If a Lightning web component isn't located in the local `lwc` directory of your 
 
 ### Lightning Namespaced Component Stubs
 
-This package installs stubs for the `lightning` base components to the `src/lightning-stubs` directory. These stubs are used automatically when running tests through `sfdx-lwc-jest`. To override the default stub provided for your project, override the `moduleNameMapper` config as described in [Other Component Mocks](#other-component-mocks).
+This package installs stubs for the `lightning` base components. These stubs are used automatically when running tests through `sfdx-lwc-jest`. To override the default stub provided for your project, override the `moduleNameMapper` config as described in [Other Component Mocks](#other-component-mocks).
 
 ### Other Component Mocks
 
