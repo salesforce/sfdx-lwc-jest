@@ -46,7 +46,9 @@ function resolveAsFile(name, extensions) {
 }
 
 function getLightningMock(modulePath) {
-    const p = path.join(__dirname, 'lightning-stubs', modulePath);
+    // Not using require.resolve() because lightning-components-stubs does not export anything
+    const stubsRootPath = path.join(__dirname, '../node_modules/lightning-components-stubs');
+    const p = path.join(stubsRootPath, 'modules/lightning-stubs', modulePath);
     if (fs.existsSync(p)) {
         return path.join(p, modulePath + '.js');
     }
