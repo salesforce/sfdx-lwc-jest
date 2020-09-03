@@ -13,5 +13,5 @@ module.exports = {
     getSfdxProjectJson: () => {
         return { mock: true, sourceApiVersion: expectedApiVersion };
     },
-    getModulePaths: () => ['C:/WIN32/SYSTEM'],
+    getModulePaths: () => ['force-app/main/unix/lwc', 'force-app\\main\\windows\\lwc'],
 };
