@@ -22,14 +22,14 @@ Add this project as a devDependency:
 yarn add -D @salesforce/sfdx-lwc-jest
 ```
 
-Update your project's unit testing script in package.json to execute `lwc-jest`:
+Update your project's unit testing script in `package.json` to execute `sfdx-lwc-jest`:
 
 ```json
 {
     "scripts": {
-        "test:unit": "lwc-jest",
-        "test:unit:watch": "lwc-jest --watch",
-        "test:unit:debug": "lwc-jest --debug"
+        "test:unit": "sfdx-lwc-jest",
+        "test:unit:watch": "sfdx-lwc-jest --watch",
+        "test:unit:debug": "sfdx-lwc-jest --debug"
     }
 }
 ```
@@ -37,7 +37,6 @@ Update your project's unit testing script in package.json to execute `lwc-jest`:
 `test:unit` runs all your tests. `test:unit:watch` and `test:unit:debug` run Jest in watch and debug mode (see below).
 
 Alternatively, you can globally install the package and run directly from the command line.
-
 
 ## Usage
 
@@ -60,8 +59,8 @@ Options:
   --help                Show help                                      [boolean]
 
 Examples:
-  lwc-jest --coverage  Collect coverage and display in output
-  lwc-jest -- --json   All params after `--` will be directly passed to Jest
+  sfdx-lwc-jest --coverage  Collect coverage and display in output
+  sfdx-lwc-jest -- --json   All params after `--` will be directly passed to Jest
 ```
 
 ## Passing Additional Jest CLI Options
@@ -69,7 +68,7 @@ Examples:
 To pass any additional Jest CLI options to your run, pass them after the `--` flag. All CLI parameters after the flag are passed directly to Jest.
 
 ```bash
-lwc-jest -- --json
+sfdx-lwc-jest -- --json
 ```
 
 See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) for all CLI options.
@@ -77,48 +76,52 @@ See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) fo
 ## Debug mode
 
 Debug mode lets you easily debug your Jest tests.
-- Put a `debugger;` into your code
-- Open `chrome://inspect`
-- Run `lwc-jest` with the `--debug` flag.
+
+-   Put a `debugger;` into your code
+-   Open `chrome://inspect`
+-   Run `sfdx-lwc-jest` with the `--debug` flag.
 
 Pass other parameters to Jest after the `--` flag. For example,
-```
-lwc-jest --debug -- --no-cache
+
+```bash
+sfdx-lwc-jest --debug -- --no-cache
 ```
 
 ### Debugging in Visual Studio Code
 
 If you prefer to debug inside Visual Studio Code, follow these steps:
-- From the Visual Studio Code dropdowns, select Debug > Add Configuration....
-- If you're prompted for an Environment choose any value.
-- Mac users, replace the contents of the generated `launch.json` with the following. (for Windows users see the [Jest website](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) for launch.json contents).
+
+-   From the Visual Studio Code dropdowns, select Debug > Add Configuration....
+-   If you're prompted for an Environment choose any value.
+-   Mac users, replace the contents of the generated `launch.json` with the following. (for Windows users see the [Jest website](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) for launch.json contents).
+
 ```json
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "Debug Jest Tests",
-      "type": "node",
-      "request": "launch",
-      "runtimeArgs": [
-        "--inspect-brk",
-        "${workspaceRoot}/node_modules/.bin/jest",
-        "--runInBand"
-      ],
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
-      "port": 9229
-    }
-  ]
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Jest Tests",
+            "type": "node",
+            "request": "launch",
+            "runtimeArgs": [
+                "--inspect-brk",
+                "${workspaceRoot}/node_modules/.bin/jest",
+                "--runInBand"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229
+        }
+    ]
 }
 ```
-- Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
-- To run tests, press F5 or select Debug > Start Debugging.
+
+-   Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
+-   To run tests, press F5 or select Debug > Start Debugging.
 
 ## Watch mode
 
 Watch mode causes Jest to monitor files for changes and rerun tests related to the changed files. This is a great way to rapidly make component and test changes while monitoring tests results.
-
 
 ## Overriding Jest Config
 
@@ -162,7 +165,7 @@ module.exports = {
     ...jestConfig,
     moduleNameMapper: {
         '^foo/fancyButton$': '<rootDir>/force-app/test/jest-mocks/foo/fancyButton',
-    }
+    },
 };
 ```
 
@@ -181,20 +184,20 @@ Finally, we need to create the mock `foo-fancy-button` files. In the `force-app/
 // fancyButton.js
 import { LightningElement, api } from 'lwc';
 export default class FancyButton extends LightningElement {
-  @api label
-  // any other implementation you may want to expose here
+    @api label;
+    // any other implementation you may want to expose here
 }
 ```
 
 ## Testing @wire Adapters
 
-To provision data through `@wire` adapters in unit tests, use the APIs provided by [`@salesforce/wire-service-jest-util`](https://github.com/salesforce/wire-service-jest-util). These APIs are exposed through this package so you do not need to include another dependency in your package.json. 
+To provision data through `@wire` adapters in unit tests, use the APIs provided by [`@salesforce/wire-service-jest-util`](https://github.com/salesforce/wire-service-jest-util). These APIs are exposed through this package so you do not need to include another dependency in your package.json.
 
 ```js
 import {
     registerTestWireAdapter,
     registerLdsTestWireAdapter,
-    registerApexTestWireAdapter
+    registerApexTestWireAdapter,
 } from '@salesforce/sfdx-lwc-jest';
 ```
 

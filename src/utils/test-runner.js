@@ -11,21 +11,11 @@ const path = require('path');
 const { jestRunner } = require('./jest');
 const shell = require('./shell');
 
-const {
-    error,
-    info,
-} = require('../log');
+const { error, info } = require('../log');
 
-const {
-    PROJECT_ROOT,
-    getSfdxProjectJson,
-} = require('./project');
+const { PROJECT_ROOT, getSfdxProjectJson } = require('./project');
 
-const {
-    jestConfig,
-    expectedApiVersion,
-    jestPath
-} = require('../config');
+const { jestConfig, expectedApiVersion, jestPath } = require('../config');
 
 // CLI options we do not want to pass along to Jest
 const OPTIONS_BLACKLIST = ['_', '$0', 'debug', 'd'];
@@ -33,7 +23,7 @@ const OPTIONS_BLACKLIST = ['_', '$0', 'debug', 'd'];
 function getOptions(argv) {
     let options = [];
 
-    Object.keys(argv).forEach(arg => {
+    Object.keys(argv).forEach((arg) => {
         if (argv[arg] && !OPTIONS_BLACKLIST.includes(arg)) {
             options.push(`--${arg}`);
         }
@@ -45,7 +35,9 @@ async function testRunner(argv) {
     const sfdxProjectJson = getSfdxProjectJson();
     const apiVersion = sfdxProjectJson.sourceApiVersion;
     if (apiVersion !== expectedApiVersion) {
-        error(`Invalid sourceApiVersion found in sfdx-project.json. Expected ${expectedApiVersion}, found ${apiVersion}`);
+        error(
+            `Invalid sourceApiVersion found in sfdx-project.json. Expected ${expectedApiVersion}, found ${apiVersion}`,
+        );
     }
 
     const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));

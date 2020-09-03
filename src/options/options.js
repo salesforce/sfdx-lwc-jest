@@ -37,6 +37,6 @@ const testOptions = {
         type: 'boolean',
         default: false,
     },
-}
+};
 
 module.exports = testOptions;

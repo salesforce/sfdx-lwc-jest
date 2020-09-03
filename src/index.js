@@ -6,7 +6,11 @@
  */
 'use strict';
 
-const { registerLdsTestWireAdapter, registerApexTestWireAdapter, registerTestWireAdapter } = require('@salesforce/wire-service-jest-util');
+const {
+    registerLdsTestWireAdapter,
+    registerApexTestWireAdapter,
+    registerTestWireAdapter,
+} = require('@salesforce/wire-service-jest-util');
 
 module.exports = {
     registerLdsTestWireAdapter,

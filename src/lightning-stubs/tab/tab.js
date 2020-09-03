@@ -7,10 +7,12 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Tab extends LightningElement {
-    @api iconAssistiveText
-    @api iconName
-    @api label
-    @api showErrorIndicator
-    @api value
+    @api endIconAlternativeText;
+    @api endIconName;
+    @api iconAssistiveText;
+    @api iconName;
+    @api label;
+    @api showErrorIndicator;
+    @api value;
     @api loadContent() {}
 }

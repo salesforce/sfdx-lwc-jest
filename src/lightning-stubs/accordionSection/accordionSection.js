@@ -7,6 +7,6 @@
 import { LightningElement, api } from 'lwc';
 
 export default class AccordionSection extends LightningElement {
-    @api label
-    @api name
+    @api label;
+    @api name;
 }

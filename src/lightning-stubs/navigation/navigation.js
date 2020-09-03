@@ -6,12 +6,14 @@
  */
 export const CurrentPageReference = jest.fn();
 
-const Navigate = Symbol("Navigate");
-const GenerateUrl = Symbol("GenerateUrl");
-export const NavigationMixin = (Base) => {
+const Navigate = Symbol('Navigate');
+const GenerateUrl = Symbol('GenerateUrl');
+export const NavigationMixin = Base => {
     return class extends Base {
-        [Navigate](pageReference, replace) {}
-        [GenerateUrl](pageReference) {}
+        [Navigate]() {}
+        [GenerateUrl]() {
+            return Promise.resolve('https://www.example.com');
+        }
     };
 };
 NavigationMixin.Navigate = Navigate;

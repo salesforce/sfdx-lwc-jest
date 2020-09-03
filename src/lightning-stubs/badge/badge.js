@@ -7,5 +7,8 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Badge extends LightningElement {
-    @api label
+    @api iconAlternativeText;
+    @api iconName;
+    @api iconPosition;
+    @api label;
 }

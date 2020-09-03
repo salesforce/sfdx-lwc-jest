@@ -10,31 +10,25 @@ const fs = require('fs');
 const path = require('path');
 const lwcResolver = require('@lwc/jest-resolver');
 
-const {
-    PROJECT_ROOT,
-    getModulePaths,
-    DEFAULT_NAMESPACE,
-} = require('./utils/project.js');
+const { PROJECT_ROOT, getModulePaths, DEFAULT_NAMESPACE } = require('./utils/project.js');
 
-const {
-    getInfoFromId,
-} = require('./utils/module.js');
+const { getInfoFromId } = require('./utils/module.js');
 
 function isFile(file) {
     let result;
 
     try {
-      const stat = fs.statSync(file);
-      result = stat.isFile() || stat.isFIFO();
+        const stat = fs.statSync(file);
+        result = stat.isFile() || stat.isFIFO();
     } catch (e) {
-      if (!(e && e.code === 'ENOENT')) {
-        throw e;
-      }
-      result = false;
+        if (!(e && e.code === 'ENOENT')) {
+            throw e;
+        }
+        result = false;
     }
 
     return result;
-  }
+}
 
 function resolveAsFile(name, extensions) {
     if (isFile(name)) {
@@ -68,7 +62,10 @@ function getModule(modulePath, options) {
     if (ns === DEFAULT_NAMESPACE) {
         const paths = getModulePaths();
         for (let i = 0; i < paths.length; i++) {
-            const file = resolveAsFile(path.join(PROJECT_ROOT, paths[i], name, name), options.extensions);
+            const file = resolveAsFile(
+                path.join(PROJECT_ROOT, paths[i], name, name),
+                options.extensions,
+            );
             if (file) {
                 return fs.realpathSync(file);
             }
@@ -80,5 +77,5 @@ module.exports = function (modulePath, options) {
     if (modulePath === 'lwc') {
         return require.resolve('@lwc/engine');
     }
-    return  getModule(modulePath, options) || lwcResolver.apply(null, arguments);
+    return getModule(modulePath, options) || lwcResolver.apply(null, arguments);
 };

@@ -7,12 +7,13 @@
 import { LightningElement, api } from 'lwc';
 
 export default class InputField extends LightningElement {
-    @api dirty
-    @api disabled
-    @api fieldName
-    @api readonly
-    @api value
-    @api variant
+    @api dirty;
+    @api disabled;
+    @api fieldName;
+    @api readOnly;
+    @api required;
+    @api value;
+    @api variant;
     @api reportValidity() {}
     @api reset() {}
     @api setErrors() {}

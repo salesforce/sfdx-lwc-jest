@@ -7,24 +7,28 @@
 import { LightningElement, api } from 'lwc';
 
 export default class InputName extends LightningElement {
-    @api disabled
-    @api fieldLevelHelp
-    @api fieldsToDisplay
-    @api firstName
-    @api informalName
-    @api label
-    @api lastName
-    @api middleName
-    @api options
-    @api readOnly
-    @api required
-    @api salutation
-    @api suffix
-    @api validity
-    @api variant
-    @api blur() {}
+    @api disabled;
+    @api fieldLevelHelp;
+    @api fieldsToDisplay;
+    @api firstName;
+    @api firstNameLabel;
+    @api informalName;
+    @api informalNameLabel;
+    @api label;
+    @api lastName;
+    @api lastNameLabel;
+    @api middleName;
+    @api middleNameLabel;
+    @api options;
+    @api readOnly;
+    @api required;
+    @api salutation;
+    @api salutationLabel;
+    @api suffix;
+    @api suffixLabel;
+    @api validity;
+    @api variant;
     @api checkValidity() {}
-    @api focus() {}
     @api reportValidity() {}
     @api setCustomValidityForField() {}
     @api showHelpMessageIfInvalid() {}

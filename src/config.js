@@ -7,14 +7,12 @@
 'use strict';
 
 const path = require('path');
-const {
-    PROJECT_ROOT,
-    getModulePaths,
-} = require('./utils/project.js');
+const jestPreset = require('@lwc/jest-preset');
+const { PROJECT_ROOT, getModulePaths } = require('./utils/project.js');
 
 function getCoveragePaths() {
     const modulePaths = getModulePaths();
-    return modulePaths.map(p => {
+    return modulePaths.map((p) => {
         // convert back to forward slashes here on Windows for Jest  to be happy
         return p.replace(/\\/g, '/') + '**/*.js';
     });
@@ -23,24 +21,23 @@ function getCoveragePaths() {
 const jestConfig = {
     rootDir: PROJECT_ROOT,
     moduleFileExtensions: ['js', 'html'],
+    testEnvironment: jestPreset.testEnvironment || 'jsdom',
     transform: {
-        '^.+\\.(js|html|css)$': require.resolve('@lwc/jest-transformer')
+        '^.+\\.(js|html|css)$': require.resolve('@lwc/jest-transformer'),
     },
-    transformIgnorePatterns: ["/node_modules/(?:(?!lightning-stubs.*(js|html|css)))*$"],
+    transformIgnorePatterns: [
+        '/node_modules/(?!(.*@salesforce/sfdx-lwc-jest/src/lightning-stubs)/)',
+    ],
     resolver: path.resolve(__dirname, './resolver.js'),
-    testPathIgnorePatterns: [
-      '<rootDir>/node_modules/',
-      '<rootDir>/test/specs/',
-    ],
+    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
     collectCoverageFrom: getCoveragePaths(),
-    snapshotSerializers: [
-        require.resolve('@lwc/jest-serializer')
-    ],
+    snapshotSerializers: [require.resolve('@lwc/jest-serializer')],
 };
 
-const expectedApiVersion = '46.0';
+const expectedApiVersion = '49.0';
 
 // Execute command is different on Windows.
-const jestPath = process.platform == 'win32' ? './node_modules/jest/bin/jest.js' : 'node_modules/.bin/jest';
+const jestPath =
+    process.platform == 'win32' ? './node_modules/jest/bin/jest.js' : 'node_modules/.bin/jest';
 
-module.exports = { jestConfig, jestPath,  expectedApiVersion };
+module.exports = { jestConfig, jestPath, expectedApiVersion };

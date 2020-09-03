@@ -8,39 +8,33 @@
 
 const fs = require('fs');
 const path = require('path');
-const GlobSync = require('glob').GlobSync;
+const fg = require('fast-glob');
 
 const PROJECT_ROOT = fs.realpathSync(process.cwd());
 const DEFAULT_NAMESPACE = 'c';
+
+let PATHS = [];
 
 function getSfdxProjectJson() {
     const sfdxProjectJson = path.join(PROJECT_ROOT, 'sfdx-project.json');
 
     if (!fs.existsSync(sfdxProjectJson)) {
-        throw new Error('Could not find sfdx-project.json. Make sure `lwc-jest` is run from project root');
+        throw new Error(
+            'Could not find sfdx-project.json. Make sure `lwc-jest` is run from project root',
+        );
     }
 
     return require(sfdxProjectJson);
 }
 
 // get relative path to 'lwc' directory from project root
+// If jest is running in watch mode, caching the paths means that new modules will not be detected which might cause tests to fail.
 function getModulePaths() {
-    const paths = [];
-    const projectPaths = [];
+    if (PATHS.length > 0) return PATHS;
     const packageDirectories = getSfdxProjectJson().packageDirectories;
-
-    packageDirectories.forEach((entry) => {
-        projectPaths.push(entry.path);
-    });
-
-    for (let i = 0; i < projectPaths.length; i++) {
-        const found = new GlobSync('**/lwc/', { cwd: projectPaths[i] }).found;
-        for (let j = 0; j < found.length; j++) {
-            paths.push(path.join(projectPaths[i], found[j]));
-        }
-    }
-
-    return paths;
+    const projectPaths = packageDirectories.map((entry) => `${entry.path}/**/lwc`);
+    PATHS = fg.sync(projectPaths, { onlyDirectories: true });
+    return PATHS;
 }
 
 module.exports = {
