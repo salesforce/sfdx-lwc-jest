@@ -14,7 +14,7 @@ function getCoveragePaths() {
     const modulePaths = getModulePaths();
     return modulePaths.map((p) => {
         // convert back to forward slashes here on Windows for Jest  to be happy
-        return p.replace(/\\/g, '/') + '**/*.js';
+        return p.replace(/\\/g, '/') + '/**/*.js';
     });
 }
 
