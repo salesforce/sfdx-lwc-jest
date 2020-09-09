@@ -29,7 +29,8 @@ Update your project's unit testing script in `package.json` to execute `sfdx-lwc
     "scripts": {
         "test:unit": "sfdx-lwc-jest",
         "test:unit:watch": "sfdx-lwc-jest --watch",
-        "test:unit:debug": "sfdx-lwc-jest --debug"
+        "test:unit:debug": "sfdx-lwc-jest --debug",
+        "test:unit:coverage": "sfdx-lwc-jest --coverage"
     }
 }
 ```
