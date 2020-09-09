@@ -41,7 +41,7 @@ Alternatively, you can globally install the package and run directly from the co
 ## Usage
 
 ```
-`lwc-jest [options]` runs Jest unit tests
+`sfdx-lwc-jest [options]` runs Jest unit tests
 
 Options:
   --version             Show version number                            [boolean]
