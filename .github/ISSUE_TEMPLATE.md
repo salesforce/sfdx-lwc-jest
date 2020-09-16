@@ -46,7 +46,7 @@ module.exports = {
 
 ```bash
 # Command to repro
-lwc-jest -- --no-cache
+sfdx-lwc-jest -- --no-cache
 ```
 
 #### Expected Results
