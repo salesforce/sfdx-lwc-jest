@@ -1483,10 +1483,10 @@
     estree-walker "^1.0.1"
     picomatch "^2.2.2"
 
-"@salesforce/wire-service-jest-util@~2.2.5":
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.2.6.tgz#2c667e260da565ece761606c32b4804ef38b7f18"
-  integrity sha512-2Y4FcHAJUnYdR30e+KIcFI7ja9gDx3aoekx+/N1yQKjiUJ85eAxx0vXS2XsRoIsEa79FqxRv6eiDcQBAkRUfJw==
+"@salesforce/wire-service-jest-util@~2.4.2":
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@salesforce/wire-service-jest-util/-/wire-service-jest-util-2.4.2.tgz#dd61563e55337c5420e3ae2137d10cd3b1711e40"
+  integrity sha512-yYf1AUhvxhEP9fJLrakogkdbNtrBiRprED+N6Vd3oGydDZrShdPwmYgqLKkzFR0HUw00LiSWaUO19yS1z6n0HA==
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.0"
