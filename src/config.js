@@ -28,13 +28,14 @@ const jestConfig = {
     transformIgnorePatterns: [
         '/node_modules/(?!(.*@salesforce/sfdx-lwc-jest/src/lightning-stubs)/)',
     ],
+    setupFilesAfterEnv: jestPreset.setupFilesAfterEnv || [],
     resolver: path.resolve(__dirname, './resolver.js'),
     testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
     collectCoverageFrom: getCoveragePaths(),
     snapshotSerializers: [require.resolve('@lwc/jest-serializer')],
 };
 
-const expectedApiVersion = '49.0';
+const expectedApiVersion = '50.0';
 
 // Execute command is different on Windows.
 const jestPath =
