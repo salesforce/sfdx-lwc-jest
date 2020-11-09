@@ -5,5 +5,6 @@
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 export const getObjectInfo = jest.fn();
+export const getObjectInfos = jest.fn();
 export const getPicklistValues = jest.fn();
 export const getPicklistValuesByRecordType = jest.fn();
