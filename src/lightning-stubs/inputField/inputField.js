@@ -14,6 +14,7 @@ export default class InputField extends LightningElement {
     @api required;
     @api value;
     @api variant;
+    @api clean() {}
     @api reportValidity() {}
     @api reset() {}
     @api setErrors() {}

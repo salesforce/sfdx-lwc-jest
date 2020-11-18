@@ -6,13 +6,12 @@
  */
 import { LightningElement, api } from 'lwc';
 
-export default class FileUpload extends LightningElement {
-    @api accept;
+export default class RichTextToolbarButton extends LightningElement {
     @api disabled;
-    @api fileFieldName;
-    @api fileFieldValue;
-    @api label;
-    @api multiple;
-    @api name;
-    @api recordId;
+    @api iconAlternativeText;
+    @api iconName;
+    @api order;
+    @api selected;
+    @api closePopup() {}
+    @api showPopup() {}
 }
