@@ -15,6 +15,7 @@ export default class InputRichText extends LightningElement {
     @api labelVisible;
     @api messageWhenBadInput;
     @api placeholder;
+    @api required;
     @api shareWithEntityId;
     @api valid;
     @api value;
@@ -22,4 +23,5 @@ export default class InputRichText extends LightningElement {
     @api getFormat() {}
     @api insertTextAtCursor() {}
     @api setFormat() {}
+    @api setRangeText() {}
 }

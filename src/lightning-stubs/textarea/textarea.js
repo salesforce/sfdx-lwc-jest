@@ -26,5 +26,6 @@ export default class Textarea extends LightningElement {
     @api checkValidity() {}
     @api reportValidity() {}
     @api setCustomValidity() {}
+    @api setRangeText() {}
     @api showHelpMessageIfInvalid() {}
 }
