@@ -30,7 +30,7 @@ const jestConfig = {
     ],
     setupFilesAfterEnv: jestPreset.setupFilesAfterEnv || [],
     resolver: path.resolve(__dirname, './resolver.js'),
-    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
+    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/', '<rootDir>/.localdevserver/'],
     collectCoverageFrom: getCoveragePaths(),
     snapshotSerializers: [require.resolve('@lwc/jest-serializer')],
 };
