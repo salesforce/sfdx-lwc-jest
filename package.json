@@ -45,9 +45,6 @@
         "lint-staged": "^10.5.3",
         "prettier": "^2.2.1"
     },
-    "resolutions": {
-        "js-yaml": "^3.13.1"
-    },
     "husky": {
         "hooks": {
             "pre-commit": "lint-staged"
