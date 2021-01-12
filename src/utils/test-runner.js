@@ -18,13 +18,19 @@ const { PROJECT_ROOT, getSfdxProjectJson } = require('./project');
 const { jestConfig, expectedApiVersion, jestPath } = require('../config');
 
 // CLI options we do not want to pass along to Jest
-const OPTIONS_BLACKLIST = ['_', '$0', 'debug', 'd'];
+// prettier-ignore
+const OPTIONS_DISALLOW_LIST = [
+    '_', 
+    '$0', 
+    'debug', 'd', 
+    'skipApiVersionCheck', 'skip-api-version-check'
+];
 
 function getOptions(argv) {
     let options = [];
 
     Object.keys(argv).forEach((arg) => {
-        if (argv[arg] && !OPTIONS_BLACKLIST.includes(arg)) {
+        if (argv[arg] && !OPTIONS_DISALLOW_LIST.includes(arg)) {
             options.push(`--${arg}`);
         }
     });
