@@ -21,9 +21,7 @@ it('does x when y', () => {
 
 ```html
 <!-- HTML for component under test -->
-<template>
-    ...
-</template>
+<template> ... </template>
 ```
 
 ```js
