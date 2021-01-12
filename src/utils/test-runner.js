@@ -31,13 +31,19 @@ function getOptions(argv) {
     return options.concat(argv._);
 }
 
-async function testRunner(argv) {
+function validSourceApiVersion() {
     const sfdxProjectJson = getSfdxProjectJson();
     const apiVersion = sfdxProjectJson.sourceApiVersion;
     if (apiVersion !== expectedApiVersion) {
         error(
             `Invalid sourceApiVersion found in sfdx-project.json. Expected ${expectedApiVersion}, found ${apiVersion}`,
         );
+    }
+}
+
+async function testRunner(argv) {
+    if (!argv.skipApiVersionCheck) {
+        validSourceApiVersion();
     }
 
     const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));

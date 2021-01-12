@@ -37,6 +37,12 @@ const testOptions = {
         type: 'boolean',
         default: false,
     },
+
+    skipApiVersionCheck: {
+        description: 'Disable the "sourceApiVersion" field check before running tests',
+        type: 'boolean',
+        default: false,
+    },
 };
 
 module.exports = testOptions;
