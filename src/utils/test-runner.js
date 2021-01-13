@@ -18,26 +18,38 @@ const { PROJECT_ROOT, getSfdxProjectJson } = require('./project');
 const { jestConfig, expectedApiVersion, jestPath } = require('../config');
 
 // CLI options we do not want to pass along to Jest
-const OPTIONS_BLACKLIST = ['_', '$0', 'debug', 'd'];
+// prettier-ignore
+const OPTIONS_DISALLOW_LIST = [
+    '_', 
+    '$0', 
+    'debug', 'd', 
+    'skipApiVersionCheck', 'skip-api-version-check'
+];
 
 function getOptions(argv) {
     let options = [];
 
     Object.keys(argv).forEach((arg) => {
-        if (argv[arg] && !OPTIONS_BLACKLIST.includes(arg)) {
+        if (argv[arg] && !OPTIONS_DISALLOW_LIST.includes(arg)) {
             options.push(`--${arg}`);
         }
     });
     return options.concat(argv._);
 }
 
-async function testRunner(argv) {
+function validSourceApiVersion() {
     const sfdxProjectJson = getSfdxProjectJson();
     const apiVersion = sfdxProjectJson.sourceApiVersion;
     if (apiVersion !== expectedApiVersion) {
         error(
             `Invalid sourceApiVersion found in sfdx-project.json. Expected ${expectedApiVersion}, found ${apiVersion}`,
         );
+    }
+}
+
+async function testRunner(argv) {
+    if (!argv.skipApiVersionCheck) {
+        validSourceApiVersion();
     }
 
     const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));

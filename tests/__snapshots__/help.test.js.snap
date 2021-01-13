@@ -4,19 +4,21 @@ exports[`--help attribute shows help 1`] = `
 "\`sfdx-lwc-jest [options]\` runs Jest unit tests in SFDX workspace
 
 Options:
-  --version             Show version number                            [boolean]
-  --coverage            Collect coverage and display in output
+      --version              Show version number                       [boolean]
+      --coverage             Collect coverage and display in output
                                                       [boolean] [default: false]
-  --updateSnapshot, -u  Re-record every snapshot that fails during a test run
+  -u, --updateSnapshot       Re-record every snapshot that fails during a test
+                             run                      [boolean] [default: false]
+      --verbose              Display individual test results with the test suite
+                             hierarchy                [boolean] [default: false]
+      --watch                Watch files for changes and rerun tests related to
+                             changed files            [boolean] [default: false]
+      --debug                Run tests in debug mode
+                             (https://jestjs.io/docs/en/troubleshooting)
                                                       [boolean] [default: false]
-  --verbose             Display individual test results with the test suite
-                        hierarchy                     [boolean] [default: false]
-  --watch               Watch files for changes and rerun tests related to
-                        changed files                 [boolean] [default: false]
-  --debug               Run tests in debug mode
-                        (https://jestjs.io/docs/en/troubleshooting)
-                                                      [boolean] [default: false]
-  --help                Show help                                      [boolean]
+      --skipApiVersionCheck  Disable the \\"sourceApiVersion\\" field check before
+                             running tests            [boolean] [default: false]
+      --help                 Show help                                 [boolean]
 
 Examples:
   sfdx-lwc-jest --coverage  Collect coverage and display in output
