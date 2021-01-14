@@ -14,7 +14,7 @@ If you see this error while running tests in your Salesforce DX project, it most
 
 For example, the error message `Invalid sourceApiVersion found in sfdx-project.json. Expected 45.0, found 46.0` means this project is targeted to API version 45.0, which maps to Spring '19, but the Salesforce DX project the tests are run in is using API version 46.0, which maps to Summer '19. The version check is done against the projects `sourceApiVersion` field in the `sfdx-project.json` file at the top level of the project.
 
-To fix this issue, make sure the most recent version version of the project is being used, or switch to the `prerelease` version, depending on what release your target org is on.
+To fix this issue, make sure the most recent version of this project is being used, or switch to the `prerelease` version, depending on what release your target org is on.
 
 ### Disabling the sourceApiVersion check
 
