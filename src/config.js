@@ -35,7 +35,7 @@ const jestConfig = {
     snapshotSerializers: [require.resolve('@lwc/jest-serializer')],
 };
 
-const expectedApiVersion = '50.0';
+const expectedApiVersion = '51.0';
 
 // Execute command is different on Windows.
 const jestPath =
