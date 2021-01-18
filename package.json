@@ -18,6 +18,7 @@
         "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
         "lint": "eslint src/",
         "format": "prettier --write '**/*.{js,json,md,html,css}'",
+        "format:check": "prettier --check '**/*.{js,json,md,html,css}'",
         "release": "npm publish --access public",
         "test": "jest"
     },

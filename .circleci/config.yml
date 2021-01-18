@@ -20,5 +20,6 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       - run: yarn check-license-headers
+      - run: yarn format:check
       - run: yarn lint
       - run: yarn test
