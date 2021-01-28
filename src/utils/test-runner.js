@@ -8,13 +8,11 @@
 
 const fs = require('fs');
 const path = require('path');
-const { jestRunner } = require('./jest');
-const shell = require('./shell');
-
-const { error, info } = require('../log');
+const { spawn } = require('child_process');
 
 const { PROJECT_ROOT, getSfdxProjectJson } = require('./project');
 
+const { error, info } = require('../log');
 const { jestConfig, expectedApiVersion, jestPath } = require('../config');
 
 // CLI options we do not want to pass along to Jest
@@ -37,6 +35,29 @@ function getOptions(argv) {
     return options.concat(argv._);
 }
 
+function getJestCommandArgs(argv, options) {
+    const commandArgs = [];
+
+    if (argv.debug) {
+        commandArgs.push('--inspect-brk');
+    }
+
+    commandArgs.push(jestPath);
+
+    if (argv.debug) {
+        ('--runInBand');
+    }
+
+    const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));
+    if (!hasCustomConfig) {
+        commandArgs.push(`--config=${JSON.stringify(jestConfig)}`);
+    }
+
+    commandArgs.push(...options);
+
+    return commandArgs;
+}
+
 function validSourceApiVersion() {
     const sfdxProjectJson = getSfdxProjectJson();
     const apiVersion = sfdxProjectJson.sourceApiVersion;
@@ -52,27 +73,34 @@ async function testRunner(argv) {
         validSourceApiVersion();
     }
 
-    const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));
-    const config = hasCustomConfig ? [] : ['--config', JSON.stringify(jestConfig)];
-
     const options = getOptions(argv);
+
+    const command = 'node';
+    const commandArgs = getJestCommandArgs(argv, options);
+
     if (argv.debug) {
         info('Running in debug mode...');
-        let commandArgs = ['--inspect-brk', jestPath, '--runInBand'];
-        commandArgs = commandArgs.concat(options);
-        if (!hasCustomConfig) {
-            commandArgs.push('--config=' + JSON.stringify(jestConfig));
-        }
-        const command = 'node';
-        info(command + ' ' + commandArgs.join(' '));
+        info(`${command} ${commandArgs.join(' ')}`);
+    }
 
-        shell.runCommand(command, commandArgs);
-    } else {
-        // Jest will not set the env if not run from the bin executable
-        if (process.env.NODE_ENV == null) {
-            process.env.NODE_ENV = 'test';
-        }
-        jestRunner.run([...config, ...options]);
+    const jestProcess = spawn(command, commandArgs);
+
+    if (argv.debug) {
+        jestProcess.on('error', (err) => {
+            error('error', err);
+        });
+
+        jestProcess.stdout.on('data', (data) => {
+            info('stdout: ' + String(data));
+        });
+
+        jestProcess.stderr.on('data', (data) => {
+            info('stderr: ' + String(data));
+        });
+
+        jestProcess.on('exit', (code) => {
+            info('Exited with code ' + String(code));
+        });
     }
 }
 

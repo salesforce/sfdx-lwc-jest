@@ -7,10 +7,8 @@
 'use strict';
 
 const fakeJest = require('../src/utils/jest');
-const fakeShell = require('../src/utils/shell');
 jest.mock('../src/utils/project');
 jest.mock('../src/utils/jest');
-jest.mock('../src/utils/shell');
 
 const runJest = require('../src/utils/test-runner');
 
