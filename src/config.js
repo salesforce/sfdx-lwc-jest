@@ -37,8 +37,11 @@ const jestConfig = {
 
 const expectedApiVersion = '50.0';
 
-// Execute command is different on Windows.
-const jestPath =
-    process.platform == 'win32' ? './node_modules/jest/bin/jest.js' : 'node_modules/.bin/jest';
+const jestPath = (() => {
+    const packageJsonPath = require.resolve('jest/package.json');
+    const { bin } = require(packageJsonPath);
+
+    return path.resolve(path.dirname(packageJsonPath), bin);
+})();
 
 module.exports = { jestConfig, jestPath, expectedApiVersion };
