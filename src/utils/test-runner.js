@@ -15,48 +15,8 @@ const { PROJECT_ROOT, getSfdxProjectJson } = require('./project');
 const { error, info } = require('../log');
 const { jestConfig, expectedApiVersion, jestPath } = require('../config');
 
-// CLI options we do not want to pass along to Jest
-// prettier-ignore
-const OPTIONS_DISALLOW_LIST = [
-    '_', 
-    '$0', 
-    'debug', 'd', 
-    'skipApiVersionCheck', 'skip-api-version-check'
-];
-
-function getOptions(argv) {
-    let options = [];
-
-    Object.keys(argv).forEach((arg) => {
-        if (argv[arg] && !OPTIONS_DISALLOW_LIST.includes(arg)) {
-            options.push(`--${arg}`);
-        }
-    });
-    return options.concat(argv._);
-}
-
-function getJestCommandArgs(argv, options) {
-    const commandArgs = [];
-
-    if (argv.debug) {
-        commandArgs.push('--inspect-brk');
-    }
-
-    commandArgs.push(jestPath);
-
-    if (argv.debug) {
-        ('--runInBand');
-    }
-
-    const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));
-    if (!hasCustomConfig) {
-        commandArgs.push(`--config=${JSON.stringify(jestConfig)}`);
-    }
-
-    commandArgs.push(...options);
-
-    return commandArgs;
-}
+// List of CLI options that should be passthrough to jest.
+const JEST_PASSTHROUGH_OPTIONS = new Set(['coverage', 'updateSnapshot', 'verbose', 'watch']);
 
 function validSourceApiVersion() {
     const sfdxProjectJson = getSfdxProjectJson();
@@ -68,40 +28,54 @@ function validSourceApiVersion() {
     }
 }
 
+function getJestArgs(argv) {
+    // Extract known options from parsed arguments
+    const knownOptions = Object.keys(argv)
+        .filter((key) => argv[key] && JEST_PASSTHROUGH_OPTIONS.has(key))
+        .map((key) => `--${key}`);
+
+    // Extract remaining options after `--`
+    const rest = argv._;
+
+    const jestArgs = [...knownOptions, ...rest];
+
+    // Force jest to run in band when debugging.
+    if (argv.debug) {
+        jestArgs.unshift('--runInBand');
+    }
+
+    // Provide default configuration when none is present at the project root.
+    const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));
+    if (!hasCustomConfig) {
+        jestArgs.unshift(`--config=${JSON.stringify(jestConfig)}`);
+    }
+
+    return jestArgs;
+}
+
 async function testRunner(argv) {
     if (!argv.skipApiVersionCheck) {
         validSourceApiVersion();
     }
 
-    const options = getOptions(argv);
-
-    const command = 'node';
-    const commandArgs = getJestCommandArgs(argv, options);
+    const spawnCommand = 'node';
+    const spawnArgs = [jestPath, ...getJestArgs(argv)];
 
     if (argv.debug) {
+        spawnArgs.unshift('--inspect-brk');
+
         info('Running in debug mode...');
-        info(`${command} ${commandArgs.join(' ')}`);
+        info(`${spawnCommand} ${spawnArgs.join(' ')}`);
     }
 
-    const jestProcess = spawn(command, commandArgs);
+    const jest = spawn(spawnCommand, spawnArgs, {
+        env: process.env,
+        stdio: 'inherit',
+    });
 
-    if (argv.debug) {
-        jestProcess.on('error', (err) => {
-            error('error', err);
-        });
-
-        jestProcess.stdout.on('data', (data) => {
-            info('stdout: ' + String(data));
-        });
-
-        jestProcess.stderr.on('data', (data) => {
-            info('stderr: ' + String(data));
-        });
-
-        jestProcess.on('exit', (code) => {
-            info('Exited with code ' + String(code));
-        });
-    }
+    jest.on('close', (code) => {
+        process.exit(code);
+    });
 }
 
 module.exports = testRunner;
