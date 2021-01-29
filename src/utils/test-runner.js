@@ -13,7 +13,7 @@ const { spawn } = require('child_process');
 const { PROJECT_ROOT, getSfdxProjectJson } = require('./project');
 
 const { error, info } = require('../log');
-const { jestConfig, expectedApiVersion, jestPath } = require('../config');
+const { jestConfig, expectedApiVersion } = require('../config');
 
 // List of CLI options that should be passthrough to jest.
 const JEST_PASSTHROUGH_OPTIONS = new Set(['coverage', 'updateSnapshot', 'verbose', 'watch']);
@@ -26,6 +26,13 @@ function validSourceApiVersion() {
             `Invalid sourceApiVersion found in sfdx-project.json. Expected ${expectedApiVersion}, found ${apiVersion}`,
         );
     }
+}
+
+function getJestPath() {
+    const packageJsonPath = require.resolve('jest/package.json');
+
+    const { bin } = require(packageJsonPath);
+    return path.resolve(path.dirname(packageJsonPath), bin);
 }
 
 function getJestArgs(argv) {
@@ -59,7 +66,7 @@ async function testRunner(argv) {
     }
 
     const spawnCommand = 'node';
-    const spawnArgs = [jestPath, ...getJestArgs(argv)];
+    const spawnArgs = [getJestPath(), ...getJestArgs(argv)];
 
     if (argv.debug) {
         spawnArgs.unshift('--inspect-brk');
