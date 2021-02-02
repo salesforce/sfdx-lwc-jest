@@ -10,9 +10,11 @@ const fs = require('fs');
 const path = require('path');
 const lwcResolver = require('@lwc/jest-resolver');
 
-const { PROJECT_ROOT, getModulePaths, DEFAULT_NAMESPACE } = require('./utils/project.js');
+const { PROJECT_ROOT, getModulePaths } = require('./utils/project.js');
 
 const { getInfoFromId } = require('./utils/module.js');
+
+const DEFAULT_NAMESPACE = 'c';
 
 function isFile(file) {
     let result;

@@ -11,7 +11,6 @@ const path = require('path');
 const fg = require('fast-glob');
 
 const PROJECT_ROOT = fs.realpathSync(process.cwd());
-const DEFAULT_NAMESPACE = 'c';
 
 let PATHS = [];
 
@@ -40,6 +39,5 @@ function getModulePaths() {
 module.exports = {
     PROJECT_ROOT,
     getSfdxProjectJson,
-    DEFAULT_NAMESPACE,
     getModulePaths,
 };

@@ -14,9 +14,8 @@ function info(message) {
     console.log(`${chalk.blue('info')} ${message}`);
 }
 
-function error(message, code = 1) {
+function error(message) {
     console.error(`${chalk.red('error')} ${message}`);
-    process.exit(code);
 }
 
 module.exports = {

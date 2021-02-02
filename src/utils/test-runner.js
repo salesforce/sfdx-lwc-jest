@@ -75,13 +75,13 @@ async function testRunner(argv) {
         info(`${spawnCommand} ${spawnArgs.join(' ')}`);
     }
 
-    const jest = spawn(spawnCommand, spawnArgs, {
-        env: process.env,
-        stdio: 'inherit',
-    });
+    return new Promise((resolve) => {
+        const jest = spawn(spawnCommand, spawnArgs, {
+            env: process.env,
+            stdio: 'inherit',
+        });
 
-    jest.on('close', (code) => {
-        process.exit(code);
+        jest.on('close', (code) => resolve(code));
     });
 }
 

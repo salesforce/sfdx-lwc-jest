@@ -13,8 +13,16 @@ const { error } = require('../src/log');
 
 const args = getArgs();
 const runJest = require('../src/utils/test-runner');
-runJest(args);
 
-process.on('unhandledRejection', reason => {
+runJest(args)
+    .catch((err) => {
+        error(err);
+        return 1;
+    })
+    .then((code) => {
+        process.exit(code);
+    });
+
+process.on('unhandledRejection', (reason) => {
     error(reason);
 });
