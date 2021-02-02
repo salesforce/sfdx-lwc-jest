@@ -10,7 +10,7 @@
         "ecmaVersion": 9
     },
     "rules": {
-        "strict": ["error", "global"],
+        "strict": ["error", "global"]
     },
     "overrides": [
         {
