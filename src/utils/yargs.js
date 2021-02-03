@@ -6,10 +6,10 @@
  */
 'use strict';
 
-const options = require('../options/options');
 const yargs = require('yargs');
 
 const { error, info } = require('../log');
+const options = require('../options/options');
 
 const argError = (msg, err, yargs) => {
     if (err) {

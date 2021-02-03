@@ -37,11 +37,4 @@ const jestConfig = {
 
 const expectedApiVersion = '50.0';
 
-const jestPath = (() => {
-    const packageJsonPath = require.resolve('jest/package.json');
-    const { bin } = require(packageJsonPath);
-
-    return path.resolve(path.dirname(packageJsonPath), bin);
-})();
-
-module.exports = { jestConfig, jestPath, expectedApiVersion };
+module.exports = { jestConfig, expectedApiVersion };

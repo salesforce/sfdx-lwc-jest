@@ -8,34 +8,15 @@
 
 const fs = require('fs');
 const path = require('path');
-const { jestRunner } = require('./jest');
-const shell = require('./shell');
-
-const { error, info } = require('../log');
+const { spawn } = require('child_process');
 
 const { PROJECT_ROOT, getSfdxProjectJson } = require('./project');
 
-const { jestConfig, expectedApiVersion, jestPath } = require('../config');
+const { error, info } = require('../log');
+const { jestConfig, expectedApiVersion } = require('../config');
 
-// CLI options we do not want to pass along to Jest
-// prettier-ignore
-const OPTIONS_DISALLOW_LIST = [
-    '_', 
-    '$0', 
-    'debug', 'd', 
-    'skipApiVersionCheck', 'skip-api-version-check'
-];
-
-function getOptions(argv) {
-    let options = [];
-
-    Object.keys(argv).forEach((arg) => {
-        if (argv[arg] && !OPTIONS_DISALLOW_LIST.includes(arg)) {
-            options.push(`--${arg}`);
-        }
-    });
-    return options.concat(argv._);
-}
+// List of CLI options that should be passthrough to jest.
+const JEST_PASSTHROUGH_OPTIONS = new Set(['coverage', 'updateSnapshot', 'verbose', 'watch']);
 
 function validSourceApiVersion() {
     const sfdxProjectJson = getSfdxProjectJson();
@@ -47,33 +28,61 @@ function validSourceApiVersion() {
     }
 }
 
+function getJestPath() {
+    const packageJsonPath = require.resolve('jest/package.json');
+
+    const { bin } = require(packageJsonPath);
+    return path.resolve(path.dirname(packageJsonPath), bin);
+}
+
+function getJestArgs(argv) {
+    // Extract known options from parsed arguments
+    const knownOptions = Object.keys(argv)
+        .filter((key) => argv[key] && JEST_PASSTHROUGH_OPTIONS.has(key))
+        .map((key) => `--${key}`);
+
+    // Extract remaining options after `--`
+    const rest = argv._;
+
+    const jestArgs = [...knownOptions, ...rest];
+
+    // Force jest to run in band when debugging.
+    if (argv.debug) {
+        jestArgs.unshift('--runInBand');
+    }
+
+    // Provide default configuration when none is present at the project root.
+    const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));
+    if (!hasCustomConfig) {
+        jestArgs.unshift(`--config=${JSON.stringify(jestConfig)}`);
+    }
+
+    return jestArgs;
+}
+
 async function testRunner(argv) {
     if (!argv.skipApiVersionCheck) {
         validSourceApiVersion();
     }
 
-    const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));
-    const config = hasCustomConfig ? [] : ['--config', JSON.stringify(jestConfig)];
+    const spawnCommand = 'node';
+    const spawnArgs = [getJestPath(), ...getJestArgs(argv)];
 
-    const options = getOptions(argv);
     if (argv.debug) {
-        info('Running in debug mode...');
-        let commandArgs = ['--inspect-brk', jestPath, '--runInBand'];
-        commandArgs = commandArgs.concat(options);
-        if (!hasCustomConfig) {
-            commandArgs.push('--config=' + JSON.stringify(jestConfig));
-        }
-        const command = 'node';
-        info(command + ' ' + commandArgs.join(' '));
+        spawnArgs.unshift('--inspect-brk');
 
-        shell.runCommand(command, commandArgs);
-    } else {
-        // Jest will not set the env if not run from the bin executable
-        if (process.env.NODE_ENV == null) {
-            process.env.NODE_ENV = 'test';
-        }
-        jestRunner.run([...config, ...options]);
+        info('Running in debug mode...');
+        info(`${spawnCommand} ${spawnArgs.join(' ')}`);
     }
+
+    return new Promise((resolve) => {
+        const jest = spawn(spawnCommand, spawnArgs, {
+            env: process.env,
+            stdio: 'inherit',
+        });
+
+        jest.on('close', (code) => resolve(code));
+    });
 }
 
 module.exports = testRunner;

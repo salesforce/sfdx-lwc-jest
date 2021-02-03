@@ -6,56 +6,71 @@
  */
 'use strict';
 
-const fakeJest = require('../src/utils/jest');
-const fakeShell = require('../src/utils/shell');
-jest.mock('../src/utils/project');
-jest.mock('../src/utils/jest');
-jest.mock('../src/utils/shell');
-
+const child_process = require('child_process');
 const runJest = require('../src/utils/test-runner');
 
-const { jestPath } = require('../src/config');
+jest.mock('child_process');
+jest.mock('../src/log');
+jest.mock('../src/utils/project');
 
-const generateArgs = ({ args = {}, advanced = [] } = {}) => {
-    args['_'] = advanced;
-    return args;
-};
+beforeEach(() => {
+    child_process.spawn.mockReset();
 
-const defaultArgs = generateArgs();
-
-test('advanced params get passed to Jest', () => {
-    const advancedParam = '--maxWorkers=4';
-    const args = generateArgs({ advanced: [advancedParam] });
-    let jestParams = [];
-    fakeJest.jestRunner.run = jest.fn((array) => {
-        jestParams = array;
+    child_process.spawn.mockImplementation(() => {
+        return {
+            on(name, cb) {
+                if (name === 'close') cb(0);
+            },
+        };
     });
-    runJest(args);
-    expect(jestParams).toContain(advancedParam);
 });
 
-test('config is being passed', () => {
-    let jestParams = [];
-    fakeJest.jestRunner.run = jest.fn((array) => {
-        jestParams = array;
-    });
-    runJest(defaultArgs);
-    expect(jestParams.length).toBe(2);
-    expect(jestParams).toContain('--config');
+test('invokes node executable with jest path', async () => {
+    await runJest({ _: [] });
+    const [[cmd, args]] = child_process.spawn.mock.calls;
+
+    expect(cmd).toContain('node');
+    expect(args[0]).toMatch(/bin\/jest\.js$/);
 });
 
-test('debug flag runs node debugger', () => {
-    const debugAttr = '--inspect-brk';
-    const args = generateArgs({ args: { debug: true } });
-    const shallArgs = {};
-    fakeJest.jestRunner.run = jest.fn();
-    fakeShell.runCommand = jest.fn((command, args) => {
-        shallArgs.command = command;
-        shallArgs.args = args;
+test('invokes jest with --runInBand and --inspect-brk in debug mode', async () => {
+    await runJest({ debug: true, _: [] });
+    const [[, args]] = child_process.spawn.mock.calls;
+
+    expect(args).toContain('--inspect-brk');
+    expect(args).toContain('--runInBand');
+});
+
+test.each(['coverage', 'updateSnapshot', 'verbose', 'watch'])(
+    'invokes jest with option %s when present',
+    async (option) => {
+        await runJest({ [option]: true, _: [] });
+        const [[, args]] = child_process.spawn.mock.calls;
+
+        expect(args).toContain(`--${option}`);
+    },
+);
+
+test('invokes jest with position arguments when present', async () => {
+    await runJest({ _: ['--showConfig', 'my/test.js'] });
+    const [[, args]] = child_process.spawn.mock.calls;
+
+    expect(args).toContain(`--showConfig`);
+    expect(args).toContain(`my/test.js`);
+});
+
+test('resolves with jest command exit code', async () => {
+    const EXIT_CODE = 42;
+    child_process.spawn.mockImplementation(() => {
+        return {
+            on(name, cb) {
+                if (name === 'close') {
+                    cb(EXIT_CODE);
+                }
+            },
+        };
     });
-    runJest(args);
-    expect(fakeJest.jestRunner.run).not.toHaveBeenCalled();
-    expect(shallArgs.args).toContain(debugAttr);
-    expect(shallArgs.args).toContain(jestPath);
-    expect(shallArgs.command).toBe('node');
+
+    const res = await runJest({ _: [] });
+    expect(res).toBe(EXIT_CODE);
 });

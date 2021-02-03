@@ -7,22 +7,11 @@
 'use strict';
 
 const { exec } = require('child_process');
+const { promisify } = require('util');
 
-const runInHelpMode = () => {
-    return new Promise((resolve, reject) => {
-        exec('node ./bin/sfdx-lwc-jest --help', (error, stdout) => {
-            if (error) {
-                reject(error);
-            } else {
-                resolve(stdout);
-            }
-        });
-    });
-};
+const promiseExec = promisify(exec);
 
-test('--help attribute shows help', () => {
-    expect.assertions(1);
-    return runInHelpMode().then((stdout) => {
-        expect(stdout).toMatchSnapshot();
-    });
+test('--help attribute shows help', async () => {
+    const { stdout } = await promiseExec('node ./bin/sfdx-lwc-jest --help');
+    expect(stdout).toMatchSnapshot();
 });
