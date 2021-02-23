@@ -23,12 +23,12 @@
         "test": "jest"
     },
     "dependencies": {
-        "@lwc/compiler": "1.7.10-228.1",
+        "@lwc/compiler": "1.7.10",
         "@lwc/engine": "1.7.10-228.1",
-        "@lwc/jest-preset": "9.0.0-228.0",
+        "@lwc/jest-preset": "9.0.0",
         "@lwc/jest-resolver": "9.0.0-228.0",
         "@lwc/jest-serializer": "9.0.0-228.0",
-        "@lwc/jest-transformer": "9.0.0-228.0",
+        "@lwc/jest-transformer": "9.0.0",
         "@lwc/module-resolver": "1.7.10-228.1",
         "@lwc/synthetic-shadow": "1.7.10-228.1",
         "@lwc/wire-service": "1.7.10-228.1",
