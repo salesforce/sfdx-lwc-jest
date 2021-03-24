@@ -43,6 +43,8 @@ export default class Input extends LightningElement {
     @api placeholder;
     @api readOnly;
     @api required;
+    @api selectionEnd;
+    @api selectionStart;
     @api step;
     @api timeAriaControls;
     @api timeAriaDescribedBy;
