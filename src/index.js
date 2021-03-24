@@ -7,12 +7,18 @@
 'use strict';
 
 const {
+    createApexTestWireAdapter,
+    createLdsTestWireAdapter,
+    createTestWireAdapter,
     registerLdsTestWireAdapter,
     registerApexTestWireAdapter,
     registerTestWireAdapter,
 } = require('@salesforce/wire-service-jest-util');
 
 module.exports = {
+    createApexTestWireAdapter,
+    createLdsTestWireAdapter,
+    createTestWireAdapter,
     registerLdsTestWireAdapter,
     registerApexTestWireAdapter,
     registerTestWireAdapter,
