@@ -168,8 +168,8 @@ Let's go through an example. We want to test the following template, `helloWorld
 ```html
 <template>
     Hello From a Lightning Web Component!
-    <lightning-button onclick={doSomething}></lightning-button>
-    <foo-fancy-button onclick={doSomethingElse}></foo-fancy-button>
+    <lightning-button onclick="{doSomething}"></lightning-button>
+    <foo-fancy-button onclick="{doSomethingElse}"></foo-fancy-button>
 </template>
 ```
 
