@@ -89,7 +89,7 @@ sfdx-lwc-jest -- --json
 
 See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) for all CLI options.
 
-## Debug mode
+## Debug Mode
 
 Debug mode lets you easily debug your Jest tests.
 
@@ -135,7 +135,7 @@ If you prefer to debug inside Visual Studio Code, follow these steps:
 -   Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
 -   To run tests, press F5 or select Debug > Start Debugging.
 
-## Watch mode
+## Watch Mode
 
 Watch mode causes Jest to monitor files for changes and rerun tests related to the changed files. This is a great way to rapidly make component and test changes while monitoring tests results.
 
@@ -163,17 +163,17 @@ This package installs stubs for the `lightning` base components to the `src/ligh
 
 For components from other namespaces, not in your local `lwc` directory, create your own mock and update the Jest config to map the name of these components to the mock file.
 
-Let's go through an example. Given the following template, `helloWorld.html`, we want to test:
+Let's go through an example. We want to test the following template, `helloWorld.html`.
 
 ```html
 <template>
     Hello From a Lightning Web Component!
-    <lightning-button onclick={doSomething}></lightning-button>
-    <foo-fancy-button onclick={doSomethingElse}></foo-button>
+    <lightning-button onclick="{doSomething}"></lightning-button>
+    <foo-fancy-button onclick="{doSomethingElse}"></foo-fancy-button>
 </template>
 ```
 
-Because it's in the `lightning` namespace, the `lightning-button` just works. However, you must write some code to help the Jest resolver find the `foo-fancy-button component`. First, create a `jest.config.js` file at the root of the Salesforce DX project workspace and add the following:
+Because it's in the `lightning` namespace, the `lightning-button` just works. However, you must write some code to help the Jest resolver find the `foo-fancy-button` component. First, create a `jest.config.js` file at the root of the Salesforce DX project workspace and add the following:
 
 ```js
 const { jestConfig } = require('@salesforce/sfdx-lwc-jest/config');
@@ -185,7 +185,7 @@ module.exports = {
 };
 ```
 
-This tells Jest to map the import for `foo-fancy-button` to the provided file. Notice that the first dash is converted to a forward slash and the rest of the component name goes from kebab to camel case. The reason for the forward slash is because the module resolver treats everything before the first dash as the namespace. Here, `<rootDir>` maps to the root of the Salesforce DX workspace. Note that this file location is not required, just an example.
+This config tells Jest to map the import for `foo-fancy-button` to the provided file. Notice that the first dash is converted to a forward slash and the rest of the component name goes from kebab to camel case. The reason for the forward slash is because the module resolver treats everything before the first dash as the namespace. Here, `<rootDir>` maps to the root of the Salesforce DX workspace. Note that this file location is not required, just an example.
 
 You also have the freedom to make these mock implementations as sophisticated or simple as you'd like. In this example, we'll keep `foo-fancy-button` simple with an empty template and no functionality in the `.js` file, but you can always add whatever markup you'd like or implement functionality like any other Lightning web component.
 
@@ -208,13 +208,5 @@ export default class FancyButton extends LightningElement {
 ## Testing @wire Adapters
 
 To provision data through `@wire` adapters in unit tests, use the APIs provided by [`@salesforce/wire-service-jest-util`](https://github.com/salesforce/wire-service-jest-util). These APIs are exposed through this package so you do not need to include another dependency in your package.json.
-
-```js
-import {
-    registerTestWireAdapter,
-    registerLdsTestWireAdapter,
-    registerApexTestWireAdapter,
-} from '@salesforce/sfdx-lwc-jest';
-```
 
 See the `@salesforce/wire-service-jest-util` [README](https://github.com/salesforce/wire-service-jest-util/blob/master/README.md) for further documentation on these APIs.
