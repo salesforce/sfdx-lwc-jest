@@ -13,6 +13,7 @@ export default class InputAddress extends LightningElement {
     @api cityLabel;
     @api cityPlaceholder;
     @api country;
+    @api countryDisabled;
     @api countryLabel;
     @api countryOptions;
     @api countryPlaceholder;

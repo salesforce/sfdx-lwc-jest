@@ -4,7 +4,9 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-export const CurrentPageReference = jest.fn();
+import { createTestWireAdapter } from '@salesforce/wire-service-jest-util';
+
+export const CurrentPageReference = createTestWireAdapter(jest.fn());
 
 const Navigate = Symbol('Navigate');
 const GenerateUrl = Symbol('GenerateUrl');

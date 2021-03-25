@@ -6,7 +6,6 @@
  */
 import { LightningElement, api } from 'lwc';
 
-export default class FormattedPhone extends LightningElement {
-    @api disabled;
-    @api value;
+export default class QuickActionPanel extends LightningElement {
+    @api header;
 }

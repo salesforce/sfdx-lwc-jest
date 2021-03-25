@@ -7,6 +7,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Textarea extends LightningElement {
+    @api autocomplete;
     @api disabled;
     @api fieldLevelHelp;
     @api label;
