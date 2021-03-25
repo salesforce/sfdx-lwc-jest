@@ -77,10 +77,6 @@ function getModule(modulePath, options) {
         return getApexMock('method');
     }
 
-    if (modulePath === '@salesforce/apex') {
-        return getApexMock('apex');
-    }
-
     if (ns === DEFAULT_NAMESPACE) {
         const paths = getModulePaths();
         for (let i = 0; i < paths.length; i++) {
