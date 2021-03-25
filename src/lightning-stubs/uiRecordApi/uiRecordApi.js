@@ -4,8 +4,10 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-export const getRecord = jest.fn();
-export const getRecordCreateDefaults = jest.fn();
+import { createLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
+
+export const getRecord = createLdsTestWireAdapter(jest.fn());
+export const getRecordCreateDefaults = createLdsTestWireAdapter(jest.fn());
 export const updateRecord = jest.fn().mockResolvedValue({});
 export const createRecord = jest.fn().mockResolvedValue({});
 export const deleteRecord = jest.fn().mockResolvedValue();
@@ -14,7 +16,7 @@ export const generateRecordInputForUpdate = jest.fn();
 export const createRecordInputFilteredByEditedFields = jest.fn();
 export const getRecordInput = jest.fn();
 export const refresh = jest.fn().mockResolvedValue();
-export const getRecordUi = jest.fn();
+export const getRecordUi = createLdsTestWireAdapter(jest.fn());
 
 /**
  * Gets a field's value from a record.
