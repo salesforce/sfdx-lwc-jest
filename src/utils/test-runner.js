@@ -31,8 +31,10 @@ function validSourceApiVersion() {
 function getJestPath() {
     const packageJsonPath = require.resolve('jest/package.json');
 
-    const { bin } = require(packageJsonPath);
-    return path.resolve(path.dirname(packageJsonPath), bin);
+    const {
+        bin: { jest },
+    } = require(packageJsonPath);
+    return path.resolve(path.dirname(packageJsonPath), jest);
 }
 
 function getJestArgs(argv) {
