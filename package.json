@@ -9,7 +9,14 @@
         "src/",
         "config.js"
     ],
-    "repository": "git@github.com:salesforce/sfdx-lwc-jest.git",
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/salesforce/sfdx-lwc-jest.git"
+    },
+    "bugs": {
+        "url": "https://github.com/salesforce/sfdx-lwc-jest/issues"
+    },
+    "homepage": "https://github.com/salesforce/sfdx-lwc-jest#readme",
     "bin": {
         "lwc-jest": "./bin/sfdx-lwc-jest",
         "sfdx-lwc-jest": "./bin/sfdx-lwc-jest"
