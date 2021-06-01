@@ -11,7 +11,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "git+ssh://git@github.com/salesforce/sfdx-lwc-jest.git"
+        "url": "https://github.com/salesforce/sfdx-lwc-jest.git"
     },
     "bugs": {
         "url": "https://github.com/salesforce/sfdx-lwc-jest/issues"
