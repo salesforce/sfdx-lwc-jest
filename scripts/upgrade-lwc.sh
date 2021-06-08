@@ -9,7 +9,7 @@ LWC_VERSION=$1
 LWC_TEST_VERSION=$2
 
 yarn upgrade @lwc/compiler@$LWC_VERSION
-yarn upgrade @lwc/engine@$LWC_VERSION
+yarn upgrade @lwc/engine-dom@$LWC_VERSION
 yarn upgrade @lwc/module-resolver@$LWC_VERSION
 yarn upgrade @lwc/wire-service@$LWC_VERSION
 yarn upgrade @lwc/synthetic-shadow@$LWC_VERSION
