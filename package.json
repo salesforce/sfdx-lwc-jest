@@ -41,11 +41,11 @@
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
-        "eslint": "^7.22.0",
+        "eslint": "^7.28.0",
         "husky": "^5.2.0",
-        "isbinaryfile": "^4.0.6",
+        "isbinaryfile": "^4.0.8",
         "lint-staged": "^10.5.4",
-        "prettier": "^2.2.1"
+        "prettier": "^2.3.1"
     },
     "lint-staged": {
         "*.js": "eslint",
