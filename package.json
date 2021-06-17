@@ -24,28 +24,28 @@
         "test": "jest"
     },
     "dependencies": {
-        "@lwc/compiler": "1.17.6",
-        "@lwc/engine": "1.17.6",
-        "@lwc/jest-preset": "10.0.0",
-        "@lwc/jest-resolver": "10.0.0",
-        "@lwc/jest-serializer": "10.0.0",
-        "@lwc/jest-transformer": "10.0.0",
-        "@lwc/module-resolver": "1.17.6",
-        "@lwc/synthetic-shadow": "1.17.6",
-        "@lwc/wire-service": "1.17.6",
+        "@lwc/compiler": "1.17.9",
+        "@lwc/engine": "1.17.9",
+        "@lwc/jest-preset": "10.0.2",
+        "@lwc/jest-resolver": "10.0.2",
+        "@lwc/jest-serializer": "10.0.2",
+        "@lwc/jest-transformer": "10.0.2",
+        "@lwc/module-resolver": "1.17.9",
+        "@lwc/synthetic-shadow": "1.17.9",
+        "@lwc/wire-service": "1.17.9",
         "@salesforce/wire-service-jest-util": "~3.0.0",
-        "chalk": "~4.1.0",
+        "chalk": "~4.1.1",
         "fast-glob": "^3.2.5",
         "jest": "26.6.3",
-        "yargs": "~16.2.0"
+        "yargs": "~17.0.1"
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
-        "eslint": "^7.22.0",
+        "eslint": "^7.28.0",
         "husky": "^5.2.0",
-        "isbinaryfile": "^4.0.6",
+        "isbinaryfile": "^4.0.8",
         "lint-staged": "^10.5.4",
-        "prettier": "^2.2.1"
+        "prettier": "^2.3.1"
     },
     "lint-staged": {
         "*.js": "eslint",
