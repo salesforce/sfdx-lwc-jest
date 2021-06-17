@@ -4,9 +4,7 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-import { LightningElement, api } from 'lwc';
+import { createLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
 
-export default class FormattedPhone extends LightningElement {
-    @api disabled;
-    @api value;
-}
+export const getNavItems = createLdsTestWireAdapter(jest.fn());
+export const refresh = jest.fn();

@@ -22,6 +22,7 @@ export default class Datatable extends LightningElement {
     @api maxColumnWidth;
     @api maxRowSelection;
     @api minColumnWidth;
+    @api renderConfig;
     @api resizeColumnDisabled;
     @api resizeStep;
     @api rowNumberOffset;

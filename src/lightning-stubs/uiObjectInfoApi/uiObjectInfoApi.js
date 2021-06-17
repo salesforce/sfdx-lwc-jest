@@ -4,7 +4,9 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-export const getObjectInfo = jest.fn();
-export const getObjectInfos = jest.fn();
-export const getPicklistValues = jest.fn();
-export const getPicklistValuesByRecordType = jest.fn();
+import { createLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
+
+export const getObjectInfo = createLdsTestWireAdapter(jest.fn());
+export const getObjectInfos = createLdsTestWireAdapter(jest.fn());
+export const getPicklistValues = createLdsTestWireAdapter(jest.fn());
+export const getPicklistValuesByRecordType = createLdsTestWireAdapter(jest.fn());

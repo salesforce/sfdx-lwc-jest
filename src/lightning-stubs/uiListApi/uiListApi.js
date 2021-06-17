@@ -4,5 +4,7 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-export const getListUi = jest.fn();
+import { createLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
+
+export const getListUi = createLdsTestWireAdapter(jest.fn());
 export const MRU = Symbol.for('MRU');
