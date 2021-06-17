@@ -32,7 +32,14 @@ function getJestPath() {
     const packageJsonPath = require.resolve('jest/package.json');
 
     const { bin } = require(packageJsonPath);
-    return path.resolve(path.dirname(packageJsonPath), bin);
+
+    // Account for difference in behavior between npm v6 and v7 (#221)
+    let normalizedBinPath = bin;
+    if (typeof bin === 'object') {
+        normalizedBinPath = bin.jest;
+    }
+
+    return path.resolve(path.dirname(packageJsonPath), normalizedBinPath);
 }
 
 function getJestArgs(argv) {
