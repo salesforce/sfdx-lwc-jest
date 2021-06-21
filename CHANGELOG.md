@@ -1,5 +1,7 @@
 # Changelog
 
+Newer release notes can be found in [GitHub Releases](https://github.com/salesforce/sfdx-lwc-jest/releases).
+
 ## 0.7.1 (March 3, 2020)
 
 ## Fixes
