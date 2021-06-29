@@ -47,19 +47,11 @@ function resolveAsFile(name, extensions) {
     return undefined;
 }
 
-function getModuleMock(modulePath, moduleName) {
-    const p = path.join(__dirname, modulePath, moduleName);
+function getLightningMock(modulePath) {
+    const p = path.join(__dirname, 'lightning-stubs', modulePath);
     if (fs.existsSync(p)) {
-        return path.join(p, moduleName + '.js');
+        return path.join(p, modulePath + '.js');
     }
-}
-
-function getLightningMock(moduleName) {
-    return getModuleMock('lightning-stubs', moduleName);
-}
-
-function getApexMock(moduleName) {
-    return getModuleMock('apex-stubs', moduleName);
 }
 
 function getModule(modulePath, options) {
@@ -67,14 +59,6 @@ function getModule(modulePath, options) {
 
     if (ns === 'lightning') {
         return getLightningMock(name);
-    }
-
-    // See https://developer.salesforce.com/docs/component-library/documentation/en/lwc/reference_salesforce_modules
-    if (
-        modulePath.startsWith('@salesforce/apex/') ||
-        modulePath.startsWith('@salesforce/apexContinuation/')
-    ) {
-        return getApexMock('method');
     }
 
     if (ns === DEFAULT_NAMESPACE) {
