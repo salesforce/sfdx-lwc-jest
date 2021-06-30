@@ -14,7 +14,7 @@
     },
     "overrides": [
         {
-            "files": ["src/lightning-stubs/**", "src/apex-stubs/**"],
+            "files": ["src/lightning-stubs/**"],
             "parser": "babel-eslint",
             "parserOptions": {
                 "sourceType": "module"
