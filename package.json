@@ -31,27 +31,27 @@
         "test": "jest"
     },
     "dependencies": {
-        "@lwc/compiler": "2.2.6",
-        "@lwc/engine-dom": "2.2.6",
+        "@lwc/compiler": "2.3.4",
+        "@lwc/engine-dom": "2.3.4",
         "@lwc/jest-preset": "11.2.0",
         "@lwc/jest-resolver": "11.2.0",
         "@lwc/jest-serializer": "11.2.0",
         "@lwc/jest-transformer": "11.2.0",
-        "@lwc/module-resolver": "2.2.6",
-        "@lwc/synthetic-shadow": "2.2.6",
-        "@lwc/wire-service": "2.2.6",
+        "@lwc/module-resolver": "2.3.4",
+        "@lwc/synthetic-shadow": "2.3.4",
+        "@lwc/wire-service": "2.3.4",
         "@salesforce/wire-service-jest-util": "4.0.0",
-        "chalk": "~4.1.1",
+        "chalk": "~4.1.2",
         "fast-glob": "^3.2.7",
-        "jest": "27.0.6",
-        "yargs": "~17.0.1"
+        "jest": "27.1.0",
+        "yargs": "~17.1.1"
     },
     "devDependencies": {
         "babel-eslint": "^10.1.0",
-        "eslint": "^7.30.0",
-        "husky": "^7.0.1",
+        "eslint": "^7.32.0",
+        "husky": "^7.0.2",
         "isbinaryfile": "^4.0.8",
-        "lint-staged": "^11.0.0",
+        "lint-staged": "^11.1.2",
         "prettier": "^2.3.2"
     },
     "lint-staged": {
