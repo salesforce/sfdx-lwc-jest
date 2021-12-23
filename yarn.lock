@@ -896,10 +896,10 @@
     postcss-value-parser "~4.1.0"
     string.prototype.matchall "^4.0.5"
 
-"@lwc/synthetic-shadow@2.3.4":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@lwc/synthetic-shadow/-/synthetic-shadow-2.3.4.tgz#17ae5db8196b92d8b5fe7ca4c2bcc9a45bd82061"
-  integrity sha512-bi1KfL2ZTRhSoX7DEZ9fqo1Y9V9Rv/CRuHdsjKZaHAf2AVn7wFLYCw9eTNbGz2wk6y9IUUGUT00/+7rMm0t21g==
+"@lwc/synthetic-shadow@2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@lwc/synthetic-shadow/-/synthetic-shadow-2.6.1.tgz#1ed066fe0f48fc14c6db62d9ad24d00d67be931f"
+  integrity sha512-5/ghqVmWLgZ5glKzBwyX+pg+WXxCLvZrq3Zyjcdfdc7tdqNGX2tbSIXMIt6YPVOtRdBMA/Ps4vb8GdfQCGo11A==
 
 "@lwc/template-compiler@2.3.4":
   version "2.3.4"
