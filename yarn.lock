@@ -830,10 +830,10 @@
     "@lwc/style-compiler" "2.3.4"
     "@lwc/template-compiler" "2.3.4"
 
-"@lwc/engine-dom@2.3.4":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@lwc/engine-dom/-/engine-dom-2.3.4.tgz#11b1cfdfc081f1336793d6da54855b30be639b4f"
-  integrity sha512-OttQ7LjSZ/d9OGvKW6+mm8nTRzD5uH/vZ+SGk61dkV+P2gPu3yehDXARvUvNJuZGgoGHEN/O1Kkv4NFc/8jeJA==
+"@lwc/engine-dom@2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@lwc/engine-dom/-/engine-dom-2.6.1.tgz#6fa83867e77c1742910e7972271fcbf21aaa4db3"
+  integrity sha512-jkVSLDzhYnrAGQqXwyQRCdnkzbB3YEmMgF9TuqeJD2X4oFuUw/BUTqigT/pcG4JDJxVRLlERT5Qm/3zWRUjjJw==
 
 "@lwc/errors@2.3.4":
   version "2.3.4"
