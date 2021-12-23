@@ -37,7 +37,7 @@
         "@lwc/jest-resolver": "11.2.0",
         "@lwc/jest-serializer": "11.2.0",
         "@lwc/jest-transformer": "11.2.0",
-        "@lwc/module-resolver": "2.3.4",
+        "@lwc/module-resolver": "2.6.1",
         "@lwc/synthetic-shadow": "2.3.4",
         "@lwc/wire-service": "2.3.4",
         "@salesforce/wire-service-jest-util": "4.0.0",

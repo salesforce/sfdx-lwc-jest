@@ -874,10 +874,10 @@
     "@babel/preset-typescript" "^7.13.0"
     babel-preset-jest "^27.0.1"
 
-"@lwc/module-resolver@2.3.4":
-  version "2.3.4"
-  resolved "https://registry.yarnpkg.com/@lwc/module-resolver/-/module-resolver-2.3.4.tgz#e72a1d580458cbaf9294e555e0e8a0f738dcee7f"
-  integrity sha512-BDb9tdPgRGp6bQpqEYulHHMPnaYSVBuVDQtR1Th7nbdO+MF8jUE4+q3rcFN2VcLh0su1GpJ/2Y1zn2NPk974Bw==
+"@lwc/module-resolver@2.6.1":
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/@lwc/module-resolver/-/module-resolver-2.6.1.tgz#6dd5ef9582ffb2ea08e2061175ffa8c558268dfd"
+  integrity sha512-/hm3PBQoOco09Vyryql8XLTd4cxzOIHqHOxIntoA4e9L3OZc0lNdebhXOhHPNtNXOVfwt6iQpsG9rYcwpeKIjA==
   dependencies:
     resolve "~1.20.0"
 
