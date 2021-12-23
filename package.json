@@ -39,7 +39,7 @@
         "@lwc/jest-transformer": "11.2.0",
         "@lwc/module-resolver": "2.3.4",
         "@lwc/synthetic-shadow": "2.3.4",
-        "@lwc/wire-service": "2.3.4",
+        "@lwc/wire-service": "2.6.1",
         "@salesforce/wire-service-jest-util": "4.0.0",
         "chalk": "~4.1.2",
         "fast-glob": "^3.2.7",
