@@ -47,7 +47,8 @@
         "yargs": "~17.3.1"
     },
     "devDependencies": {
-        "babel-eslint": "^10.1.0",
+        "@babel/eslint-parser": "^7.16.5",
+        "@babel/plugin-proposal-decorators": "^7.16.7",
         "eslint": "^8.6.0",
         "husky": "^7.0.4",
         "isbinaryfile": "^4.0.8",
