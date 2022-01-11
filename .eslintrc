@@ -15,9 +15,18 @@
     "overrides": [
         {
             "files": ["src/lightning-stubs/**"],
-            "parser": "babel-eslint",
+            "parser": "@babel/eslint-parser",
             "parserOptions": {
-                "sourceType": "module"
+                "sourceType": "module",
+                "requireConfigFile": false,
+                "babelOptions": {
+                    "plugins": [
+                        [
+                            "@babel/plugin-proposal-decorators",
+                            { "legacy": true }
+                        ]
+                    ]
+                }
             },
             "env": {
                 "browser": true
