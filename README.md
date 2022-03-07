@@ -2,6 +2,17 @@
 
 Run Jest against Lightning web components in a Salesforce DX workspace environment.
 
+## Versions
+
+To test against the latest Salesforce production instances, use the npm tag appropriate for the current release, e.g.:
+
+```
+yarn add -D @salesforce/sfdx-lwc-jest@winter22
+yarn add -D @salesforce/sfdx-lwc-jest@spring22
+```
+
+The npm `latest` tag corresponds to the latest version of this repo, not necessarily Salesforce production versions.
+
 ## Invalid sourceApiVersion found in sfdx-project.json
 
 If you see this error while running tests in your Salesforce DX project, it most likely means you are using the incorrect version of this project.
