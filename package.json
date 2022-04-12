@@ -29,7 +29,7 @@
         "format:check": "prettier --check '**/*.{js,json,md,html,css}'",
         "release": "yarn release:publish",
         "release:version": "npm version",
-        "release:publish": "npm publish --access public --registry=https://registry.npmjs.org --dry-run",
+        "release:publish": "npm publish --access public --registry=https://registry.npmjs.org",
         "test": "jest"
     },
     "dependencies": {
