@@ -28,7 +28,8 @@
         "format": "prettier --write '**/*.{js,json,md,html,css}'",
         "format:check": "prettier --check '**/*.{js,json,md,html,css}'",
         "release": "yarn release:publish",
-        "release:publish": "npm publish --access public",
+        "release:version": "npm version",
+        "release:publish": "npm publish --access public --registry=https://registry.npmjs.org --dry-run",
         "test": "jest"
     },
     "dependencies": {
