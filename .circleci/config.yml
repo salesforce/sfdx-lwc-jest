@@ -22,14 +22,13 @@ commands:
       - save_cache:
           key: v1-yarn-deps-{{ checksum "yarn.lock" }}
           paths:
-            - node_modules
+            - ~/.cache/yarn
   restore_yarn_cache:
     description: Restore cache from previous build
     steps:
       - restore_cache:
           keys:
           - v1-yarn-deps-{{ checksum "yarn.lock" }}
-          - v1-yarn-deps-
 
 jobs:
   build:
@@ -67,7 +66,7 @@ jobs:
           command: npm config set "//registry.npmjs.org/:_authToken" "$NPM_AUTOMATION_TOKEN"
       - run:
           name: Publish package
-          command: yarn release:publish:ci
+          command: yarn release:publish
 
 workflows:
   build_and_test:
