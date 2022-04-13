@@ -12,7 +12,7 @@ deploy_filters: &deploy_filters
 executors:
   node:
     docker:
-      - image: cimg/node:14
+      - image: circleci/node:14
 
 
 commands:
