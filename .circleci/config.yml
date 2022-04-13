@@ -1,25 +1,83 @@
-version: 2
-jobs:
-  build:
+version: 2.1
+
+deploy_filters: &deploy_filters
+  filters:
+    branches:
+      ignore: /.*/
+    tags:
+      # Trigger on tags that begin with `v`
+      only: /^v.*/
+
+
+executors:
+  node:
     docker:
-      - image: circleci/node:lts
+      - image: cimg/node:14
 
+
+commands:
+  save_yarn_cache:
+    description: Save cache for future build
     steps:
-      - checkout
-
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "yarn.lock" }}
-          - v1-dependencies-
-
-      - run: yarn install --frozen-lock
-
       - save_cache:
+          key: v1-yarn-deps-{{ checksum "yarn.lock" }}
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "yarn.lock" }}
+  restore_yarn_cache:
+    description: Restore cache from previous build
+    steps:
+      - restore_cache:
+          keys:
+          - v1-yarn-deps-{{ checksum "yarn.lock" }}
+          - v1-yarn-deps-
 
-      - run: yarn check-license-headers
-      - run: yarn format:check
-      - run: yarn lint
-      - run: yarn test
+jobs:
+  build:
+    executor: node
+    steps:
+      - checkout
+      - restore_yarn_cache
+      - run:
+          name: Install dependencies and build
+          command: yarn install --frozen-lockfile
+      - save_yarn_cache
+      - run:
+          name: Check License Headers
+          command: yarn check-license-headers
+      - run:
+          name: Check formatting
+          command: yarn format:check
+      - run:
+          name: Run linter
+          command: yarn lint
+      - run:
+          name: Run unit tests
+          command: yarn test
+
+  deploy:
+    executor: node
+    steps:
+      - checkout
+      - restore_yarn_cache
+      - run:
+          name: Install dependencies and build
+          command: yarn install --frozen-lockfile
+      - run:
+          name: Configure NPM authentication
+          command: npm config set "//registry.npmjs.org/:_authToken" "$NPM_AUTOMATION_TOKEN"
+      - run:
+          name: Publish package
+          command: yarn release:publish:ci
+
+workflows:
+  build_and_test:
+    jobs:
+      - build
+  build_and_test_and_deploy:
+    jobs:
+      - build:
+          <<: *deploy_filters
+      - deploy:
+          <<: *deploy_filters
+          requires:
+            - build

@@ -30,6 +30,7 @@
         "release": "yarn release:publish",
         "release:version": "npm version",
         "release:publish": "npm publish --access public --registry=https://registry.npmjs.org",
+        "release:publish:ci": "npm publish --access public --registry=https://registry.npmjs.org --dry-run",
         "test": "jest"
     },
     "dependencies": {
