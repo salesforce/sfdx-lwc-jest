@@ -69,9 +69,6 @@ jobs:
           command: yarn release:publish
 
 workflows:
-  workflow:
-    jobs:
-      - build
   build_and_test:
     jobs:
       - build
