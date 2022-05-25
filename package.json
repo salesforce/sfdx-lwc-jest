@@ -43,10 +43,10 @@
         "@lwc/synthetic-shadow": "2.14.0",
         "@lwc/wire-service": "2.14.0",
         "@salesforce/wire-service-jest-util": "4.0.0",
-        "chalk": "~4.1.2",
+        "chalk": "^4.1.2",
         "fast-glob": "^3.2.10",
-        "jest": "28.1.0",
-        "jest-environment-jsdom": "28.1.0",
+        "jest": "^28.1.0",
+        "jest-environment-jsdom": "^28.1.0",
         "yargs": "~17.5.1"
     },
     "devDependencies": {
