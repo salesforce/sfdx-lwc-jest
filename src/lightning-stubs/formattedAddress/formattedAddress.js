@@ -11,6 +11,7 @@ export default class FormattedAddress extends LightningElement {
     @api country;
     @api disabled;
     @api latitude;
+    @api locale;
     @api longitude;
     @api postalCode;
     @api province;

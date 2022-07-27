@@ -12,6 +12,7 @@ export default class RecordEditForm extends LightningElement {
     @api formClass;
     @api layoutType;
     @api objectApiName;
+    @api optionalFields;
     @api recordId;
     @api recordTypeId;
     @api submit() {}

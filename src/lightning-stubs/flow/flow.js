@@ -6,14 +6,11 @@
  */
 import { LightningElement, api } from 'lwc';
 
-export default class Button extends LightningElement {
-    @api disabled;
-    @api iconName;
-    @api iconPosition;
-    @api label;
-    @api name;
-    @api type;
-    @api value;
-    @api variant;
-    @api disableAnimation;
+export default class Flow extends LightningElement {
+    @api flowApiName;
+    @api flowFinishBehavior;
+    @api flowInputVariables;
+    @api flowInterviewId;
+    @api resumeFlow() {}
+    @api startFlow() {}
 }

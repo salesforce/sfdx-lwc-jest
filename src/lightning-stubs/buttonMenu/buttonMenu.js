@@ -10,6 +10,7 @@ export default class ButtonMenu extends LightningElement {
     @api alternativeText;
     @api disabled;
     @api draftAlternativeText;
+    @api groupOrder;
     @api iconName;
     @api iconSize;
     @api isDraft;

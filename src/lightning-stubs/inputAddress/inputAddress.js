@@ -8,6 +8,7 @@ import { LightningElement, api } from 'lwc';
 
 export default class InputAddress extends LightningElement {
     @api addressLabel;
+    @api addressLookupLabel;
     @api addressLookupPlaceholder;
     @api city;
     @api cityLabel;
@@ -19,6 +20,7 @@ export default class InputAddress extends LightningElement {
     @api countryPlaceholder;
     @api disabled;
     @api fieldLevelHelp;
+    @api locale;
     @api postalCode;
     @api postalCodeLabel;
     @api postalCodePlaceholder;
