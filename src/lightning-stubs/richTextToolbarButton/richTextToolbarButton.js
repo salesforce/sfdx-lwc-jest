@@ -8,9 +8,9 @@ import { LightningElement, api } from 'lwc';
 
 export default class RichTextToolbarButton extends LightningElement {
     @api disabled;
+    @api groupOrder;
     @api iconAlternativeText;
     @api iconName;
-    @api order;
     @api selected;
     @api closePopup() {}
     @api showPopup() {}

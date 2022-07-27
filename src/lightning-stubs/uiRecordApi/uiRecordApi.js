@@ -15,6 +15,7 @@ export const generateRecordInputForCreate = jest.fn();
 export const generateRecordInputForUpdate = jest.fn();
 export const createRecordInputFilteredByEditedFields = jest.fn();
 export const getRecordInput = jest.fn();
+export const getRecordNotifyChange = createLdsTestWireAdapter(jest.fn());
 export const refresh = jest.fn().mockResolvedValue();
 export const getRecordUi = createLdsTestWireAdapter(jest.fn());
 

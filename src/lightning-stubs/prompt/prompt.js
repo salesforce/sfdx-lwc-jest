@@ -6,14 +6,15 @@
  */
 import { LightningElement, api } from 'lwc';
 
-export default class Button extends LightningElement {
-    @api disabled;
-    @api iconName;
-    @api iconPosition;
+export default class Prompt extends LightningElement {
+    static open() {
+        throw new Error(
+            'The LightningPrompt documentation contains examples for mocking .open in Jest',
+        );
+    }
+    @api defaultValue;
     @api label;
-    @api name;
-    @api type;
-    @api value;
+    @api message;
+    @api theme;
     @api variant;
-    @api disableAnimation;
 }
