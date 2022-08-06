@@ -35,6 +35,6 @@ const jestConfig = {
     snapshotSerializers: [require.resolve('@lwc/jest-serializer')],
 };
 
-const expectedApiVersion = '55.0';
+const expectedApiVersion = '56.0';
 
 module.exports = { jestConfig, expectedApiVersion };
