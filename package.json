@@ -45,8 +45,7 @@
         "@salesforce/wire-service-jest-util": "4.0.0",
         "chalk": "^4.1.2",
         "fast-glob": "^3.2.10",
-        "jest": "^29.0.1",
-        "jest-environment-jsdom": "^29.0.1",
+        "jest": "27.4.7",
         "yargs": "~17.5.1"
     },
     "devDependencies": {
