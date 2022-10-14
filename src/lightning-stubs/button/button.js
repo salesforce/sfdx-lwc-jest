@@ -16,4 +16,5 @@ export default class Button extends LightningElement {
     @api value;
     @api variant;
     @api disableAnimation;
+    @api stretch;
 }
