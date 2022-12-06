@@ -32,6 +32,9 @@
         "release:publish": "npm publish --access public --registry=https://registry.npmjs.org",
         "test": "jest"
     },
+    "//": {
+        "chalk": "Cannot update to chalk@5.0.0 because it requires ESM adoption https://github.com/chalk/chalk/releases/tag/v5.0.0"
+    },
     "dependencies": {
         "@lwc/compiler": "2.31.0",
         "@lwc/engine-dom": "2.31.0",
