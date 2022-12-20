@@ -36,15 +36,15 @@
         "chalk": "Cannot update to chalk@5.0.0 because it requires ESM adoption https://github.com/chalk/chalk/releases/tag/v5.0.0"
     },
     "dependencies": {
-        "@lwc/compiler": "2.31.0",
-        "@lwc/engine-dom": "2.31.0",
-        "@lwc/jest-preset": "11.5.4",
-        "@lwc/jest-resolver": "11.5.4",
-        "@lwc/jest-serializer": "11.5.4",
-        "@lwc/jest-transformer": "11.5.4",
-        "@lwc/module-resolver": "2.31.0",
-        "@lwc/synthetic-shadow": "2.31.0",
-        "@lwc/wire-service": "2.31.0",
+        "@lwc/compiler": "2.35.0",
+        "@lwc/engine-dom": "2.35.0",
+        "@lwc/jest-preset": "11.6.0",
+        "@lwc/jest-resolver": "11.6.0",
+        "@lwc/jest-serializer": "11.6.0",
+        "@lwc/jest-transformer": "11.6.0",
+        "@lwc/module-resolver": "2.35.0",
+        "@lwc/synthetic-shadow": "2.35.0",
+        "@lwc/wire-service": "2.35.0",
         "@salesforce/wire-service-jest-util": "4.0.1",
         "chalk": "^4.1.2",
         "fast-glob": "^3.2.12",
@@ -55,11 +55,11 @@
         "@babel/core": "^7.20.5",
         "@babel/eslint-parser": "^7.19.1",
         "@babel/plugin-proposal-decorators": "^7.20.5",
-        "eslint": "^8.29.0",
+        "eslint": "^8.30.0",
         "husky": "^8.0.2",
         "isbinaryfile": "^5.0.0",
         "lint-staged": "^13.1.0",
-        "prettier": "^2.8.0"
+        "prettier": "^2.8.1"
     },
     "lint-staged": {
         "*.js": "eslint",
