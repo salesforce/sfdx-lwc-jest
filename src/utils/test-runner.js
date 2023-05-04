@@ -59,7 +59,10 @@ function getJestArgs(argv) {
     }
 
     // Provide default configuration when none is present at the project root.
-    const hasCustomConfig = fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js'));
+    const hasCustomConfig =
+        fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.js')) ||
+        fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.mjs')) ||
+        fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.cjs'));
     if (!hasCustomConfig) {
         jestArgs.unshift(`--config=${JSON.stringify(jestConfig)}`);
     }
