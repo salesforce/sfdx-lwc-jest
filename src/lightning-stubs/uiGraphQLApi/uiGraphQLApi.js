@@ -18,7 +18,7 @@ export class graphql extends createTestWireAdapter() {
     constructor(dataCallback) {
         super(dataCallback);
 
-        graphql.emit({ data: undefined, errors: undefined });
+        graphql.emit(undefined);
     }
 }
 
