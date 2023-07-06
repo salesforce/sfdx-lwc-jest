@@ -13,6 +13,8 @@ yarn add -D @salesforce/sfdx-lwc-jest@spring22
 
 The npm `latest` tag corresponds to the latest version of this repo, not necessarily Salesforce production versions.
 
+To see a full list of available versions, and the tag that maps to the corresponding Salesforce release, see [the list of `npm` package versions](https://www.npmjs.com/package/@salesforce/sfdx-lwc-jest?activeTab=versions).
+
 ## Invalid sourceApiVersion found in sfdx-project.json
 
 If you see this error while running tests in your Salesforce DX project, it most likely means you are using the incorrect version of this project.
