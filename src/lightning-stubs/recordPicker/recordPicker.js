@@ -11,12 +11,14 @@ export default class RecordPicker extends LightningElement {
     @api filter;
     @api label;
     @api matchingInfo;
+    @api messageWhenBadInput;
     @api objectApiName;
     @api placeholder;
     @api required;
     @api value;
     @api variant;
     @api checkValidity() {}
+    @api clearSelection() {}
     @api reportValidity() {}
     @api setCustomValidity() {}
 }
