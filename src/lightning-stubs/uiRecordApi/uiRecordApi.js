@@ -7,6 +7,7 @@
 import { createLdsTestWireAdapter } from '@salesforce/wire-service-jest-util';
 
 export const getRecord = createLdsTestWireAdapter(jest.fn());
+export const getRecords = createLdsTestWireAdapter(jest.fn());
 export const getRecordCreateDefaults = createLdsTestWireAdapter(jest.fn());
 export const updateRecord = jest.fn().mockResolvedValue({});
 export const createRecord = jest.fn().mockResolvedValue({});
@@ -18,6 +19,7 @@ export const getRecordInput = jest.fn();
 export const getRecordNotifyChange = createLdsTestWireAdapter(jest.fn());
 export const refresh = jest.fn().mockResolvedValue();
 export const getRecordUi = createLdsTestWireAdapter(jest.fn());
+export const notifyRecordUpdateAvailable = jest.fn().mockResolvedValue();
 
 /**
  * Gets a field's value from a record.
