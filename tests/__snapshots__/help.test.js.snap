@@ -16,7 +16,7 @@ Options:
       --debug                Run tests in debug mode
                              (https://jestjs.io/docs/en/troubleshooting)
                                                       [boolean] [default: false]
-      --skipApiVersionCheck  Disable the \\"sourceApiVersion\\" field check before
+      --skipApiVersionCheck  Disable the "sourceApiVersion" field check before
                              running tests. **Warning** By disabling this check
                              you risk running tests against stale versions of
                              the framework. See details here:

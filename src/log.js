@@ -8,14 +8,22 @@
 
 /* eslint-disable no-console */
 
-const chalk = require('chalk');
+function blue(message) {
+    // equivalent to chalk.blue()
+    return `\x1B[34m${message}\x1B[39m`;
+}
+
+function red(message) {
+    // equivalent to chalk.red()
+    return `\x1B[31m${message}\x1B[39m`;
+}
 
 function info(message) {
-    console.log(`${chalk.blue('info')} ${message}`);
+    console.log(`${blue('info')} ${message}`);
 }
 
 function error(message) {
-    console.error(`${chalk.red('error')} ${message}`);
+    console.error(`${red('error')} ${message}`);
 }
 
 module.exports = {
