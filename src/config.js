@@ -12,10 +12,19 @@ const { PROJECT_ROOT, getModulePaths } = require('./utils/project.js');
 
 function getCoveragePaths() {
     const modulePaths = getModulePaths();
-    return modulePaths.map((p) => {
-        // convert back to forward slashes here on Windows for Jest  to be happy
-        return p.replace(/\\/g, '/') + '/**/*.js';
-    });
+    return modulePaths
+        .map((p) => {
+            // convert back to forward slashes here on Windows for Jest to be happy
+            const prefix = p.replace(/\\/g, '/');
+            return [
+                // Note no `*.js` here - Jest will not find `.js` files unless you use a bare `*`
+                prefix + '/**/*',
+                // Specifically exclude HTML/CSS files since Jest doesn't understand the syntax
+                '!' + prefix + '/**/*.html',
+                '!' + prefix + '/**/*.css',
+            ];
+        })
+        .flat();
 }
 
 const jestConfig = {
