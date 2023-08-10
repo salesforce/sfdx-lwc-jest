@@ -11,7 +11,11 @@ const { jestConfig } = require('../src/config');
 
 test('coveragePaths correctly build', () => {
     expect(jestConfig.collectCoverageFrom).toStrictEqual([
-        'force-app/main/unix/lwc/**/*.js',
-        'force-app/main/windows/lwc/**/*.js',
+        'force-app/main/unix/lwc/**/*',
+        '!force-app/main/unix/lwc/**/*.html',
+        '!force-app/main/unix/lwc/**/*.css',
+        'force-app/main/windows/lwc/**/*',
+        '!force-app/main/windows/lwc/**/*.html',
+        '!force-app/main/windows/lwc/**/*.css',
     ]);
 });
