@@ -7,7 +7,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class ToastContainer extends LightningElement {
-    static instance(config = {}) {}
+    static instance() {}
     @api containerPosition;
     @api maxToasts;
     @api toastPosition;
