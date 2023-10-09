@@ -3,7 +3,7 @@ version: 2.1
 executors:
   node:
     docker:
-      - image: circleci/node:14
+      - image: cimg/node:18.18.0
 
 commands:
   save_yarn_cache:
