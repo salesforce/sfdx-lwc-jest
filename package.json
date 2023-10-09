@@ -59,6 +59,10 @@
         "lint-staged": "^13.2.3",
         "prettier": "^3.0.1"
     },
+    "volta": {
+        "node": "18.18.0",
+        "yarn": "1.22.19"
+    },
     "lint-staged": {
         "*.js": "eslint",
         "*.{js,json,md,html,css}": "prettier --write"
