@@ -7,7 +7,9 @@
 import { LightningElement, api } from 'lwc';
 
 export default class RecordPicker extends LightningElement {
+    @api disabled;
     @api displayInfo;
+    @api fieldLevelHelp;
     @api filter;
     @api label;
     @api matchingInfo;
