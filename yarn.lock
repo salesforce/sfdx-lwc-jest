@@ -825,20 +825,20 @@
     "@babel/generator" "7.21.4"
     match-json "1.3.5"
 
-"@lwc/babel-plugin-component@6.5.0":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/babel-plugin-component/-/babel-plugin-component-6.5.0.tgz#c794c4960e28af2da5d35c96e0c8df8f5af8b089"
-  integrity sha512-6BPdcOZe8CeyqgVTCDxrzce0b79lLOSxSHiz9gqJJld8LbJHj872Wq8BfFQg3yl81hDtNFlpsfUo7Oremz+OKA==
+"@lwc/babel-plugin-component@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/babel-plugin-component/-/babel-plugin-component-6.4.1.tgz#d6c6c1adaf36a4831e30316c51d3cc89e5ae00cf"
+  integrity sha512-/O5mzAcWH0k8z2LKTOrGAWNy3xEZNkUhKiGDZbO6+OR+EEIo2Rq/4rZZaQZr90pdwrHNhCmz1R6iLcJ9wtOG/w==
   dependencies:
     "@babel/helper-module-imports" "7.22.15"
-    "@lwc/errors" "6.5.0"
-    "@lwc/shared" "6.5.0"
+    "@lwc/errors" "6.4.1"
+    "@lwc/shared" "6.4.1"
     line-column "~1.0.2"
 
-"@lwc/compiler@^6.4.1":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/compiler/-/compiler-6.5.0.tgz#dd234e0c32d4fe54f465c7ff676ca457a461b798"
-  integrity sha512-xO8LHoV77LQtE0QBUUwuOWgsxWCK/H3mxxgWeikuTCzoEhtzST+arrLovFwoto65bv+pzCRzcmFG2hZc3Atbdw==
+"@lwc/compiler@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/compiler/-/compiler-6.4.1.tgz#e304f148ee5816841b55793cc63a568487badedf"
+  integrity sha512-fhHWLbBeHCipAnCB3x+mysyjbFe4tHpnSnEfmdru5pvJYmFicc7nuG0kBZADS3Objkaz5zdPdjWjluD9/8rkyA==
   dependencies:
     "@babel/core" "7.24.1"
     "@babel/plugin-proposal-async-generator-functions" "7.20.7"
@@ -846,26 +846,26 @@
     "@babel/plugin-proposal-object-rest-spread" "7.20.7"
     "@babel/plugin-transform-async-to-generator" "7.23.3"
     "@locker/babel-plugin-transform-unforgeables" "0.20.0"
-    "@lwc/babel-plugin-component" "6.5.0"
-    "@lwc/errors" "6.5.0"
-    "@lwc/shared" "6.5.0"
-    "@lwc/style-compiler" "6.5.0"
-    "@lwc/template-compiler" "6.5.0"
+    "@lwc/babel-plugin-component" "6.4.1"
+    "@lwc/errors" "6.4.1"
+    "@lwc/shared" "6.4.1"
+    "@lwc/style-compiler" "6.4.1"
+    "@lwc/template-compiler" "6.4.1"
 
-"@lwc/engine-dom@^6.4.1":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/engine-dom/-/engine-dom-6.5.0.tgz#2eb15d24af565d1e4db1664805c70e54eb7f39eb"
-  integrity sha512-BnW69DPT/Ct74G0ATAEyEE5Y1JxHnAfFQBEvE0ILdGENWJ+Uc25q+e0OiIIoAgWUlp2pAxXb9C2LgYXde3kpIg==
+"@lwc/engine-dom@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/engine-dom/-/engine-dom-6.4.1.tgz#3cab52bdc2978c9c3800a8337f9bcc5f7af99432"
+  integrity sha512-UR0hbc5ja2N6mGbGyYkCRv7hTUatsCQv9APhEYsAwCaImRTTtuB5FhFcE7Qk7yHB8TIh5/xxUoW1WpF/BNPiYg==
 
-"@lwc/engine-server@6.3.2":
-  version "6.3.2"
-  resolved "https://registry.npmjs.org/@lwc/engine-server/-/engine-server-6.3.2.tgz#ab544ae86adc392259df3b1dae489a82b59dfe78"
-  integrity sha512-9+jUXneUDJo0JOuro3S8W84TO8ANnjkKM/ToOMNZx8J+Ryr1dc8mvyAfBpZx/rRGbKI9qYOp2u3eJDD9c6WFvg==
+"@lwc/engine-server@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/engine-server/-/engine-server-6.4.1.tgz#811f74b4a92eee38fe906caa81f2c7ae57e1bffa"
+  integrity sha512-Pz1OQBYcSVkCIIjoR0PlolQnewux/IHLiwyjHzpgnJAUSQYh4bJzTxK13xid85PKzXV3dX4VWfYmacJT9PLQtw==
 
-"@lwc/errors@6.5.0":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/errors/-/errors-6.5.0.tgz#1af83ee8bc947460fa627007af2aa752c816e08b"
-  integrity sha512-hbtrIz86IAfmZ+qSa/LPOrPsirHIncotfSfgZoBb+u7q9bqlzUmoKmNKPaNvwtjQSARnCqPa+4DrFUXIGHW7gA==
+"@lwc/errors@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/errors/-/errors-6.4.1.tgz#0f9d496202563af05680936a350127d229534492"
+  integrity sha512-J3PJm1qOiMnw0evpgK0rZMIcwNmxwD5iP8naPqzJMRms0fHXF/6Ls/GIWfQwGOntDYD4dPpKRTOZsA6OC7UCJw==
 
 "@lwc/jest-preset@14.3.0":
   version "14.3.0"
@@ -912,49 +912,49 @@
     magic-string "^0.30.5"
     semver "^7.5.4"
 
-"@lwc/module-resolver@^6.4.1":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/module-resolver/-/module-resolver-6.5.0.tgz#f686b6234068f47431e7aa2e5b95d526251ad965"
-  integrity sha512-bgxCdRygdDQjM9q9r43U5O+qDnod7XiNye8KmAItfogsOE8j278A3BobF6a3sgG9qifpE0IhAQeNw1mejBPXsg==
+"@lwc/module-resolver@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/module-resolver/-/module-resolver-6.4.1.tgz#ad0c8e8ea999280b2858488d576dcab7d71d9b6a"
+  integrity sha512-uOsvcvu7PFcdNB6Fip0lj+3yLOG0VVRKuktPubDbZb1e0ozXBn2dM/nhlr65guB2bwXDCfmwOs+TWjG+MVJPPw==
   dependencies:
     resolve "~1.22.6"
 
-"@lwc/shared@6.5.0":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/shared/-/shared-6.5.0.tgz#8a634a9ab7baed76db98da35f8dc86ab685e107d"
-  integrity sha512-GkModrLxc7LYZ8Kh9adGwKZHpzlpceCpNlfQPcVvB9EdmOuQVwNwU7+DW3+wFdTm2DdAD8uToSftBsuT4gLwTw==
+"@lwc/shared@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/shared/-/shared-6.4.1.tgz#e42f8294f1d674a0f210f3301207c02a78273b34"
+  integrity sha512-RGgqtmjZIRW1RqzTowkdku4sIMap+kF5cg85Z/loWxHXodCTp1yczwDxdTAU3z6EXOddWvR2xSVCd3cZIZimxA==
 
-"@lwc/style-compiler@6.5.0":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/style-compiler/-/style-compiler-6.5.0.tgz#789343b09e50f723c141bdca6d96ccc3e4efdde9"
-  integrity sha512-PCxU6IeXLhNoj/de1kzjzOo8SECZLHJ30TrLx50ISwCIr2XfZ7Ay0hItNtZuxj4j+1cZ285SU+eq22hAJCptoQ==
+"@lwc/style-compiler@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/style-compiler/-/style-compiler-6.4.1.tgz#e88d506cfb0e591aaf0f29d1c49ba623861f1cad"
+  integrity sha512-McuM94mjXcwv3Q9EE/ENfZrsZR6VEduXajzjbJva3DRc329seEf3czfyRnTZKg3zlMMVKG7HH1e3YRquFGz5JA==
   dependencies:
-    "@lwc/shared" "6.5.0"
+    "@lwc/shared" "6.4.1"
     postcss "~8.4.37"
     postcss-selector-parser "~6.0.15"
     postcss-value-parser "~4.2.0"
 
-"@lwc/synthetic-shadow@^6.4.1":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/synthetic-shadow/-/synthetic-shadow-6.5.0.tgz#c3872501988019e084791caa79b2f4e68a29325d"
-  integrity sha512-0Xn+q0QwTI5DaOawHA9E+/QXTz2+DhOTqcfmYFENPvuqDLnETyiWnnbu9bFoBUMgh1U6eyBN+3sco69oL6xY5Q==
+"@lwc/synthetic-shadow@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/synthetic-shadow/-/synthetic-shadow-6.4.1.tgz#a57583ee8331a3d1b01c3bfaf2bee905943ee966"
+  integrity sha512-kj/ARu/xbvoXE0msCRC5nVvZEElEG6k/6FGq2vv7Iu0oN+E2duKEwdOX2l5ws41L9dLLmmFpE/t4yPQVuTCevw==
 
-"@lwc/template-compiler@6.5.0":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/template-compiler/-/template-compiler-6.5.0.tgz#049b9d07171ceb69c06f0073d36bd26d00191787"
-  integrity sha512-n6zQOatVzjxN1PHmErvN2VoQY9XzPTSh+j5CgzXQlu0bdEU5/KGFMQF3jN8aUvHK49o++t91Q8BN1cKkPcG62g==
+"@lwc/template-compiler@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/template-compiler/-/template-compiler-6.4.1.tgz#d3771c7ba96fd0978a271d53967fa8e9958703f5"
+  integrity sha512-Z5ZtxThSDrR9UTIkEZlN2+6UCMb6gaNnPXCKbv6rbFibwx35KUOObzlWAk5vNMZWUgaKuCQOf3wxx7oqsZenvw==
   dependencies:
-    "@lwc/errors" "6.5.0"
-    "@lwc/shared" "6.5.0"
+    "@lwc/errors" "6.4.1"
+    "@lwc/shared" "6.4.1"
     acorn "8.10.0"
     astring "~1.8.6"
     estree-walker "~2.0.2"
     he "~1.2.0"
 
-"@lwc/wire-service@^6.4.1":
-  version "6.5.0"
-  resolved "https://registry.npmjs.org/@lwc/wire-service/-/wire-service-6.5.0.tgz#f5ab9306f428b4e837a3b79a5c6605ead860cb96"
-  integrity sha512-mKkqDyR7DRxEqjDX3rl8jEod13CJX7WNf3uOuq6sqacYTZhD6uADypLUOwlalAkucy3b88JuLrQ9IyPluwswUQ==
+"@lwc/wire-service@6.4.1":
+  version "6.4.1"
+  resolved "https://registry.npmjs.org/@lwc/wire-service/-/wire-service-6.4.1.tgz#e63da6cc69c54ace06696bca7a9b8d0ef7ec8bdc"
+  integrity sha512-ckB43nDhUJwyp4H1RIlPxYJOK0yVj6VZUSYIrTVVk6agXrE0+qcJ/lJcMKKVP1YBixGM1a+RDeFi9ewLTdZGIg==
 
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
