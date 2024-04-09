@@ -33,16 +33,16 @@
         "test": "jest"
     },
     "dependencies": {
-        "@lwc/compiler": "6.3.2",
-        "@lwc/engine-dom": "6.3.2",
-        "@lwc/engine-server": "6.3.2",
-        "@lwc/jest-preset": "14.3.0",
-        "@lwc/jest-resolver": "14.3.0",
-        "@lwc/jest-serializer": "14.3.0",
-        "@lwc/jest-transformer": "14.3.0",
-        "@lwc/module-resolver": "6.3.2",
-        "@lwc/synthetic-shadow": "6.3.2",
-        "@lwc/wire-service": "6.3.2",
+        "@lwc/compiler": "6.5.0",
+        "@lwc/engine-dom": "6.5.0",
+        "@lwc/engine-server": "6.5.0",
+        "@lwc/jest-preset": "15.0.0",
+        "@lwc/jest-resolver": "15.0.0",
+        "@lwc/jest-serializer": "15.0.0",
+        "@lwc/jest-transformer": "15.0.0",
+        "@lwc/module-resolver": "6.5.0",
+        "@lwc/synthetic-shadow": "6.5.0",
+        "@lwc/wire-service": "6.5.0",
         "@salesforce/wire-service-jest-util": "4.1.4",
         "fast-glob": "^3.3.2",
         "jest": "29.7.0",
@@ -50,9 +50,9 @@
         "yargs": "~17.7.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.24.0",
-        "@babel/eslint-parser": "^7.23.10",
-        "@babel/plugin-proposal-decorators": "^7.24.0",
+        "@babel/core": "^7.24.4",
+        "@babel/eslint-parser": "^7.24.1",
+        "@babel/plugin-proposal-decorators": "^7.24.1",
         "eslint": "^8.57.0",
         "husky": "^9.0.11",
         "isbinaryfile": "^5.0.2",
@@ -60,8 +60,8 @@
         "prettier": "^3.2.5"
     },
     "volta": {
-        "node": "20.11.0",
-        "yarn": "1.22.19"
+        "node": "20.12.1",
+        "yarn": "1.22.22"
     },
     "lint-staged": {
         "*.js": "eslint",
