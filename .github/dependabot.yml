@@ -13,6 +13,11 @@ updates:
       lwc-test:
         patterns:
           - "@lwc/jest-*"
+      # Group other lwc deps together since they also all depend on each other
+      # See: https://github.com/salesforce/lwc
+      lwc:
+        patterns:
+          - "@lwc/*"
       # Non-major version bumps hopefully shouldn't break anything,
       # so let's group them together into a single PR!
       theoretically-non-breaking:
