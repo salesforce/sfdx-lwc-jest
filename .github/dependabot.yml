@@ -8,6 +8,11 @@ updates:
     schedule:
       interval: "monthly"
     groups:
+      # Group all lwc-test (aka `lwc/jest-*`) deps together since they all depend on each other
+      # See: https://github.com/salesforce/lwc-test
+      lwc-test:
+        patterns:
+          - "@lwc/jest-*"
       # Non-major version bumps hopefully shouldn't break anything,
       # so let's group them together into a single PR!
       theoretically-non-breaking:
