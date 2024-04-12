@@ -36,7 +36,7 @@
         "@lwc/compiler": "6.5.0",
         "@lwc/engine-dom": "6.5.0",
         "@lwc/engine-server": "6.5.0",
-        "@lwc/jest-preset": "15.0.0",
+        "@lwc/jest-preset": "16.0.0",
         "@lwc/jest-resolver": "15.0.0",
         "@lwc/jest-serializer": "15.0.0",
         "@lwc/jest-transformer": "15.0.0",
