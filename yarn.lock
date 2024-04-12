@@ -1332,6 +1332,13 @@
   dependencies:
     "@lwc/jest-shared" "15.0.0"
 
+"@lwc/jest-resolver@16.0.0":
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-16.0.0.tgz#79a0f3626fc5ffc78adc0c24c989fdc3d677a8f7"
+  integrity sha512-REEN9cBHdppEcC0yYmCS9AmFiBPOFiH6VAfR5IbggfL4ykF2D90oE6p35oFSWZV7fqFBeWuc2jxAmE/bv/Dl1A==
+  dependencies:
+    "@lwc/jest-shared" "16.0.0"
+
 "@lwc/jest-serializer@15.0.0":
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/@lwc/jest-serializer/-/jest-serializer-15.0.0.tgz#954f394f47e55d3388d7112de4c7ecacf40cd1c9"
@@ -1344,6 +1351,11 @@
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/@lwc/jest-shared/-/jest-shared-15.0.0.tgz#0cefb2125d1f37ee4809471accc135a318b6536a"
   integrity sha512-RUlT789k4xH9NYJsB5uvVo6c+EY5pwrly5aOQje6+jQBHWcBPp7Z/vQFDM/gvft4pmHjyniqR6XCFaJ/BJ702g==
+
+"@lwc/jest-shared@16.0.0":
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-shared/-/jest-shared-16.0.0.tgz#94cc36f5d4a42fe0e0645f6c5bba0a0e5dbabd7a"
+  integrity sha512-S1LiCi2ToC20va1KBcuWqH3Bm9t96k2inVCeGN96+Q4sZSrebBHwfyBEBKq75uwph7FbhHmYv7chLPDZUQIoVg==
 
 "@lwc/jest-transformer@15.0.0":
   version "15.0.0"
