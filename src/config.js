@@ -29,7 +29,7 @@ function getCoveragePaths() {
 
 const jestConfig = {
     rootDir: PROJECT_ROOT,
-    moduleFileExtensions: ['js', 'html'],
+    moduleFileExtensions: jestPreset.moduleFileExtensions,
     testEnvironment: jestPreset.testEnvironment || 'jsdom',
     transform: {
         '^.+\\.(js|html|css)$': require.resolve('@lwc/jest-transformer'),
