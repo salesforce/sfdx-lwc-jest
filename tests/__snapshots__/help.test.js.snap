@@ -16,13 +16,8 @@ Options:
       --debug                Run tests in debug mode
                              (https://jestjs.io/docs/en/troubleshooting)
                                                       [boolean] [default: false]
-      --skipApiVersionCheck  Disable the "sourceApiVersion" field check before
-                             running tests. **Warning** By disabling this check
-                             you risk running tests against stale versions of
-                             the framework. See details here:
-                             https://github.com/salesforce/sfdx-lwc-jest#disabli
-                             ng-the-sourceApiVersion-check
-                                                      [boolean] [default: false]
+      --skipApiVersionCheck  Deprecated: this noop flag is kept for backward
+                             compatibility            [boolean] [default: false]
       --help                 Show help                                 [boolean]
 
 Examples:

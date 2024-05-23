@@ -39,8 +39,7 @@ const testOptions = {
     },
 
     skipApiVersionCheck: {
-        description:
-            'Disable the "sourceApiVersion" field check before running tests. **Warning** By disabling this check you risk running tests against stale versions of the framework. See details here: https://github.com/salesforce/sfdx-lwc-jest#disabling-the-sourceApiVersion-check',
+        description: 'Deprecated: this noop flag is kept for backward compatibility',
         type: 'boolean',
         default: false,
     },
