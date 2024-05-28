@@ -28,20 +28,25 @@ function getCoveragePaths() {
 }
 
 const jestConfig = {
-    rootDir: PROJECT_ROOT,
-    moduleFileExtensions: ['js', 'html'],
+    // Inherited from @lwc/jest-preset
+    moduleFileExtensions: jestPreset.moduleFileExtensions || ['ts', 'js', 'html'],
     testEnvironment: jestPreset.testEnvironment || 'jsdom',
     transform: {
-        '^.+\\.(js|html|css)$': require.resolve('@lwc/jest-transformer'),
+        ...jestPreset.transform,
+        '^.+\\.(js|ts|html|css)$': require.resolve('@lwc/jest-transformer'),
     },
+    setupFilesAfterEnv: jestPreset.setupFilesAfterEnv || [],
+    snapshotSerializers: jestPreset.snapshotSerializers || [
+        require.resolve('@lwc/jest-serializer'),
+    ],
+    // Specific to sfdx-lwc-jest
+    collectCoverageFrom: getCoveragePaths(),
+    resolver: path.join(__dirname, './resolver.js'),
+    rootDir: PROJECT_ROOT,
+    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
     transformIgnorePatterns: [
         '/node_modules/(?!(.*@salesforce/sfdx-lwc-jest/src/lightning-stubs)/)',
     ],
-    setupFilesAfterEnv: jestPreset.setupFilesAfterEnv || [],
-    resolver: path.resolve(__dirname, './resolver.js'),
-    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
-    collectCoverageFrom: getCoveragePaths(),
-    snapshotSerializers: [require.resolve('@lwc/jest-serializer')],
 };
 
 const expectedApiVersion = '61.0';
