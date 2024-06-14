@@ -10,23 +10,13 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 
-const { PROJECT_ROOT, getSfdxProjectJson } = require('./project');
+const { PROJECT_ROOT } = require('./project');
 
-const { error, info } = require('../log');
-const { jestConfig, expectedApiVersion } = require('../config');
+const { info, warn } = require('../log');
+const { jestConfig } = require('../config');
 
 // List of CLI options that should be passthrough to jest.
 const JEST_PASSTHROUGH_OPTIONS = new Set(['coverage', 'updateSnapshot', 'verbose', 'watch']);
-
-function validSourceApiVersion() {
-    const sfdxProjectJson = getSfdxProjectJson();
-    const apiVersion = sfdxProjectJson.sourceApiVersion;
-    if (apiVersion !== expectedApiVersion) {
-        error(
-            `Invalid sourceApiVersion found in sfdx-project.json. Expected ${expectedApiVersion}, found ${apiVersion}`,
-        );
-    }
-}
 
 function getJestPath() {
     const packageJsonPath = require.resolve('jest/package.json');
@@ -72,9 +62,10 @@ function getJestArgs(argv) {
 
 async function testRunner(argv) {
     if (!argv.skipApiVersionCheck) {
-        validSourceApiVersion();
+        warn(
+            'The --skipApiVersionCheck flag is deprecated and will be removed in future versions.',
+        );
     }
-
     const spawnCommand = 'node';
     const spawnArgs = [getJestPath(), ...getJestArgs(argv)];
 

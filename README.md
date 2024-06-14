@@ -15,20 +15,6 @@ The npm `latest` tag corresponds to the latest version of this repo, not necessa
 
 To see a full list of available versions, and the tag that maps to the corresponding Salesforce release, see [the list of `npm` package versions](https://www.npmjs.com/package/@salesforce/sfdx-lwc-jest?activeTab=versions).
 
-## Invalid sourceApiVersion found in sfdx-project.json
-
-If you see this error while running tests in your Salesforce DX project, it most likely means you are using the incorrect version of this project.
-
-For example, the error message `Invalid sourceApiVersion found in sfdx-project.json. Expected 45.0, found 46.0` means this project is targeted to API version 45.0, which maps to Spring '19, but the Salesforce DX project the tests are run in is using API version 46.0, which maps to Summer '19. The version check is done against the projects `sourceApiVersion` field in the `sfdx-project.json` file at the top level of the project.
-
-To fix this issue, make sure the most recent version of this project is being used, or switch to the `prerelease` version, depending on what release your target org is on.
-
-## Disabling the sourceApiVersion check
-
-The `sourceApiVersion` field check is not a perfect check. Projects may be targeting orgs that are on the current release, but still have an older `sourceApiVersion` value set in their `sfdx-project.json` file. To disable this check, run tests with the `--skipApiVersionCheck` flag set.
-
-**Note that by doing this, you risk running with an old version of the test runner and your tests may be using an out of date version of the LWC framework. To ensure tests are always run with the proper framework version and configuration, make sure to be on the most recent `latest` or `prerelease` tagged version of this package.**
-
 ## Installation
 
 Add this project as a devDependency:
@@ -71,13 +57,6 @@ Options:
                              changed files            [boolean] [default: false]
       --debug                Run tests in debug mode
                              (https://jestjs.io/docs/en/troubleshooting)
-                                                      [boolean] [default: false]
-      --skipApiVersionCheck  Disable the "sourceApiVersion" field check before
-                             running tests. **Warning** By disabling this check
-                             you risk running tests against stale versions of
-                             the framework. See details here:
-                             https://github.com/salesforce/sfdx-lwc-jest#disabli
-                             ng-the-sourceApiVersion-check
                                                       [boolean] [default: false]
       --help                 Show help                                 [boolean]
 

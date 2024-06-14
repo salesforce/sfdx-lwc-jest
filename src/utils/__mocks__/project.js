@@ -6,12 +6,10 @@
  */
 'use strict';
 
-const { expectedApiVersion } = require('../../config');
-
 module.exports = {
     PROJECT_ROOT: 'projectRoot',
     getSfdxProjectJson: () => {
-        return { mock: true, sourceApiVersion: expectedApiVersion };
+        return { mock: true };
     },
     getModulePaths: () => ['force-app/main/unix/lwc', 'force-app\\main\\windows\\lwc'],
 };
