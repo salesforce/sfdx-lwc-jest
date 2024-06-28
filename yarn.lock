@@ -783,15 +783,15 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@lwc/engine-dom@6.6.5":
-  version "6.6.5"
-  resolved "https://registry.yarnpkg.com/@lwc/engine-dom/-/engine-dom-6.6.5.tgz#8197cc2f47bd335651c4202d82269792e8aacf54"
-  integrity sha512-JdLF1x5+cQgaK8Yg2MmAR8+yh9/RS6DIwxE2ZJAFDbL8b9euFwTeJiHMxkN20YP3TkwOGJhVpmzA7yNUxG5C0w==
+"@lwc/engine-dom@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@lwc/engine-dom/-/engine-dom-7.0.0.tgz#6f288ad9c5f0c112a9cd3553f22e9990f51c32e7"
+  integrity sha512-KryO4IbtlZNHe4j33gtcQk2F4IoSYU1EzmCvgBQBLXvSwvRUIrnsH3VaYvLoHYMxuuN1UOCIlJWNYHIfmKEYPQ==
 
-"@lwc/engine-server@6.6.5":
-  version "6.6.5"
-  resolved "https://registry.yarnpkg.com/@lwc/engine-server/-/engine-server-6.6.5.tgz#f83506bdb648ea5200a9e5034ec72f11ab3a6864"
-  integrity sha512-1EHqx5YoVDaXeTJOs5P/p0t8g+heG2zzlrt+7UKCnav3PEtSWDzk7vRsUHKww2lWVbDqzBAfJ+GotCdF6yYxVA==
+"@lwc/engine-server@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@lwc/engine-server/-/engine-server-7.0.0.tgz#fd7cf7d76f514b639a04d6c4f2ee7a023a351101"
+  integrity sha512-h826jYDwoE8b48WiRX1h+xUVkiQaLF5GItvzjIVbKTP65ANc67F2ujtDf/t4SgZdKwKP/eWPORksPu9cFF0LpA==
 
 "@lwc/jest-preset@16.0.0":
   version "16.0.0"
@@ -838,22 +838,22 @@
     magic-string "^0.30.8"
     semver "^7.6.0"
 
-"@lwc/module-resolver@6.6.5":
-  version "6.6.5"
-  resolved "https://registry.yarnpkg.com/@lwc/module-resolver/-/module-resolver-6.6.5.tgz#3a180a50e141b627fb8b60f423a673f4e92797bc"
-  integrity sha512-K6loygurKjqPNqWL4d8Jao3uRDPJzcaTULaNURvR6oGutcXobWwgjcCs1L1VDCI6V5megMUZ0aAk4vYZy8VtDA==
+"@lwc/module-resolver@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@lwc/module-resolver/-/module-resolver-7.0.0.tgz#9f796578123de92b53047c0588f7aabbacd13f9d"
+  integrity sha512-EOwjftD8AT7cz6Cp8PMfqcvdgu7X5OCw1F8o6q6oYPHV9la3PoEn+1RbImwcE1LDN6HuXl11NaG09cI7Rg/WAA==
   dependencies:
     resolve "~1.22.6"
 
-"@lwc/synthetic-shadow@6.6.5":
-  version "6.6.5"
-  resolved "https://registry.yarnpkg.com/@lwc/synthetic-shadow/-/synthetic-shadow-6.6.5.tgz#ca4c15941df4fc28ceef56b3e5410b6d4412f7ce"
-  integrity sha512-tpTza332NuG+xc33NfXqcEQPa7sDrtGrUUzj1iVa0MuZRCwJmT9IFhzFzXcarVDfr5KYsNm4a968tpMrgMX+pw==
+"@lwc/synthetic-shadow@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@lwc/synthetic-shadow/-/synthetic-shadow-7.0.0.tgz#830f9237fc2ecf2ae59f1f59f665871408a5f2a8"
+  integrity sha512-MxQXK89s5DHCDgULgvmE062ACUm7JZbu03YGxtWyAp981TzRQMI0ljvruCO40S1ZOFaoG0V2Kpqe6Rb/Rwxabw==
 
-"@lwc/wire-service@6.6.5":
-  version "6.6.5"
-  resolved "https://registry.yarnpkg.com/@lwc/wire-service/-/wire-service-6.6.5.tgz#8ba7ebb39fa3ed02380ba3e4d7908b51030b00bb"
-  integrity sha512-M2On1I/BZq/3UZvKRZByzccvs69rzZt5pLsqxyTOK1BA7ZD5rVzUDnVn2TSljp2uiquru/RL5RVp350dUmoaog==
+"@lwc/wire-service@7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@lwc/wire-service/-/wire-service-7.0.0.tgz#21df52ca1438c7033ca92bead9dbb26b37b9942c"
+  integrity sha512-BbXCWFKl1YL/ZbCXmIG60r9aUoaChUEbznz/pBKRdNxSzndGiv9dxsJOACe+aWGEU/Z8HRfvy1oxTv8g+HOung==
 
 "@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1":
   version "5.1.1-v1"
