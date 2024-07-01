@@ -8,13 +8,14 @@
 LWC_VERSION=$1
 LWC_TEST_VERSION=$2
 
-yarn upgrade @lwc/compiler@$LWC_VERSION
-yarn upgrade @lwc/engine-dom@$LWC_VERSION
-yarn upgrade @lwc/module-resolver@$LWC_VERSION
-yarn upgrade @lwc/wire-service@$LWC_VERSION
-yarn upgrade @lwc/synthetic-shadow@$LWC_VERSION
-
-yarn upgrade @lwc/jest-resolver@$LWC_TEST_VERSION
-yarn upgrade @lwc/jest-serializer@$LWC_TEST_VERSION
-yarn upgrade @lwc/jest-transformer@$LWC_TEST_VERSION
-yarn upgrade @lwc/jest-preset@$LWC_TEST_VERSION
+yarn upgrade \
+    @lwc/compiler@$LWC_VERSION \
+    @lwc/engine-dom@$LWC_VERSION \
+    @lwc/engine-server@$LWC_VERSION \
+    @lwc/module-resolver@$LWC_VERSION \
+    @lwc/wire-service@$LWC_VERSION \
+    @lwc/synthetic-shadow@$LWC_VERSION \
+    @lwc/jest-resolver@$LWC_TEST_VERSION \
+    @lwc/jest-serializer@$LWC_TEST_VERSION \
+    @lwc/jest-transformer@$LWC_TEST_VERSION \
+    @lwc/jest-preset@$LWC_TEST_VERSION \
