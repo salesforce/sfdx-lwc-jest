@@ -145,6 +145,22 @@ If a Lightning web component isn't located in the local `lwc` directory of your 
 
 This package installs stubs for the `lightning` base components to the `src/lightning-stubs` directory. These stubs are used automatically when running tests through `sfdx-lwc-jest`. To override the default stub provided for your project, override the `moduleNameMapper` config as described in [Other Component Mocks](#other-component-mocks).
 
+### Lightning Web Component Mocks
+
+To mock custom LWC components, add a `__mocks__` directory in the `force-app/**/lwc/componentName/` and add a file mocking your component. 
+
+`force-app/main/lwc/fancyButton/__mocks__/fancyButton.js`
+
+```js
+// fancyButton/__mocks__/fancyButton.js
+import { LightningElement, api } from 'lwc';
+export default class FancyButton extends LightningElement {
+    // ensure all @api properties, methods, and getters/setters are mocked
+    @api label;
+    // any other implementation you may want to expose here
+}
+```
+
 ### Other Component Mocks
 
 For components from other namespaces, not in your local `lwc` directory, create your own mock and update the Jest config to map the name of these components to the mock file.
