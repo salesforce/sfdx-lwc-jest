@@ -64,6 +64,16 @@ function getModule(modulePath, options) {
     if (ns === DEFAULT_NAMESPACE) {
         const paths = getModulePaths();
         for (let i = 0; i < paths.length; i++) {
+
+            const mockFile = resolveAsFile(
+                path.join(PROJECT_ROOT, paths[i], name, '__mocks__', name),
+                options.extensions,
+            );
+
+            if (mockFile) {
+                return fs.realpathSync(mockFile);
+            }
+            
             const file = resolveAsFile(
                 path.join(PROJECT_ROOT, paths[i], name, name),
                 options.extensions,
