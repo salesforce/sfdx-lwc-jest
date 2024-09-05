@@ -2,25 +2,12 @@
 
 Run Jest against Lightning web components in a Salesforce DX workspace environment.
 
-## Versions
-
-To test against the latest Salesforce production instances, use the npm tag appropriate for the current release, e.g.:
-
-```
-yarn add -D @salesforce/sfdx-lwc-jest@winter22
-yarn add -D @salesforce/sfdx-lwc-jest@spring22
-```
-
-The npm `latest` tag corresponds to the latest version of this repo, not necessarily Salesforce production versions.
-
-To see a full list of available versions, and the tag that maps to the corresponding Salesforce release, see [the list of `npm` package versions](https://www.npmjs.com/package/@salesforce/sfdx-lwc-jest?activeTab=versions).
-
 ## Installation
 
-Add this project as a devDependency:
+Add this project, `@lwc/engine-dom`, and `@lwc/jest-preset` as `devDependencies`:
 
 ```bash
-yarn add -D @salesforce/sfdx-lwc-jest
+yarn add -D @salesforce/sfdx-lwc-jest @lwc/engine-dom @lwc/jest-preset
 ```
 
 Update your project's unit testing script in `package.json` to execute `sfdx-lwc-jest`:
@@ -39,6 +26,19 @@ Update your project's unit testing script in `package.json` to execute `sfdx-lwc
 `test:unit` runs all your tests. `test:unit:watch` and `test:unit:debug` run Jest in watch and debug mode (see below).
 
 Alternatively, you can globally install the package and run directly from the command line.
+
+## Versions
+
+To test against the latest Salesforce production instances, use the npm tag appropriate for the current release when installing `@lwc/engine-dom`, e.g.:
+
+```
+yarn add -D @lwc/engine-dom@winter24
+yarn add -D @lwc/engine-dom@spring24
+```
+
+The npm `latest` tag corresponds to the latest version of this repo, not necessarily Salesforce production versions.
+
+To see a full list of available versions, and the tag that maps to the corresponding Salesforce release, see [the list of `npm` package versions](https://www.npmjs.com/package/@lwc/engine-dom?activeTab=versions).
 
 ## Usage
 
