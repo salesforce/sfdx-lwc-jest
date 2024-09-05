@@ -44,7 +44,7 @@
     json5 "^2.2.3"
     semver "^6.3.1"
 
-"@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.23.9", "@babel/core@^7.24.0", "@babel/core@^7.24.4":
+"@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.23.9", "@babel/core@^7.24.4":
   version "7.25.2"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.25.2.tgz#ed8eec275118d7613e77a352894cd12ded8eba77"
   integrity sha512-BBt3opiCOxUr9euZ5/ro/Xv8/V7yJ5bjYMqG/C1YAo8MIKAnumZalCN+msbci3Pigy4lIQfPUpfMM27HMGaYEA==
@@ -291,7 +291,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.12.13"
 
-"@babel/plugin-syntax-decorators@^7.24.0", "@babel/plugin-syntax-decorators@^7.24.7":
+"@babel/plugin-syntax-decorators@^7.24.1", "@babel/plugin-syntax-decorators@^7.24.7":
   version "7.24.7"
   resolved "https://registry.yarnpkg.com/@babel/plugin-syntax-decorators/-/plugin-syntax-decorators-7.24.7.tgz#e4f8a0a8778ccec669611cd5aed1ed8e6e3a6fcf"
   integrity sha512-Ui4uLJJrRV1lb38zg1yYTmRKmiZLiftDEvZN2iq3kd9kUFU+PttmzTbAFC2ucRk/XJmtek6G23gPsuZbhrT8fQ==
@@ -409,7 +409,7 @@
     "@babel/helper-create-class-features-plugin" "^7.24.7"
     "@babel/helper-plugin-utils" "^7.24.7"
 
-"@babel/plugin-transform-modules-commonjs@^7.23.3", "@babel/plugin-transform-modules-commonjs@^7.24.7":
+"@babel/plugin-transform-modules-commonjs@^7.24.1", "@babel/plugin-transform-modules-commonjs@^7.24.7":
   version "7.24.8"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-modules-commonjs/-/plugin-transform-modules-commonjs-7.24.8.tgz#ab6421e564b717cb475d6fff70ae7f103536ea3c"
   integrity sha512-WHsk9H8XxRs3JXKWFiqtQebdh9b/pTk4EgueygFzYlTKAg0Ud985mSevdNjdXdFBATSKVJGQXP1tv6aGbssLKA==
@@ -446,7 +446,7 @@
     "@babel/helper-skip-transparent-expression-wrappers" "^7.24.7"
     "@babel/plugin-syntax-typescript" "^7.24.7"
 
-"@babel/preset-typescript@^7.23.3":
+"@babel/preset-typescript@^7.24.1":
   version "7.24.7"
   resolved "https://registry.yarnpkg.com/@babel/preset-typescript/-/preset-typescript-7.24.7.tgz#66cd86ea8f8c014855671d5ea9a737139cbbfef1"
   integrity sha512-SyXRe3OdWwIwalxDg5UtJnJQO+YPcTfwiIY2B0Xlddh9o7jpWLvv8X1RthIeDOxQ+O1ML5BLPCONToObyVQVuQ==
@@ -835,49 +835,49 @@
   resolved "https://registry.yarnpkg.com/@lwc/errors/-/errors-7.1.2.tgz#f36603976ff75d58b2f2e63d7ebac6bd063a1636"
   integrity sha512-1b933ONUijzJl72VVY5shiTDVN38ilB0RcljBH+ztJzxxr8umy2YEJYA9oGFacXP+zfox+kpOfWjrXlfqZ5ueA==
 
-"@lwc/jest-preset@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-preset/-/jest-preset-16.0.0.tgz#e4755e904a5acd0be3762a95af5048839f122781"
-  integrity sha512-3mBI3HzU+0KvDSTWAhcSpX139gkyzmCIpsJb67x/Jwm2en4+3q8i5/aCc7I2QJwIw/25T2LJUcDbz4Z5zD3VDw==
+"@lwc/jest-preset@16.1.0":
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-preset/-/jest-preset-16.1.0.tgz#68fafbcac09a260272426c7699d5df8d78e8e117"
+  integrity sha512-byyddJVtQFeBXIgFts4m8jJ42oyM8hUlx/wYFLVmzha6IJleW9kAn6VXuW/qmvUsjGTZ2+h9LiL2bTMVCH8gnw==
   dependencies:
-    "@lwc/jest-resolver" "16.0.0"
-    "@lwc/jest-serializer" "16.0.0"
-    "@lwc/jest-transformer" "16.0.0"
+    "@lwc/jest-resolver" "16.1.0"
+    "@lwc/jest-serializer" "16.1.0"
+    "@lwc/jest-transformer" "16.1.0"
 
-"@lwc/jest-resolver@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-16.0.0.tgz#79a0f3626fc5ffc78adc0c24c989fdc3d677a8f7"
-  integrity sha512-REEN9cBHdppEcC0yYmCS9AmFiBPOFiH6VAfR5IbggfL4ykF2D90oE6p35oFSWZV7fqFBeWuc2jxAmE/bv/Dl1A==
+"@lwc/jest-resolver@16.1.0":
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-16.1.0.tgz#863032f4bded8c370e05ee0a03f8750c479e7e2d"
+  integrity sha512-+9J1TlasNnejAoTK+P+T92UyHwGOpIrYtSHilLl/hAEFXNA0NOm16COWPfaJYnSGuAULgyc9QO2gB5NoOdysFw==
   dependencies:
-    "@lwc/jest-shared" "16.0.0"
+    "@lwc/jest-shared" "16.1.0"
 
-"@lwc/jest-serializer@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-serializer/-/jest-serializer-16.0.0.tgz#780a460f3b182bc5e410a675a7d144a6b3c9ae08"
-  integrity sha512-VDVnsxBpS+WwviNieH4bZzq+N0EMdAM3RCbc4L9d4HbSOF8slD/kdsTXkhcaDW6hCXP8TKztMPNTvOzY+qH9+A==
+"@lwc/jest-serializer@16.1.0":
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-serializer/-/jest-serializer-16.1.0.tgz#dc8836d34018418efac9d7a9df7b8ad42364bd06"
+  integrity sha512-72uiDg+NXgyQiXomDLVrNHLPSDi8KBUyf7yqTFi9Oj/X9KHu0Hfmes3dtWvTR9kIBj7g8Z9o0N3AUTrY/vmYIw==
   dependencies:
-    "@lwc/jest-shared" "16.0.0"
+    "@lwc/jest-shared" "16.1.0"
     pretty-format "^29.7.0"
 
-"@lwc/jest-shared@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-shared/-/jest-shared-16.0.0.tgz#94cc36f5d4a42fe0e0645f6c5bba0a0e5dbabd7a"
-  integrity sha512-S1LiCi2ToC20va1KBcuWqH3Bm9t96k2inVCeGN96+Q4sZSrebBHwfyBEBKq75uwph7FbhHmYv7chLPDZUQIoVg==
+"@lwc/jest-shared@16.1.0":
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-shared/-/jest-shared-16.1.0.tgz#c5528ec164c2ceb69d3e5e5e90e1342176154991"
+  integrity sha512-WSvOwaK5qzPyDL8PBDs1P3dxiJqMzzxjTll70h7qU5/pufG+F8NTtweD7rry8lvJ/mzDQ/Uuah34ymCw8lQ3qQ==
 
-"@lwc/jest-transformer@16.0.0":
-  version "16.0.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-transformer/-/jest-transformer-16.0.0.tgz#b04ce2fd01886053b05a348b2f16c6412e06bee5"
-  integrity sha512-//iiLVPdaOnzg/HN8mox+xeSKmebzVervoaJWhvmICIDagtZz9S88dSVsnFKsnY03yOLA7XM8Wz/11ZaZ8bhUg==
+"@lwc/jest-transformer@16.1.0":
+  version "16.1.0"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-transformer/-/jest-transformer-16.1.0.tgz#6667cb81d2d50b328760b752dd78d5067028c9e6"
+  integrity sha512-RIbCjA5NQRe6EYzvZlW3oiW44ipX4MuVRxigab9yWBO1WX/EkiAaRul/iSRm1I5mwT6zF6NRXaTfUO2rPfD09A==
   dependencies:
-    "@babel/core" "^7.24.0"
+    "@babel/core" "^7.24.4"
     "@babel/plugin-proposal-dynamic-import" "^7.18.6"
     "@babel/plugin-syntax-class-properties" "^7.12.13"
-    "@babel/plugin-syntax-decorators" "^7.24.0"
-    "@babel/plugin-transform-modules-commonjs" "^7.23.3"
-    "@babel/preset-typescript" "^7.23.3"
-    "@lwc/jest-shared" "16.0.0"
+    "@babel/plugin-syntax-decorators" "^7.24.1"
+    "@babel/plugin-transform-modules-commonjs" "^7.24.1"
+    "@babel/preset-typescript" "^7.24.1"
+    "@lwc/jest-shared" "16.1.0"
     babel-preset-jest "^29.6.3"
-    magic-string "^0.30.8"
+    magic-string "^0.30.9"
     semver "^7.6.0"
 
 "@lwc/module-resolver@7.1.2":
@@ -2974,7 +2974,7 @@ lru-cache@^5.1.1:
   dependencies:
     yallist "^3.0.2"
 
-magic-string@^0.30.8:
+magic-string@^0.30.9:
   version "0.30.11"
   resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.30.11.tgz#301a6f93b3e8c2cb13ac1a7a673492c0dfd12954"
   integrity sha512-+Wri9p0QHMy+545hKww7YAu5NyzF8iomPL/RQazugQ9+Ez4Ic3mERMd8ZTX5rfK944j+560ZJi8iAwgak1Ac7A==
