@@ -4,10 +4,12 @@ Run Jest against Lightning web components in a Salesforce DX workspace environme
 
 ## Installation
 
-Add this project, `@lwc/engine-dom`, and `@lwc/jest-preset` as `devDependencies`:
+Add this project, `@lwc/engine-dom`, `@lwc/engine-server`, `@lwc/compiler`, and `@lwc/synthetic-shadow`, and `@lwc/jest-preset` as `devDependencies`:
 
 ```bash
-yarn add -D @salesforce/sfdx-lwc-jest @lwc/engine-dom @lwc/jest-preset
+yarn add -D @salesforce/sfdx-lwc-jest @lwc/engine-dom \
+    @lwc/engine-server @lwc/compiler @lwc/synthetic-shadow \
+    @lwc/jest-preset
 ```
 
 Update your project's unit testing script in `package.json` to execute `sfdx-lwc-jest`:
@@ -29,7 +31,7 @@ Alternatively, you can globally install the package and run directly from the co
 
 ## Versions
 
-To test against the latest Salesforce production instances, use the npm tag appropriate for the current release when installing `@lwc/engine-dom`, e.g.:
+To test against the latest Salesforce production instances, use the npm tag appropriate for the current release when installing `@lwc/engine-dom`, `@lwc/engine-server`, `@lwc/compiler`, and `@lwc/synthetic-shadow`, e.g.:
 
 ```
 yarn add -D @lwc/engine-dom@winter24
