@@ -15,4 +15,7 @@ export default class FileUpload extends LightningElement {
     @api multiple;
     @api name;
     @api recordId;
+    @api required;
+    @api reportValidity() {}
+    @api setCustomValidity() {}
 }
