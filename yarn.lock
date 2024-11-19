@@ -955,39 +955,39 @@
   resolved "https://registry.yarnpkg.com/@lwc/errors/-/errors-7.2.6.tgz#0b5198ecf30e46714de9cefe539e8041631b9ba0"
   integrity sha512-LSnlNzbLec69UkYbKgTA5M9AwvW7fbXsOE+UuZh4pBfXonTdF4bvypCkEsOo6U28KAdntyGuJMZdPjT6xa1OXw==
 
-"@lwc/jest-preset@^16.1.0":
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-preset/-/jest-preset-16.1.0.tgz#68fafbcac09a260272426c7699d5df8d78e8e117"
-  integrity sha512-byyddJVtQFeBXIgFts4m8jJ42oyM8hUlx/wYFLVmzha6IJleW9kAn6VXuW/qmvUsjGTZ2+h9LiL2bTMVCH8gnw==
+"@lwc/jest-preset@~16.0.3":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-preset/-/jest-preset-16.0.3.tgz#08221411ed167cb93b5729f49aa2380ed79e2ef5"
+  integrity sha512-AZjl5JpYoW6MforMbcJTLPwVDd0drDlXaU6Yw4jWLM5rRpnCRTEJE8bwXpdyRYpz2/A0yVwh+dvSXkfCjeIOvg==
   dependencies:
-    "@lwc/jest-resolver" "16.1.0"
-    "@lwc/jest-serializer" "16.1.0"
-    "@lwc/jest-transformer" "16.1.0"
+    "@lwc/jest-resolver" "16.0.3"
+    "@lwc/jest-serializer" "16.0.3"
+    "@lwc/jest-transformer" "16.0.3"
 
-"@lwc/jest-resolver@16.1.0", "@lwc/jest-resolver@^16.1.0":
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-16.1.0.tgz#863032f4bded8c370e05ee0a03f8750c479e7e2d"
-  integrity sha512-+9J1TlasNnejAoTK+P+T92UyHwGOpIrYtSHilLl/hAEFXNA0NOm16COWPfaJYnSGuAULgyc9QO2gB5NoOdysFw==
+"@lwc/jest-resolver@16.0.3", "@lwc/jest-resolver@~16.0.3":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-16.0.3.tgz#67abf7795f6457783f34cdbb2fbfc57b96188e66"
+  integrity sha512-bMoFbrDsAZg+BLMb5FD6NiHkqxfuJ8uv7bEcrBhhdREAHU6oiYuXMBdXTqN91DLQ5p0PMgQayJcXAWM7zEy67w==
   dependencies:
-    "@lwc/jest-shared" "16.1.0"
+    "@lwc/jest-shared" "16.0.3"
 
-"@lwc/jest-serializer@16.1.0", "@lwc/jest-serializer@^16.1.0":
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-serializer/-/jest-serializer-16.1.0.tgz#dc8836d34018418efac9d7a9df7b8ad42364bd06"
-  integrity sha512-72uiDg+NXgyQiXomDLVrNHLPSDi8KBUyf7yqTFi9Oj/X9KHu0Hfmes3dtWvTR9kIBj7g8Z9o0N3AUTrY/vmYIw==
+"@lwc/jest-serializer@16.0.3", "@lwc/jest-serializer@~16.0.3":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-serializer/-/jest-serializer-16.0.3.tgz#7328e05899a64e5af48b625c82af9c25358ecedb"
+  integrity sha512-KfZIG9PiZ6sR97v6r2V2u2olEvnT0vQ+GvERkfjkIncxBpA5Mvr9MTkax0/ltAB8TtasrQDqThVSG5xZgCkNEw==
   dependencies:
-    "@lwc/jest-shared" "16.1.0"
+    "@lwc/jest-shared" "16.0.3"
     pretty-format "^29.7.0"
 
-"@lwc/jest-shared@16.1.0":
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-shared/-/jest-shared-16.1.0.tgz#c5528ec164c2ceb69d3e5e5e90e1342176154991"
-  integrity sha512-WSvOwaK5qzPyDL8PBDs1P3dxiJqMzzxjTll70h7qU5/pufG+F8NTtweD7rry8lvJ/mzDQ/Uuah34ymCw8lQ3qQ==
+"@lwc/jest-shared@16.0.3":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-shared/-/jest-shared-16.0.3.tgz#4e7e580b41d3a729978980819f22f9e28780a7fe"
+  integrity sha512-PCmmTUXqHwQwNBxPsr/fxl8q3euJJerFszr59cU9aWflguvjGKax861qIf6yyDZjW1WANqJPBS1zMmD/1Ym12Q==
 
-"@lwc/jest-transformer@16.1.0", "@lwc/jest-transformer@^16.1.0":
-  version "16.1.0"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-transformer/-/jest-transformer-16.1.0.tgz#6667cb81d2d50b328760b752dd78d5067028c9e6"
-  integrity sha512-RIbCjA5NQRe6EYzvZlW3oiW44ipX4MuVRxigab9yWBO1WX/EkiAaRul/iSRm1I5mwT6zF6NRXaTfUO2rPfD09A==
+"@lwc/jest-transformer@16.0.3", "@lwc/jest-transformer@~16.0.3":
+  version "16.0.3"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-transformer/-/jest-transformer-16.0.3.tgz#280854bccdf6ef4806a8406bc2981c4931ade9ce"
+  integrity sha512-A8pgb4fu+tj7X8pexBoyNT5Kqdtfxq4aRT1/mEYsgt+nNG3Lmd2hrkH208YOx6hpMFJ8V1Lt4XmRrHDBKQWa3w==
   dependencies:
     "@babel/core" "^7.24.4"
     "@babel/plugin-proposal-dynamic-import" "^7.18.6"
@@ -995,7 +995,7 @@
     "@babel/plugin-syntax-decorators" "^7.24.1"
     "@babel/plugin-transform-modules-commonjs" "^7.24.1"
     "@babel/preset-typescript" "^7.24.1"
-    "@lwc/jest-shared" "16.1.0"
+    "@lwc/jest-shared" "16.0.3"
     babel-preset-jest "^29.6.3"
     magic-string "^0.30.9"
     semver "^7.6.0"
