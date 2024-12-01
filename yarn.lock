@@ -817,46 +817,46 @@
   resolved "https://registry.yarnpkg.com/@lwc/errors/-/errors-8.7.0.tgz#f12693be517d8a32f9b3ae81f57ac95baaab2bf1"
   integrity sha512-MIIMjCDlYv7+pgVCMnS0k35ThWSg43TtP94FcA/JcUTmqVRsQvqmImMZkdd5+mv8L3mM89tF8fVBLt+R9uAn4g==
 
-"@lwc/jest-jsdom-test-env@18.1.1":
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-jsdom-test-env/-/jest-jsdom-test-env-18.1.1.tgz#7a4ccee120d59b9c92c5b1c31a6e78c17cca5d20"
-  integrity sha512-1tcYxZdWRgwfcB/09Fqn1u0NnweF1/Zryji+BztEch2yQ9A3CVOGXxHNibrVN24Ke5diQObHw/VRvHl6n1ovBw==
+"@lwc/jest-jsdom-test-env@18.1.2":
+  version "18.1.2"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-jsdom-test-env/-/jest-jsdom-test-env-18.1.2.tgz#ac8c49ebeb7875bf4b54c4cf295d86751a4589d4"
+  integrity sha512-VRuhMgIGNMh2mkifj+OjYBJ815H87RhOJ77hF6gb9NluAVl0SD/2dK1pNftIQKmU618MsK+dZ8CZBe9WW/TNxA==
 
 "@lwc/jest-preset@^18.1.1":
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-preset/-/jest-preset-18.1.1.tgz#b7ee45195d2d9130d7f125e1d766516782909f33"
-  integrity sha512-iJBq5Gf9iGYpRIQOqimy6aC/0SpTo+kJX1MHtpLSxJYb2RDbVipSC+vLk5VyFCfbxsyFtGwYLEiYgk3Pzef4SQ==
+  version "18.1.2"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-preset/-/jest-preset-18.1.2.tgz#8349147bc67b1d7e6172ea7d581eeafee82fc283"
+  integrity sha512-u92OnH7ZJxysXTlmpQNdVKY1A2gLYa3F1bBm/aJ3L9hy4TF/tq5lC3b9XzN7jM1KIGyyFexN/r4IGysHVj25VQ==
   dependencies:
-    "@lwc/jest-jsdom-test-env" "18.1.1"
-    "@lwc/jest-resolver" "18.1.1"
-    "@lwc/jest-serializer" "18.1.1"
-    "@lwc/jest-transformer" "18.1.1"
+    "@lwc/jest-jsdom-test-env" "18.1.2"
+    "@lwc/jest-resolver" "18.1.2"
+    "@lwc/jest-serializer" "18.1.2"
+    "@lwc/jest-transformer" "18.1.2"
     jest-serializer-html "7.1.0"
 
-"@lwc/jest-resolver@18.1.1", "@lwc/jest-resolver@^18.1.1":
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-18.1.1.tgz#cac39e7e9835ff623005fef4ad7a1a673125ea09"
-  integrity sha512-kjEdJ4sXRsDPGgZo7IJBVKQJ/Mxrq+0OH6uT1Cj5xuf2H7cxdprcDvtHkCcrASevOBy9EuKLpJVFmAH5gPNmKw==
+"@lwc/jest-resolver@18.1.2", "@lwc/jest-resolver@^18.1.1":
+  version "18.1.2"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-resolver/-/jest-resolver-18.1.2.tgz#24abb1480daa7d260d0fd077811d69686cf1c29e"
+  integrity sha512-D9PLLwtKM2/KVgoegcN47F4Q1R4St8jqG5s3r0A4af5+Eo1WsCY9woYBSTU9fAYL4qHuUhFGZXECSdwd42OhYg==
   dependencies:
-    "@lwc/jest-shared" "18.1.1"
+    "@lwc/jest-shared" "18.1.2"
 
-"@lwc/jest-serializer@18.1.1", "@lwc/jest-serializer@^18.1.1":
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-serializer/-/jest-serializer-18.1.1.tgz#5c74c626b9bfd216f31219336823d7b183dfa0af"
-  integrity sha512-yYdBYbWGQirQ6+HBVpL7ZWMFmsUSs3xUcGAOtsXAipeiDXCaLawK9S5aavQrhJ31lWF7/+cNXk0ijNF28uvLNw==
+"@lwc/jest-serializer@18.1.2", "@lwc/jest-serializer@^18.1.1":
+  version "18.1.2"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-serializer/-/jest-serializer-18.1.2.tgz#f672a2ec59ccc95abfbeb4f131a00f530d806e1f"
+  integrity sha512-YdKs8BAjqfzDYwW4D6tocjUnUnAi3mfqd86fiAu9xXKmDnuZ6Z+LBNQgkP8+c5IJAKgQJ4mfcq399qFK0Tw4TQ==
   dependencies:
-    "@lwc/jest-shared" "18.1.1"
+    "@lwc/jest-shared" "18.1.2"
     pretty-format "^29.7.0"
 
-"@lwc/jest-shared@18.1.1":
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-shared/-/jest-shared-18.1.1.tgz#722d862b3f0f935ffecd77717f609e475f6fc192"
-  integrity sha512-CQr2wNS6D3Faio/SJ+COwUpDxnu7wTRF0miGPzyJ7Glf6mRaPiRpSD83kJRxJNhDG+RRTffaYGhVstfrpviK0g==
+"@lwc/jest-shared@18.1.2":
+  version "18.1.2"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-shared/-/jest-shared-18.1.2.tgz#790e37c08b43b8e2304c9e04d02cb1df2bb42de8"
+  integrity sha512-inbybMbv/8GQwWJNjIwYtkOIHqsn/N/64CgnDyyswvKNZGCPvhzLVjyl2YnBgOrax1xNiEH8Hz/8dVDGrRyZkQ==
 
-"@lwc/jest-transformer@18.1.1", "@lwc/jest-transformer@^18.1.1":
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/@lwc/jest-transformer/-/jest-transformer-18.1.1.tgz#ea79d6facd5ec4837fd8ac51c8921bf5177c997b"
-  integrity sha512-+QgOxTvzR+7uXn7S86tTb5gAHhIY2XkF+maZGal8hE/k4yd0J8DEkQspg5CSqDg6B/VqyCuVpgdnZpyGCMHRXg==
+"@lwc/jest-transformer@18.1.2", "@lwc/jest-transformer@^18.1.1":
+  version "18.1.2"
+  resolved "https://registry.yarnpkg.com/@lwc/jest-transformer/-/jest-transformer-18.1.2.tgz#4d05970834d1406bc63bab363d7405b35145396b"
+  integrity sha512-Fyzl2iavWnChoWG1cmDFaPM+VUI79SMP8NzZHE+w3gi474rlkldJZ/lS/NdXgq1lCjf/S+SssbGYWb0DmYa0aQ==
   dependencies:
     "@babel/core" "^7.24.4"
     "@babel/plugin-proposal-dynamic-import" "^7.18.6"
@@ -864,7 +864,7 @@
     "@babel/plugin-syntax-decorators" "^7.24.1"
     "@babel/plugin-transform-modules-commonjs" "^7.24.1"
     "@babel/preset-typescript" "^7.24.1"
-    "@lwc/jest-shared" "18.1.1"
+    "@lwc/jest-shared" "18.1.2"
     babel-preset-jest "^29.6.3"
     magic-string "^0.30.9"
     semver "^7.6.0"
