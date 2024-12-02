@@ -79,9 +79,9 @@ See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) fo
 
 Debug mode lets you easily debug your Jest tests.
 
--   Put a `debugger;` into your code
--   Open `chrome://inspect`
--   Run `sfdx-lwc-jest` with the `--debug` flag.
+- Put a `debugger;` into your code
+- Open `chrome://inspect`
+- Run `sfdx-lwc-jest` with the `--debug` flag.
 
 Pass other parameters to Jest after the `--` flag. For example,
 
@@ -93,9 +93,9 @@ sfdx-lwc-jest --debug -- --no-cache
 
 If you prefer to debug inside Visual Studio Code, follow these steps:
 
--   From the Visual Studio Code dropdowns, select Debug > Add Configuration....
--   If you're prompted for an Environment choose any value.
--   Mac users, replace the contents of the generated `launch.json` with the following. (for Windows users see the [Jest website](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) for launch.json contents).
+- From the Visual Studio Code dropdowns, select Debug > Add Configuration....
+- If you're prompted for an Environment choose any value.
+- Mac users, replace the contents of the generated `launch.json` with the following. (for Windows users see the [Jest website](https://jestjs.io/docs/en/troubleshooting#debugging-in-vs-code) for launch.json contents).
 
 ```json
 {
@@ -118,8 +118,8 @@ If you prefer to debug inside Visual Studio Code, follow these steps:
 }
 ```
 
--   Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
--   To run tests, press F5 or select Debug > Start Debugging.
+- Add a `jest.config.js` file to the root of the Salesforce DX project as described [here](#overriding-jest-config). You must add this file to run Jest from Visual Studio Code.
+- To run tests, press F5 or select Debug > Start Debugging.
 
 ## Watch Mode
 
