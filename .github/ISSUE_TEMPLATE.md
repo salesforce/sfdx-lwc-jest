@@ -57,8 +57,8 @@ sfdx-lwc-jest -- --no-cache
 
 ### Version
 
--   @salesforce/sfdx-lwc-jest: x.x.x
--   Node: x.x.x
+- @salesforce/sfdx-lwc-jest: x.x.x
+- Node: x.x.x
 
 **Possible Solution**
 
