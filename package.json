@@ -35,7 +35,6 @@
     "dependencies": {
         "@lwc/compiler": "^8.7.0",
         "@lwc/engine-dom": "^8.7.0",
-        "@lwc/engine-server": "^8.7.0",
         "@lwc/jest-preset": "^18.1.1",
         "@lwc/jest-resolver": "^18.1.1",
         "@lwc/jest-serializer": "^18.1.1",
