@@ -805,11 +805,6 @@
   resolved "https://registry.yarnpkg.com/@lwc/engine-dom/-/engine-dom-8.11.0.tgz#ad7a9d1d91136284b3d1a858c0b108d37a847887"
   integrity sha512-Mwb0FyV8YXqSpPAEPQRndZuDvXftuFE069EjhxVFIt0YMf/j68WtpPVvpE0gbDPL2CpDejHEwelSJZnikFipoQ==
 
-"@lwc/engine-server@^8.7.0":
-  version "8.11.0"
-  resolved "https://registry.yarnpkg.com/@lwc/engine-server/-/engine-server-8.11.0.tgz#790a17eac8d07fc0bf3db00fe8a286b2f777d100"
-  integrity sha512-zVkvdeGFuEDDPH/e2xj4S0fyWK5ZKoR1H0XsTh8mYzRaO0ua+U6EcGDj3f5UwfMsJeWuAPrXwXjFNYH+46Jp/w==
-
 "@lwc/errors@8.11.0":
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/@lwc/errors/-/errors-8.11.0.tgz#bad810d6780f0af36e9c3db72f24cba4785c004e"

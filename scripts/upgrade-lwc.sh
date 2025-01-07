@@ -11,7 +11,6 @@ LWC_TEST_VERSION=$2
 yarn upgrade \
     @lwc/compiler@$LWC_VERSION \
     @lwc/engine-dom@$LWC_VERSION \
-    @lwc/engine-server@$LWC_VERSION \
     @lwc/module-resolver@$LWC_VERSION \
     @lwc/wire-service@$LWC_VERSION \
     @lwc/synthetic-shadow@$LWC_VERSION \
