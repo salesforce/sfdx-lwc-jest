@@ -41,7 +41,6 @@ const testOptions = {
     skipApiVersionCheck: {
         description: 'Deprecated: this noop flag is kept for backward compatibility',
         type: 'boolean',
-        default: false,
     },
 };
 

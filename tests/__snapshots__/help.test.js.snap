@@ -17,7 +17,7 @@ Options:
                              (https://jestjs.io/docs/en/troubleshooting)
                                                       [boolean] [default: false]
       --skipApiVersionCheck  Deprecated: this noop flag is kept for backward
-                             compatibility            [boolean] [default: false]
+                             compatibility                             [boolean]
       --help                 Show help                                 [boolean]
 
 Examples:

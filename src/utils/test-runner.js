@@ -61,7 +61,7 @@ function getJestArgs(argv) {
 }
 
 async function testRunner(argv) {
-    if (!argv.skipApiVersionCheck) {
+    if (argv.skipApiVersionCheck !== undefined) {
         warn(
             'The --skipApiVersionCheck flag is deprecated and will be removed in future versions.',
         );
