@@ -58,11 +58,14 @@ Options:
       --debug                Run tests in debug mode
                              (https://jestjs.io/docs/en/troubleshooting)
                                                       [boolean] [default: false]
+      --projectJson          Path to the project JSON file (defaults to
+                             sfdx-project.json)                         [string]
       --help                 Show help                                 [boolean]
 
 Examples:
-  sfdx-lwc-jest --coverage  Collect coverage and display in output
-  sfdx-lwc-jest -- --json   All params after `--` are directly passed to Jest
+  sfdx-lwc-jest --coverage              Collect coverage and display in output
+  sfdx-lwc-jest --projectJson my.json   Use custom project file
+  sfdx-lwc-jest -- --json               All params after `--` are directly passed to Jest
 ```
 
 ## Passing Additional Jest CLI Options
@@ -74,6 +77,22 @@ sfdx-lwc-jest -- --json
 ```
 
 See the [Jest documentation](http://facebook.github.io/jest/docs/en/cli.html) for all CLI options.
+
+## Custom Project Configuration
+
+By default, `sfdx-lwc-jest` looks for `sfdx-project.json` in the current working directory to discover LWC component paths. You can specify a custom project JSON file using the `--projectJson` option:
+
+```bash
+sfdx-lwc-jest --projectJson ./configs/my-project.json
+```
+
+This is useful for:
+
+- Projects with non-standard project file names
+- Testing against multiple project configurations
+- CI/CD pipelines with custom project setups
+
+The custom project file should follow the same format as `sfdx-project.json` with `packageDirectories` containing paths to your LWC components.
 
 ## Debug Mode
 
