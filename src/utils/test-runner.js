@@ -10,10 +10,10 @@ const fs = require('fs');
 const path = require('path');
 const { spawn } = require('child_process');
 
-const { PROJECT_ROOT } = require('./project');
+const { PROJECT_ROOT, setCustomProjectJsonPath } = require('./project');
 
 const { info, warn } = require('../log');
-const { jestConfig } = require('../config');
+const { getJestConfig } = require('../config');
 
 // List of CLI options that should be passthrough to jest.
 const JEST_PASSTHROUGH_OPTIONS = new Set(['coverage', 'updateSnapshot', 'verbose', 'watch']);
@@ -54,6 +54,7 @@ function getJestArgs(argv) {
         fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.mjs')) ||
         fs.existsSync(path.resolve(PROJECT_ROOT, 'jest.config.cjs'));
     if (!hasCustomConfig) {
+        const jestConfig = getJestConfig();
         jestArgs.unshift(`--config=${JSON.stringify(jestConfig)}`);
     }
 
@@ -61,6 +62,11 @@ function getJestArgs(argv) {
 }
 
 async function testRunner(argv) {
+    // Set custom project JSON path if provided
+    if (argv.projectJson) {
+        setCustomProjectJsonPath(argv.projectJson);
+    }
+
     if (argv.skipApiVersionCheck !== undefined) {
         warn(
             'The --skipApiVersionCheck flag is deprecated and will be removed in future versions.',

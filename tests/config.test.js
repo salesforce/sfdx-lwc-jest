@@ -7,7 +7,8 @@
 'use strict';
 
 jest.mock('../src/utils/project');
-const { jestConfig } = require('../src/config');
+const { getJestConfig } = require('../src/config');
+const jestConfig = getJestConfig();
 
 test('coveragePaths correctly build', () => {
     expect(jestConfig.collectCoverageFrom).toStrictEqual([
