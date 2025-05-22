@@ -42,6 +42,11 @@ const testOptions = {
         description: 'Deprecated: this noop flag is kept for backward compatibility',
         type: 'boolean',
     },
+
+    projectJson: {
+        description: 'Path to the project JSON file (defaults to sfdx-project.json)',
+        type: 'string',
+    },
 };
 
 module.exports = testOptions;

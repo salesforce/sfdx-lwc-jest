@@ -6,5 +6,5 @@
  */
 'use strict';
 
-const { jestConfig } = require('./src/config');
-module.exports = { jestConfig };
+const { getJestConfig } = require('./src/config');
+module.exports = { jestConfig: getJestConfig() };
