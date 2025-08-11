@@ -27,26 +27,28 @@ function getCoveragePaths() {
         .flat();
 }
 
-const jestConfig = {
-    // Inherited from @lwc/jest-preset
-    moduleFileExtensions: jestPreset.moduleFileExtensions || ['ts', 'js', 'html'],
-    testEnvironment: jestPreset.testEnvironment || 'jsdom',
-    transform: {
-        ...jestPreset.transform,
-        '^.+\\.(js|ts|html|css)$': require.resolve('@lwc/jest-transformer'),
-    },
-    setupFilesAfterEnv: jestPreset.setupFilesAfterEnv || [],
-    snapshotSerializers: jestPreset.snapshotSerializers || [
-        require.resolve('@lwc/jest-serializer'),
-    ],
-    // Specific to sfdx-lwc-jest
-    collectCoverageFrom: getCoveragePaths(),
-    resolver: path.join(__dirname, './resolver.js'),
-    rootDir: PROJECT_ROOT,
-    testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
-    transformIgnorePatterns: [
-        '/node_modules/(?!(.*@salesforce/sfdx-lwc-jest/src/lightning-stubs)/)',
-    ],
-};
+function getJestConfig() {
+    return {
+        // Inherited from @lwc/jest-preset
+        moduleFileExtensions: jestPreset.moduleFileExtensions || ['ts', 'js', 'html'],
+        testEnvironment: jestPreset.testEnvironment || 'jsdom',
+        transform: {
+            ...jestPreset.transform,
+            '^.+\\.(js|ts|html|css)$': require.resolve('@lwc/jest-transformer'),
+        },
+        setupFilesAfterEnv: jestPreset.setupFilesAfterEnv || [],
+        snapshotSerializers: jestPreset.snapshotSerializers || [
+            require.resolve('@lwc/jest-serializer'),
+        ],
+        // Specific to sfdx-lwc-jest
+        collectCoverageFrom: getCoveragePaths(),
+        resolver: path.join(__dirname, './resolver.js'),
+        rootDir: PROJECT_ROOT,
+        testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
+        transformIgnorePatterns: [
+            '/node_modules/(?!(.*@salesforce/sfdx-lwc-jest/src/lightning-stubs)/)',
+        ],
+    };
+}
 
-module.exports = { jestConfig };
+module.exports = { getJestConfig };
