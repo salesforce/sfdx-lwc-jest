@@ -4,6 +4,10 @@ import globals from 'globals';
 import header from 'eslint-plugin-header';
 import babelParser from '@babel/eslint-parser';
 
+// Workaround for plugin schema validation failing in eslint v9
+// Ref: https://github.com/Stuk/eslint-plugin-header/issues/57#issuecomment-2378485611
+header.rules.header.meta.schema = false;
+
 export default defineConfig([
     js.configs.recommended,
     {
