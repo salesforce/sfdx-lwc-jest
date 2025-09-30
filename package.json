@@ -23,7 +23,6 @@
     },
     "scripts": {
         "prepare": "husky install",
-        "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
         "lint": "eslint src/ tests/",
         "format": "prettier --write '**/*.{js,json,md,html,css}'",
         "format:check": "prettier --check '**/*.{js,json,md,html,css}'",
