@@ -6,6 +6,9 @@
  */
 import { createTestWireAdapter } from '@salesforce/wire-service-jest-util';
 
+/**
+ * @deprecated import from lightning/graphql instead
+ */
 export class graphql extends createTestWireAdapter() {
     static emit(value, filterFn) {
         super.emit({ data: value, errors: undefined }, filterFn);
@@ -22,5 +25,8 @@ export class graphql extends createTestWireAdapter() {
     }
 }
 
+/**
+ * @deprecated import from lightning/graphql instead
+ */
 export const gql = jest.fn();
 export const refreshGraphQL = jest.fn();
