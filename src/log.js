@@ -6,8 +6,6 @@
  */
 'use strict';
 
-/* eslint-disable no-console */
-
 function blue(message) {
     // equivalent to chalk.blue()
     return `\x1B[34m${message}\x1B[39m`;
