@@ -30,12 +30,9 @@ jobs:
             - name: Install dependencies
               run: yarn install --frozen-lockfile
 
-            - name: Check License Headers
-              run: yarn check-license-headers
-
             - name: Check formatting
               run: yarn format:check
-            
+
             - name: Run linter
               run: yarn lint
 

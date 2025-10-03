@@ -23,7 +23,6 @@
     },
     "scripts": {
         "prepare": "husky install",
-        "check-license-headers": "node ./scripts/checkLicenseHeaders.js",
         "lint": "eslint src/ tests/",
         "format": "prettier --write '**/*.{js,json,md,html,css}'",
         "format:check": "prettier --check '**/*.{js,json,md,html,css}'",
@@ -50,17 +49,21 @@
         "yargs": "~17.7.2"
     },
     "devDependencies": {
-        "@babel/core": "^7.26.10",
-        "@babel/eslint-parser": "^7.27.0",
-        "@babel/plugin-proposal-decorators": "^7.25.9",
-        "eslint": "^7.32.0",
+        "@babel/core": "^7.28.4",
+        "@babel/eslint-parser": "^7.28.4",
+        "@babel/plugin-proposal-decorators": "^7.28.0",
+        "@eslint/eslintrc": "^3.3.1",
+        "@eslint/js": "^9.36.0",
+        "eslint": "^9.36.0",
+        "eslint-plugin-header": "^3.1.1",
+        "globals": "^16.4.0",
         "husky": "^9.1.7",
-        "isbinaryfile": "^5.0.4",
+        "isbinaryfile": "^5.0.6",
         "lint-staged": "^16.2.3",
-        "prettier": "^3.3.3"
+        "prettier": "^3.6.2"
     },
     "volta": {
-        "node": "20.12.1",
+        "node": "20.19.5",
         "yarn": "1.22.22"
     },
     "lint-staged": {
