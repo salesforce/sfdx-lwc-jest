@@ -4,9 +4,11 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-export default class Toast {
+import { LightningElement, api } from 'lwc';
+
+export default class Toast extends LightningElement {
     static show() {}
-    
+
     @api labelLinks;
     @api messageLinks;
     @api label;
