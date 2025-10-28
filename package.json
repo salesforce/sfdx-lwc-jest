@@ -1,6 +1,6 @@
 {
     "name": "@salesforce/sfdx-lwc-jest",
-    "version": "7.4.0",
+    "version": "7.5.0",
     "description": "Run Jest against LWC components in a Salesforce DX workspace environment",
     "main": "src/index.js",
     "license": "MIT",
@@ -69,5 +69,8 @@
     "lint-staged": {
         "*.js": "eslint",
         "*.{js,json,md,html,css}": "prettier --write"
+    },
+    "publishConfig": {
+        "tag": "prerelease"
     }
 }
