@@ -7,7 +7,10 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Card extends LightningElement {
+    @api headingLevel;
+    @api hideHeader;
     @api iconName;
+    @api label;
     @api title;
     @api variant;
 }
