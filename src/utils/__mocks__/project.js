@@ -12,4 +12,5 @@ module.exports = {
         return { mock: true };
     },
     getModulePaths: () => ['force-app/main/unix/lwc', 'force-app\\main\\windows\\lwc'],
+    setCustomProjectJsonPath: () => {},
 };

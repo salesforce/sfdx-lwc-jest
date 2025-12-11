@@ -13,13 +13,22 @@ const fg = require('fast-glob');
 const PROJECT_ROOT = fs.realpathSync(process.cwd());
 
 let PATHS = [];
+let CUSTOM_PROJECT_JSON_PATH = null;
+
+function setCustomProjectJsonPath(customPath) {
+    CUSTOM_PROJECT_JSON_PATH = customPath;
+    // Clear cached paths when project JSON changes
+    PATHS = [];
+}
 
 function getSfdxProjectJson() {
-    const sfdxProjectJson = path.join(PROJECT_ROOT, 'sfdx-project.json');
+    const sfdxProjectJson = CUSTOM_PROJECT_JSON_PATH
+        ? path.resolve(CUSTOM_PROJECT_JSON_PATH)
+        : path.join(PROJECT_ROOT, 'sfdx-project.json');
 
     if (!fs.existsSync(sfdxProjectJson)) {
         throw new Error(
-            'Could not find sfdx-project.json. Make sure `lwc-jest` is run from project root',
+            `Could not find ${sfdxProjectJson}. Make sure the project JSON file exists and 'lwc-jest' is run from project root`,
         );
     }
 
@@ -40,4 +49,5 @@ module.exports = {
     PROJECT_ROOT,
     getSfdxProjectJson,
     getModulePaths,
+    setCustomProjectJsonPath,
 };

@@ -18,6 +18,8 @@ Options:
                                                       [boolean] [default: false]
       --skipApiVersionCheck  Deprecated: this noop flag is kept for backward
                              compatibility                             [boolean]
+      --projectJson          Path to the project JSON file (defaults to
+                             sfdx-project.json)                         [string]
       --help                 Show help                                 [boolean]
 
 Examples:
