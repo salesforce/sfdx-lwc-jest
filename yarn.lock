@@ -1095,6 +1095,11 @@
   resolved "https://registry.yarnpkg.com/@lwc/shared/-/shared-8.26.1.tgz#f137942628fea06ad083709dc39e38dd2f516c80"
   integrity sha512-i8OrdCg/2YADJ4qYRs3Zx7+ssSe4vT+Ucer1kayDvJaeS37qfJ7MOeFVtJejJgagFsqpTDMVQrwBIEutXvNrpg==
 
+"@lwc/signals@^8.22.3":
+  version "8.27.0"
+  resolved "https://registry.yarnpkg.com/@lwc/signals/-/signals-8.27.0.tgz#1028ea08b47b020a5ca0ea99017e9b5808d95178"
+  integrity sha512-4LRajgmlTLeEE5sNxFp/PBaLUHGUTNldWzkUywSXtFWQIwyUAzovxoEzs5DFlwVuak8bFc1uEcvyBs1XW8P0Eg==
+
 "@lwc/ssr-compiler@8.26.1":
   version "8.26.1"
   resolved "https://registry.yarnpkg.com/@lwc/ssr-compiler/-/ssr-compiler-8.26.1.tgz#1e638339ca270754436da724c45aad417142247a"
@@ -1109,6 +1114,13 @@
     estree-toolkit "^1.7.13"
     immer "^11.0.1"
     meriyah "^5.0.0"
+
+"@lwc/state@0.25.3":
+  version "0.25.3"
+  resolved "https://registry.yarnpkg.com/@lwc/state/-/state-0.25.3.tgz#bb176e3b44236df1d5b0a9cfa1cad92bd036e987"
+  integrity sha512-907OseLs5l6kf+FIeNvR2nHmnFqmLZcW9jtL24qeVWp8hay3vQtbHSuQxoU+ZBgyBBxGyfFM9yvNrbL93ooxoQ==
+  dependencies:
+    "@lwc/signals" "^8.22.3"
 
 "@lwc/style-compiler@8.26.1":
   version "8.26.1"
