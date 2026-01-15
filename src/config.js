@@ -45,7 +45,7 @@ const jestConfig = {
     rootDir: PROJECT_ROOT,
     testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/test/specs/'],
     transformIgnorePatterns: [
-        '/node_modules/(?!(.*@salesforce/sfdx-lwc-jest/src/lightning-stubs)/)',
+        '/node_modules/(?!(.*@lwc/state)|(.*@salesforce/sfdx-lwc-jest/src/lightning-stubs)/)',
     ],
 };
 
