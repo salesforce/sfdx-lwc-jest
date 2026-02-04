@@ -1115,10 +1115,17 @@
     immer "^11.0.1"
     meriyah "^5.0.0"
 
-"@lwc/state@0.25.3":
-  version "0.25.3"
-  resolved "https://registry.yarnpkg.com/@lwc/state/-/state-0.25.3.tgz#bb176e3b44236df1d5b0a9cfa1cad92bd036e987"
-  integrity sha512-907OseLs5l6kf+FIeNvR2nHmnFqmLZcW9jtL24qeVWp8hay3vQtbHSuQxoU+ZBgyBBxGyfFM9yvNrbL93ooxoQ==
+"@lwc/state-test-utils@0.26.1":
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/@lwc/state-test-utils/-/state-test-utils-0.26.1.tgz#46317559f3f961899308372e0b73cae84aeb75a4"
+  integrity sha512-mHmiNy30d2OduVsHJnk6O/jiApbHmp6+8rdx6K/bOnjy6eFKCw5k5sl/PckW/H+9x7PxS+JKULvwaBOw80LUHw==
+  dependencies:
+    "@lwc/state" "0.26.1"
+
+"@lwc/state@0.26.1":
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/@lwc/state/-/state-0.26.1.tgz#2286cb42ceaecb970b06097b3c26436b6933080e"
+  integrity sha512-YvW8FKHTD67TYIL5Y0qVsAGMTuaZZYrKNxrFGxaGp6TjIfRn5TK3GOQSTEgiku/K2YHX+LIC1nC9uQHb0fHNkQ==
   dependencies:
     "@lwc/signals" "^8.22.3"
 
