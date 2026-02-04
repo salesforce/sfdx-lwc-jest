@@ -15,6 +15,8 @@ const {
     registerTestWireAdapter,
 } = require('@salesforce/wire-service-jest-util');
 
+const { stateManagerInstanceMock } = require('@lwc/state-test-utils');
+
 module.exports = {
     createApexTestWireAdapter,
     createLdsTestWireAdapter,
@@ -22,4 +24,5 @@ module.exports = {
     registerLdsTestWireAdapter,
     registerApexTestWireAdapter,
     registerTestWireAdapter,
+    stateManagerInstanceMock,
 };
