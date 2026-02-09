@@ -8,7 +8,7 @@
 LWC_VERSION=$1
 LWC_TEST_VERSION=$2
 
-yarn upgrade \
+yarn upgrade --registry https://registry.yarnpkg.com \
     @lwc/compiler@$LWC_VERSION \
     @lwc/engine-dom@$LWC_VERSION \
     @lwc/engine-server@$LWC_VERSION \
