@@ -7,6 +7,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class ButtonStateful extends LightningElement {
+    @api disabled;
     @api groupOrder;
     @api iconNameWhenHover;
     @api iconNameWhenOff;
