@@ -28,12 +28,6 @@ export class FlowNavigationNextEvent extends CustomEvent {
     }
 }
 
-export class FlowNavigationNextEvent extends CustomEvent {
-    constructor() {
-        super(FlowNavigationNextEventName, { bubbles: true, composed: true });
-    }
-}
-
 export class FlowNavigationPauseEvent extends CustomEvent {
     constructor() {
         super(FlowNavigationPauseEventName, { bubbles: true, composed: true });
