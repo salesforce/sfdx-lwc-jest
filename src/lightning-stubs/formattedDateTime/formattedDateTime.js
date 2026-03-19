@@ -7,6 +7,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class FormattedDateTime extends LightningElement {
+    @api dateStyle;
     @api day;
     @api era;
     @api hour;
