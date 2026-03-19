@@ -17,6 +17,7 @@ export default class InputName extends LightningElement {
     @api label;
     @api lastName;
     @api lastNameLabel;
+    @api locale;
     @api middleName;
     @api middleNameLabel;
     @api options;

@@ -11,6 +11,7 @@ export default class Datatable extends LightningElement {
     @api columns;
     @api data;
     @api defaultSortDirection;
+    @api disabledRows;
     @api draftValues;
     @api enableInfiniteLoading;
     @api errors;
@@ -29,6 +30,7 @@ export default class Datatable extends LightningElement {
     @api rowNumberOffset;
     @api selectedRows;
     @api showRowNumberColumn;
+    @api singleRowSelectionMode;
     @api sortedBy;
     @api sortedDirection;
     @api suppressBottomBar;

@@ -7,8 +7,10 @@
 import { LightningElement, api } from 'lwc';
 
 export default class TreeGrid extends LightningElement {
+    @api columnWidthsMode;
     @api columns;
     @api data;
+    @api disabledRows;
     @api expandedRows;
     @api hideCheckboxColumn;
     @api isLoading;
@@ -17,6 +19,7 @@ export default class TreeGrid extends LightningElement {
     @api minColumnWidth;
     @api resizeColumnDisabled;
     @api rowNumberOffset;
+    @api rowToggleIcon;
     @api selectedRows;
     @api showRowNumberColumn;
     @api collapseAll() {}

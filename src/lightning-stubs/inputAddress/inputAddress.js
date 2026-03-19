@@ -16,10 +16,12 @@ export default class InputAddress extends LightningElement {
     @api country;
     @api countryDisabled;
     @api countryLabel;
+    @api countryLookupFilter;
     @api countryOptions;
     @api countryPlaceholder;
     @api disabled;
     @api fieldLevelHelp;
+    @api hideProvince;
     @api locale;
     @api postalCode;
     @api postalCodeLabel;
@@ -31,7 +33,10 @@ export default class InputAddress extends LightningElement {
     @api readOnly;
     @api required;
     @api showAddressLookup;
+    @api showCompactAddress;
     @api street;
+    @api subpremise;
+    @api subpremiseLabel;
     @api streetLabel;
     @api streetPlaceholder;
     @api validity;

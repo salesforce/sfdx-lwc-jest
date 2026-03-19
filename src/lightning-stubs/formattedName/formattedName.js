@@ -11,6 +11,7 @@ export default class FormattedName extends LightningElement {
     @api format;
     @api informalName;
     @api lastName;
+    @api locale;
     @api middleName;
     @api salutation;
     @api suffix;
