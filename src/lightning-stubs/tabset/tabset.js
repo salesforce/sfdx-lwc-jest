@@ -8,5 +8,8 @@ import { LightningElement, api } from 'lwc';
 
 export default class Tabset extends LightningElement {
     @api activeTabValue;
+    @api headingLabel;
+    @api headingLevel;
+    @api headingVisible;
     @api variant;
 }

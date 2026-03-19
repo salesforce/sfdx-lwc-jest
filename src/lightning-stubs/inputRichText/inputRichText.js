@@ -14,6 +14,7 @@ export default class InputRichText extends LightningElement {
     @api formats;
     @api label;
     @api labelVisible;
+    @api manualImageUpload;
     @api messageWhenBadInput;
     @api placeholder;
     @api required;
