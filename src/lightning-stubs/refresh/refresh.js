@@ -4,8 +4,6 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-const MAX_IDS = 2 ** 20;
-
 export const RefreshEventName = 'lightning__refresh';
 export class RefreshEvent extends CustomEvent {
     constructor() {
@@ -17,43 +15,30 @@ export class RefreshEvent extends CustomEvent {
     }
 }
 
-let registeredHandlers = {};
-let registeredContainers = {};
-
-const getRandomId = () => {
-    let id;
-    do {
-        id = Math.floor(Math.random() * MAX_IDS);
-    } while (
-        registeredHandlers.hasOwnProperty(id.toString()) ||
-        registeredContainers.hasOwnProperty(id.toString())
-    );
-
-    return id;
-};
+const registeredHandlers = new Map();
+const registeredContainers = new Map();
+let lastAssignedId = -1;
 
 export const registerRefreshHandler = jest.fn((element, handler) => {
     let elementToRefresh = element;
     let eventHandler = handler;
-    const registerId = getRandomId();
-    registeredHandlers[registerId.toString()] = eventHandler.bind(elementToRefresh);
 
-    return registerId;
+    registeredHandlers.set(++lastAssignedId, eventHandler.bind(elementToRefresh));
+    return lastAssignedId;
 });
 
 export const unregisterRefreshHandler = jest.fn((id) => {
-    delete registeredHandlers[id.toString()];
+    registeredHandlers.delete(id);
 });
 
 export const registerRefreshContainer = jest.fn((element, handler) => {
     let elementToRefresh = element;
     let eventHandler = handler;
-    const registerId = getRandomId();
-    registeredContainers[registerId.toString()] = eventHandler.bind(elementToRefresh);
 
-    return registerId;
+    registeredContainers.set(++lastAssignedId, eventHandler.bind(elementToRefresh));
+    return lastAssignedId;
 });
 
 export const unregisterRefreshContainer = jest.fn((id) => {
-    delete registeredContainers[id.toString()];
+    registeredContainers.delete(id);
 });
