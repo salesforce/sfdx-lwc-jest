@@ -1013,10 +1013,10 @@
     postcss-selector-parser "~7.1.1"
     postcss-value-parser "~4.2.0"
 
-"@lwc/synthetic-shadow@8.28.2":
-  version "8.28.2"
-  resolved "https://registry.yarnpkg.com/@lwc/synthetic-shadow/-/synthetic-shadow-8.28.2.tgz#cddba720ee46f1aeaa6694242ce9d8fe6b91ea90"
-  integrity sha512-RZZBUHQ8TdG+foC2sS8qx9rUL8A7trttlglOQlTqPaoBKWb92TjQP7FLmOG5By4w4lSCBFxjedfrtDMT7zIdFQ==
+"@lwc/synthetic-shadow@9.1.1":
+  version "9.1.1"
+  resolved "https://registry.yarnpkg.com/@lwc/synthetic-shadow/-/synthetic-shadow-9.1.1.tgz#ea36231ca2a346f5af13d3d897d9b22c1c07468e"
+  integrity sha512-Hhxt9Xa7UV8rbJafb+VkQUhYnHx9bDp+Fd6KVTp2mb0AqRf7fCRuR0QiFQOsqU+PZfZUHyowIe/Qe7g19Ua5og==
 
 "@lwc/template-compiler@8.28.2":
   version "8.28.2"

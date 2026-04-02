@@ -42,7 +42,7 @@
         "@lwc/module-resolver": "8.28.2",
         "@lwc/state": "0.28.0",
         "@lwc/state-test-utils": "0.28.0",
-        "@lwc/synthetic-shadow": "8.28.2",
+        "@lwc/synthetic-shadow": "9.1.1",
         "@lwc/wire-service": "8.28.2",
         "@salesforce/wire-service-jest-util": "4.1.6",
         "fast-glob": "^3.3.3",
