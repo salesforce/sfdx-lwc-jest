@@ -7,10 +7,10 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Combobox extends LightningElement {
-    @api autocomplete;
     @api disabled;
     @api dropdownAlignment;
     @api fieldLevelHelp;
+    @api iconName;
     @api label;
     @api messageWhenValueMissing;
     @api name;

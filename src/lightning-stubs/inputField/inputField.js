@@ -7,7 +7,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class InputField extends LightningElement {
-    @api dirty;
+    @api autocomplete;
     @api disabled;
     @api fieldName;
     @api readOnly;

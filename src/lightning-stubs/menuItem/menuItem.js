@@ -7,6 +7,7 @@
 import { LightningElement, api } from 'lwc';
 
 export default class MenuItem extends LightningElement {
+    @api accessKey;
     @api checked;
     @api disabled;
     @api download;

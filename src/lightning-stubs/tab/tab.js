@@ -13,6 +13,7 @@ export default class Tab extends LightningElement {
     @api iconName;
     @api label;
     @api showErrorIndicator;
+    @api title;
     @api value;
     @api loadContent() {}
 }

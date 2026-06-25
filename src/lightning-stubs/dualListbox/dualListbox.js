@@ -8,8 +8,8 @@ import { LightningElement, api } from 'lwc';
 
 export default class DualListbox extends LightningElement {
     @api addButtonLabel;
-    @api disableReordering;
     @api disabled;
+    @api disableReordering;
     @api downButtonLabel;
     @api fieldLevelHelp;
     @api label;

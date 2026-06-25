@@ -35,10 +35,11 @@ export default class InputAddress extends LightningElement {
     @api showAddressLookup;
     @api showCompactAddress;
     @api street;
-    @api subpremise;
-    @api subpremiseLabel;
     @api streetLabel;
     @api streetPlaceholder;
+    @api subpremise;
+    @api subpremiseLabel;
+    @api subpremisePlaceholder;
     @api validity;
     @api variant;
     @api checkValidity() {}

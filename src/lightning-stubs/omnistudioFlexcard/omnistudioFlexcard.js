@@ -1,17 +1,17 @@
 /*
- * Copyright (c) 2018, salesforce.com, inc.
+ * Copyright (c) 2026, salesforce.com, inc.
  * All rights reserved.
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 import { LightningElement, api } from 'lwc';
 
-export default class RecordEditForm extends LightningElement {
-    @api density;
-    @api formClass;
+export default class OmnistudioFlexcard extends LightningElement {
+    @api exposedAttributes;
+    @api flexcardName;
+    @api lwr;
     @api objectApiName;
-    @api optionalFields;
+    @api parentData;
     @api recordId;
-    @api recordTypeId;
-    @api submit() {}
+    @api records;
 }

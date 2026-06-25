@@ -11,5 +11,6 @@ export default class Tabset extends LightningElement {
     @api headingLabel;
     @api headingLevel;
     @api headingVisible;
+    @api title;
     @api variant;
 }

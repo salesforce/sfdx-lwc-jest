@@ -7,14 +7,15 @@
 import { LightningElement, api } from 'lwc';
 
 export default class Datatable extends LightningElement {
-    @api columnWidthsMode;
     @api columns;
+    @api columnWidthsMode;
     @api data;
     @api defaultSortDirection;
     @api disabledRows;
     @api draftValues;
     @api enableInfiniteLoading;
     @api errors;
+    @api hideBorders;
     @api hideCheckboxColumn;
     @api hideTableHeader;
     @api isLoading;
@@ -23,12 +24,12 @@ export default class Datatable extends LightningElement {
     @api maxColumnWidth;
     @api maxRowSelection;
     @api minColumnWidth;
-    @api renderConfig;
     @api renderMode;
     @api resizeColumnDisabled;
     @api resizeStep;
     @api rowNumberOffset;
     @api selectedRows;
+    @api showActionsMenu;
     @api showRowNumberColumn;
     @api singleRowSelectionMode;
     @api sortedBy;

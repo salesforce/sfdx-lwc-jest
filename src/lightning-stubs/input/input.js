@@ -8,8 +8,10 @@ import { LightningElement, api } from 'lwc';
 
 export default class Input extends LightningElement {
     @api accept;
+    @api accessKey;
     @api autocomplete;
     @api checked;
+    @api dateAccessKey;
     @api dateAriaControls;
     @api dateAriaDescribedBy;
     @api dateAriaLabel;
@@ -18,8 +20,9 @@ export default class Input extends LightningElement {
     @api disabled;
     @api fieldLevelHelp;
     @api files;
-    @api formatFractionDigits;
     @api formatter;
+    @api indeterminate;
+    @api inputmode;
     @api isLoading;
     @api label;
     @api max;
@@ -43,12 +46,15 @@ export default class Input extends LightningElement {
     @api placeholder;
     @api readOnly;
     @api required;
+    @api role;
     @api selectionEnd;
     @api selectionStart;
     @api step;
+    @api timeAccessKey;
     @api timeAriaControls;
     @api timeAriaDescribedBy;
     @api timeAriaLabelledBy;
+    @api timeStepMinutes;
     @api timeStyle;
     @api timezone;
     @api type;

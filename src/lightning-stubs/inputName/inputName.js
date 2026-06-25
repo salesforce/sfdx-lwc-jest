@@ -11,22 +11,16 @@ export default class InputName extends LightningElement {
     @api fieldLevelHelp;
     @api fieldsToDisplay;
     @api firstName;
-    @api firstNameLabel;
     @api informalName;
-    @api informalNameLabel;
     @api label;
     @api lastName;
-    @api lastNameLabel;
     @api locale;
     @api middleName;
-    @api middleNameLabel;
     @api options;
     @api readOnly;
     @api required;
     @api salutation;
-    @api salutationLabel;
     @api suffix;
-    @api suffixLabel;
     @api validity;
     @api variant;
     @api checkValidity() {}

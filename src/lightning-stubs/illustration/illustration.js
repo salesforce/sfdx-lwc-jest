@@ -1,16 +1,12 @@
 /*
- * Copyright (c) 2018, salesforce.com, inc.
+ * Copyright (c) 2026, salesforce.com, inc.
  * All rights reserved.
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
 import { LightningElement, api } from 'lwc';
 
-export default class Modal extends LightningElement {
-    @api description;
-    @api disableClose;
-    @api label;
-    @api size;
-
-    @api open() {}
+export default class Illustration extends LightningElement {
+    @api alternativeText;
+    @api illustrationName;
 }

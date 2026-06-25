@@ -9,10 +9,8 @@ import { LightningElement, api } from 'lwc';
 export default class Pill extends LightningElement {
     @api hasError;
     @api href;
-    @api isPlainLink;
     @api label;
     @api name;
-    @api role;
     @api variant;
     @api focusLink() {}
 }

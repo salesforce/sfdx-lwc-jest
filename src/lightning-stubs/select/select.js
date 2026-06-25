@@ -4,19 +4,21 @@
  * SPDX-License-Identifier: MIT
  * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/MIT
  */
-import { api, LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
-export default class LightningSelect extends LightningElement {
-    @api label;
-    @api multiple;
-    @api options;
-    @api value;
-    @api name;
-    @api required;
+export default class Select extends LightningElement {
+    @api accessKey;
     @api disabled;
     @api fieldLevelHelp;
+    @api label;
     @api messageWhenValueMissing;
-    @api placeholder;
+    @api multiple;
+    @api name;
+    @api options;
+    @api required;
+    @api size;
+    @api validity;
+    @api value;
     @api variant;
 
     @api checkValidity() {

@@ -12,6 +12,7 @@ export default class Map extends LightningElement {
     @api mapMarkers;
     @api markersTitle;
     @api options;
+    @api region;
     @api selectedMarkerValue;
     @api showFooter;
     @api zoomLevel;

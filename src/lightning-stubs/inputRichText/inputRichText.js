@@ -7,7 +7,6 @@
 import { LightningElement, api } from 'lwc';
 
 export default class InputRichText extends LightningElement {
-    @api customButtons;
     @api disabled;
     @api disabledCategories;
     @api fieldLevelHelp;

@@ -13,6 +13,7 @@ export default class ButtonIconStateful extends LightningElement {
     @api name;
     @api selected;
     @api size;
+    @api tooltip;
     @api value;
     @api variant;
 }
