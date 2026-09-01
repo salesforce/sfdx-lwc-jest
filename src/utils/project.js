@@ -30,7 +30,11 @@ function getSfdxProjectJson() {
 // If jest is running in watch mode, caching the paths means that new modules will not be detected which might cause tests to fail.
 function getModulePaths() {
     if (PATHS.length > 0) return PATHS;
-    const packageDirectories = getSfdxProjectJson().packageDirectories;
+    // Use .slice() to avoid mutating the cached array returned by require(), then
+    // reverse so that directories listed later in packageDirectories take precedence
+    // over earlier ones – matching Salesforce's source-push override behaviour
+    // where the last-defined package wins when component names collide (issue #252).
+    const packageDirectories = getSfdxProjectJson().packageDirectories.slice().reverse();
     const projectPaths = packageDirectories.map((entry) => `${entry.path}/**/lwc`);
     PATHS = fg.sync(projectPaths, { onlyDirectories: true });
     return PATHS;
