@@ -77,7 +77,7 @@ function getModule(modulePath, options) {
 
 module.exports = function (modulePath, options) {
     if (modulePath === 'lwc') {
-        return require.resolve('@lwc/engine-dom');
+        return require.resolve('@lwc/engine-dom/dist/index.cjs');
     }
     return getModule(modulePath, options) || lwcResolver.apply(null, arguments);
 };
